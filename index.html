@@ -13,7 +13,7 @@
 </head>
 <body class="bg-gradient-to-br from-slate-50 to-blue-50 text-slate-800 min-h-screen flex flex-col justify-between font-sans">
 
-    <!-- Header with Custom Background and Mobile Menu Toggle -->
+    <!-- Header with Hamburger Menu -->
     <header class="bg-slate-900 text-white shadow-md sticky top-0 z-50 py-4">
         <div class="max-w-5xl mx-auto px-4 flex justify-between items-center">
             <!-- Brand Name (Click to go Home/Top) -->
@@ -21,20 +21,20 @@
                 ✨ TextTools Hub
             </a>
             
-            <!-- Three-Dot / Menu Toggle Button -->
+            <!-- Hamburger Menu Button (3 Lines Icon) -->
             <div class="relative">
                 <button onclick="toggleMenu()" class="p-2 rounded-lg hover:bg-slate-800 focus:outline-none transition">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
                 
-                <!-- Dropdown Menu for Categories -->
-                <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-2xl shadow-xl py-2 text-slate-700 border border-slate-100">
-                    <button onclick="showSection('textTools')" class="w-full text-left px-4 py-2 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition">📝 Text Tools</button>
-                    <button onclick="showSection('converters')" class="w-full text-left px-4 py-2 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition">🔄 Converters</button>
-                    <button onclick="showSection('tools')" class="w-full text-left px-4 py-2 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition">🛠️ Tools</button>
-                    <button onclick="showSection('productivity')" class="w-full text-left px-4 py-2 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition">⚡ Productivity Tools</button>
+                <!-- Hamburger Dropdown Menu -->
+                <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-52 bg-white rounded-2xl shadow-xl py-2 text-slate-700 border border-slate-100">
+                    <button onclick="showSection('textTools')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">📝 Text Tools</button>
+                    <button onclick="showSection('converters')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">🔄 Converters</button>
+                    <button onclick="showSection('tools')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">🛠️ Tools</button>
+                    <button onclick="showSection('productivity')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">⚡ Productivity Tools</button>
                 </div>
             </div>
         </div>
@@ -128,21 +128,21 @@
             </div>
         </div>
 
-        <!-- Section 2: Converters (Placeholder for future features) -->
+        <!-- Section 2: Converters -->
         <div id="converters" class="tool-section hidden bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center">
             <h3 class="text-xl font-bold text-slate-800 mb-2">🔄 Converters</h3>
             <p class="text-sm text-slate-500 mb-6">Advanced unit and data conversion utilities are coming soon here!</p>
             <button onclick="showSection('home')" class="bg-blue-600 text-white px-6 py-2.5 rounded-xl font-medium text-sm shadow-sm">Back to Home</button>
         </div>
 
-        <!-- Section 3: Tools (Placeholder for future features) -->
+        <!-- Section 3: Tools -->
         <div id="tools" class="tool-section hidden bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center">
             <h3 class="text-xl font-bold text-slate-800 mb-2">🛠️ General Tools</h3>
             <p class="text-sm text-slate-500 mb-6">Utility generators and helper tools will be available here soon!</p>
             <button onclick="showSection('home')" class="bg-blue-600 text-white px-6 py-2.5 rounded-xl font-medium text-sm shadow-sm">Back to Home</button>
         </div>
 
-        <!-- Section 4: Productivity Tools (Placeholder for future features) -->
+        <!-- Section 4: Productivity Tools -->
         <div id="productivity" class="tool-section hidden bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center">
             <h3 class="text-xl font-bold text-slate-800 mb-2">⚡ Productivity Tools</h3>
             <p class="text-sm text-slate-500 mb-6">Timers, planners, and efficiency widgets are coming soon here!</p>
@@ -187,20 +187,17 @@
         </p>
     </section>
 
-    <!-- JavaScript Logic for Navigation and Tools -->
+    <!-- JavaScript Logic -->
     <script>
-        // Toggle Dropdown Menu
+        // Toggle Hamburger Menu
         function toggleMenu() {
             const menu = document.getElementById('dropdownMenu');
             menu.classList.toggle('hidden');
         }
 
-        // Switch between Home and Tool Sections dynamically
+        // Switch Sections
         function showSection(sectionId) {
-            // Hide dropdown menu if open
             document.getElementById('dropdownMenu').classList.add('hidden');
-
-            // Hide home grid and all tool sections
             document.getElementById('home').classList.add('hidden');
             const sections = document.querySelectorAll('.tool-section');
             sections.forEach(sec => sec.classList.add('hidden'));
