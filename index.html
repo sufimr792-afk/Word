@@ -1,66 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Search Console Verification Meta Tag -->
     <meta name="google-site-verification" content="BqizJoyVioQZT_aqZl0aFEqBuQ7vRXXl018m0u97b8I">
     
-    <title>Text Tools Hub - Multi-Utility Platform</title>
+    <title>Text Tools Hub - Free Online Utility & Converter Tools</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://tailwindcomponents.com/tailwind/v2/tailwind.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-slate-50 to-blue-50 text-slate-800 min-h-screen flex flex-col justify-between font-sans">
 
-    <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 py-4">
+    <!-- Header with Custom Background and Mobile Menu Toggle -->
+    <header class="bg-slate-900 text-white shadow-md sticky top-0 z-50 py-4">
         <div class="max-w-5xl mx-auto px-4 flex justify-between items-center">
-            <h1 class="text-2xl font-extrabold text-blue-600 flex items-center gap-2">✨ TextTools Hub</h1>
-            <span class="text-xs bg-blue-100 text-blue-600 px-3 py-1 rounded-full font-semibold">Pro Version</span>
+            <!-- Brand Name (Click to go Home/Top) -->
+            <a href="#" onclick="showSection('home')" class="text-xl font-extrabold tracking-wide flex items-center gap-2 hover:text-blue-400 transition">
+                ✨ TextTools Hub
+            </a>
+            
+            <!-- Three-Dot / Menu Toggle Button -->
+            <div class="relative">
+                <button onclick="toggleMenu()" class="p-2 rounded-lg hover:bg-slate-800 focus:outline-none transition">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                    </svg>
+                </button>
+                
+                <!-- Dropdown Menu for Categories -->
+                <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-2xl shadow-xl py-2 text-slate-700 border border-slate-100">
+                    <button onclick="showSection('textTools')" class="w-full text-left px-4 py-2 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition">📝 Text Tools</button>
+                    <button onclick="showSection('converters')" class="w-full text-left px-4 py-2 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition">🔄 Converters</button>
+                    <button onclick="showSection('tools')" class="w-full text-left px-4 py-2 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition">🛠️ Tools</button>
+                    <button onclick="showSection('productivity')" class="w-full text-left px-4 py-2 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition">⚡ Productivity Tools</button>
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- Main Content -->
     <main class="max-w-5xl mx-auto px-4 py-8 flex-grow w-full">
         
-        <!-- Hero Title -->
-        <div class="text-center mb-8">
-            <h2 class="text-3xl font-bold text-slate-900 mb-2">Toolbox Categories</h2>
-            <p class="text-sm text-slate-500">Tap any category below to access its professional tools instantly.</p>
+        <!-- Toolbox Categories Grid (Homepage View) -->
+        <div id="home" class="space-y-6">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">Toolbox Categories</h2>
+                <p class="text-sm text-slate-500">Explore our professional categories below to access specialized utilities.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                <!-- 1. Text Tools -->
+                <div onclick="showSection('textTools')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
+                    <div class="text-3xl mb-2">📝</div>
+                    <h3 class="font-bold text-blue-600 text-lg">Text Tools</h3>
+                    <p class="text-xs text-slate-400 mt-1">Word count, case converters, cleaning</p>
+                </div>
+                <!-- 2. Converters -->
+                <div onclick="showSection('converters')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
+                    <div class="text-3xl mb-2">🔄</div>
+                    <h3 class="font-bold text-slate-700 text-lg">Converters</h3>
+                    <p class="text-xs text-slate-400 mt-1">Unit, currency, and data formatters</p>
+                </div>
+                <!-- 3. Tools -->
+                <div onclick="showSection('tools')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
+                    <div class="text-3xl mb-2">🛠️</div>
+                    <h3 class="font-bold text-slate-700 text-lg">Tools</h3>
+                    <p class="text-xs text-slate-400 mt-1">Utility scripts and generators</p>
+                </div>
+                <!-- 4. Productivity Tools -->
+                <div onclick="showSection('productivity')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
+                    <div class="text-3xl mb-2">⚡</div>
+                    <h3 class="font-bold text-slate-700 text-lg">Productivity Tools</h3>
+                    <p class="text-xs text-slate-400 mt-1">Timers, counters, and task assistants</p>
+                </div>
+            </div>
         </div>
 
-        <!-- Category Grid Cards (As you requested) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-            <!-- 1. Text Tools -->
-            <div onclick="showSection('textSection')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
-                <div class="text-3xl mb-2">📝</div>
-                <h3 class="font-bold text-blue-600 text-lg">Text Tools</h3>
-                <p class="text-xs text-slate-400 mt-1">Word & Case Analyzer</p>
+        <!-- Section 1: Text Tools (Active Feature) -->
+        <div id="textTools" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-bold text-slate-800">📝 Text Tools & Analyzer</h3>
+                <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Home</button>
             </div>
-            <!-- 2. Converters -->
-            <div onclick="showSection('converterSection')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
-                <div class="text-3xl mb-2">🔄</div>
-                <h3 class="font-bold text-slate-700 text-lg">Converters</h3>
-                <p class="text-xs text-slate-400 mt-1">Text & Format Converters</p>
-            </div>
-            <!-- 3. Tools -->
-            <div onclick="showSection('toolsSection')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
-                <div class="text-3xl mb-2">🛠️</div>
-                <h3 class="font-bold text-slate-700 text-lg">Tools</h3>
-                <p class="text-xs text-slate-400 mt-1">Utility & Cleaner Tools</p>
-            </div>
-            <!-- 4. Productivity Tools -->
-            <div onclick="showSection('productivitySection')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
-                <div class="text-3xl mb-2">⚡</div>
-                <h3 class="font-bold text-slate-700 text-lg">Productivity</h3>
-                <p class="text-xs text-slate-400 mt-1">Counters & Generators</p>
-            </div>
-        </div>
-
-        <!-- SECTION 1: Text Tools (Default Active) -->
-        <div id="textSection" class="tool-section bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100 mb-8">
-            <h3 class="text-xl font-bold mb-4 text-slate-800">📝 Text Analyzer & Case Tools</h3>
+            
             <textarea id="textInput" rows="6" class="w-full p-4 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-700 placeholder-slate-400 mb-6 bg-slate-50" placeholder="Type or paste your text here..."></textarea>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
@@ -82,42 +106,47 @@
                 </div>
             </div>
 
-            <div class="flex flex-wrap gap-2">
-                <button onclick="convertToUpperCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition">UPPERCASE</button>
-                <button onclick="convertToLowerCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition">lowercase</button>
-                <button onclick="copyText()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition">📋 Copy Text</button>
-                <button onclick="clearText()" class="bg-rose-600 hover:bg-rose-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition ml-auto">🗑️ Clear</button>
+            <div class="mb-4">
+                <p class="text-xs font-semibold text-slate-400 uppercase mb-2">Case & Formatting</p>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="convertToUpperCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">UPPERCASE</button>
+                    <button onclick="convertToLowerCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">lowercase</button>
+                    <button onclick="convertToSentenceCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">Sentence case</button>
+                    <button onclick="removeSpaces()" class="bg-slate-700 hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">Remove Extra Spaces</button>
+                    <button onclick="removeDuplicateLines()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">Remove Duplicate Lines</button>
+                    <button onclick="reverseText()" class="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">Reverse Text</button>
+                </div>
+            </div>
+
+            <div>
+                <p class="text-xs font-semibold text-slate-400 uppercase mb-2">Actions & Export</p>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="copyText()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-medium text-sm transition shadow-sm">📋 Copy Text</button>
+                    <button onclick="downloadTextFile()" class="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2.5 rounded-xl font-medium text-sm transition shadow-sm">💾 Download .txt</button>
+                    <button onclick="clearText()" class="bg-rose-600 hover:bg-rose-700 text-white px-4 py-2.5 rounded-xl font-medium text-sm transition shadow-sm ml-auto">🗑️ Clear</button>
+                </div>
             </div>
         </div>
 
-        <!-- SECTION 2: Converters -->
-        <div id="converterSection" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100 mb-8">
-            <h3 class="text-xl font-bold mb-4 text-slate-800">🔄 Converters Hub</h3>
-            <p class="text-sm text-slate-600 mb-4">Select or test format conversions below:</p>
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center">
-                <p class="text-slate-500 text-sm mb-3">Binary to Text & Text to Binary Converter coming active here.</p>
-                <button onclick="alert('Converter tool is ready for expansion!')" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs font-semibold">Test Converter</button>
-            </div>
+        <!-- Section 2: Converters (Placeholder for future features) -->
+        <div id="converters" class="tool-section hidden bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center">
+            <h3 class="text-xl font-bold text-slate-800 mb-2">🔄 Converters</h3>
+            <p class="text-sm text-slate-500 mb-6">Advanced unit and data conversion utilities are coming soon here!</p>
+            <button onclick="showSection('home')" class="bg-blue-600 text-white px-6 py-2.5 rounded-xl font-medium text-sm shadow-sm">Back to Home</button>
         </div>
 
-        <!-- SECTION 3: Tools -->
-        <div id="toolsSection" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100 mb-8">
-            <h3 class="text-xl font-bold mb-4 text-slate-800">🛠️ Utility & Cleaner Tools</h3>
-            <p class="text-sm text-slate-600 mb-4">Manage space removal, line filtering, and text cleaning instantly.</p>
-            <div class="flex flex-wrap gap-2">
-                <button onclick="removeSpaces()" class="bg-slate-700 hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl text-xs font-medium">Remove Extra Spaces</button>
-                <button onclick="removeDuplicateLines()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-xl text-xs font-medium">Remove Duplicate Lines</button>
-            </div>
+        <!-- Section 3: Tools (Placeholder for future features) -->
+        <div id="tools" class="tool-section hidden bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center">
+            <h3 class="text-xl font-bold text-slate-800 mb-2">🛠️ General Tools</h3>
+            <p class="text-sm text-slate-500 mb-6">Utility generators and helper tools will be available here soon!</p>
+            <button onclick="showSection('home')" class="bg-blue-600 text-white px-6 py-2.5 rounded-xl font-medium text-sm shadow-sm">Back to Home</button>
         </div>
 
-        <!-- SECTION 4: Productivity Tools -->
-        <div id="productivitySection" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100 mb-8">
-            <h3 class="text-xl font-bold mb-4 text-slate-800">⚡ Productivity Tools</h3>
-            <p class="text-sm text-slate-600 mb-4">Boost your workflow with advanced text generation and metrics.</p>
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center">
-                <p class="text-slate-500 text-sm mb-3">Quick text counter, placeholder generator, and advanced logging.</p>
-                <button onclick="alert('Productivity tool active!')" class="bg-emerald-600 text-white px-4 py-2 rounded-xl text-xs font-semibold">Launch Tool</button>
-            </div>
+        <!-- Section 4: Productivity Tools (Placeholder for future features) -->
+        <div id="productivity" class="tool-section hidden bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center">
+            <h3 class="text-xl font-bold text-slate-800 mb-2">⚡ Productivity Tools</h3>
+            <p class="text-sm text-slate-500 mb-6">Timers, planners, and efficiency widgets are coming soon here!</p>
+            <button onclick="showSection('home')" class="bg-blue-600 text-white px-6 py-2.5 rounded-xl font-medium text-sm shadow-sm">Back to Home</button>
         </div>
 
     </main>
@@ -158,20 +187,37 @@
         </p>
     </section>
 
-    <!-- JavaScript for Tab Switching and Tool Logic -->
+    <!-- JavaScript Logic for Navigation and Tools -->
     <script>
-        // Function to switch between tool categories smoothly
+        // Toggle Dropdown Menu
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Switch between Home and Tool Sections dynamically
         function showSection(sectionId) {
+            // Hide dropdown menu if open
+            document.getElementById('dropdownMenu').classList.add('hidden');
+
+            // Hide home grid and all tool sections
+            document.getElementById('home').classList.add('hidden');
             const sections = document.querySelectorAll('.tool-section');
             sections.forEach(sec => sec.classList.add('hidden'));
-            
-            const target = document.getElementById(sectionId);
-            if(target) {
-                target.classList.remove('hidden');
-                target.scrollIntoView({ behavior: 'smooth' });
+
+            if(sectionId === 'home') {
+                document.getElementById('home').classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                const target = document.getElementById(sectionId);
+                if(target) {
+                    target.classList.remove('hidden');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
             }
         }
 
+        // Text Analyzer Logic
         const textInput = document.getElementById('textInput');
         const wordCount = document.getElementById('wordCount');
         const charCount = document.getElementById('charCount');
@@ -196,14 +242,29 @@
 
         function convertToUpperCase() { textInput.value = textInput.value.toUpperCase(); updateStats(); }
         function convertToLowerCase() { textInput.value = textInput.value.toLowerCase(); updateStats(); }
-        function removeSpaces() { textInput.value = textInput.value.replace(/\s+/g, ' ').trim(); alert('Extra spaces removed!'); }
+        function convertToSentenceCase() {
+            let text = textInput.value.toLowerCase();
+            textInput.value = text.replace(/(^\s*[\w])|([.!?]\s+[w])/g, c => c.toUpperCase());
+            updateStats();
+        }
+        function removeSpaces() { textInput.value = textInput.value.replace(/\s+/g, ' ').trim(); updateStats(); }
         function removeDuplicateLines() {
             let lines = textInput.value.split('\n');
             let uniqueLines = [...new Set(lines)];
             textInput.value = uniqueLines.join('\n');
-            alert('Duplicate lines removed!');
+            updateStats();
         }
+        function reverseText() { textInput.value = textInput.value.split('').reverse().join(''); updateStats(); }
         function copyText() { textInput.select(); navigator.clipboard.writeText(textInput.value); alert('Text copied to clipboard!'); }
+        function downloadTextFile() {
+            const text = textInput.value;
+            if(!text) { alert('No text to download!'); return; }
+            const blob = new Blob([text], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url; a.download = 'converted-text.txt'; a.click();
+            URL.revokeObjectURL(url);
+        }
         function clearText() { textInput.value = ''; updateStats(); }
     </script>
 </body>
