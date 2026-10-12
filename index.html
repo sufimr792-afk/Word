@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Tools Hub - Free Online Text Utility Tools</title>
-    <!-- Tailwind CSS CDN -->
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>TextTools Hub - Free Online Text Analyzer & Utility Tools</title>
+    <meta name="title" content="TextTools Hub - Free Online Text Analyzer & Utility Tools">
+    <meta name="description" content="Use TextTools Hub for free online text formatting. Instantly count words, characters, sentences, convert uppercase/lowercase, remove extra spaces and duplicate lines.">
+    <meta name="keywords" content="text tools, word counter, character count, uppercase to lowercase, remove extra spaces, remove duplicate lines, text analyzer, free online utilities">
+    <meta name="author" content="TextTools Hub">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texttools-hub.vercel.app/">
+    <meta property="og:title" content="TextTools Hub - Free Online Text Analyzer & Utility Tools">
+    <meta property="og:description" content="Instantly count words, characters and format your text easily with our free online tools.">
+
+    <!-- Tailwind CSS CDN for Modern & Responsive Design -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Structured Data (Schema.org for Google Rich Results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "TextTools Hub",
+      "url": "https://texttools-hub.vercel.app/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://texttools-hub.vercel.app/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between">
 
@@ -19,8 +48,9 @@
 
     <!-- Main Content -->
     <main class="max-w-4xl mx-auto px-4 py-8 flex-grow w-full">
-        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
-            <h2 class="text-xl font-semibold mb-4">Multi-Purpose Text Analyzer & Utilities</h2>
+        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 mb-8">
+            <h2 class="text-xl font-semibold mb-2">Multi-Purpose Text Analyzer & Utilities</h2>
+            <p class="text-sm text-slate-500 mb-4">Type or paste your content below to analyze words, format text, and clean data instantly.</p>
             
             <!-- Textarea -->
             <textarea id="textInput" rows="7" class="w-full p-4 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-700 placeholder-slate-400 mb-4" placeholder="Type or paste your text here..."></textarea>
@@ -69,11 +99,31 @@
             </div>
 
         </div>
+
+        <!-- SEO Content Section (Helps Google Rank the Site) -->
+        <section class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 text-slate-600 text-sm leading-relaxed">
+            <h3 class="text-lg font-bold text-slate-800 mb-3">About Free Online Text Tools Hub</h3>
+            <p class="mb-3">Welcome to TextTools Hub, your ultimate destination for fast, free, and secure online text manipulation utilities. Whether you are a content writer, student, programmer, or digital marketer, our suite of tools helps you optimize your workflow instantly right inside your browser.</p>
+            <h4 class="font-semibold text-slate-800 mb-1">Why use our text utilities?</h4>
+            <ul class="list-disc pl-5 space-y-1">
+                <li><strong>Instant Analysis:</strong> Get real-time word count, character count, and estimated reading time.</li>
+                <li><strong>Case Conversion:</strong> Change blocks of text between UPPERCASE, lowercase, and Sentence case with one click.</li>
+                <li><strong>Data Cleaning:</strong> Quickly strip out extra unwanted spaces and remove duplicate lines from lists.</li>
+                <li><strong>100% Secure:</strong> All text processing happens locally in your browser; your data is never sent to any server.</li>
+            </ul>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-slate-100 py-4 text-center text-xs text-slate-500">
-        <p>&copy; 2026 TextTools Hub. All rights reserved.</p>
+    <footer class="bg-white border-t border-slate-100 py-6 text-center text-xs text-slate-500 mt-12">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 TextTools Hub. All rights reserved.</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:underline">Privacy Policy</a>
+                <a href="#" class="hover:underline">Terms of Service</a>
+                <a href="#" class="hover:underline">Contact Us</a>
+            </div>
+        </div>
     </footer>
 
     <!-- JavaScript Logic -->
