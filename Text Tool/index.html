@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Tools Hub - Free Online Text Utility Tools</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="max-w-4xl mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-600">✍️ TextTools Hub</h1>
+            <span class="text-xs bg-blue-100 text-blue-600 px-3 py-1 rounded-full font-medium">Free & Fast</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
+            <h2 class="text-xl font-semibold mb-4">Multi-Purpose Text Analyzer</h2>
+            
+            <!-- Textarea -->
+            <textarea id="textInput" rows="8" class="w-full p-4 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-700 placeholder-slate-400 mb-4" placeholder="Type or paste your text here..."></textarea>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <div class="bg-blue-50 p-4 rounded-xl text-center">
+                    <p class="text-xs text-blue-500 font-semibold uppercase">Words</p>
+                    <p id="wordCount" class="text-2xl font-bold text-blue-700">0</p>
+                </div>
+                <div class="bg-emerald-50 p-4 rounded-xl text-center">
+                    <p class="text-xs text-emerald-500 font-semibold uppercase">Characters</p>
+                    <p id="charCount" class="text-2xl font-bold text-emerald-700">0</p>
+                </div>
+                <div class="bg-amber-50 p-4 rounded-xl text-center">
+                    <p class="text-xs text-amber-500 font-semibold uppercase">Sentences</p>
+                    <p id="sentenceCount" class="text-2xl font-bold text-amber-700">0</p>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-xl text-center">
+                    <p class="text-xs text-purple-500 font-semibold uppercase">Reading Time</p>
+                    <p id="readTime" class="text-2xl font-bold text-purple-700">0s</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-3">
+                <button onclick="convertToUpperCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition">UPPERCASE</button>
+                <button onclick="convertToLowerCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition">lowercase</button>
+                <button onclick="removeSpaces()" class="bg-slate-600 hover:bg-slate-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition">Remove Extra Spaces</button>
+                <button onclick="copyText()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition">Copy Text</button>
+                <button onclick="clearText()" class="bg-rose-600 hover:bg-rose-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition ml-auto">Clear</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-100 py-4 text-center text-xs text-slate-500">
+        <p>&copy; 2026 TextTools Hub. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        const textInput = document.getElementById('textInput');
+        const wordCount = document.getElementById('wordCount');
+        const charCount = document.getElementById('charCount');
+        const sentenceCount = document.getElementById('sentenceCount');
+        const readTime = document.getElementById('readTime');
+
+        textInput.addEventListener('input', updateStats);
+
+        function updateStats() {
+            const text = textInput.value;
+            
+            // Characters
+            charCount.innerText = text.length;
+
+            // Words
+            const words = text.trim().split(/\s+/);
+            const numWords = text.trim() === '' ? 0 : words.length;
+            wordCount.innerText = numWords;
+
+            // Sentences
+            const sentences = text.split(/[.!?]+/).filter(Boolean);
+            sentenceCount.innerText = sentences.length;
+
+            // Reading time (approx 200 words per minute)
+            const seconds = Math.ceil((numWords / 200) * 60);
+            readTime.innerText = seconds + 's';
+        }
+
+        function convertToUpperCase() {
+            textInput.value = textInput.value.toUpperCase();
+            updateStats();
+        }
+
+        function convertToLowerCase() {
+            textInput.value = textInput.value.toLowerCase();
+            updateStats();
+        }
+
+        function removeSpaces() {
+            textInput.value = textInput.value.replace(/\s+/g, ' ').trim();
+            updateStats();
+        }
+
+        function copyText() {
+            textInput.select();
+            navigator.clipboard.writeText(textInput.value);
+            alert('Text copied to clipboard!');
+        }
+
+        function clearText() {
+            textInput.value = '';
+            updateStats();
+        }
+    </script>
+</body>
+</html>
