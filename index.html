@@ -6,7 +6,7 @@
     <!-- Google Search Console Verification Meta Tag -->
     <meta name="google-site-verification" content="BqizJoyVioQZT_aqZl0aFEqBuQ7vRXXl018m0u97b8I">
     
-    <title>Text Tools Hub - Free Online Utility & Converter Tools</title>
+    <title>Text Tools Hub - Multi-Utility Platform</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://tailwindcomponents.com/tailwind/v2/tailwind.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,42 +26,43 @@
         
         <!-- Hero Title -->
         <div class="text-center mb-8">
-            <h2 class="text-3xl font-bold text-slate-900 mb-2">Toolbox Categories & Utilities</h2>
-            <p class="text-sm text-slate-500">Select a tool below or use our advanced multi-purpose text analyzer instantly.</p>
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">Toolbox Categories</h2>
+            <p class="text-sm text-slate-500">Tap any category below to access its professional tools instantly.</p>
         </div>
 
-        <!-- Category Grid Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <div onclick="switchTab('textTools')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
+        <!-- Category Grid Cards (As you requested) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            <!-- 1. Text Tools -->
+            <div onclick="showSection('textSection')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
                 <div class="text-3xl mb-2">📝</div>
                 <h3 class="font-bold text-blue-600 text-lg">Text Tools</h3>
                 <p class="text-xs text-slate-400 mt-1">Word & Case Analyzer</p>
             </div>
-            <div onclick="alert('Converters category coming soon! Stay tuned.')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
+            <!-- 2. Converters -->
+            <div onclick="showSection('converterSection')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
                 <div class="text-3xl mb-2">🔄</div>
                 <h3 class="font-bold text-slate-700 text-lg">Converters</h3>
-                <p class="text-xs text-slate-400 mt-1">Unit, Currency, Hex</p>
+                <p class="text-xs text-slate-400 mt-1">Text & Format Converters</p>
             </div>
-            <div onclick="alert('Calculators category coming soon! Stay tuned.')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
-                <div class="text-3xl mb-2">🧮</div>
-                <h3 class="font-bold text-slate-700 text-lg">Calculators</h3>
-                <p class="text-xs text-slate-400 mt-1">BMI, Age, Loan</p>
-            </div>
-            <div onclick="alert('Utility tools coming soon! Stay tuned.')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
+            <!-- 3. Tools -->
+            <div onclick="showSection('toolsSection')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
                 <div class="text-3xl mb-2">🛠️</div>
-                <h3 class="font-bold text-slate-700 text-lg">Utilities</h3>
-                <p class="text-xs text-slate-400 mt-1">QR, Password, etc.</p>
+                <h3 class="font-bold text-slate-700 text-lg">Tools</h3>
+                <p class="text-xs text-slate-400 mt-1">Utility & Cleaner Tools</p>
+            </div>
+            <!-- 4. Productivity Tools -->
+            <div onclick="showSection('productivitySection')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
+                <div class="text-3xl mb-2">⚡</div>
+                <h3 class="font-bold text-slate-700 text-lg">Productivity</h3>
+                <p class="text-xs text-slate-400 mt-1">Counters & Generators</p>
             </div>
         </div>
 
-        <!-- Active Tool Section: Text Analyzer Box -->
-        <div id="textTools" class="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
-            <h3 class="text-xl font-bold mb-4 text-slate-800">Multi-Purpose Text Analyzer</h3>
-            
-            <!-- Textarea -->
+        <!-- SECTION 1: Text Tools (Default Active) -->
+        <div id="textSection" class="tool-section bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100 mb-8">
+            <h3 class="text-xl font-bold mb-4 text-slate-800">📝 Text Analyzer & Case Tools</h3>
             <textarea id="textInput" rows="6" class="w-full p-4 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-700 placeholder-slate-400 mb-6 bg-slate-50" placeholder="Type or paste your text here..."></textarea>
 
-            <!-- Stats Bar -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 <div class="bg-blue-50 p-4 rounded-2xl text-center border border-blue-100">
                     <p class="text-xs text-blue-500 font-semibold uppercase">Words</p>
@@ -81,27 +82,41 @@
                 </div>
             </div>
 
-            <!-- Action Buttons Group 1 -->
-            <div class="mb-4">
-                <p class="text-xs font-semibold text-slate-400 uppercase mb-2">Case & Formatting</p>
-                <div class="flex flex-wrap gap-2">
-                    <button onclick="convertToUpperCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">UPPERCASE</button>
-                    <button onclick="convertToLowerCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">lowercase</button>
-                    <button onclick="convertToSentenceCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">Sentence case</button>
-                    <button onclick="removeSpaces()" class="bg-slate-700 hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">Remove Extra Spaces</button>
-                    <button onclick="removeDuplicateLines()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">Remove Duplicate Lines</button>
-                    <button onclick="reverseText()" class="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">Reverse Text</button>
-                </div>
+            <div class="flex flex-wrap gap-2">
+                <button onclick="convertToUpperCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition">UPPERCASE</button>
+                <button onclick="convertToLowerCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition">lowercase</button>
+                <button onclick="copyText()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition">📋 Copy Text</button>
+                <button onclick="clearText()" class="bg-rose-600 hover:bg-rose-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition ml-auto">🗑️ Clear</button>
             </div>
+        </div>
 
-            <!-- Action Buttons Group 2 -->
-            <div>
-                <p class="text-xs font-semibold text-slate-400 uppercase mb-2">Actions & Export</p>
-                <div class="flex flex-wrap gap-2">
-                    <button onclick="copyText()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-medium text-sm transition shadow-sm">📋 Copy Text</button>
-                    <button onclick="downloadTextFile()" class="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2.5 rounded-xl font-medium text-sm transition shadow-sm">💾 Download .txt</button>
-                    <button onclick="clearText()" class="bg-rose-600 hover:bg-rose-700 text-white px-4 py-2.5 rounded-xl font-medium text-sm transition shadow-sm ml-auto">🗑️ Clear</button>
-                </div>
+        <!-- SECTION 2: Converters -->
+        <div id="converterSection" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100 mb-8">
+            <h3 class="text-xl font-bold mb-4 text-slate-800">🔄 Converters Hub</h3>
+            <p class="text-sm text-slate-600 mb-4">Select or test format conversions below:</p>
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center">
+                <p class="text-slate-500 text-sm mb-3">Binary to Text & Text to Binary Converter coming active here.</p>
+                <button onclick="alert('Converter tool is ready for expansion!')" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs font-semibold">Test Converter</button>
+            </div>
+        </div>
+
+        <!-- SECTION 3: Tools -->
+        <div id="toolsSection" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100 mb-8">
+            <h3 class="text-xl font-bold mb-4 text-slate-800">🛠️ Utility & Cleaner Tools</h3>
+            <p class="text-sm text-slate-600 mb-4">Manage space removal, line filtering, and text cleaning instantly.</p>
+            <div class="flex flex-wrap gap-2">
+                <button onclick="removeSpaces()" class="bg-slate-700 hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl text-xs font-medium">Remove Extra Spaces</button>
+                <button onclick="removeDuplicateLines()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-xl text-xs font-medium">Remove Duplicate Lines</button>
+            </div>
+        </div>
+
+        <!-- SECTION 4: Productivity Tools -->
+        <div id="productivitySection" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100 mb-8">
+            <h3 class="text-xl font-bold mb-4 text-slate-800">⚡ Productivity Tools</h3>
+            <p class="text-sm text-slate-600 mb-4">Boost your workflow with advanced text generation and metrics.</p>
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center">
+                <p class="text-slate-500 text-sm mb-3">Quick text counter, placeholder generator, and advanced logging.</p>
+                <button onclick="alert('Productivity tool active!')" class="bg-emerald-600 text-white px-4 py-2 rounded-xl text-xs font-semibold">Launch Tool</button>
             </div>
         </div>
 
@@ -143,15 +158,29 @@
         </p>
     </section>
 
-    <!-- JavaScript Logic -->
+    <!-- JavaScript for Tab Switching and Tool Logic -->
     <script>
+        // Function to switch between tool categories smoothly
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.tool-section');
+            sections.forEach(sec => sec.classList.add('hidden'));
+            
+            const target = document.getElementById(sectionId);
+            if(target) {
+                target.classList.remove('hidden');
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
         const textInput = document.getElementById('textInput');
         const wordCount = document.getElementById('wordCount');
         const charCount = document.getElementById('charCount');
         const sentenceCount = document.getElementById('sentenceCount');
         const readTime = document.getElementById('readTime');
 
-        textInput.addEventListener('input', updateStats);
+        if(textInput) {
+            textInput.addEventListener('input', updateStats);
+        }
 
         function updateStats() {
             const text = textInput.value;
@@ -167,31 +196,15 @@
 
         function convertToUpperCase() { textInput.value = textInput.value.toUpperCase(); updateStats(); }
         function convertToLowerCase() { textInput.value = textInput.value.toLowerCase(); updateStats(); }
-        function convertToSentenceCase() {
-            let text = textInput.value.toLowerCase();
-            textInput.value = text.replace(/(^\s*[\w])|([.!?]\s+[w])/g, c => c.toUpperCase());
-            updateStats();
-        }
-        function removeSpaces() { textInput.value = textInput.value.replace(/\s+/g, ' ').trim(); updateStats(); }
+        function removeSpaces() { textInput.value = textInput.value.replace(/\s+/g, ' ').trim(); alert('Extra spaces removed!'); }
         function removeDuplicateLines() {
             let lines = textInput.value.split('\n');
             let uniqueLines = [...new Set(lines)];
             textInput.value = uniqueLines.join('\n');
-            updateStats();
+            alert('Duplicate lines removed!');
         }
-        function reverseText() { textInput.value = textInput.value.split('').reverse().join(''); updateStats(); }
         function copyText() { textInput.select(); navigator.clipboard.writeText(textInput.value); alert('Text copied to clipboard!'); }
-        function downloadTextFile() {
-            const text = textInput.value;
-            if(!text) { alert('No text to download!'); return; }
-            const blob = new Blob([text], { type: 'text/plain' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url; a.download = 'converted-text.txt'; a.click();
-            URL.revokeObjectURL(url);
-        }
         function clearText() { textInput.value = ''; updateStats(); }
-        function switchTab(tabId) { document.getElementById(tabId).scrollIntoView({ behavior: 'smooth' }); }
     </script>
 </body>
 </html>
