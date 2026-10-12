@@ -20,10 +20,10 @@
     <!-- Main Content -->
     <main class="max-w-4xl mx-auto px-4 py-8 flex-grow w-full">
         <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
-            <h2 class="text-xl font-semibold mb-4">Multi-Purpose Text Analyzer</h2>
+            <h2 class="text-xl font-semibold mb-4">Multi-Purpose Text Analyzer & Utilities</h2>
             
             <!-- Textarea -->
-            <textarea id="textInput" rows="8" class="w-full p-4 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-700 placeholder-slate-400 mb-4" placeholder="Type or paste your text here..."></textarea>
+            <textarea id="textInput" rows="7" class="w-full p-4 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-700 placeholder-slate-400 mb-4" placeholder="Type or paste your text here..."></textarea>
 
             <!-- Stats Bar -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
@@ -45,14 +45,29 @@
                 </div>
             </div>
 
-            <!-- Action Buttons -->
-            <div class="flex flex-wrap gap-3">
-                <button onclick="convertToUpperCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition">UPPERCASE</button>
-                <button onclick="convertToLowerCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition">lowercase</button>
-                <button onclick="removeSpaces()" class="bg-slate-600 hover:bg-slate-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition">Remove Extra Spaces</button>
-                <button onclick="copyText()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition">Copy Text</button>
-                <button onclick="clearText()" class="bg-rose-600 hover:bg-rose-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition ml-auto">Clear</button>
+            <!-- Action Buttons Group 1: Case Converters -->
+            <div class="mb-4">
+                <p class="text-xs font-semibold text-slate-400 uppercase mb-2">Case & Formatting</p>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="convertToUpperCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg font-medium text-xs transition">UPPERCASE</button>
+                    <button onclick="convertToLowerCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg font-medium text-xs transition">lowercase</button>
+                    <button onclick="convertToSentenceCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg font-medium text-xs transition">Sentence case</button>
+                    <button onclick="removeSpaces()" class="bg-slate-600 hover:bg-slate-700 text-white px-3 py-2 rounded-lg font-medium text-xs transition">Remove Extra Spaces</button>
+                    <button onclick="removeDuplicateLines()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded-lg font-medium text-xs transition">Remove Duplicate Lines</button>
+                    <button onclick="reverseText()" class="bg-teal-600 hover:bg-teal-700 text-white px-3 py-2 rounded-lg font-medium text-xs transition">Reverse Text</button>
+                </div>
             </div>
+
+            <!-- Action Buttons Group 2: Utilities & Clipboard -->
+            <div>
+                <p class="text-xs font-semibold text-slate-400 uppercase mb-2">Actions & Export</p>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="copyText()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition">📋 Copy Text</button>
+                    <button onclick="downloadTextFile()" class="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition">💾 Download .txt</button>
+                    <button onclick="clearText()" class="bg-rose-600 hover:bg-rose-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition ml-auto">🗑️ Clear</button>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -101,8 +116,26 @@
             updateStats();
         }
 
+        function convertToSentenceCase() {
+            let text = textInput.value.toLowerCase();
+            textInput.value = text.replace(/(^\s*[\w])|([.!?]\s+[w])/g, c => c.toUpperCase());
+            updateStats();
+        }
+
         function removeSpaces() {
             textInput.value = textInput.value.replace(/\s+/g, ' ').trim();
+            updateStats();
+        }
+
+        function removeDuplicateLines() {
+            let lines = textInput.value.split('\n');
+            let uniqueLines = [...new Set(lines)];
+            textInput.value = uniqueLines.join('\n');
+            updateStats();
+        }
+
+        function reverseText() {
+            textInput.value = textInput.value.split('').reverse().join('');
             updateStats();
         }
 
@@ -110,6 +143,21 @@
             textInput.select();
             navigator.clipboard.writeText(textInput.value);
             alert('Text copied to clipboard!');
+        }
+
+        function downloadTextFile() {
+            const text = textInput.value;
+            if(!text) {
+                alert('No text to download!');
+                return;
+            }
+            const blob = new Blob([text], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'converted-text.txt';
+            a.click();
+            URL.revokeObjectURL(url);
         }
 
         function clearText() {
