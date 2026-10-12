@@ -1,132 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="BqizJoyVioQZT_aqZl0aFEqBubQcIqhh1LpOl-MpnuA" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Search Console Verification Meta Tag -->
+    <meta name="google-site-verification" content="BqizJoyVioQZT_aqZl0aFEqBuQ7vRXXl018m0u97b8I">
     
-    <!-- Primary SEO Meta Tags -->
-    <title>TextTools Hub - Free Online Text Analyzer & Utility Tools</title>
-    <meta name="title" content="TextTools Hub - Free Online Text Analyzer & Utility Tools">
-    <meta name="description" content="Use TextTools Hub for free online text formatting. Instantly count words, characters, sentences, convert uppercase/lowercase, remove extra spaces and duplicate lines.">
-    <meta name="keywords" content="text tools, word counter, character count, uppercase to lowercase, remove extra spaces, remove duplicate lines, text analyzer, free online utilities">
-    <meta name="author" content="TextTools Hub">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph / Facebook / Social Media Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://texttools-hub.vercel.app/">
-    <meta property="og:title" content="TextTools Hub - Free Online Text Analyzer & Utility Tools">
-    <meta property="og:description" content="Instantly count words, characters and format your text easily with our free online tools.">
-
-    <!-- Tailwind CSS CDN for Modern & Responsive Design -->
+    <title>Text Tools Hub - Free Online Utility & Converter Tools</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://tailwindcomponents.com/tailwind/v2/tailwind.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Structured Data (Schema.org for Google Rich Results) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "TextTools Hub",
-      "url": "https://texttools-hub.vercel.app/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://texttools-hub.vercel.app/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
 </head>
-<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between">
+<body class="bg-gradient-to-br from-slate-50 to-blue-50 text-slate-800 min-h-screen flex flex-col justify-between font-sans">
 
     <!-- Header -->
-    <header class="bg-white shadow-sm py-4">
-        <div class="max-w-4xl mx-auto px-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-blue-600">✍️ TextTools Hub</h1>
-            <span class="text-xs bg-blue-100 text-blue-600 px-3 py-1 rounded-full font-medium">Free & Fast</span>
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 py-4">
+        <div class="max-w-5xl mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-blue-600 flex items-center gap-2">✨ TextTools Hub</h1>
+            <span class="text-xs bg-blue-100 text-blue-600 px-3 py-1 rounded-full font-semibold">Pro Version</span>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="max-w-4xl mx-auto px-4 py-8 flex-grow w-full">
-        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 mb-8">
-            <h2 class="text-xl font-semibold mb-2">Multi-Purpose Text Analyzer & Utilities</h2>
-            <p class="text-sm text-slate-500 mb-4">Type or paste your content below to analyze words, format text, and clean data instantly.</p>
+    <main class="max-w-5xl mx-auto px-4 py-8 flex-grow w-full">
+        
+        <!-- Hero Title -->
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">Toolbox Categories & Utilities</h2>
+            <p class="text-sm text-slate-500">Select a tool below or use our advanced multi-purpose text analyzer instantly.</p>
+        </div>
+
+        <!-- Category Grid Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div onclick="switchTab('textTools')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
+                <div class="text-3xl mb-2">📝</div>
+                <h3 class="font-bold text-blue-600 text-lg">Text Tools</h3>
+                <p class="text-xs text-slate-400 mt-1">Word & Case Analyzer</p>
+            </div>
+            <div onclick="alert('Converters category coming soon! Stay tuned.')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
+                <div class="text-3xl mb-2">🔄</div>
+                <h3 class="font-bold text-slate-700 text-lg">Converters</h3>
+                <p class="text-xs text-slate-400 mt-1">Unit, Currency, Hex</p>
+            </div>
+            <div onclick="alert('Calculators category coming soon! Stay tuned.')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
+                <div class="text-3xl mb-2">🧮</div>
+                <h3 class="font-bold text-slate-700 text-lg">Calculators</h3>
+                <p class="text-xs text-slate-400 mt-1">BMI, Age, Loan</p>
+            </div>
+            <div onclick="alert('Utility tools coming soon! Stay tuned.')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
+                <div class="text-3xl mb-2">🛠️</div>
+                <h3 class="font-bold text-slate-700 text-lg">Utilities</h3>
+                <p class="text-xs text-slate-400 mt-1">QR, Password, etc.</p>
+            </div>
+        </div>
+
+        <!-- Active Tool Section: Text Analyzer Box -->
+        <div id="textTools" class="bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
+            <h3 class="text-xl font-bold mb-4 text-slate-800">Multi-Purpose Text Analyzer</h3>
             
             <!-- Textarea -->
-            <textarea id="textInput" rows="7" class="w-full p-4 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-700 placeholder-slate-400 mb-4" placeholder="Type or paste your text here..."></textarea>
+            <textarea id="textInput" rows="6" class="w-full p-4 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-700 placeholder-slate-400 mb-6 bg-slate-50" placeholder="Type or paste your text here..."></textarea>
 
             <!-- Stats Bar -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                <div class="bg-blue-50 p-4 rounded-xl text-center">
+                <div class="bg-blue-50 p-4 rounded-2xl text-center border border-blue-100">
                     <p class="text-xs text-blue-500 font-semibold uppercase">Words</p>
-                    <p id="wordCount" class="text-2xl font-bold text-blue-700">0</p>
+                    <p id="wordCount" class="text-2xl font-extrabold text-blue-700">0</p>
                 </div>
-                <div class="bg-emerald-50 p-4 rounded-xl text-center">
+                <div class="bg-emerald-50 p-4 rounded-2xl text-center border border-emerald-100">
                     <p class="text-xs text-emerald-500 font-semibold uppercase">Characters</p>
-                    <p id="charCount" class="text-2xl font-bold text-emerald-700">0</p>
+                    <p id="charCount" class="text-2xl font-extrabold text-emerald-700">0</p>
                 </div>
-                <div class="bg-amber-50 p-4 rounded-xl text-center">
+                <div class="bg-amber-50 p-4 rounded-2xl text-center border border-amber-100">
                     <p class="text-xs text-amber-500 font-semibold uppercase">Sentences</p>
-                    <p id="sentenceCount" class="text-2xl font-bold text-amber-700">0</p>
+                    <p id="sentenceCount" class="text-2xl font-extrabold text-amber-700">0</p>
                 </div>
-                <div class="bg-purple-50 p-4 rounded-xl text-center">
+                <div class="bg-purple-50 p-4 rounded-2xl text-center border border-purple-100">
                     <p class="text-xs text-purple-500 font-semibold uppercase">Reading Time</p>
-                    <p id="readTime" class="text-2xl font-bold text-purple-700">0s</p>
+                    <p id="readTime" class="text-2xl font-extrabold text-purple-700">0s</p>
                 </div>
             </div>
 
-            <!-- Action Buttons Group 1: Case Converters -->
+            <!-- Action Buttons Group 1 -->
             <div class="mb-4">
                 <p class="text-xs font-semibold text-slate-400 uppercase mb-2">Case & Formatting</p>
                 <div class="flex flex-wrap gap-2">
-                    <button onclick="convertToUpperCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg font-medium text-xs transition">UPPERCASE</button>
-                    <button onclick="convertToLowerCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg font-medium text-xs transition">lowercase</button>
-                    <button onclick="convertToSentenceCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg font-medium text-xs transition">Sentence case</button>
-                    <button onclick="removeSpaces()" class="bg-slate-600 hover:bg-slate-700 text-white px-3 py-2 rounded-lg font-medium text-xs transition">Remove Extra Spaces</button>
-                    <button onclick="removeDuplicateLines()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded-lg font-medium text-xs transition">Remove Duplicate Lines</button>
-                    <button onclick="reverseText()" class="bg-teal-600 hover:bg-teal-700 text-white px-3 py-2 rounded-lg font-medium text-xs transition">Reverse Text</button>
+                    <button onclick="convertToUpperCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">UPPERCASE</button>
+                    <button onclick="convertToLowerCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">lowercase</button>
+                    <button onclick="convertToSentenceCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">Sentence case</button>
+                    <button onclick="removeSpaces()" class="bg-slate-700 hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">Remove Extra Spaces</button>
+                    <button onclick="removeDuplicateLines()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">Remove Duplicate Lines</button>
+                    <button onclick="reverseText()" class="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition shadow-sm">Reverse Text</button>
                 </div>
             </div>
 
-            <!-- Action Buttons Group 2: Utilities & Clipboard -->
+            <!-- Action Buttons Group 2 -->
             <div>
                 <p class="text-xs font-semibold text-slate-400 uppercase mb-2">Actions & Export</p>
                 <div class="flex flex-wrap gap-2">
-                    <button onclick="copyText()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition">📋 Copy Text</button>
-                    <button onclick="downloadTextFile()" class="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition">💾 Download .txt</button>
-                    <button onclick="clearText()" class="bg-rose-600 hover:bg-rose-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition ml-auto">🗑️ Clear</button>
+                    <button onclick="copyText()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-medium text-sm transition shadow-sm">📋 Copy Text</button>
+                    <button onclick="downloadTextFile()" class="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2.5 rounded-xl font-medium text-sm transition shadow-sm">💾 Download .txt</button>
+                    <button onclick="clearText()" class="bg-rose-600 hover:bg-rose-700 text-white px-4 py-2.5 rounded-xl font-medium text-sm transition shadow-sm ml-auto">🗑️ Clear</button>
                 </div>
             </div>
-
         </div>
 
-        <!-- SEO Content Section (Helps Google Rank the Site) -->
-        <section class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 text-slate-600 text-sm leading-relaxed">
-            <h3 class="text-lg font-bold text-slate-800 mb-3">About Free Online Text Tools Hub</h3>
-            <p class="mb-3">Welcome to TextTools Hub, your ultimate destination for fast, free, and secure online text manipulation utilities. Whether you are a content writer, student, programmer, or digital marketer, our suite of tools helps you optimize your workflow instantly right inside your browser.</p>
-            <h4 class="font-semibold text-slate-800 mb-1">Why use our text utilities?</h4>
-            <ul class="list-disc pl-5 space-y-1">
-                <li><strong>Instant Analysis:</strong> Get real-time word count, character count, and estimated reading time.</li>
-                <li><strong>Case Conversion:</strong> Change blocks of text between UPPERCASE, lowercase, and Sentence case with one click.</li>
-                <li><strong>Data Cleaning:</strong> Quickly strip out extra unwanted spaces and remove duplicate lines from lists.</li>
-                <li><strong>100% Secure:</strong> All text processing happens locally in your browser; your data is never sent to any server.</li>
-            </ul>
-        </section>
     </main>
 
     <!-- Footer with Thank You Message -->
-    <footer class="bg-white border-t border-slate-100 py-8 text-center text-xs text-slate-500">
-        <div class="max-w-4xl mx-auto px-4">
-            <!-- Thank You Message -->
+    <footer class="bg-white border-t border-slate-100 py-8 text-center text-xs text-slate-500 mt-12">
+        <div class="max-w-5xl mx-auto px-4">
             <div class="mb-6 pb-6 border-b border-slate-100">
                 <h4 class="text-sm font-semibold text-blue-600 mb-1">🌟 Thank You for Visiting TextTools Hub!</h4>
                 <p class="text-slate-600 max-w-xl mx-auto leading-relaxed">
-                    We are truly dedicated to providing you with a fast, secure, and completely free online text utility experience. Your support and feedback motivate us to continually improve our tools and add new features to simplify your daily workflow. Have a wonderful day!
+                    We are truly dedicated to providing you with a fast, secure, and completely free online text utility experience. Have a wonderful day!
                 </p>
             </div>
-
-            <!-- Copyright & Navigation Links -->
             <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                 <p>&copy; 2026 TextTools Hub. All rights reserved.</p>
                 <div class="flex gap-4">
@@ -138,25 +127,21 @@
         </div>
     </footer>
 
-    <!-- Privacy Policy Section with ID -->
-    <section id="privacyPolicy" class="max-w-4xl mx-auto px-4 py-6 mt-6 bg-white rounded-2xl shadow-sm border border-slate-100 scroll-mt-6">
+    <!-- Privacy Policy Section -->
+    <section id="privacyPolicy" class="max-w-5xl mx-auto px-4 py-6 mt-6 bg-white rounded-3xl shadow-sm border border-slate-100 scroll-mt-6">
         <h3 class="text-lg font-semibold mb-2 text-slate-800">Privacy Policy</h3>
         <p class="text-xs text-slate-600 leading-relaxed mb-3">
-            At TextTools Hub, accessible from our website, we prioritize your privacy. All text processing (word counting, formatting, case conversion) happens entirely locally within your web browser. <strong>We do not store, collect, or share any text data</strong> you type or paste into our tools.
-        </p>
-        <p class="text-xs text-slate-600 leading-relaxed">
-            We may use third-party advertising companies (like Google AdSense) to serve ads when you visit our website. These companies may use information about your visits to provide advertisements about goods and services of interest to you.
+            At TextTools Hub, accessible from our website, we prioritize your privacy. All text processing happens entirely locally within your web browser. <strong>We do not store, collect, or share any text data</strong>.
         </p>
     </section>
 
-    <!-- Terms of Service Section with ID -->
-    <section id="termsOfService" class="max-w-4xl mx-auto px-4 py-6 mt-4 mb-8 bg-white rounded-2xl shadow-sm border border-slate-100 scroll-mt-6">
+    <!-- Terms of Service Section -->
+    <section id="termsOfService" class="max-w-5xl mx-auto px-4 py-6 mt-4 mb-8 bg-white rounded-3xl shadow-sm border border-slate-100 scroll-mt-6">
         <h3 class="text-lg font-semibold mb-2 text-slate-800">Terms of Service</h3>
-        <p class="text-xs text-slate-600 leading-relaxed mb-3">
-            By using TextTools Hub, you agree to use our free online text formatting and analysis tools responsibly. Our tools are provided "as is" without any warranties.
+        <p class="text-xs text-slate-600 leading-relaxed">
+            By using TextTools Hub, you agree to use our free online text tools responsibly. Our tools are provided "as is" without any warranties.
         </p>
     </section>
-
 
     <!-- JavaScript Logic -->
     <script>
@@ -170,82 +155,43 @@
 
         function updateStats() {
             const text = textInput.value;
-            
-            // Characters
             charCount.innerText = text.length;
-
-            // Words
             const words = text.trim().split(/\s+/);
             const numWords = text.trim() === '' ? 0 : words.length;
             wordCount.innerText = numWords;
-
-            // Sentences
             const sentences = text.split(/[.!?]+/).filter(Boolean);
             sentenceCount.innerText = sentences.length;
-
-            // Reading time (approx 200 words per minute)
             const seconds = Math.ceil((numWords / 200) * 60);
             readTime.innerText = seconds + 's';
         }
 
-        function convertToUpperCase() {
-            textInput.value = textInput.value.toUpperCase();
-            updateStats();
-        }
-
-        function convertToLowerCase() {
-            textInput.value = textInput.value.toLowerCase();
-            updateStats();
-        }
-
+        function convertToUpperCase() { textInput.value = textInput.value.toUpperCase(); updateStats(); }
+        function convertToLowerCase() { textInput.value = textInput.value.toLowerCase(); updateStats(); }
         function convertToSentenceCase() {
             let text = textInput.value.toLowerCase();
             textInput.value = text.replace(/(^\s*[\w])|([.!?]\s+[w])/g, c => c.toUpperCase());
             updateStats();
         }
-
-        function removeSpaces() {
-            textInput.value = textInput.value.replace(/\s+/g, ' ').trim();
-            updateStats();
-        }
-
+        function removeSpaces() { textInput.value = textInput.value.replace(/\s+/g, ' ').trim(); updateStats(); }
         function removeDuplicateLines() {
             let lines = textInput.value.split('\n');
             let uniqueLines = [...new Set(lines)];
             textInput.value = uniqueLines.join('\n');
             updateStats();
         }
-
-        function reverseText() {
-            textInput.value = textInput.value.split('').reverse().join('');
-            updateStats();
-        }
-
-        function copyText() {
-            textInput.select();
-            navigator.clipboard.writeText(textInput.value);
-            alert('Text copied to clipboard!');
-        }
-
+        function reverseText() { textInput.value = textInput.value.split('').reverse().join(''); updateStats(); }
+        function copyText() { textInput.select(); navigator.clipboard.writeText(textInput.value); alert('Text copied to clipboard!'); }
         function downloadTextFile() {
             const text = textInput.value;
-            if(!text) {
-                alert('No text to download!');
-                return;
-            }
+            if(!text) { alert('No text to download!'); return; }
             const blob = new Blob([text], { type: 'text/plain' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
-            a.href = url;
-            a.download = 'converted-text.txt';
-            a.click();
+            a.href = url; a.download = 'converted-text.txt'; a.click();
             URL.revokeObjectURL(url);
         }
-
-        function clearText() {
-            textInput.value = '';
-            updateStats();
-        }
+        function clearText() { textInput.value = ''; updateStats(); }
+        function switchTab(tabId) { document.getElementById(tabId).scrollIntoView({ behavior: 'smooth' }); }
     </script>
 </body>
 </html>
