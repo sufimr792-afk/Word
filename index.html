@@ -11,26 +11,30 @@
     <script src="https://tailwindcomponents.com/tailwind/v2/tailwind.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-br from-slate-50 to-blue-50 text-slate-800 min-h-screen flex flex-col justify-between font-sans">
+<body class="bg-gradient-to-br from-slate-50 via-blue-50/50 to-indigo-50/50 text-slate-800 min-h-screen flex flex-col justify-between font-sans selection:bg-blue-500 selection:text-white">
 
     <!-- Header with Hamburger Menu -->
-    <header class="bg-slate-900 text-white shadow-md sticky top-0 z-50 py-4">
+    <header class="bg-slate-900/95 backdrop-blur-md text-white shadow-lg sticky top-0 z-50 py-3.5 border-b border-slate-800">
         <div class="max-w-5xl mx-auto px-4 flex justify-between items-center">
-            <a href="#" onclick="showSection('home')" class="text-xl font-extrabold tracking-wide flex items-center gap-2 hover:text-blue-400 transition">
-                ✨ TextTools Hub
+            <a href="#" onclick="showSection('home')" class="text-xl font-extrabold tracking-wide flex items-center gap-2.5 hover:text-blue-400 transition">
+                <span class="bg-blue-600 p-1.5 rounded-xl shadow-inner text-sm">✨</span> TextTools Hub
             </a>
             <div class="relative">
-                <button onclick="toggleMenu()" class="p-2 rounded-lg hover:bg-slate-800 focus:outline-none transition">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button onclick="toggleMenu()" class="p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 focus:outline-none transition border border-slate-700/50">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
-                <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-60 bg-white rounded-2xl shadow-xl py-2 text-slate-700 border border-slate-100">
-                    <button onclick="showSection('documentsHome')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">📂 Documents Hub</button>
-                    <button onclick="showSection('convertersHome')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">🔄 Converters Hub</button>
-                    <button onclick="showSection('calculatorsHome')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">🧮 Calculators Hub</button>
-                    <button onclick="showSection('productivityHome')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">⚡ Productivity Tools</button>
-                    <button onclick="showSection('textTools')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">📝 Text Tools & Analyzer</button>
+                <div id="dropdownMenu" class="hidden absolute right-0 mt-2.5 w-60 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl py-2 text-slate-700 border border-slate-100 divide-y divide-slate-100">
+                    <div class="py-1">
+                        <button onclick="showSection('documentsHome')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2.5">📂 Documents Hub</button>
+                        <button onclick="showSection('convertersHome')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2.5">🔄 Converters Hub</button>
+                        <button onclick="showSection('calculatorsHome')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2.5">🧮 Calculators Hub</button>
+                        <button onclick="showSection('productivityHome')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2.5">⚡ Productivity Tools</button>
+                    </div>
+                    <div class="py-1">
+                        <button onclick="showSection('textTools')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2.5">📝 Text Tools & Analyzer</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,40 +44,65 @@
     <main class="max-w-5xl mx-auto px-4 py-8 flex-grow w-full">
         
         <!-- Homepage View -->
-        <div id="home" class="space-y-6">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold text-slate-900 mb-2">Toolbox Categories</h2>
-                <p class="text-sm text-slate-500">Select a category below to access professional and free online utilities.</p>
+        <div id="home" class="space-y-8 animate-fadeIn">
+            <!-- Hero Banner -->
+            <div class="text-center py-6 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-3xl shadow-xl relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Welcome to TextTools Hub</h1>
+                <p class="text-sm sm:text-base text-blue-100 max-w-lg mx-auto font-medium">Your all-in-one professional toolkit for document conversion, calculations, and productivity utilities.</p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-                <div onclick="showSection('documentsHome')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
-                    <div class="text-3xl mb-2">📂</div>
-                    <h3 class="font-bold text-blue-600 text-lg">Documents Hub</h3>
-                    <p class="text-xs text-slate-400 mt-1">10+ File & Document Converters</p>
+            <div class="text-center">
+                <h2 class="text-xl font-bold text-slate-900 tracking-tight">Explore Toolbox Categories</h2>
+                <p class="text-xs sm:text-sm text-slate-500 mt-1">Select a category below to access professional and free online utilities.</p>
+            </div>
+
+            <!-- Grid Categories -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
+                <div onclick="showSection('documentsHome')" class="group bg-white/80 hover:bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl border border-slate-100/80 cursor-pointer transition-all duration-300 transform hover:-translate-y-1.5 flex items-center gap-5">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center text-2xl group-hover:scale-110 transition shadow-inner">📂</div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-lg group-hover:text-blue-600 transition">Documents Hub</h3>
+                        <p class="text-xs text-slate-500 mt-0.5">10+ File & Document Converters</p>
+                    </div>
                 </div>
-                <div onclick="showSection('convertersHome')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
-                    <div class="text-3xl mb-2">🔄</div>
-                    <h3 class="font-bold text-slate-700 text-lg">Converters</h3>
-                    <p class="text-xs text-slate-400 mt-1">Length, Temp, Speed, Data, Hex & CSV</p>
+
+                <div onclick="showSection('convertersHome')" class="group bg-white/80 hover:bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl border border-slate-100/80 cursor-pointer transition-all duration-300 transform hover:-translate-y-1.5 flex items-center gap-5">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl group-hover:scale-110 transition shadow-inner">🔄</div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-lg group-hover:text-blue-600 transition">Converters</h3>
+                        <p class="text-xs text-slate-500 mt-0.5">Length, Temp, Speed, Data, Hex & CSV</p>
+                    </div>
                 </div>
-                <div onclick="showSection('calculatorsHome')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
-                    <div class="text-3xl mb-2">🧮</div>
-                    <h3 class="font-bold text-slate-700 text-lg">Calculators</h3>
-                    <p class="text-xs text-slate-400 mt-1">BMI, Exact Age (Y/M/D), Loan, % & more</p>
+
+                <div onclick="showSection('calculatorsHome')" class="group bg-white/80 hover:bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl border border-slate-100/80 cursor-pointer transition-all duration-300 transform hover:-translate-y-1.5 flex items-center gap-5">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 flex items-center justify-center text-2xl group-hover:scale-110 transition shadow-inner">🧮</div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-lg group-hover:text-blue-600 transition">Calculators</h3>
+                        <p class="text-xs text-slate-500 mt-0.5">BMI, Exact Age (Y/M/D), Loan, % & more</p>
+                    </div>
                 </div>
-                <div onclick="showSection('productivityHome')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
-                    <div class="text-3xl mb-2">⚡</div>
-                    <h3 class="font-bold text-slate-700 text-lg">Productivity Tools</h3>
-                    <p class="text-xs text-slate-400 mt-1">Password, QR, Base64 & URL utilities</p>
+
+                <div onclick="showSection('productivityHome')" class="group bg-white/80 hover:bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl border border-slate-100/80 cursor-pointer transition-all duration-300 transform hover:-translate-y-1.5 flex items-center gap-5">
+                    <div class="w-14 h-14 rounded-2xl bg-violet-50 flex items-center justify-center text-2xl group-hover:scale-110 transition shadow-inner">⚡</div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-lg group-hover:text-blue-600 transition">Productivity Tools</h3>
+                        <p class="text-xs text-slate-500 mt-0.5">Password, QR, Base64 & URL utilities</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="max-w-2xl mx-auto mt-4">
-                <div onclick="showSection('textTools')" class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-2xl shadow-md text-center cursor-pointer transition transform hover:-translate-y-1">
-                    <div class="text-3xl mb-2">📝</div>
-                    <h3 class="font-bold text-xl">Text Tools & Analyzer</h3>
-                    <p class="text-xs text-blue-100 mt-1">Word count, case converters, line cleaner & more</p>
+            <!-- Full Width Featured Card -->
+            <div class="max-w-3xl mx-auto">
+                <div onclick="showSection('textTools')" class="group bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950 text-white p-6 sm:p-7 rounded-3xl shadow-xl cursor-pointer transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-between border border-slate-800">
+                    <div class="flex items-center gap-5">
+                        <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-2xl group-hover:scale-110 transition backdrop-blur-md">📝</div>
+                        <div>
+                            <h3 class="font-bold text-lg sm:text-xl group-hover:text-blue-400 transition">Text Tools & Analyzer</h3>
+                            <p class="text-xs sm:text-sm text-slate-400 mt-0.5">Word count, case converters, line cleaner & more</p>
+                        </div>
+                    </div>
+                    <div class="text-slate-400 group-hover:translate-x-1 transition text-xl font-bold pr-2">→</div>
                 </div>
             </div>
         </div>
@@ -86,20 +115,20 @@
             </div>
             <p class="text-sm text-slate-500 mb-6">Select a document conversion utility:</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div onclick="openDocTool('Word to PDF', '.docx')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">1. Word to PDF</h4><p class="text-xs text-slate-400 mt-1">Convert DOCX to PDF</p></div>
-                <div onclick="openDocTool('PDF to Word', '.pdf')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">2. PDF to Word</h4><p class="text-xs text-slate-400 mt-1">Extract text to Word</p></div>
-                <div onclick="openDocTool('Excel to PDF', '.xlsx')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">3. Excel to PDF</h4><p class="text-xs text-slate-400 mt-1">Spreadsheet converter</p></div>
-                <div onclick="openDocTool('PDF to Excel', '.pdf')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">4. PDF to Excel</h4><p class="text-xs text-slate-400 mt-1">Tables to spreadsheet</p></div>
-                <div onclick="openDocTool('JPG to PNG', '.jpg,.jpeg')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">5. JPG to PNG</h4><p class="text-xs text-slate-400 mt-1">Image format changer</p></div>
-                <div onclick="openDocTool('PNG to JPG', '.png')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">6. PNG to JPG</h4><p class="text-xs text-slate-400 mt-1">Compress and convert</p></div>
-                <div onclick="openDocTool('JPG to PDF', '.jpg,.jpeg')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">7. JPG to PDF</h4><p class="text-xs text-slate-400 mt-1">Images into single PDF</p></div>
-                <div onclick="openDocTool('PDF to PowerPoint', '.pdf')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">8. PDF to PowerPoint</h4><p class="text-xs text-slate-400 mt-1">Slides conversion</p></div>
-                <div onclick="openDocTool('PowerPoint to PDF', '.pptx')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">9. PowerPoint to PDF</h4><p class="text-xs text-slate-400 mt-1">Presentation export</p></div>
-                <div onclick="openDocTool('Text to PDF', '.txt')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">10. Text to PDF</h4><p class="text-xs text-slate-400 mt-1">Plain text to PDF document</p></div>
+                <div onclick="openDocTool('Word to PDF', '.docx')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">1. Word to PDF</h4><p class="text-xs text-slate-400 mt-1">Convert DOCX to PDF</p></div>
+                <div onclick="openDocTool('PDF to Word', '.pdf')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">2. PDF to Word</h4><p class="text-xs text-slate-400 mt-1">Extract text to Word</p></div>
+                <div onclick="openDocTool('Excel to PDF', '.xlsx')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">3. Excel to PDF</h4><p class="text-xs text-slate-400 mt-1">Spreadsheet converter</p></div>
+                <div onclick="openDocTool('PDF to Excel', '.pdf')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">4. PDF to Excel</h4><p class="text-xs text-slate-400 mt-1">Tables to spreadsheet</p></div>
+                <div onclick="openDocTool('JPG to PNG', '.jpg,.jpeg')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">5. JPG to PNG</h4><p class="text-xs text-slate-400 mt-1">Image format changer</p></div>
+                <div onclick="openDocTool('PNG to JPG', '.png')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">6. PNG to JPG</h4><p class="text-xs text-slate-400 mt-1">Compress and convert</p></div>
+                <div onclick="openDocTool('JPG to PDF', '.jpg,.jpeg')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">7. JPG to PDF</h4><p class="text-xs text-slate-400 mt-1">Images into single PDF</p></div>
+                <div onclick="openDocTool('PDF to PowerPoint', '.pdf')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">8. PDF to PowerPoint</h4><p class="text-xs text-slate-400 mt-1">Slides conversion</p></div>
+                <div onclick="openDocTool('PowerPoint to PDF', '.pptx')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">9. PowerPoint to PDF</h4><p class="text-xs text-slate-400 mt-1">Presentation export</p></div>
+                <div onclick="openDocTool('Text to PDF', '.txt')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">10. Text to PDF</h4><p class="text-xs text-slate-400 mt-1">Plain text to PDF document</p></div>
             </div>
         </div>
 
-        <!-- Document Workspace with Cloud Conversion & Secure API Bridge -->
+        <!-- Document Workspace -->
         <div id="docWorkspace" class="tool-section hidden max-w-xl mx-auto bg-white p-8 rounded-3xl shadow-xl border text-center space-y-6">
             <div class="flex justify-between items-center mb-2">
                 <h3 id="docWorkspaceTitle" class="text-xl font-bold text-slate-800">Document Tool</h3>
@@ -115,7 +144,6 @@
 
             <button id="convertBtn" onclick="processAndConvertDocument()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-2xl font-bold shadow-md transition">Convert & Download File</button>
 
-            <!-- Real Cloud Conversion Helper Notice -->
             <div class="p-3 bg-blue-50 text-blue-700 rounded-xl text-xs text-left leading-relaxed border border-blue-100">
                 💡 <b>Pro Tip:</b> For heavy files, you can also use our <a href="https://cloudconvert.com" target="_blank" class="underline font-bold">CloudConvert Partner Engine</a> directly through this workspace.
             </div>
@@ -235,7 +263,7 @@
         </div>
         <div id="prodQr" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
             <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">📱 QR Code</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5">← Back</button></div>
-            <input type="text" id="qrText" class="w-full p-3 border rounded-xl mb-3" placeholder="Enter text/URL"><button onclick="generateQR()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm mb-3">Generate</button><div class="p-3 bg-slate-50 text-center"><img id="qrImage" src="" alt="QR" class="mx-auto hidden"></div>
+            <input type="text" id="qrText" class="w-full p-3 border rounded-xl mb-3" placeholder="Enter text/URL"><button onclick="generateQR()" class="bg-blue-600 text-white py-2 px-4 rounded-xl text-sm mb-3">Generate</button><div class="p-3 bg-slate-50 text-center"><img id="qrImage" src="" alt="QR" class="mx-auto hidden"></div>
         </div>
         <div id="prodBase64" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
             <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🔐 Base64 Tool</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
@@ -250,37 +278,84 @@
             <textarea id="urlOutput" rows="3" class="w-full p-3 border rounded-xl bg-slate-50" readonly placeholder="Output..."></textarea>
         </div>
 
-        <!-- ================= 5. TEXT TOOLS ================= -->
-        <div id="textTools" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border">
+        <!-- ================= 5. ENHANCED TEXT TOOLS & ANALYZER ================= -->
+        <div id="textTools" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-xl border">
             <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold text-slate-800">📝 Text Tools & Analyzer</h3>
+                <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">📝 Text Tools & Analyzer</h3>
                 <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Home</button>
             </div>
-            <textarea id="textInput" rows="6" class="w-full p-4 border rounded-2xl mb-6 bg-slate-50" placeholder="Type or paste text here..."></textarea>
+            
+            <textarea id="textInput" rows="6" class="w-full p-4 border rounded-2xl mb-6 bg-slate-50 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="Type or paste your text here..."></textarea>
+            
+            <!-- Statistics Dashboard -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                <div class="bg-blue-50 p-4 rounded-2xl text-center border"><p class="text-xs text-blue-500 font-semibold">Words</p><p id="wordCount" class="text-2xl font-extrabold text-blue-700">0</p></div>
-                <div class="bg-emerald-50 p-4 rounded-2xl text-center border"><p class="text-xs text-emerald-500 font-semibold">Characters</p><p id="charCount" class="text-2xl font-extrabold text-emerald-700">0</p></div>
-                <div class="bg-amber-50 p-4 rounded-2xl text-center border"><p class="text-xs text-amber-500 font-semibold">Sentences</p><p id="sentenceCount" class="text-2xl font-extrabold text-amber-700">0</p></div>
-                <div class="bg-purple-50 p-4 rounded-2xl text-center border"><p class="text-xs text-purple-500 font-semibold">Reading Time</p><p id="readTime" class="text-2xl font-extrabold text-purple-700">0s</p></div>
+                <div class="bg-blue-50 p-4 rounded-2xl text-center border border-blue-100"><p class="text-xs text-blue-500 font-semibold">Words</p><p id="wordCount" class="text-2xl font-extrabold text-blue-700">0</p></div>
+                <div class="bg-emerald-50 p-4 rounded-2xl text-center border border-emerald-100"><p class="text-xs text-emerald-500 font-semibold">Characters</p><p id="charCount" class="text-2xl font-extrabold text-emerald-700">0</p></div>
+                <div class="bg-amber-50 p-4 rounded-2xl text-center border border-amber-100"><p class="text-xs text-amber-500 font-semibold">Sentences</p><p id="sentenceCount" class="text-2xl font-extrabold text-amber-700">0</p></div>
+                <div class="bg-purple-50 p-4 rounded-2xl text-center border border-purple-100"><p class="text-xs text-purple-500 font-semibold">Reading Time</p><p id="readTime" class="text-2xl font-extrabold text-purple-700">0s</p></div>
             </div>
-            <div class="flex flex-wrap gap-2">
-                <button onclick="convertToUpperCase()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs">UPPERCASE</button>
-                <button onclick="convertToLowerCase()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs">lowercase</button>
-                <button onclick="convertToTitleCase()" class="bg-violet-600 text-white px-4 py-2 rounded-xl text-xs">Title Case</button>
-                <button onclick="clearText()" class="bg-rose-600 text-white px-4 py-2 rounded-xl text-xs ml-auto">Clear</button>
+
+            <!-- Find & Replace Extra Feature -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 p-4 bg-slate-50 rounded-2xl border">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Find Word</label>
+                    <input type="text" id="findInput" class="w-full p-2.5 border rounded-xl text-xs bg-white" placeholder="Word to find...">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Replace With</label>
+                    <div class="flex gap-2">
+                        <input type="text" id="replaceInput" class="w-full p-2.5 border rounded-xl text-xs bg-white" placeholder="New word...">
+                        <button onclick="findAndReplaceText()" class="bg-indigo-600 text-white px-4 py-2.5 rounded-xl text-xs font-bold hover:bg-indigo-700 transition">Replace</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expanded Action Buttons -->
+            <div class="flex flex-wrap gap-2.5">
+                <button onclick="convertToUpperCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl text-xs font-medium transition shadow-sm">UPPERCASE</button>
+                <button onclick="convertToLowerCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl text-xs font-medium transition shadow-sm">lowercase</button>
+                <button onclick="convertToTitleCase()" class="bg-violet-600 hover:bg-violet-700 text-white px-4 py-2.5 rounded-xl text-xs font-medium transition shadow-sm">Title Case</button>
+                <button onclick="convertToSentenceCase()" class="bg-violet-600 hover:bg-violet-700 text-white px-4 py-2.5 rounded-xl text-xs font-medium transition shadow-sm">Sentence case</button>
+                <button onclick="removeExtraSpaces()" class="bg-slate-700 hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl text-xs font-medium transition shadow-sm">Remove Extra Spaces</button>
+                <button onclick="removeLineBreaks()" class="bg-slate-700 hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl text-xs font-medium transition shadow-sm">Remove Line Breaks</button>
+                <button onclick="reverseText()" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2.5 rounded-xl text-xs font-medium transition shadow-sm">Reverse Text</button>
+                <button onclick="copyTextToClipboard()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl text-xs font-medium transition shadow-sm">Copy Text</button>
+                <button onclick="clearText()" class="bg-rose-600 hover:bg-rose-700 text-white px-4 py-2.5 rounded-xl text-xs font-bold transition ml-auto shadow-sm">Clear All</button>
             </div>
         </div>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-slate-100 py-8 text-center text-xs text-slate-500 mt-12">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="mb-6 pb-6 border-b border-slate-100">
-                <h4 class="text-sm font-semibold text-blue-600 mb-1">🌟 Thank You for Visiting TextTools Hub!</h4>
-                <p class="text-slate-600 max-w-xl mx-auto leading-relaxed">We are dedicated to providing fast and free online tools.</p>
+    <!-- Enhanced Premium Footer -->
+    <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 pt-12 pb-8 mt-16 text-xs font-sans">
+        <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 pb-8 border-b border-slate-800">
+            <!-- Col 1 -->
+            <div class="space-y-3">
+                <h4 class="text-white font-extrabold text-sm tracking-wide flex items-center gap-2">✨ TextTools Hub</h4>
+                <p class="text-slate-400 leading-relaxed text-xs">Your all-in-one professional digital toolbox for fast file conversion, precise calculations, and advanced text utilities completely free.</p>
             </div>
+            <!-- Col 2 -->
+            <div class="space-y-2">
+                <h4 class="text-white font-bold text-xs uppercase tracking-wider">Quick Navigation</h4>
+                <ul class="space-y-1.5">
+                    <li><a href="#" onclick="showSection('documentsHome')" class="hover:text-blue-400 transition">📂 Documents Hub</a></li>
+                    <li><a href="#" onclick="showSection('convertersHome')" class="hover:text-blue-400 transition">🔄 Converters Hub</a></li>
+                    <li><a href="#" onclick="showSection('calculatorsHome')" class="hover:text-blue-400 transition">🧮 Calculators Hub</a></li>
+                    <li><a href="#" onclick="showSection('productivityHome')" class="hover:text-blue-400 transition">⚡ Productivity Tools</a></li>
+                </ul>
+            </div>
+            <!-- Col 3 -->
+            <div class="space-y-2">
+                <h4 class="text-white font-bold text-xs uppercase tracking-wider">Visitor Appreciation</h4>
+                <div class="p-3 bg-slate-800/80 rounded-2xl border border-slate-700/60 text-slate-300">
+                    <p class="font-semibold text-amber-400 mb-1">🌟 Thank You for Visiting!</p>
+                    <p class="text-[11px] leading-relaxed">We are dedicated to providing fast and free online tools for your everyday needs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-3 text-slate-500">
             <p>&copy; 2026 TextTools Hub. All rights reserved.</p>
+            <p>Designed for fast and secure online utilities.</p>
         </div>
     </footer>
 
@@ -312,7 +387,6 @@
             showSection('docWorkspace');
         }
 
-        // Real Upload & Cloud Conversion Processing Engine Simulation
         function processAndConvertDocument() {
             let fileInput = document.getElementById('docFileInput');
             if(fileInput.files.length === 0) { 
@@ -327,13 +401,11 @@
             convertBtn.disabled = true;
             convertBtn.classList.add('opacity-50');
 
-            // Simulating real secure cloud conversion stream
             setTimeout(() => {
                 statusEl.classList.add('hidden');
                 convertBtn.disabled = false;
                 convertBtn.classList.remove('opacity-50');
 
-                // Target extension based on selected conversion tool
                 let ext = "pdf";
                 if(selectedDocToolName.includes('PDF to Word')) ext = "docx";
                 else if(selectedDocToolName.includes('PDF to Excel')) ext = "xlsx";
@@ -346,7 +418,6 @@
 
                 alert(`কনভার্শন সম্পন্ন হয়েছে! আপনার ফাইল "${convertedFileName}" সফলভাবে ডাউনলোড হচ্ছে।`);
 
-                // Create download stream blob
                 let blob = new Blob([file], { type: 'application/octet-stream' });
                 let url = URL.createObjectURL(blob);
                 let a = document.createElement('a');
@@ -357,7 +428,6 @@
             }, 2500);
         }
 
-        // Text Analyzer
         const textInput = document.getElementById('textInput');
         if(textInput) {
             textInput.addEventListener('input', () => {
@@ -376,6 +446,32 @@
             let t = textInput.value.toLowerCase().split(' ');
             for(let i=0; i<t.length; i++) t[i] = t[i].charAt(0).toUpperCase() + t[i].slice(1);
             textInput.value = t.join(' ');
+        }
+        function convertToSentenceCase() {
+            let t = textInput.value.toLowerCase();
+            textInput.value = t.replace(/(^\s*\w|[\.\!\?]\s*\w)/g, c => c.toUpperCase());
+        }
+        function removeExtraSpaces() {
+            textInput.value = textInput.value.replace(/\s+/g, ' ').trim();
+        }
+        function removeLineBreaks() {
+            textInput.value = textInput.value.replace(/(\r\n|\n|\r)/gm, " ");
+        }
+        function reverseText() {
+            textInput.value = textInput.value.split('').reverse().join('');
+        }
+        function findAndReplaceText() {
+            let findVal = document.getElementById('findInput').value;
+            let replaceVal = document.getElementById('replaceInput').value;
+            if(!findVal) { alert('অনুগ্রহ করে খোঁজার জন্য শব্দ লিখুন!'); return; }
+            let regex = new RegExp(findVal, 'g');
+            textInput.value = textInput.value.replace(regex, replaceVal);
+            alert('সফলভাবে প্রতিস্থাপন করা হয়েছে!');
+        }
+        function copyTextToClipboard() {
+            textInput.select();
+            navigator.clipboard.writeText(textInput.value);
+            alert('টেক্সট ক্লিপবোর্ডে কপি করা হয়েছে!');
         }
         function clearText() { textInput.value = ''; }
 
