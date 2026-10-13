@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Search Console Verification Meta Tag -->
-    <meta name="google-site-verification" content="BqizJoyVioQZT_aqZl0aFEqBubQcIqhh1LpOl-MpnuA">
+    <meta name="google-site-verification" content="BqizJoyVioQZT_aqZl0aFEqBuQ7vRXXl018m0u97b8I">
     
-    <title>Text Tools Hub - Free Online Utility & Converter Tools</title>
+    <title>Text Tools Hub - Free Online Utility, Converters & Calculators</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://tailwindcomponents.com/tailwind/v2/tailwind.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,11 +30,12 @@
                 </button>
                 
                 <!-- Hamburger Dropdown Menu -->
-                <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-xl py-2 text-slate-700 border border-slate-100">
-                    <button onclick="showSection('textTools')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">📝 Text Tools Hub</button>
-                    <button onclick="showSection('convertersHome')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">🔄 Converters</button>
-                    <button onclick="showSection('tools')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">🛠️ Tools</button>
-                    <button onclick="showSection('productivity')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">⚡ Productivity Tools</button>
+                <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-60 bg-white rounded-2xl shadow-xl py-2 text-slate-700 border border-slate-100">
+                    <button onclick="showSection('documentsHome')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">📂 Documents Hub</button>
+                    <button onclick="showSection('convertersHome')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">🔄 Converters Hub</button>
+                    <button onclick="showSection('calculatorsHome')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">🧮 Calculators Hub</button>
+                    <button onclick="showSection('productivityHome')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">⚡ Productivity Tools</button>
+                    <button onclick="showSection('textTools')" class="w-full text-left px-4 py-2.5 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition flex items-center gap-2">📝 Text Tools & Analyzer</button>
                 </div>
             </div>
         </div>
@@ -43,38 +44,265 @@
     <!-- Main Content -->
     <main class="max-w-5xl mx-auto px-4 py-8 flex-grow w-full">
         
-        <!-- Toolbox Categories Grid (Homepage View) -->
+        <!-- Homepage View (5 Main Categories) -->
         <div id="home" class="space-y-6">
             <div class="text-center mb-8">
                 <h2 class="text-3xl font-bold text-slate-900 mb-2">Toolbox Categories</h2>
-                <p class="text-sm text-slate-500">Explore our professional categories below to access specialized utilities.</p>
+                <p class="text-sm text-slate-500">Select a category below to access professional and free online utilities.</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-                <div onclick="showSection('textTools')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
-                    <div class="text-3xl mb-2">📝</div>
-                    <h3 class="font-bold text-blue-600 text-lg">Text Tools</h3>
-                    <p class="text-xs text-slate-400 mt-1">Word count, case converters, cleaning</p>
+                <!-- 1. Documents -->
+                <div onclick="showSection('documentsHome')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
+                    <div class="text-3xl mb-2">📂</div>
+                    <h3 class="font-bold text-blue-600 text-lg">Documents Hub</h3>
+                    <p class="text-xs text-slate-400 mt-1">PDF, Word, Excel & Image Converters</p>
                 </div>
+                <!-- 2. Converters -->
                 <div onclick="showSection('convertersHome')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
                     <div class="text-3xl mb-2">🔄</div>
                     <h3 class="font-bold text-slate-700 text-lg">Converters</h3>
                     <p class="text-xs text-slate-400 mt-1">Length, Temp, Speed, Hex & more</p>
                 </div>
-                <div onclick="showSection('tools')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
-                    <div class="text-3xl mb-2">🛠️</div>
-                    <h3 class="font-bold text-slate-700 text-lg">Tools</h3>
-                    <p class="text-xs text-slate-400 mt-1">Utility scripts and generators</p>
+                <!-- 3. Calculators -->
+                <div onclick="showSection('calculatorsHome')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
+                    <div class="text-3xl mb-2">🧮</div>
+                    <h3 class="font-bold text-slate-700 text-lg">Calculators</h3>
+                    <p class="text-xs text-slate-400 mt-1">BMI, Age, Loan, Percentage & more</p>
                 </div>
-                <div onclick="showSection('productivity')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
+                <!-- 4. Productivity Tools -->
+                <div onclick="showSection('productivityHome')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
                     <div class="text-3xl mb-2">⚡</div>
                     <h3 class="font-bold text-slate-700 text-lg">Productivity Tools</h3>
-                    <p class="text-xs text-slate-400 mt-1">Timers, counters, and task assistants</p>
+                    <p class="text-xs text-slate-400 mt-1">Password, QR, Base64 & URL utilities</p>
+                </div>
+            </div>
+
+            <!-- 5. Text Tools Quick Access Card on Home -->
+            <div class="max-w-2xl mx-auto mt-4">
+                <div onclick="showSection('textTools')" class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-2xl shadow-md text-center cursor-pointer transition transform hover:-translate-y-1">
+                    <div class="text-3xl mb-2">📝</div>
+                    <h3 class="font-bold text-xl">Text Tools & Analyzer</h3>
+                    <p class="text-xs text-blue-100 mt-1">Word count, case converters, line cleaner & more</p>
                 </div>
             </div>
         </div>
 
-        <!-- 1. Text Tools Section -->
+        <!-- ================= 1. DOCUMENTS HUB ================= -->
+        <div id="documentsHome" class="tool-section hidden space-y-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-slate-900">📂 Documents Hub</h3>
+                <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Home</button>
+            </div>
+            <p class="text-sm text-slate-500 mb-6">Select a document conversion utility:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div onclick="alert('Word to PDF tool is ready for integration!')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">Word to PDF</h4><p class="text-xs text-slate-400 mt-1">Convert DOCX to PDF</p></div>
+                <div onclick="alert('PDF to Word tool is ready for integration!')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">PDF to Word</h4><p class="text-xs text-slate-400 mt-1">Extract text to Word</p></div>
+                <div onclick="alert('Excel to PDF tool is ready for integration!')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">Excel to PDF</h4><p class="text-xs text-slate-400 mt-1">Spreadsheet converter</p></div>
+                <div onclick="alert('PDF to Excel tool is ready for integration!')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">PDF to Excel</h4><p class="text-xs text-slate-400 mt-1">Tables to spreadsheet</p></div>
+                <div onclick="alert('JPG to PNG tool is ready for integration!')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">JPG to PNG</h4><p class="text-xs text-slate-400 mt-1">Image format changer</p></div>
+                <div onclick="alert('PNG to JPG tool is ready for integration!')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">PNG to JPG</h4><p class="text-xs text-slate-400 mt-1">Compress and convert</p></div>
+                <div onclick="alert('JPG to PDF tool is ready for integration!')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">JPG to PDF</h4><p class="text-xs text-slate-400 mt-1">Images into single PDF</p></div>
+                <div onclick="alert('PDF to PowerPoint tool is ready for integration!')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">PDF to PowerPoint</h4><p class="text-xs text-slate-400 mt-1">Slides conversion</p></div>
+                <div onclick="alert('PowerPoint to PDF tool is ready for integration!')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">PowerPoint to PDF</h4><p class="text-xs text-slate-400 mt-1">Presentation export</p></div>
+            </div>
+        </div>
+
+        <!-- ================= 2. CONVERTERS HUB ================= -->
+        <div id="convertersHome" class="tool-section hidden space-y-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-slate-900">🔄 Converters Hub</h3>
+                <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Home</button>
+            </div>
+            <p class="text-sm text-slate-500 mb-6">Select a specific converter tool below:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div onclick="showSection('convLength')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">Length Converter</h4><p class="text-xs text-slate-400 mt-1">Meters, Feet, Inches</p></div>
+                <div onclick="showSection('convTemp')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">Temperature Converter</h4><p class="text-xs text-slate-400 mt-1">Celsius, Fahrenheit</p></div>
+                <div onclick="showSection('convWeight')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">Weight / Mass</h4><p class="text-xs text-slate-400 mt-1">Kg, Gram, Pound</p></div>
+                <div onclick="showSection('convData')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">Data / Storage</h4><p class="text-xs text-slate-400 mt-1">MB, GB, KB, TB</p></div>
+                <div onclick="showSection('convColor')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">Hex / RGB Converter</h4><p class="text-xs text-slate-400 mt-1">Color code formatters</p></div>
+                <div onclick="showSection('convSpeed')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">Speed Converter</h4><p class="text-xs text-slate-400 mt-1">Km/h to Mph</p></div>
+                <div onclick="showSection('convHexDec')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">Hex to Decimal</h4><p class="text-xs text-slate-400 mt-1">Hexadecimal calculator</p></div>
+                <div onclick="showSection('convCsvJson')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">CSV & JSON Converter</h4><p class="text-xs text-slate-400 mt-1">Format converter</p></div>
+            </div>
+        </div>
+
+        <!-- Converters Sub-tools -->
+        <div id="convLength" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold text-slate-800">📏 Length Converter</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Meters (m)</label><input type="number" id="meterInput" oninput="convertLength('meter')" class="w-full p-3 border rounded-xl bg-slate-50" placeholder="Enter meters"></div>
+                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Feet (ft)</label><input type="number" id="feetInput" oninput="convertLength('feet')" class="w-full p-3 border rounded-xl bg-slate-50" placeholder="Enter feet"></div>
+            </div>
+        </div>
+        <div id="convTemp" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold text-slate-800">🌡️ Temperature Converter</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Celsius (°C)</label><input type="number" id="celsiusInput" oninput="convertTemp('c')" class="w-full p-3 border rounded-xl bg-slate-50" placeholder="Celsius"></div>
+                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Fahrenheit (°F)</label><input type="number" id="fahrenheitInput" oninput="convertTemp('f')" class="w-full p-3 border rounded-xl bg-slate-50" placeholder="Fahrenheit"></div>
+            </div>
+        </div>
+        <div id="convWeight" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold text-slate-800">⚖️ Weight Converter</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Kilograms (kg)</label><input type="number" id="kgInput" oninput="convertWeight('kg')" class="w-full p-3 border rounded-xl bg-slate-50" placeholder="Kilograms"></div>
+                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Pounds (lbs)</label><input type="number" id="lbsInput" oninput="convertWeight('lbs')" class="w-full p-3 border rounded-xl bg-slate-50" placeholder="Pounds"></div>
+            </div>
+        </div>
+        <div id="convData" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold text-slate-800">💾 Data Storage Converter</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Megabytes (MB)</label><input type="number" id="mbInput" oninput="convertData()" class="w-full p-3 border rounded-xl bg-slate-50" placeholder="MB"></div>
+                <div><p class="text-xs font-semibold text-slate-500 mb-1">Result in GB:</p><div id="gbResult" class="p-3 bg-blue-50 text-blue-700 font-bold rounded-xl border">0 GB</div></div>
+            </div>
+        </div>
+        <div id="convColor" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold text-slate-800">🎨 Hex to RGB Converter</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div><label class="block text-xs font-semibold text-slate-500 mb-1">Hex Code</label><input type="text" id="hexInput" oninput="hexToRgb()" class="w-full p-3 border rounded-xl bg-slate-50 mb-3" placeholder="#3b82f6"><p id="rgbResult" class="text-sm font-medium text-slate-700">RGB: N/A</p></div>
+        </div>
+        <div id="convSpeed" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold text-slate-800">🏎️ Speed Converter</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Km/h</label><input type="number" id="kmhInput" oninput="convertSpeed('kmh')" class="w-full p-3 border rounded-xl bg-slate-50" placeholder="km/h"></div>
+                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Mph</label><input type="number" id="mphInput" oninput="convertSpeed('mph')" class="w-full p-3 border rounded-xl bg-slate-50" placeholder="mph"></div>
+            </div>
+        </div>
+        <div id="convHexDec" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold text-slate-800">🔢 Hex to Decimal</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Hex</label><input type="text" id="hexDecInput" oninput="hexToDecimal()" class="w-full p-3 border rounded-xl bg-slate-50" placeholder="e.g. 1A"></div>
+                <div><p class="text-xs font-semibold text-slate-500 mb-1">Decimal:</p><div id="decimalResult" class="p-3 bg-blue-50 text-blue-700 font-bold rounded-xl border">0</div></div>
+            </div>
+        </div>
+        <div id="convCsvJson" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold text-slate-800">📊 CSV to JSON</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <textarea id="csvInput" rows="4" class="w-full p-3 border rounded-xl bg-slate-50 mb-3 text-sm" placeholder="name,age..."></textarea>
+            <button onclick="csvToJson()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs mb-3">Convert</button>
+            <pre id="jsonOutput" class="p-3 bg-slate-900 text-emerald-400 rounded-xl text-xs overflow-x-auto">JSON output...</pre>
+        </div>
+
+        <!-- ================= 3. CALCULATORS HUB (6 Options) ================= -->
+        <div id="calculatorsHome" class="tool-section hidden space-y-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-slate-900">🧮 Calculators Hub</h3>
+                <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Home</button>
+            </div>
+            <p class="text-sm text-slate-500 mb-6">Select a calculator below:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div onclick="showSection('calcBmi')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">1. BMI Calculator</h4><p class="text-xs text-slate-400 mt-1">Body mass index check</p></div>
+                <div onclick="showSection('calcAge')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">2. Age Calculator</h4><p class="text-xs text-slate-400 mt-1">Calculate exact age</p></div>
+                <div onclick="showSection('calcPercentage')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">3. Percentage Calculator</h4><p class="text-xs text-slate-400 mt-1">Find percentages easily</p></div>
+                <div onclick="showSection('calcLoan')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">4. Loan / EMI Calculator</h4><p class="text-xs text-slate-400 mt-1">Monthly loan installments</p></div>
+                <div onclick="showSection('calcDiscount')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">5. Discount Calculator</h4><p class="text-xs text-slate-400 mt-1">Sale & offer savings</p></div>
+                <div onclick="showSection('calcInterest')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">6. Simple Interest</h4><p class="text-xs text-slate-400 mt-1">Investment & loan interest</p></div>
+            </div>
+        </div>
+
+        <!-- Calculator Sub-tools -->
+        <div id="calcBmi" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🩺 BMI Calculator</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="space-y-4 max-w-md">
+                <div><label class="block text-xs font-semibold mb-1">Weight (kg)</label><input type="number" id="bmiWeight" class="w-full p-3 border rounded-xl" placeholder="Weight in kg"></div>
+                <div><label class="block text-xs font-semibold mb-1">Height (cm)</label><input type="number" id="bmiHeight" class="w-full p-3 border rounded-xl" placeholder="Height in cm"></div>
+                <button onclick="calculateBmi()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Calculate BMI</button>
+                <div id="bmiResult" class="p-3 bg-blue-50 text-blue-800 font-bold rounded-xl">Result: N/A</div>
+            </div>
+        </div>
+        <div id="calcAge" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🎂 Age Calculator</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="space-y-4 max-w-md">
+                <div><label class="block text-xs font-semibold mb-1">Date of Birth</label><input type="date" id="dobInput" class="w-full p-3 border rounded-xl"></div>
+                <button onclick="calculateAge()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Calculate Age</button>
+                <div id="ageResult" class="p-3 bg-blue-50 text-blue-800 font-bold rounded-xl">Your Age: N/A</div>
+            </div>
+        </div>
+        <div id="calcPercentage" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">📊 Percentage Calculator</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="space-y-4 max-w-md">
+                <div><label class="block text-xs font-semibold mb-1">What is percentage (%)</label><input type="number" id="perVal" class="w-full p-3 border rounded-xl mb-2" placeholder="Percentage (e.g. 20)"><input type="number" id="perTotal" class="w-full p-3 border rounded-xl" placeholder="Of number (e.g. 500)"></div>
+                <button onclick="calculatePercentage()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Calculate</button>
+                <div id="perResult" class="p-3 bg-blue-50 text-blue-800 font-bold rounded-xl">Result: N/A</div>
+            </div>
+        </div>
+        <div id="calcLoan" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">💳 Loan / EMI Calculator</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="space-y-4 max-w-md">
+                <div><label class="block text-xs font-semibold mb-1">Loan Amount</label><input type="number" id="loanAmount" class="w-full p-3 border rounded-xl mb-2" placeholder="Principal amount"><input type="number" id="loanRate" class="w-full p-3 border rounded-xl mb-2" placeholder="Interest rate (%)"><input type="number" id="loanMonths" class="w-full p-3 border rounded-xl" placeholder="Duration (months)"></div>
+                <button onclick="calculateLoan()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Calculate EMI</button>
+                <div id="loanResult" class="p-3 bg-blue-50 text-blue-800 font-bold rounded-xl">Monthly EMI: N/A</div>
+            </div>
+        </div>
+        <div id="calcDiscount" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🏷️ Discount Calculator</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="space-y-4 max-w-md">
+                <div><label class="block text-xs font-semibold mb-1">Original Price & Discount (%)</label><input type="number" id="discPrice" class="w-full p-3 border rounded-xl mb-2" placeholder="Original Price"><input type="number" id="discPercent" class="w-full p-3 border rounded-xl" placeholder="Discount %"></div>
+                <button onclick="calculateDiscount()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Calculate Savings</button>
+                <div id="discResult" class="p-3 bg-blue-50 text-blue-800 font-bold rounded-xl">Final Price: N/A</div>
+            </div>
+        </div>
+        <div id="calcInterest" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">📈 Simple Interest Calculator</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="space-y-4 max-w-md">
+                <div><input type="number" id="intPrinciple" class="w-full p-3 border rounded-xl mb-2" placeholder="Principal"><input type="number" id="intRate" class="w-full p-3 border rounded-xl mb-2" placeholder="Rate (%)"><input type="number" id="intTime" class="w-full p-3 border rounded-xl" placeholder="Time (years)"></div>
+                <button onclick="calculateInterest()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Calculate Interest</button>
+                <div id="intResult" class="p-3 bg-blue-50 text-blue-800 font-bold rounded-xl">Total Interest: N/A</div>
+            </div>
+        </div>
+
+        <!-- ================= 4. PRODUCTIVITY TOOLS (4 Options) ================= -->
+        <div id="productivityHome" class="tool-section hidden space-y-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-slate-900">⚡ Productivity Tools</h3>
+                <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Home</button>
+            </div>
+            <p class="text-sm text-slate-500 mb-6">Select a productivity utility:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+                <div onclick="showSection('prodPassword')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">🔑 Password Generator</h4><p class="text-xs text-slate-400 mt-1">Generate secure random passwords</p></div>
+                <div onclick="showSection('prodQr')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">📱 QR Code Generator</h4><p class="text-xs text-slate-400 mt-1">Create QR code from text or URL</p></div>
+                <div onclick="showSection('prodBase64')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">🔐 Base64 Encoder / Decoder</h4><p class="text-xs text-slate-400 mt-1">Encode or decode Base64 strings</p></div>
+                <div onclick="showSection('prodUrl')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">🌐 URL Encoder / Decoder</h4><p class="text-xs text-slate-400 mt-1">Encode or decode web URLs</p></div>
+            </div>
+        </div>
+
+        <!-- Productivity Sub-tools -->
+        <div id="prodPassword" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🔑 Secure Password Generator</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="space-y-4 max-w-md">
+                <div class="flex gap-2"><input type="text" id="generatedPassword" class="w-full p-3 border rounded-xl bg-slate-50 font-mono text-sm" readonly><button onclick="generatePassword()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Generate</button></div>
+            </div>
+        </div>
+        <div id="prodQr" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">📱 QR Code Generator</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="space-y-4 max-w-md">
+                <input type="text" id="qrText" class="w-full p-3 border rounded-xl" placeholder="Enter text or URL">
+                <button onclick="generateQR()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Generate QR Code</button>
+                <div id="qrContainer" class="p-4 bg-slate-50 rounded-xl text-center"><img id="qrImage" src="" alt="QR Code will appear here" class="mx-auto hidden"></div>
+            </div>
+        </div>
+        <div id="prodBase64" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🔐 Base64 Encoder / Decoder</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="space-y-4 max-w-lg">
+                <textarea id="base64Input" rows="3" class="w-full p-3 border rounded-xl" placeholder="Enter text here..."></textarea>
+                <div class="flex gap-2">
+                    <button onclick="encodeBase64()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Encode</button>
+                    <button onclick="decodeBase64()" class="bg-indigo-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Decode</button>
+                </div>
+                <textarea id="base64Output" rows="3" class="w-full p-3 border rounded-xl bg-slate-50" placeholder="Result output..." readonly></textarea>
+            </div>
+        </div>
+        <div id="prodUrl" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🌐 URL Encoder / Decoder</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="space-y-4 max-w-lg">
+                <textarea id="urlInput" rows="3" class="w-full p-3 border rounded-xl" placeholder="Enter URL or text here..."></textarea>
+                <div class="flex gap-2">
+                    <button onclick="encodeUrl()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Encode URL</button>
+                    <button onclick="decodeUrl()" class="bg-indigo-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Decode URL</button>
+                </div>
+                <textarea id="urlOutput" rows="3" class="w-full p-3 border rounded-xl bg-slate-50" placeholder="Result output..." readonly></textarea>
+            </div>
+        </div>
+
+        <!-- ================= 5. TEXT TOOLS & ANALYZER ================= -->
         <div id="textTools" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
             <div class="flex justify-between items-center mb-6">
                 <h3 class="text-xl font-bold text-slate-800">📝 Text Tools & Analyzer</h3>
@@ -91,7 +319,7 @@
             </div>
 
             <div class="mb-4">
-                <p class="text-xs font-semibold text-slate-400 uppercase mb-2">Text Case & Formatting (Text Case Converter)</p>
+                <p class="text-xs font-semibold text-slate-400 uppercase mb-2">Text Case & Formatting</p>
                 <div class="flex flex-wrap gap-2">
                     <button onclick="convertToUpperCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition">UPPERCASE</button>
                     <button onclick="convertToLowerCase()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl font-medium text-xs transition">lowercase</button>
@@ -111,161 +339,6 @@
                     <button onclick="clearText()" class="bg-rose-600 hover:bg-rose-700 text-white px-4 py-2.5 rounded-xl font-medium text-sm transition ml-auto">🗑️ Clear</button>
                 </div>
             </div>
-        </div>
-
-        <!-- 2. Converters Home (Sub-menu List) -->
-        <div id="convertersHome" class="tool-section hidden space-y-6">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-2xl font-bold text-slate-900">🔄 Converters Hub</h3>
-                <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Home</button>
-            </div>
-            <p class="text-sm text-slate-500 mb-6">Select a specific converter tool below:</p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div onclick="showSection('convLength')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition">
-                    <h4 class="font-bold text-blue-600 text-base">1. Length Converter</h4>
-                    <p class="text-xs text-slate-400 mt-1">Meters, Inches, Feet, etc.</p>
-                </div>
-                <div onclick="showSection('convTemp')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition">
-                    <h4 class="font-bold text-blue-600 text-base">2. Temperature Converter</h4>
-                    <p class="text-xs text-slate-400 mt-1">Celsius, Fahrenheit, Kelvin</p>
-                </div>
-                <div onclick="showSection('convWeight')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition">
-                    <h4 class="font-bold text-blue-600 text-base">3. Weight / Mass</h4>
-                    <p class="text-xs text-slate-400 mt-1">Kg, Gram, Pound, Ounce</p>
-                </div>
-                <div onclick="showSection('convData')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition">
-                    <h4 class="font-bold text-blue-600 text-base">4. Data / Storage</h4>
-                    <p class="text-xs text-slate-400 mt-1">MB, GB, KB, TB</p>
-                </div>
-                <div onclick="showSection('convColor')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition">
-                    <h4 class="font-bold text-blue-600 text-base">5. Hex / RGB Converter</h4>
-                    <p class="text-xs text-slate-400 mt-1">Color code formatters</p>
-                </div>
-                <div onclick="showSection('convSpeed')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition">
-                    <h4 class="font-bold text-blue-600 text-base">6. Speed Converter (km/h to mph)</h4>
-                    <p class="text-xs text-slate-400 mt-1">Km/h and Mph conversion</p>
-                </div>
-                <div onclick="showSection('convHexDec')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition">
-                    <h4 class="font-bold text-blue-600 text-base">7. Hex to Decimal Converter</h4>
-                    <p class="text-xs text-slate-400 mt-1">Hexadecimal and Decimal calculator</p>
-                </div>
-                <div onclick="showSection('convCsvJson')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition">
-                    <h4 class="font-bold text-blue-600 text-base">8. CSV & JSON Converter</h4>
-                    <p class="text-xs text-slate-400 mt-1">Convert between CSV and JSON</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Individual Sub-tools -->
-        <!-- Length Converter -->
-        <div id="convLength" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold text-slate-800">📏 Length Converter</h3>
-                <button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Converters</button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Meters (m)</label><input type="number" id="meterInput" oninput="convertLength('meter')" class="w-full p-3 border border-slate-200 rounded-xl bg-slate-50" placeholder="Enter meters"></div>
-                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Feet (ft)</label><input type="number" id="feetInput" oninput="convertLength('feet')" class="w-full p-3 border border-slate-200 rounded-xl bg-slate-50" placeholder="Enter feet"></div>
-            </div>
-        </div>
-
-        <!-- Temperature Converter -->
-        <div id="convTemp" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold text-slate-800">🌡️ Temperature Converter</h3>
-                <button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Converters</button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Celsius (°C)</label><input type="number" id="celsiusInput" oninput="convertTemp('c')" class="w-full p-3 border border-slate-200 rounded-xl bg-slate-50" placeholder="Enter Celsius"></div>
-                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Fahrenheit (°F)</label><input type="number" id="fahrenheitInput" oninput="convertTemp('f')" class="w-full p-3 border border-slate-200 rounded-xl bg-slate-50" placeholder="Enter Fahrenheit"></div>
-            </div>
-        </div>
-
-        <!-- Weight Converter -->
-        <div id="convWeight" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold text-slate-800">⚖️ Weight Converter</h3>
-                <button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Converters</button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Kilograms (kg)</label><input type="number" id="kgInput" oninput="convertWeight('kg')" class="w-full p-3 border border-slate-200 rounded-xl bg-slate-50" placeholder="Enter kg"></div>
-                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Pounds (lbs)</label><input type="number" id="lbsInput" oninput="convertWeight('lbs')" class="w-full p-3 border border-slate-200 rounded-xl bg-slate-50" placeholder="Enter lbs"></div>
-            </div>
-        </div>
-
-        <!-- Data Storage Converter -->
-        <div id="convData" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold text-slate-800">💾 Data Storage Converter</h3>
-                <button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Converters</button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Megabytes (MB)</label><input type="number" id="mbInput" oninput="convertData()" class="w-full p-3 border border-slate-200 rounded-xl bg-slate-50" placeholder="Enter MB"></div>
-                <div><p class="text-xs font-semibold text-slate-500 mb-1">Result in GB:</p><div id="gbResult" class="p-3 bg-blue-50 text-blue-700 font-bold rounded-xl border border-blue-100">0 GB</div></div>
-            </div>
-        </div>
-
-        <!-- Hex to RGB Converter -->
-        <div id="convColor" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold text-slate-800">🎨 Hex to RGB Converter</h3>
-                <button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Converters</button>
-            </div>
-            <div class="mb-4">
-                <label class="block text-xs font-semibold text-slate-500 mb-1">Hex Code (e.g., #3b82f6)</label>
-                <input type="text" id="hexInput" oninput="hexToRgb()" class="w-full p-3 border border-slate-200 rounded-xl bg-slate-50 mb-3" placeholder="#3b82f6">
-                <p id="rgbResult" class="text-sm font-medium text-slate-700">RGB: N/A</p>
-            </div>
-        </div>
-
-        <!-- Speed Converter -->
-        <div id="convSpeed" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold text-slate-800">🏎️ Speed Converter (km/h to mph)</h3>
-                <button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Converters</button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Kilometers per hour (km/h)</label><input type="number" id="kmhInput" oninput="convertSpeed('kmh')" class="w-full p-3 border border-slate-200 rounded-xl bg-slate-50" placeholder="Enter km/h"></div>
-                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Miles per hour (mph)</label><input type="number" id="mphInput" oninput="convertSpeed('mph')" class="w-full p-3 border border-slate-200 rounded-xl bg-slate-50" placeholder="Enter mph"></div>
-            </div>
-        </div>
-
-        <!-- Hex to Decimal Converter -->
-        <div id="convHexDec" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold text-slate-800">🔢 Hex to Decimal Converter</h3>
-                <button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Converters</button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div><label class="block text-xs font-semibold text-slate-500 mb-1">Hexadecimal (e.g., 1A)</label><input type="text" id="hexDecInput" oninput="hexToDecimal()" class="w-full p-3 border border-slate-200 rounded-xl bg-slate-50" placeholder="Enter Hex"></div>
-                <div><p class="text-xs font-semibold text-slate-500 mb-1">Decimal Result:</p><div id="decimalResult" class="p-3 bg-blue-50 text-blue-700 font-bold rounded-xl border border-blue-100">0</div></div>
-            </div>
-        </div>
-
-        <!-- CSV to JSON Converter -->
-        <div id="convCsvJson" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-slate-100">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold text-slate-800">📊 CSV to JSON Converter</h3>
-                <button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Converters</button>
-            </div>
-            <textarea id="csvInput" rows="4" class="w-full p-3 border border-slate-200 rounded-xl bg-slate-50 mb-3 text-sm" placeholder="Enter CSV data (e.g. name,age)..."></textarea>
-            <button onclick="csvToJson()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs font-medium mb-3">Convert to JSON</button>
-            <pre id="jsonOutput" class="p-3 bg-slate-900 text-emerald-400 rounded-xl text-xs overflow-x-auto min-h-[60px]">JSON output will appear here...</pre>
-        </div>
-
-        <!-- 3. Tools Section -->
-        <div id="tools" class="tool-section hidden bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center">
-            <h3 class="text-xl font-bold text-slate-800 mb-2">🛠️ General Tools</h3>
-            <p class="text-sm text-slate-500 mb-6">Utility generators and helper tools will be available here soon!</p>
-            <button onclick="showSection('home')" class="bg-blue-600 text-white px-6 py-2.5 rounded-xl font-medium text-sm">Back to Home</button>
-        </div>
-
-        <!-- 4. Productivity Tools Section -->
-        <div id="productivity" class="tool-section hidden bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center">
-            <h3 class="text-xl font-bold text-slate-800 mb-2">⚡ Productivity Tools</h3>
-            <p class="text-sm text-slate-500 mb-6">Timers, planners, and efficiency widgets are coming soon here!</p>
-            <button onclick="showSection('home')" class="bg-blue-600 text-white px-6 py-2.5 rounded-xl font-medium text-sm">Back to Home</button>
         </div>
 
     </main>
@@ -360,26 +433,22 @@
             if(type === 'meter') { document.getElementById('feetInput').value = m ? (m * 3.28084).toFixed(2) : ''; }
             else { document.getElementById('meterInput').value = f ? (f / 3.28084).toFixed(2) : ''; }
         }
-
         function convertTemp(type) {
             let c = document.getElementById('celsiusInput').value;
             let f = document.getElementById('fahrenheitInput').value;
             if(type === 'c') { document.getElementById('fahrenheitInput').value = c !== '' ? ((c * 9/5) + 32).toFixed(1) : ''; }
             else { document.getElementById('celsiusInput').value = f !== '' ? ((f - 32) * 5/9).toFixed(1) : ''; }
         }
-
         function convertWeight(type) {
             let kg = document.getElementById('kgInput').value;
             let lbs = document.getElementById('lbsInput').value;
             if(type === 'kg') { document.getElementById('lbsInput').value = kg ? (kg * 2.20462).toFixed(2) : ''; }
             else { document.getElementById('kgInput').value = lbs ? (lbs / 2.20462).toFixed(2) : ''; }
         }
-
         function convertData() {
             let mb = document.getElementById('mbInput').value;
             document.getElementById('gbResult').innerText = mb ? (mb / 1024).toFixed(4) + ' GB' : '0 GB';
         }
-
         function hexToRgb() {
             let hex = document.getElementById('hexInput').value.trim();
             let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -388,20 +457,17 @@
                 document.getElementById('rgbResult').innerText = `RGB: (${r}, ${g}, ${b})`;
             } else { document.getElementById('rgbResult').innerText = 'RGB: Invalid Hex Code'; }
         }
-
         function convertSpeed(type) {
             let kmh = document.getElementById('kmhInput').value;
             let mph = document.getElementById('mphInput').value;
             if(type === 'kmh') { document.getElementById('mphInput').value = kmh ? (kmh * 0.621371).toFixed(2) : ''; }
             else { document.getElementById('kmhInput').value = mph ? (mph / 0.621371).toFixed(2) : ''; }
         }
-
         function hexToDecimal() {
             let hex = document.getElementById('hexDecInput').value.trim();
             let dec = parseInt(hex, 16);
             document.getElementById('decimalResult').innerText = !isNaN(dec) ? dec : '0';
         }
-
         function csvToJson() {
             let csv = document.getElementById('csvInput').value.trim();
             if(!csv) { document.getElementById('jsonOutput').innerText = 'Please enter valid CSV data.'; return; }
@@ -415,6 +481,93 @@
                 result.push(obj);
             }
             document.getElementById('jsonOutput').innerText = JSON.stringify(result, null, 2);
+        }
+
+        // Calculators Logic
+        function calculateBmi() {
+            let w = document.getElementById('bmiWeight').value;
+            let h = document.getElementById('bmiHeight').value / 100;
+            if(w && h) {
+                let bmi = (w / (h * h)).toFixed(1);
+                document.getElementById('bmiResult').innerText = `Your BMI: ${bmi}`;
+            } else { alert('Please enter valid weight and height.'); }
+        }
+        function calculateAge() {
+            let dob = new Date(document.getElementById('dobInput').value);
+            let today = new Date();
+            if(isNaN(dob)) { alert('Please select a valid date.'); return; }
+            let age = today.getFullYear() - dob.getFullYear();
+            let m = today.getMonth() - dob.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) { age--; }
+            document.getElementById('ageResult').innerText = `Your Age: ${age} Years`;
+        }
+        function calculatePercentage() {
+            let p = document.getElementById('perVal').value;
+            let t = document.getElementById('perTotal').value;
+            if(p && t) {
+                let res = (p * t) / 100;
+                document.getElementById('perResult').innerText = `Result: ${res}`;
+            }
+        }
+        function calculateLoan() {
+            let p = parseFloat(document.getElementById('loanAmount').value);
+            let r = parseFloat(document.getElementById('loanRate').value) / 12 / 100;
+            let n = parseFloat(document.getElementById('loanMonths').value);
+            if(p && r && n) {
+                let emi = (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+                document.getElementById('loanResult').innerText = `Monthly EMI: ${emi.toFixed(2)}`;
+            }
+        }
+        function calculateDiscount() {
+            let p = document.getElementById('discPrice').value;
+            let d = document.getElementById('discPercent').value;
+            if(p && d) {
+                let saved = (p * d) / 100;
+                let final = p - saved;
+                document.getElementById('discResult').innerText = `Final Price: ${final.toFixed(2)} (Saved: ${saved.toFixed(2)})`;
+            }
+        }
+        function calculateInterest() {
+            let p = document.getElementById('intPrinciple').value;
+            let r = document.getElementById('intRate').value;
+            let t = document.getElementById('intTime').value;
+            if(p && r && t) {
+                let interest = (p * r * t) / 100;
+                document.getElementById('intResult').innerText = `Total Interest: ${interest.toFixed(2)}`;
+            }
+        }
+
+        // Productivity Logic (Password, QR, Base64 & URL)
+        function generatePassword() {
+            let chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+";
+            let password = "";
+            for (let i = 0; i <= 12; i++) {
+                password += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            document.getElementById('generatedPassword').value = password;
+        }
+        function generateQR() {
+            let text = document.getElementById('qrText').value.trim();
+            if(!text) { alert('Please enter text or URL.'); return; }
+            let qrImg = document.getElementById('qrImage');
+            qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(text)}`;
+            qrImg.classList.remove('hidden');
+        }
+        function encodeBase64() {
+            let val = document.getElementById('base64Input').value;
+            try { document.getElementById('base64Output').value = btoa(val); } catch(e) { alert('Invalid input'); }
+        }
+        function decodeBase64() {
+            let val = document.getElementById('base64Input').value;
+            try { document.getElementById('base64Output').value = atob(val); } catch(e) { alert('Invalid Base64 string'); }
+        }
+        function encodeUrl() {
+            let val = document.getElementById('urlInput').value;
+            document.getElementById('urlOutput').value = encodeURIComponent(val);
+        }
+        function decodeUrl() {
+            let val = document.getElementById('urlInput').value;
+            try { document.getElementById('urlOutput').value = decodeURIComponent(val); } catch(e) { alert('Invalid URL string'); }
         }
     </script>
 </body>
