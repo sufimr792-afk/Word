@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>TextTools Hub - Free Online Utility, Converters & Calculators</title>
+    <meta name="description" content="TextTools Hub is your all-in-one professional digital toolbox for free file conversion, precise age and BMI calculations, password generation, and advanced text utilities.">
+    <meta name="keywords" content="Text Tools Hub, Word to PDF, BMI Calculator, Age Calculator, Online Converters, Text Analyzer, Shakhawt Hossain">
+    <meta name="author" content="SHAKHAWT HOSSAIN">
+    
     <!-- Google Search Console Verification Meta Tag -->
     <meta name="google-site-verification" content="BqizJoyVioQZT_aqZl0aFEqBuQ7vRXXl018m0u97b8I">
     
-    <title>Text Tools Hub - Free Online Utility, Converters & Calculators</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://tailwindcomponents.com/tailwind/v2/tailwind.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -324,17 +330,31 @@
             </div>
         </div>
 
-        <!-- ================= 6. PRIVACY POLICY SECTION ================= -->
+        <!-- ================= 6. ABOUT US SECTION ================= -->
+        <div id="aboutSection" class="tool-section hidden max-w-2xl mx-auto bg-white p-8 rounded-3xl shadow-xl border space-y-4">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-slate-900">ℹ️ About Us</h3>
+                <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold">← Back</button>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">Welcome to <b>TextTools Hub</b> – your ultimate all-in-one digital companion for fast file conversion, calculations, text formatting, and daily productivity utilities.</p>
+            <p class="text-xs text-slate-600 leading-relaxed">Our mission is to provide developers, students, professionals, and everyday internet users with a clean, fast, secure, and 100% free online toolbox accessible from any device without installing heavy software.</p>
+            <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-1 mt-4">
+                <p class="text-xs font-bold text-slate-900">Founder & Creator:</p>
+                <p class="text-xs text-blue-600 font-semibold">SHAKHAWT HOSSAIN</p>
+            </div>
+        </div>
+
+        <!-- ================= 7. PRIVACY POLICY SECTION ================= -->
         <div id="privacySection" class="tool-section hidden max-w-2xl mx-auto bg-white p-8 rounded-3xl shadow-xl border space-y-4">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-xl font-bold text-slate-900">🔒 Privacy Policy</h3>
                 <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold">← Back</button>
             </div>
-            <p class="text-xs text-slate-600 leading-relaxed">At TextTools Hub, accessible from our website, protecting your privacy is one of our main priorities. This Privacy Policy document contains types of information that is collected and recorded by TextTools Hub and how we use it.</p>
-            <p class="text-xs text-slate-600 leading-relaxed">We do not store any of your personal files or sensitive text data on our servers. All document and text conversions happen securely through client-side or cloud processing.</p>
+            <p class="text-xs text-slate-600 leading-relaxed">At TextTools Hub, protecting your privacy is one of our main priorities. This Privacy Policy document contains types of information that is collected and recorded by TextTools Hub and how we use it.</p>
+            <p class="text-xs text-slate-600 leading-relaxed">We do not store any of your personal files or sensitive text data on our servers. All document and text operations happen securely and privately.</p>
         </div>
 
-        <!-- ================= 7. CONTACT US SECTION ================= -->
+        <!-- ================= 8. CONTACT US SECTION ================= -->
         <div id="contactSection" class="tool-section hidden max-w-xl mx-auto bg-white p-8 rounded-3xl shadow-xl border space-y-4">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-xl font-bold text-slate-900">📞 Contact Us</h3>
@@ -343,13 +363,13 @@
             <p class="text-xs text-slate-600 leading-relaxed">If you have any questions, suggestions, or feedback regarding our free tools and converters, feel free to reach out to us.</p>
             <div class="p-4 bg-blue-50 text-blue-900 rounded-2xl border border-blue-100 space-y-1">
                 <p class="text-xs font-bold">Email Support:</p>
-                <p class="text-xs text-blue-600 font-semibold">support@texttoolshub.vercel.app</p>
+                <a href="mailto:texttoolshub@gmail.com" class="text-xs text-blue-600 font-semibold underline">texttoolshub@gmail.com</a>
             </div>
         </div>
 
     </main>
 
-    <!-- Enhanced Premium Footer with Privacy & Contact -->
+    <!-- Enhanced Premium Footer with About, Privacy & Contact -->
     <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 pt-12 pb-8 mt-16 text-xs font-sans">
         <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 pb-8 border-b border-slate-800">
             <!-- Col 1 -->
@@ -357,7 +377,7 @@
                 <h4 class="text-white font-extrabold text-sm tracking-wide flex items-center gap-2">✨ TextTools Hub</h4>
                 <p class="text-slate-400 leading-relaxed text-xs">Your all-in-one professional digital toolbox for fast file conversion, precise calculations, and advanced text utilities completely free.</p>
             </div>
-            <!-- Col 2: Quick Links with Privacy & Contact -->
+            <!-- Col 2: Quick Links with About, Privacy & Contact -->
             <div class="space-y-2">
                 <h4 class="text-white font-bold text-xs uppercase tracking-wider">Quick Navigation</h4>
                 <ul class="space-y-1.5">
@@ -365,6 +385,7 @@
                     <li><a href="#" onclick="showSection('convertersHome')" class="hover:text-blue-400 transition">🔄 Converters Hub</a></li>
                     <li><a href="#" onclick="showSection('calculatorsHome')" class="hover:text-blue-400 transition">🧮 Calculators Hub</a></li>
                     <li><a href="#" onclick="showSection('productivityHome')" class="hover:text-blue-400 transition">⚡ Productivity Tools</a></li>
+                    <li><a href="#" onclick="showSection('aboutSection')" class="hover:text-blue-400 transition font-semibold text-slate-300">ℹ️ About Us</a></li>
                     <li><a href="#" onclick="showSection('privacySection')" class="hover:text-blue-400 transition font-semibold text-slate-300">🔒 Privacy Policy</a></li>
                     <li><a href="#" onclick="showSection('contactSection')" class="hover:text-blue-400 transition font-semibold text-slate-300">📞 Contact Us</a></li>
                 </ul>
@@ -647,4 +668,4 @@
         }
     </script>
 </body>
-    </html>
+                                                                                                                      </html>
