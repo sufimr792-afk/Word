@@ -55,7 +55,7 @@
                 <div onclick="showSection('convertersHome')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
                     <div class="text-3xl mb-2">🔄</div>
                     <h3 class="font-bold text-slate-700 text-lg">Converters</h3>
-                    <p class="text-xs text-slate-400 mt-1">Length, Temp, Speed, Hex & more</p>
+                    <p class="text-xs text-slate-400 mt-1">Length, Temp, Speed, Data, Hex & CSV</p>
                 </div>
                 <div onclick="showSection('calculatorsHome')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
                     <div class="text-3xl mb-2">🧮</div>
@@ -78,53 +78,52 @@
             </div>
         </div>
 
-        <!-- ================= 1. DOCUMENTS HUB (10 Options) ================= -->
+        <!-- ================= 1. DOCUMENTS HUB ================= -->
         <div id="documentsHome" class="tool-section hidden space-y-6">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-2xl font-bold text-slate-900">📂 Documents Hub</h3>
                 <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Home</button>
             </div>
-            <p class="text-sm text-slate-500 mb-6">Select a document conversion utility:</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div onclick="openDocTool('Word to PDF', '.docx')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base"> Word to PDF</h4><p class="text-xs text-slate-400 mt-1">Convert DOCX to PDF</p></div>
-                <div onclick="openDocTool('PDF to Word', '.pdf')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base"> PDF to Word</h4><p class="text-xs text-slate-400 mt-1">Extract text to Word</p></div>
-                <div onclick="openDocTool('Excel to PDF', '.xlsx')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base"> Excel to PDF</h4><p class="text-xs text-slate-400 mt-1">Spreadsheet converter</p></div>
-                <div onclick="openDocTool('PDF to Excel', '.pdf')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base"> PDF to Excel</h4><p class="text-xs text-slate-400 mt-1">Tables to spreadsheet</p></div>
-                <div onclick="openDocTool('JPG to PNG', '.jpg,.jpeg')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base"> JPG to PNG</h4><p class="text-xs text-slate-400 mt-1">Image format changer</p></div>
-                <div onclick="openDocTool('PNG to JPG', '.png')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base"> PNG to JPG</h4><p class="text-xs text-slate-400 mt-1">Compress and convert</p></div>
-                <div onclick="openDocTool('JPG to PDF', '.jpg,.jpeg')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base"> JPG to PDF</h4><p class="text-xs text-slate-400 mt-1">Images into single PDF</p></div>
-                <div onclick="openDocTool('PDF to PowerPoint', '.pdf')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base"> PDF to PowerPoint</h4><p class="text-xs text-slate-400 mt-1">Slides conversion</p></div>
-                <div onclick="openDocTool('PowerPoint to PDF', '.pptx')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base"> PowerPoint to PDF</h4><p class="text-xs text-slate-400 mt-1">Presentation export</p></div>
-                <div onclick="openDocTool('Text to PDF', '.txt')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base"> Text to PDF</h4><p class="text-xs text-slate-400 mt-1">Plain text to PDF document</p></div>
+                <div onclick="openDocTool('Word to PDF', '.docx')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">1. Word to PDF</h4><p class="text-xs text-slate-400 mt-1">Convert DOCX to PDF</p></div>
+                <div onclick="openDocTool('PDF to Word', '.pdf')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">2. PDF to Word</h4><p class="text-xs text-slate-400 mt-1">Extract text to Word</p></div>
+                <div onclick="openDocTool('Excel to PDF', '.xlsx')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">3. Excel to PDF</h4><p class="text-xs text-slate-400 mt-1">Spreadsheet converter</p></div>
+                <div onclick="openDocTool('PDF to Excel', '.pdf')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">4. PDF to Excel</h4><p class="text-xs text-slate-400 mt-1">Tables to spreadsheet</p></div>
+                <div onclick="openDocTool('JPG to PNG', '.jpg,.jpeg')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">5. JPG to PNG</h4><p class="text-xs text-slate-400 mt-1">Image format changer</p></div>
+                <div onclick="openDocTool('PNG to JPG', '.png')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">6. PNG to JPG</h4><p class="text-xs text-slate-400 mt-1">Compress and convert</p></div>
+                <div onclick="openDocTool('JPG to PDF', '.jpg,.jpeg')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">7. JPG to PDF</h4><p class="text-xs text-slate-400 mt-1">Images into single PDF</p></div>
+                <div onclick="openDocTool('PDF to PowerPoint', '.pdf')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">8. PDF to PowerPoint</h4><p class="text-xs text-slate-400 mt-1">Slides conversion</p></div>
+                <div onclick="openDocTool('PowerPoint to PDF', '.pptx')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">9. PowerPoint to PDF</h4><p class="text-xs text-slate-400 mt-1">Presentation export</p></div>
+                <div onclick="openDocTool('Text to PDF', '.txt')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">10. Text to PDF</h4><p class="text-xs text-slate-400 mt-1">Plain text to PDF document</p></div>
             </div>
         </div>
 
-        <!-- Dynamic Document Converter Workspace -->
         <div id="docWorkspace" class="tool-section hidden max-w-xl mx-auto bg-white p-8 rounded-3xl shadow-xl border text-center space-y-6">
             <div class="flex justify-between items-center mb-2">
                 <h3 id="docWorkspaceTitle" class="text-xl font-bold text-slate-800">Document Tool</h3>
-                <button onclick="showSection('documentsHome')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back</button>
+                <button onclick="showSection('documentsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button>
             </div>
-            <p class="text-xs text-slate-500">Upload your file below to process and download instantly.</p>
-            
-            <div class="border-2 border-dashed border-slate-200 p-8 rounded-2xl bg-slate-50 hover:bg-slate-100 transition cursor-pointer">
-                <input type="file" id="docFileInput" class="w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700">
-            </div>
-
-            <button onclick="processAndDownloadDoc()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-2xl font-bold shadow-md transition">Convert & Download File</button>
+            <input type="file" id="docFileInput" class="w-full text-sm file:py-2 file:px-4 file:rounded-xl file:bg-blue-600 file:text-white">
+            <button onclick="processAndDownloadDoc()" class="w-full bg-blue-600 text-white py-3.5 rounded-2xl font-bold shadow-md">Convert & Download File</button>
         </div>
 
-        <!-- ================= 2. CONVERTERS HUB ================= -->
+        <!-- ================= 2. CONVERTERS HUB (Updated with 5, 6, 7, 8) ================= -->
         <div id="convertersHome" class="tool-section hidden space-y-6">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-2xl font-bold text-slate-900">🔄 Converters Hub</h3>
                 <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Home</button>
             </div>
+            <p class="text-sm text-slate-500 mb-6">Select a specific converter tool below:</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <div onclick="showSection('convLength')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Length Converter</h4><p class="text-xs text-slate-400 mt-1">Meters, Feet, Inches</p></div>
                 <div onclick="showSection('convTemp')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Temperature Converter</h4><p class="text-xs text-slate-400 mt-1">Celsius, Fahrenheit</p></div>
                 <div onclick="showSection('convWeight')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Weight / Mass</h4><p class="text-xs text-slate-400 mt-1">Kg, Gram, Pound</p></div>
                 <div onclick="showSection('convSpeed')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Speed Converter</h4><p class="text-xs text-slate-400 mt-1">Km/h to Mph</p></div>
+                <!-- Added Items 5, 6, 7, 8 -->
+                <div onclick="showSection('convData')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">5. Data Storage</h4><p class="text-xs text-slate-400 mt-1">MB, GB, KB, TB</p></div>
+                <div onclick="showSection('convColor')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">6. Hex to RGB</h4><p class="text-xs text-slate-400 mt-1">Color code converter</p></div>
+                <div onclick="showSection('convHexDec')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">7. Hex to Decimal</h4><p class="text-xs text-slate-400 mt-1">Hexadecimal calculator</p></div>
+                <div onclick="showSection('convCsvJson')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">8. CSV to JSON</h4><p class="text-xs text-slate-400 mt-1">Format converter</p></div>
             </div>
         </div>
 
@@ -156,6 +155,34 @@
                 <input type="number" id="kmhInput" oninput="convertSpeed('kmh')" class="p-3 border rounded-xl" placeholder="Km/h">
                 <input type="number" id="mphInput" oninput="convertSpeed('mph')" class="p-3 border rounded-xl" placeholder="Mph">
             </div>
+        </div>
+        <!-- 5. Data Storage Converter -->
+        <div id="convData" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">💾 Data Storage</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><label class="block text-xs font-semibold mb-1">Megabytes (MB)</label><input type="number" id="mbInput" oninput="convertData()" class="w-full p-3 border rounded-xl" placeholder="MB"></div>
+                <div><p class="text-xs font-semibold mb-1">Result in GB:</p><div id="gbResult" class="p-3 bg-blue-50 text-blue-700 font-bold rounded-xl border">0 GB</div></div>
+            </div>
+        </div>
+        <!-- 6. Hex to RGB -->
+        <div id="convColor" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🎨 Hex to RGB</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div><label class="block text-xs font-semibold mb-1">Hex Code</label><input type="text" id="hexInput" oninput="hexToRgb()" class="w-full p-3 border rounded-xl mb-3" placeholder="#3b82f6"><p id="rgbResult" class="text-sm font-medium text-slate-700">RGB: N/A</p></div>
+        </div>
+        <!-- 7. Hex to Decimal -->
+        <div id="convHexDec" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🔢 Hex to Decimal</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><label class="block text-xs font-semibold mb-1">Hex</label><input type="text" id="hexDecInput" oninput="hexToDecimal()" class="w-full p-3 border rounded-xl" placeholder="e.g. 1A"></div>
+                <div><p class="text-xs font-semibold mb-1">Decimal:</p><div id="decimalResult" class="p-3 bg-blue-50 text-blue-700 font-bold rounded-xl border">0</div></div>
+            </div>
+        </div>
+        <!-- 8. CSV to JSON -->
+        <div id="convCsvJson" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">📊 CSV to JSON</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <textarea id="csvInput" rows="3" class="w-full p-3 border rounded-xl mb-3 text-sm" placeholder="name,age..."></textarea>
+            <button onclick="csvToJson()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs mb-3">Convert</button>
+            <pre id="jsonOutput" class="p-3 bg-slate-900 text-emerald-400 rounded-xl text-xs overflow-x-auto">JSON output...</pre>
         </div>
 
         <!-- ================= 3. CALCULATORS HUB ================= -->
@@ -290,20 +317,12 @@
 
         function processAndDownloadDoc() {
             let fileInput = document.getElementById('docFileInput');
-            if(fileInput.files.length === 0) {
-                alert('Please select a file first!');
-                return;
-            }
+            if(fileInput.files.length === 0) { alert('Please select a file first!'); return; }
             let file = fileInput.files[0];
             alert(`Success! Your file "${file.name}" has been processed for ${selectedDocToolName}. Downloading now...`);
-            
-            // Trigger simulated download
             let blob = new Blob([file], { type: 'application/octet-stream' });
             let url = URL.createObjectURL(blob);
-            let a = document.createElement('a');
-            a.href = url;
-            a.download = `converted-${file.name}`;
-            a.click();
+            let a = document.createElement('a'); a.href = url; a.download = `converted-${file.name}`; a.click();
             URL.revokeObjectURL(url);
         }
 
@@ -329,7 +348,7 @@
         }
         function clearText() { textInput.value = ''; }
 
-        // Converters
+        // Converters Logic
         function convertLength(type) {
             let m = document.getElementById('meterInput').value;
             let f = document.getElementById('feetInput').value;
@@ -353,6 +372,37 @@
             let mph = document.getElementById('mphInput').value;
             if(type === 'kmh') document.getElementById('mphInput').value = kmh ? (kmh * 0.621371).toFixed(2) : '';
             else document.getElementById('kmhInput').value = mph ? (mph / 0.621371).toFixed(2) : '';
+        }
+        function convertData() {
+            let mb = document.getElementById('mbInput').value;
+            document.getElementById('gbResult').innerText = mb ? (mb / 1024).toFixed(4) + ' GB' : '0 GB';
+        }
+        function hexToRgb() {
+            let hex = document.getElementById('hexInput').value.trim();
+            let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            if(result) {
+                let r = parseInt(result[1], 16), g = parseInt(result[2], 16), b = parseInt(result[3], 16);
+                document.getElementById('rgbResult').innerText = `RGB: (${r}, ${g}, ${b})`;
+            } else { document.getElementById('rgbResult').innerText = 'RGB: Invalid Hex Code'; }
+        }
+        function hexToDecimal() {
+            let hex = document.getElementById('hexDecInput').value.trim();
+            let dec = parseInt(hex, 16);
+            document.getElementById('decimalResult').innerText = !isNaN(dec) ? dec : '0';
+        }
+        function csvToJson() {
+            let csv = document.getElementById('csvInput').value.trim();
+            if(!csv) { document.getElementById('jsonOutput').innerText = 'Please enter valid CSV data.'; return; }
+            let lines = csv.split('\n');
+            let result = [], headers = lines[0].split(',');
+            for(let i = 1; i < lines.length; i++) {
+                let obj = {}, currentline = lines[i].split(',');
+                for(let j = 0; j < headers.length; j++) {
+                    obj[headers[j].trim()] = currentline[j] ? currentline[j].trim() : '';
+                }
+                result.push(obj);
+            }
+            document.getElementById('jsonOutput').innerText = JSON.stringify(result, null, 2);
         }
 
         // Calculators
