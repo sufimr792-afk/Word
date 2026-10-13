@@ -60,7 +60,7 @@
                 <div onclick="showSection('calculatorsHome')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
                     <div class="text-3xl mb-2">🧮</div>
                     <h3 class="font-bold text-slate-700 text-lg">Calculators</h3>
-                    <p class="text-xs text-slate-400 mt-1">Advanced BMI, Age, Loan & more</p>
+                    <p class="text-xs text-slate-400 mt-1">BMI, Exact Age (Y/M/D), Loan, % & more</p>
                 </div>
                 <div onclick="showSection('productivityHome')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
                     <div class="text-3xl mb-2">⚡</div>
@@ -107,85 +107,59 @@
             <button onclick="processAndDownloadDoc()" class="w-full bg-blue-600 text-white py-3.5 rounded-2xl font-bold shadow-md">Convert & Download File</button>
         </div>
 
-        <!-- ================= 2. CONVERTERS HUB (Updated with 5, 6, 7, 8) ================= -->
+        <!-- ================= 2. CONVERTERS HUB ================= -->
         <div id="convertersHome" class="tool-section hidden space-y-6">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-2xl font-bold text-slate-900">🔄 Converters Hub</h3>
                 <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Home</button>
             </div>
-            <p class="text-sm text-slate-500 mb-6">Select a specific converter tool below:</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <div onclick="showSection('convLength')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Length Converter</h4><p class="text-xs text-slate-400 mt-1">Meters, Feet, Inches</p></div>
                 <div onclick="showSection('convTemp')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Temperature Converter</h4><p class="text-xs text-slate-400 mt-1">Celsius, Fahrenheit</p></div>
                 <div onclick="showSection('convWeight')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Weight / Mass</h4><p class="text-xs text-slate-400 mt-1">Kg, Gram, Pound</p></div>
                 <div onclick="showSection('convSpeed')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Speed Converter</h4><p class="text-xs text-slate-400 mt-1">Km/h to Mph</p></div>
-                <!-- Added Items 5, 6, 7, 8 -->
-                <div onclick="showSection('convData')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">5. Data Storage</h4><p class="text-xs text-slate-400 mt-1">MB, GB, KB, TB</p></div>
-                <div onclick="showSection('convColor')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">6. Hex to RGB</h4><p class="text-xs text-slate-400 mt-1">Color code converter</p></div>
-                <div onclick="showSection('convHexDec')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">7. Hex to Decimal</h4><p class="text-xs text-slate-400 mt-1">Hexadecimal calculator</p></div>
-                <div onclick="showSection('convCsvJson')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">8. CSV to JSON</h4><p class="text-xs text-slate-400 mt-1">Format converter</p></div>
+                <div onclick="showSection('convData')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Data Storage</h4><p class="text-xs text-slate-400 mt-1">MB, GB, KB, TB</p></div>
+                <div onclick="showSection('convColor')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Hex to RGB</h4><p class="text-xs text-slate-400 mt-1">Color code converter</p></div>
+                <div onclick="showSection('convHexDec')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Hex to Decimal</h4><p class="text-xs text-slate-400 mt-1">Hexadecimal calculator</p></div>
+                <div onclick="showSection('convCsvJson')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">CSV to JSON</h4><p class="text-xs text-slate-400 mt-1">Format converter</p></div>
             </div>
         </div>
 
         <!-- Converters Sub-tools -->
         <div id="convLength" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
             <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">📏 Length</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="grid grid-cols-2 gap-4">
-                <input type="number" id="meterInput" oninput="convertLength('meter')" class="p-3 border rounded-xl" placeholder="Meters">
-                <input type="number" id="feetInput" oninput="convertLength('feet')" class="p-3 border rounded-xl" placeholder="Feet">
-            </div>
+            <div class="grid grid-cols-2 gap-4"><input type="number" id="meterInput" oninput="convertLength('meter')" class="p-3 border rounded-xl" placeholder="Meters"><input type="number" id="feetInput" oninput="convertLength('feet')" class="p-3 border rounded-xl" placeholder="Feet"></div>
         </div>
         <div id="convTemp" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
             <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🌡️ Temperature</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="grid grid-cols-2 gap-4">
-                <input type="number" id="celsiusInput" oninput="convertTemp('c')" class="p-3 border rounded-xl" placeholder="Celsius">
-                <input type="number" id="fahrenheitInput" oninput="convertTemp('f')" class="p-3 border rounded-xl" placeholder="Fahrenheit">
-            </div>
+            <div class="grid grid-cols-2 gap-4"><input type="number" id="celsiusInput" oninput="convertTemp('c')" class="p-3 border rounded-xl" placeholder="Celsius"><input type="number" id="fahrenheitInput" oninput="convertTemp('f')" class="p-3 border rounded-xl" placeholder="Fahrenheit"></div>
         </div>
         <div id="convWeight" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
             <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">⚖️ Weight</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="grid grid-cols-2 gap-4">
-                <input type="number" id="kgInput" oninput="convertWeight('kg')" class="p-3 border rounded-xl" placeholder="Kg">
-                <input type="number" id="lbsInput" oninput="convertWeight('lbs')" class="p-3 border rounded-xl" placeholder="Lbs">
-            </div>
+            <div class="grid grid-cols-2 gap-4"><input type="number" id="kgInput" oninput="convertWeight('kg')" class="p-3 border rounded-xl" placeholder="Kg"><input type="number" id="lbsInput" oninput="convertWeight('lbs')" class="p-3 border rounded-xl" placeholder="Lbs"></div>
         </div>
         <div id="convSpeed" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
             <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🏎️ Speed</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="grid grid-cols-2 gap-4">
-                <input type="number" id="kmhInput" oninput="convertSpeed('kmh')" class="p-3 border rounded-xl" placeholder="Km/h">
-                <input type="number" id="mphInput" oninput="convertSpeed('mph')" class="p-3 border rounded-xl" placeholder="Mph">
-            </div>
+            <div class="grid grid-cols-2 gap-4"><input type="number" id="kmhInput" oninput="convertSpeed('kmh')" class="p-3 border rounded-xl" placeholder="Km/h"><input type="number" id="mphInput" oninput="convertSpeed('mph')" class="p-3 border rounded-xl" placeholder="Mph"></div>
         </div>
-        <!-- 5. Data Storage Converter -->
         <div id="convData" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
             <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">💾 Data Storage</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div><label class="block text-xs font-semibold mb-1">Megabytes (MB)</label><input type="number" id="mbInput" oninput="convertData()" class="w-full p-3 border rounded-xl" placeholder="MB"></div>
-                <div><p class="text-xs font-semibold mb-1">Result in GB:</p><div id="gbResult" class="p-3 bg-blue-50 text-blue-700 font-bold rounded-xl border">0 GB</div></div>
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div><label class="block text-xs font-semibold mb-1">MB</label><input type="number" id="mbInput" oninput="convertData()" class="w-full p-3 border rounded-xl" placeholder="MB"></div><div><p class="text-xs font-semibold mb-1">GB:</p><div id="gbResult" class="p-3 bg-blue-50 text-blue-700 font-bold rounded-xl border">0 GB</div></div></div>
         </div>
-        <!-- 6. Hex to RGB -->
         <div id="convColor" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
             <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🎨 Hex to RGB</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
             <div><label class="block text-xs font-semibold mb-1">Hex Code</label><input type="text" id="hexInput" oninput="hexToRgb()" class="w-full p-3 border rounded-xl mb-3" placeholder="#3b82f6"><p id="rgbResult" class="text-sm font-medium text-slate-700">RGB: N/A</p></div>
         </div>
-        <!-- 7. Hex to Decimal -->
         <div id="convHexDec" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
             <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🔢 Hex to Decimal</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div><label class="block text-xs font-semibold mb-1">Hex</label><input type="text" id="hexDecInput" oninput="hexToDecimal()" class="w-full p-3 border rounded-xl" placeholder="e.g. 1A"></div>
-                <div><p class="text-xs font-semibold mb-1">Decimal:</p><div id="decimalResult" class="p-3 bg-blue-50 text-blue-700 font-bold rounded-xl border">0</div></div>
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div><label class="block text-xs font-semibold mb-1">Hex</label><input type="text" id="hexDecInput" oninput="hexToDecimal()" class="w-full p-3 border rounded-xl" placeholder="e.g. 1A"></div><div><p class="text-xs font-semibold mb-1">Decimal:</p><div id="decimalResult" class="p-3 bg-blue-50 text-blue-700 font-bold rounded-xl border">0</div></div></div>
         </div>
-        <!-- 8. CSV to JSON -->
         <div id="convCsvJson" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
             <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">📊 CSV to JSON</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <textarea id="csvInput" rows="3" class="w-full p-3 border rounded-xl mb-3 text-sm" placeholder="name,age..."></textarea>
-            <button onclick="csvToJson()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs mb-3">Convert</button>
-            <pre id="jsonOutput" class="p-3 bg-slate-900 text-emerald-400 rounded-xl text-xs overflow-x-auto">JSON output...</pre>
+            <textarea id="csvInput" rows="3" class="w-full p-3 border rounded-xl mb-3 text-sm" placeholder="name,age..."></textarea><button onclick="csvToJson()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs mb-3">Convert</button><pre id="jsonOutput" class="p-3 bg-slate-900 text-emerald-400 rounded-xl text-xs overflow-x-auto">JSON output...</pre>
         </div>
 
-        <!-- ================= 3. CALCULATORS HUB ================= -->
+        <!-- ================= 3. CALCULATORS HUB (Expanded with Age Years/Months/Days, %, Discount, Interest) ================= -->
         <div id="calculatorsHome" class="tool-section hidden space-y-6">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-2xl font-bold text-slate-900">🧮 Calculators Hub</h3>
@@ -193,42 +167,53 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <div onclick="showSection('calcBmi')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">BMI Calculator</h4><p class="text-xs text-slate-400 mt-1">Status check</p></div>
-                <div onclick="showSection('calcAge')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Age Calculator</h4><p class="text-xs text-slate-400 mt-1">Exact age</p></div>
+                <div onclick="showSection('calcAge')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Age Calculator</h4><p class="text-xs text-slate-400 mt-1">Exact Years, Months, Days</p></div>
                 <div onclick="showSection('calcLoan')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Loan / EMI</h4><p class="text-xs text-slate-400 mt-1">Monthly installments</p></div>
+                <!-- New Calculators Added -->
+                <div onclick="showSection('calcPercentage')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Percentage Calculator</h4><p class="text-xs text-slate-400 mt-1">Find percentages easily</p></div>
+                <div onclick="showSection('calcDiscount')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Discount Calculator</h4><p class="text-xs text-slate-400 mt-1">Sale & offer savings</p></div>
+                <div onclick="showSection('calcInterest')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Simple Interest</h4><p class="text-xs text-slate-400 mt-1">Investment interest</p></div>
             </div>
         </div>
 
         <!-- BMI Calculator -->
         <div id="calcBmi" class="tool-section hidden max-w-xl mx-auto bg-white rounded-3xl shadow-xl border overflow-hidden">
-            <div class="bg-slate-900 text-white p-5 flex justify-between items-center">
-                <h3 class="text-lg font-bold">Calculate Your BMI</h3>
-                <button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-800 text-slate-300 px-3 py-1.5 rounded-xl">← Back</button>
-            </div>
-            <div id="bmiFormView" class="p-6 md:p-8 space-y-4">
-                <div><label class="block text-xs font-semibold mb-1">Weight (kg)</label><input type="number" id="bmiWeight" class="w-full p-3 border rounded-xl" placeholder="Weight"></div>
-                <div><label class="block text-xs font-semibold mb-1">Height (cm)</label><input type="number" id="bmiHeight" class="w-full p-3 border rounded-xl" placeholder="Height in cm"></div>
-                <button onclick="calculateAdvancedBmi()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold">Calculate BMI</button>
-            </div>
-            <div id="bmiResultView" class="hidden p-6 md:p-8 space-y-4 text-center">
-                <button onclick="resetBmiForm()" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Recalculate</button>
-                <div id="bmiStatusCard" class="p-4 rounded-xl font-bold">Status</div>
-                <div id="bmiScoreBadge" class="text-white font-extrabold text-xl px-4 py-2 rounded-full inline-block">Score</div>
-            </div>
+            <div class="bg-slate-900 text-white p-5 flex justify-between items-center"><h3 class="text-lg font-bold">Calculate Your BMI</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-800 text-slate-300 px-3 py-1.5 rounded-xl">← Back</button></div>
+            <div id="bmiFormView" class="p-6 md:p-8 space-y-4"><div><label class="block text-xs font-semibold mb-1">Weight (kg)</label><input type="number" id="bmiWeight" class="w-full p-3 border rounded-xl" placeholder="Weight"></div><div><label class="block text-xs font-semibold mb-1">Height (cm)</label><input type="number" id="bmiHeight" class="w-full p-3 border rounded-xl" placeholder="Height in cm"></div><button onclick="calculateAdvancedBmi()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold">Calculate BMI</button></div>
+            <div id="bmiResultView" class="hidden p-6 md:p-8 space-y-4 text-center"><button onclick="resetBmiForm()" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Recalculate</button><div id="bmiStatusCard" class="p-4 rounded-xl font-bold">Status</div><div id="bmiScoreBadge" class="text-white font-extrabold text-xl px-4 py-2 rounded-full inline-block">Score</div></div>
         </div>
 
+        <!-- Age Calculator (Years, Months, Days) -->
         <div id="calcAge" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🎂 Age</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
-            <input type="date" id="dobInput" class="w-full p-3 border rounded-xl mb-3">
-            <button onclick="calculateAge()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm">Calculate</button>
-            <div id="ageResult" class="mt-3 p-3 bg-blue-50 font-bold rounded-xl">Age: N/A</div>
+            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🎂 Age Calculator</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
+            <label class="block text-xs font-semibold mb-1 text-slate-500">Select Date of Birth</label>
+            <input type="date" id="dobInput" class="w-full p-3 border rounded-xl mb-4 bg-slate-50">
+            <button onclick="calculateExactAge()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm shadow-md">Calculate Exact Age</button>
+            <div id="ageResult" class="mt-4 p-4 bg-blue-50 text-blue-900 font-bold rounded-xl text-center">Your Age: N/A</div>
         </div>
+
+        <!-- Loan EMI Calculator -->
         <div id="calcLoan" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
             <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">💳 Loan EMI</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
-            <input type="number" id="loanAmount" class="w-full p-3 border rounded-xl mb-2" placeholder="Amount">
-            <input type="number" id="loanRate" class="w-full p-3 border rounded-xl mb-2" placeholder="Rate %">
-            <input type="number" id="loanMonths" class="w-full p-3 border rounded-xl mb-2" placeholder="Months">
-            <button onclick="calculateLoan()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm">Calculate</button>
-            <div id="loanResult" class="mt-3 p-3 bg-blue-50 font-bold rounded-xl">EMI: N/A</div>
+            <input type="number" id="loanAmount" class="w-full p-3 border rounded-xl mb-2" placeholder="Amount"><input type="number" id="loanRate" class="w-full p-3 border rounded-xl mb-2" placeholder="Rate %"><input type="number" id="loanMonths" class="w-full p-3 border rounded-xl mb-2" placeholder="Months"><button onclick="calculateLoan()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm">Calculate</button><div id="loanResult" class="mt-3 p-3 bg-blue-50 font-bold rounded-xl text-center">EMI: N/A</div>
+        </div>
+
+        <!-- Percentage Calculator -->
+        <div id="calcPercentage" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
+            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">📊 Percentage</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
+            <input type="number" id="perVal" class="w-full p-3 border rounded-xl mb-2" placeholder="Percentage (e.g. 20)"><input type="number" id="perTotal" class="w-full p-3 border rounded-xl mb-3" placeholder="Of number (e.g. 500)"><button onclick="calculatePercentage()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm">Calculate</button><div id="perResult" class="mt-3 p-3 bg-blue-50 font-bold rounded-xl text-center">Result: N/A</div>
+        </div>
+
+        <!-- Discount Calculator -->
+        <div id="calcDiscount" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
+            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🏷️ Discount</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
+            <input type="number" id="discPrice" class="w-full p-3 border rounded-xl mb-2" placeholder="Original Price"><input type="number" id="discPercent" class="w-full p-3 border rounded-xl mb-3" placeholder="Discount %"><button onclick="calculateDiscount()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm">Calculate</button><div id="discResult" class="mt-3 p-3 bg-blue-50 font-bold rounded-xl text-center">Final Price: N/A</div>
+        </div>
+
+        <!-- Simple Interest Calculator -->
+        <div id="calcInterest" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
+            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">📈 Simple Interest</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
+            <input type="number" id="intPrinciple" class="w-full p-3 border rounded-xl mb-2" placeholder="Principal"><input type="number" id="intRate" class="w-full p-3 border rounded-xl mb-2" placeholder="Rate (%)"><input type="number" id="intTime" class="w-full p-3 border rounded-xl mb-3" placeholder="Time (years)"><button onclick="calculateInterest()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm">Calculate</button><div id="intResult" class="mt-3 p-3 bg-blue-50 font-bold rounded-xl text-center">Total Interest: N/A</div>
         </div>
 
         <!-- ================= 4. PRODUCTIVITY TOOLS ================= -->
@@ -249,9 +234,7 @@
         </div>
         <div id="prodQr" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
             <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">📱 QR Code</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5">← Back</button></div>
-            <input type="text" id="qrText" class="w-full p-3 border rounded-xl mb-3" placeholder="Enter text/URL">
-            <button onclick="generateQR()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm mb-3">Generate</button>
-            <div class="p-3 bg-slate-50 text-center"><img id="qrImage" src="" alt="QR" class="mx-auto hidden"></div>
+            <input type="text" id="qrText" class="w-full p-3 border rounded-xl mb-3" placeholder="Enter text/URL"><button onclick="generateQR()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm mb-3">Generate</button><div class="p-3 bg-slate-50 text-center"><img id="qrImage" src="" alt="QR" class="mx-auto hidden"></div>
         </div>
 
         <!-- ================= 5. TEXT TOOLS ================= -->
@@ -405,7 +388,7 @@
             document.getElementById('jsonOutput').innerText = JSON.stringify(result, null, 2);
         }
 
-        // Calculators
+        // Calculators Logic
         function calculateAdvancedBmi() {
             let w = parseFloat(document.getElementById('bmiWeight').value);
             let h = parseFloat(document.getElementById('bmiHeight').value) / 100;
@@ -421,18 +404,59 @@
             document.getElementById('bmiResultView').classList.add('hidden');
             document.getElementById('bmiFormView').classList.remove('hidden');
         }
-        function calculateAge() {
-            let dob = new Date(document.getElementById('dobInput').value);
+
+        // Exact Age Calculator (Years, Months, Days)
+        function calculateExactAge() {
+            let dobVal = document.getElementById('dobInput').value;
+            if(!dobVal) { alert('Please select your date of birth!'); return; }
+            let dob = new Date(dobVal);
             let today = new Date();
-            let age = today.getFullYear() - dob.getFullYear();
-            document.getElementById('ageResult').innerText = `Your Age: ${isNaN(age) ? 'N/A' : age + ' Years'}`;
+
+            if(dob > today) { alert('Date of birth cannot be in the future!'); return; }
+
+            let years = today.getFullYear() - dob.getFullYear();
+            let months = today.getMonth() - dob.getMonth();
+            let days = today.getDate() - dob.getDate();
+
+            if (days < 0) {
+                months--;
+                let prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+                days += prevMonth.getDate();
+            }
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            document.getElementById('ageResult').innerText = `${years} Years, ${months} Months, ${days} Days`;
         }
+
         function calculateLoan() {
             let p = parseFloat(document.getElementById('loanAmount').value), r = parseFloat(document.getElementById('loanRate').value)/12/100, n = parseFloat(document.getElementById('loanMonths').value);
             if(p && r && n) {
                 let emi = (p * r * Math.pow(1+r, n)) / (Math.pow(1+r, n) - 1);
                 document.getElementById('loanResult').innerText = `Monthly EMI: ${emi.toFixed(2)}`;
-            }
+            } else { alert('Please fill all loan fields.'); }
+        }
+        function calculatePercentage() {
+            let p = parseFloat(document.getElementById('perVal').value), t = parseFloat(document.getElementById('perTotal').value);
+            if(!isNaN(p) && !isNaN(t)) {
+                document.getElementById('perResult').innerText = `Result: ${(p * t) / 100}`;
+            } else { alert('Please enter valid numbers.'); }
+        }
+        function calculateDiscount() {
+            let p = parseFloat(document.getElementById('discPrice').value), d = parseFloat(document.getElementById('discPercent').value);
+            if(!isNaN(p) && !isNaN(d)) {
+                let saved = (p * d) / 100;
+                document.getElementById('discResult').innerText = `Final Price: ${(p - saved).toFixed(2)} (Saved: ${saved.toFixed(2)})`;
+            } else { alert('Please enter valid price and discount.'); }
+        }
+        function calculateInterest() {
+            let p = parseFloat(document.getElementById('intPrinciple').value), r = parseFloat(document.getElementById('intRate').value), t = parseFloat(document.getElementById('intTime').value);
+            if(!isNaN(p) && !isNaN(r) && !isNaN(t)) {
+                let interest = (p * r * t) / 100;
+                document.getElementById('intResult').innerText = `Total Interest: ${interest.toFixed(2)}`;
+            } else { alert('Please fill all interest fields.'); }
         }
 
         // Productivity
