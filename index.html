@@ -6,8 +6,8 @@
     
     <!-- SEO Meta Tags -->
     <title>TextTools Hub - Free Online Utility, Converters & Calculators</title>
-    <meta name="description" content="TextTools Hub is your all-in-one professional digital toolbox for free file conversion, precise age and BMI calculations, password generation, and advanced text utilities.">
-    <meta name="keywords" content="Text Tools Hub, Word to PDF, BMI Calculator, Age Calculator, Online Converters, Text Analyzer, Shakhawt Hossain">
+    <meta name="description" content="TextTools Hub is your all-in-one professional digital toolbox for free file conversion, precise advanced BMI calculator with WHO standards, age calculator, and utilities.">
+    <meta name="keywords" content="Text Tools Hub, Advanced BMI Calculator, Age Calculator, Online Converters, Shakhawt Hossain">
     <meta name="author" content="SHAKHAWT HOSSAIN">
     
     <!-- Google Search Console Verification Meta Tag -->
@@ -85,7 +85,7 @@
                     <div class="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center text-2xl group-hover:scale-110 transition backdrop-blur-md shadow-inner">🧮</div>
                     <div>
                         <h3 class="font-bold text-lg group-hover:text-emerald-100 transition">Calculators</h3>
-                        <p class="text-xs text-emerald-100/80 mt-0.5">BMI with WHO Chart, Age, Loan, % & more</p>
+                        <p class="text-xs text-emerald-100/80 mt-0.5">BMI with WHO Table, Age, Loan, % & more</p>
                     </div>
                 </div>
 
@@ -140,18 +140,18 @@
                 <h3 id="docWorkspaceTitle" class="text-xl font-bold text-slate-800">Document Tool</h3>
                 <button onclick="showSection('documentsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button>
             </div>
-            <p class="text-xs text-slate-500">Upload your file below. Our secure browser conversion engine will process and export your file instantly.</p>
+            <p class="text-xs text-slate-500">Upload your file below. Our secure cloud conversion engine will process and convert it instantly.</p>
             
             <div class="border-2 border-dashed border-slate-200 p-6 rounded-2xl bg-slate-50">
                 <input type="file" id="docFileInput" class="w-full text-sm file:py-2 file:px-4 file:rounded-xl file:bg-blue-600 file:text-white file:border-0 cursor-pointer">
             </div>
 
-            <div id="conversionStatus" class="hidden text-xs font-semibold text-blue-600 animate-pulse">Processing file securely... Please wait.</div>
+            <div id="conversionStatus" class="hidden text-xs font-semibold text-blue-600 animate-pulse">Connecting to secure cloud converter... Please wait.</div>
 
             <button id="convertBtn" onclick="processAndConvertDocument()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-2xl font-bold shadow-md transition">Convert & Download File</button>
 
             <div class="p-3 bg-blue-50 text-blue-700 rounded-xl text-xs text-left leading-relaxed border border-blue-100">
-                💡 <b>Pro Tip:</b> For professional batch conversions, use our <a href="https://cloudconvert.com" target="_blank" class="underline font-bold">CloudConvert Partner Engine</a>.
+                💡 <b>Pro Tip:</b> For heavy files, you can also use our <a href="https://cloudconvert.com" target="_blank" class="underline font-bold">CloudConvert Partner Engine</a> directly through this workspace.
             </div>
         </div>
 
@@ -214,7 +214,7 @@
                 <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Home</button>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div onclick="showSection('calcBmi')" class="bg-gradient-to-br from-emerald-50 to-teal-50 hover:from-emerald-100 hover:to-teal-100 p-5 rounded-2xl shadow-sm border border-emerald-200/60 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-emerald-700 text-base">BMI Calculator</h4><p class="text-xs text-emerald-600/80 mt-1">WHO Standard Chart & Gauge</p></div>
+                <div onclick="showSection('calcBmi')" class="bg-gradient-to-br from-emerald-50 to-teal-50 hover:from-emerald-100 hover:to-teal-100 p-5 rounded-2xl shadow-sm border border-emerald-200/60 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-emerald-700 text-base">BMI Calculator</h4><p class="text-xs text-emerald-600/80 mt-1">WHO Table & Gauge</p></div>
                 <div onclick="showSection('calcAge')" class="bg-gradient-to-br from-emerald-50 to-teal-50 hover:from-emerald-100 hover:to-teal-100 p-5 rounded-2xl shadow-sm border border-emerald-200/60 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-emerald-700 text-base">Age Calculator</h4><p class="text-xs text-emerald-600/80 mt-1">Exact Years, Months, Days</p></div>
                 <div onclick="showSection('calcLoan')" class="bg-gradient-to-br from-emerald-50 to-teal-50 hover:from-emerald-100 hover:to-teal-100 p-5 rounded-2xl shadow-sm border border-emerald-200/60 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-emerald-700 text-base">Loan / EMI</h4><p class="text-xs text-emerald-600/80 mt-1">Monthly installments</p></div>
                 <div onclick="showSection('calcPercentage')" class="bg-gradient-to-br from-emerald-50 to-teal-50 hover:from-emerald-100 hover:to-teal-100 p-5 rounded-2xl shadow-sm border border-emerald-200/60 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-emerald-700 text-base">Percentage Calculator</h4><p class="text-xs text-emerald-600/80 mt-1">Find percentages easily</p></div>
@@ -223,136 +223,100 @@
             </div>
         </div>
 
-        <!-- Professional Advanced BMI Calculator (Exact Match to User Reference) -->
+        <!-- NEW ADVANCED BMI CALCULATOR -->
         <div id="calcBmi" class="tool-section hidden max-w-xl mx-auto bg-white rounded-3xl shadow-xl border overflow-hidden">
             <div class="bg-slate-900 text-white p-5 flex justify-between items-center">
-                <div class="flex items-center gap-3">
-                    <span class="text-xl">📈</span>
-                    <h3 class="text-lg font-bold">Calculate Your BMI</h3>
-                </div>
+                <h3 class="text-base font-bold flex items-center gap-2"><span>📈</span> Calculate Your BMI</h3>
                 <button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-800 text-slate-300 px-3 py-1.5 rounded-xl hover:bg-slate-700 transition">← Back</button>
             </div>
             
-            <!-- Input Form View -->
-            <div id="bmiFormView" class="p-6 md:p-8 space-y-6">
-                <p class="text-xs text-slate-500 font-medium">For an accurate calculation, please share a few basic details about yourself.</p>
+            <!-- Input View -->
+            <div id="bmiFormView" class="p-6 md:p-8 space-y-5">
+                <p class="text-xs text-slate-500 font-medium text-center">For an accurate calculation, please share a few basic details about yourself.</p>
                 
-                <!-- Gender Selection -->
+                <!-- Gender -->
                 <div>
-                    <label class="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">Gender</label>
-                    <div class="flex gap-6">
-                        <label class="flex items-center gap-2 cursor-pointer text-sm font-medium"><input type="radio" name="gender" value="male" checked class="w-4 h-4 text-blue-600"> Male</label>
-                        <label class="flex items-center gap-2 cursor-pointer text-sm font-medium"><input type="radio" name="gender" value="female" class="w-4 h-4 text-blue-600"> Female</label>
-                        <label class="flex items-center gap-2 cursor-pointer text-sm font-medium"><input type="radio" name="gender" value="other" class="w-4 h-4 text-blue-600"> Other</label>
+                    <label class="block text-xs font-bold text-slate-700 mb-2">Gender</label>
+                    <div class="flex gap-4">
+                        <label class="flex items-center gap-2 text-xs font-semibold cursor-pointer"><input type="radio" name="bmiGender" value="male" checked class="text-blue-600 focus:ring-blue-500"> Male</label>
+                        <label class="flex items-center gap-2 text-xs font-semibold cursor-pointer"><input type="radio" name="bmiGender" value="female" class="text-blue-600 focus:ring-blue-500"> Female</label>
+                        <label class="flex items-center gap-2 text-xs font-semibold cursor-pointer"><input type="radio" name="bmiGender" value="other" class="text-blue-600 focus:ring-blue-500"> Other</label>
                     </div>
                 </div>
 
-                <!-- Age Input -->
+                <!-- Age -->
                 <div>
-                    <label class="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Age (years)</label>
-                    <input type="number" id="bmiAge" class="w-full p-3.5 border border-slate-200 rounded-2xl bg-slate-50 focus:bg-white focus:ring-2 focus:ring-blue-500 transition text-sm" placeholder="Enter your age (e.g., 25)">
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Age (years)</label>
+                    <input type="number" id="bmiAge" class="w-full p-3 border rounded-xl text-sm bg-slate-50 focus:bg-white transition focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Enter your age">
                 </div>
 
-                <!-- Height Unit Toggle & Inputs -->
+                <!-- Height Unit Switcher -->
                 <div>
-                    <div class="flex justify-between items-center mb-1.5">
-                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide">Height</label>
-                        <div class="inline-flex bg-slate-100 p-1 rounded-xl text-xs font-semibold">
-                            <button type="button" id="unitCm" onclick="setHeightUnit('cm')" class="px-3 py-1.5 rounded-lg bg-slate-900 text-white shadow-sm transition">cm</button>
-                            <button type="button" id="unitFt" onclick="setHeightUnit('ft')" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition">ft/in</button>
+                    <div class="flex justify-between items-center mb-1">
+                        <label class="block text-xs font-bold text-slate-700">Height</label>
+                        <div class="inline-flex bg-slate-100 p-1 rounded-xl text-xs font-bold">
+                            <button type="button" id="unitCmBtn" onclick="setHeightUnit('cm')" class="px-3 py-1 rounded-lg bg-slate-900 text-white transition shadow-sm">cm</button>
+                            <button type="button" id="unitFtBtn" onclick="setHeightUnit('ft')" class="px-3 py-1 rounded-lg text-slate-600 transition">ft/in</button>
                         </div>
                     </div>
-
-                    <!-- CM Input Box -->
-                    <div id="heightCmBox">
-                        <input type="number" id="bmiHeightCm" class="w-full p-3.5 border border-slate-200 rounded-2xl bg-slate-50 focus:bg-white focus:ring-2 focus:ring-blue-500 transition text-sm" placeholder="Height in cm (e.g. 175)">
+                    
+                    <!-- CM Input -->
+                    <div id="heightCmContainer">
+                        <input type="number" id="bmiHeightCm" class="w-full p-3 border rounded-xl text-sm bg-slate-50 focus:bg-white transition focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Height in cm (e.g. 170)">
                     </div>
 
-                    <!-- FT / IN Input Box -->
-                    <div id="heightFtBox" class="hidden grid grid-cols-2 gap-3">
-                        <input type="number" id="bmiHeightFeet" class="w-full p-3.5 border border-slate-200 rounded-2xl bg-slate-50 focus:bg-white focus:ring-2 focus:ring-blue-500 transition text-sm" placeholder="Feet (e.g., 5)">
-                        <input type="number" id="bmiHeightInches" class="w-full p-3.5 border border-slate-200 rounded-2xl bg-slate-50 focus:bg-white focus:ring-2 focus:ring-blue-500 transition text-sm" placeholder="Inches (e.g., 8)">
+                    <!-- FT/IN Input -->
+                    <div id="heightFtContainer" class="hidden grid grid-cols-2 gap-3">
+                        <input type="number" id="bmiHeightFeet" class="w-full p-3 border rounded-xl text-sm bg-slate-50 focus:bg-white transition outline-none" placeholder="Feet (e.g. 5)">
+                        <input type="number" id="bmiHeightInches" class="w-full p-3 border rounded-xl text-sm bg-slate-50 focus:bg-white transition outline-none" placeholder="Inches (e.g. 8)">
                     </div>
                 </div>
 
-                <!-- Weight Input -->
+                <!-- Weight -->
                 <div>
-                    <label class="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Weight (kg)</label>
-                    <input type="number" id="bmiWeight" class="w-full p-3.5 border border-slate-200 rounded-2xl bg-slate-50 focus:bg-white focus:ring-2 focus:ring-blue-500 transition text-sm" placeholder="Weight in kg (e.g., 65)">
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Weight (kg)</label>
+                    <input type="number" id="bmiWeightKg" class="w-full p-3 border rounded-xl text-sm bg-slate-50 focus:bg-white transition focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Weight in kg (e.g. 65)">
                 </div>
 
-                <!-- Calculate Button -->
-                <button onclick="calculateAdvancedBmi()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold text-base shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5">Calculate BMI</button>
+                <button onclick="calculateAdvancedBmi()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-xl font-bold shadow-lg transition">Calculate BMI</button>
             </div>
 
-            <!-- Result View (Exact Match with Reference Images) -->
-            <div id="bmiResultView" class="hidden p-6 md:p-8 space-y-6">
-                <!-- Top Header & Back Button -->
+            <!-- Result View -->
+            <div id="bmiResultView" class="hidden p-6 md:p-8 space-y-6 text-center animate-fadeIn">
                 <div class="flex justify-between items-center border-b pb-4">
-                    <h4 class="font-extrabold text-slate-800 text-lg">Your BMI Result</h4>
-                    <button onclick="resetBmiForm()" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3.5 py-2 rounded-xl font-bold transition">← Back / Recalculate</button>
+                    <button onclick="resetBmiForm()" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3.5 py-2 rounded-xl font-bold transition flex items-center gap-1.5">← Recalculate</button>
+                    <h4 class="font-extrabold text-slate-900 text-sm">Your BMI Result</h4>
                 </div>
 
-                <!-- Status Banner Card -->
-                <div id="bmiStatusCard" class="p-4 rounded-2xl text-center font-bold text-sm shadow-sm">Status banner</div>
+                <!-- Status Banner -->
+                <div id="bmiStatusBanner" class="p-4 rounded-2xl font-bold text-xs shadow-sm">Status banner</div>
 
-                <!-- Score & Details Card -->
-                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 text-center space-y-3">
-                    <div class="flex justify-between items-center text-xs font-semibold text-slate-500 px-2">
-                        <span>Result</span>
-                        <span id="bmiHeaderLabel" class="text-slate-900 font-bold">BMI = 0.0 (Normal)</span>
-                    </div>
-
-                    <div id="bmiScoreBadge" class="text-white font-black text-2xl px-6 py-3 rounded-2xl inline-block shadow-md">BMI = 0.0</div>
-
-                    <div class="text-xs space-y-1 text-slate-600 font-medium pt-2">
-                        <p><b>Healthy BMI range:</b> 18.5 kg/m² - 24.9 kg/m²</p>
-                        <p id="healthyWeightText"><b>Healthy weight for the height:</b> -- kg</p>
-                    </div>
-
-                    <!-- Visual Gauge / Speedometer Indicator -->
-                    <div class="pt-4 pb-2">
-                        <div class="w-full bg-gradient-to-r from-blue-400 via-emerald-500 via-amber-400 to-rose-600 h-4 rounded-full shadow-inner relative overflow-hidden">
-                            <div id="bmiIndicatorDot" class="absolute top-0 bottom-0 w-2 bg-slate-900 shadow-lg rounded-full transition-all duration-500" style="left: 50%;"></div>
-                        </div>
-                        <div class="flex justify-between text-[10px] font-bold text-slate-400 mt-1 uppercase">
-                            <span>Underweight</span>
-                            <span>Normal</span>
-                            <span>Excess</span>
-                            <span>Obesity</span>
-                        </div>
-                    </div>
+                <!-- Score Badge -->
+                <div class="py-2">
+                    <div id="bmiScoreBadge" class="text-white font-extrabold text-2xl px-6 py-3 rounded-2xl inline-block shadow-md">BMI = 0.0</div>
                 </div>
 
-                <!-- WHO Classification Table (From user reference image) -->
-                <div class="space-y-3 pt-2">
-                    <h5 class="font-bold text-slate-900 text-sm">WHO BMI Table for Adults</h5>
-                    <div class="overflow-x-auto border rounded-2xl shadow-sm">
-                        <table class="w-full text-left text-xs">
-                            <thead class="bg-slate-900 text-white">
-                                <tr>
-                                    <th class="p-3">Classification</th>
-                                    <th class="p-3">BMI range - kg/m²</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-slate-100 bg-white">
-                                <tr class="hover:bg-slate-50"><td class="p-3 font-medium text-slate-700">Severe Thinness</td><td class="p-3 text-slate-600">&lt; 16</td></tr>
-                                <tr class="hover:bg-slate-50"><td class="p-3 font-medium text-slate-700">Moderate Thinness</td><td class="p-3 text-slate-600">16 - 17</td></tr>
-                                <tr class="hover:bg-slate-50"><td class="p-3 font-medium text-slate-700">Mild Thinness</td><td class="p-3 text-slate-600">17 - 18.5</td></tr>
-                                <tr class="bg-emerald-50/60 font-semibold"><td class="p-3 text-emerald-800">Normal</td><td class="p-3 text-emerald-800">18.5 - 25</td></tr>
-                                <tr class="hover:bg-slate-50"><td class="p-3 font-medium text-slate-700">Overweight</td><td class="p-3 text-slate-600">25 - 30</td></tr>
-                                <tr class="hover:bg-slate-50"><td class="p-3 font-medium text-slate-700">Obese Class I</td><td class="p-3 text-slate-600">30 - 35</td></tr>
-                                <tr class="hover:bg-slate-50"><td class="p-3 font-medium text-slate-700">Obese Class II</td><td class="p-3 text-slate-600">35 - 40</td></tr>
-                                <tr class="hover:bg-slate-50"><td class="p-3 font-medium text-slate-700">Obese Class III</td><td class="p-3 text-slate-600">&gt; 40</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <!-- Range Details -->
+                <div class="bg-slate-50 p-4 rounded-2xl border text-xs space-y-1.5 text-left">
+                    <p class="flex justify-between font-medium"><span>Healthy BMI range:</span> <strong class="text-slate-900">18.5 kg/m² - 24.9 kg/m²</strong></p>
+                    <p class="flex justify-between font-medium"><span>Healthy weight for height:</span> <strong id="healthyWeightRange" class="text-blue-600">-- kg</strong></p>
                 </div>
 
-                <!-- BMI Introduction Description -->
-                <div class="space-y-2 pt-2 text-xs text-slate-600 leading-relaxed border-t">
-                    <h5 class="font-bold text-slate-900 text-sm">BMI Introduction</h5>
-                    <p>BMI is a measurement of a person's leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. It is widely used as a general indicator of whether a person has a healthy body weight for their height.</p>
+                <!-- WHO Classification Table -->
+                <div class="border rounded-2xl overflow-hidden text-left text-xs">
+                    <div class="bg-slate-900 text-white px-4 py-2.5 font-bold">WHO Adult BMI Table</div>
+                    <table class="w-full divide-y divide-slate-200">
+                        <tbody id="bmiTableBody" class="divide-y divide-slate-100">
+                            <tr class="hover:bg-slate-50"><td class="px-3 py-2">Severe Thinness</td><td class="px-3 py-2 text-right font-semibold">&lt; 16</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-3 py-2">Moderate Thinness</td><td class="px-3 py-2 text-right font-semibold">16 - 17</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-3 py-2">Mild Thinness</td><td class="px-3 py-2 text-right font-semibold">17 - 18.5</td></tr>
+                            <tr class="bg-emerald-50 text-emerald-900 font-bold"><td class="px-3 py-2">Normal</td><td class="px-3 py-2 text-right">18.5 - 25</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-3 py-2">Overweight</td><td class="px-3 py-2 text-right font-semibold">25 - 30</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-3 py-2">Obese Class I</td><td class="px-3 py-2 text-right font-semibold">30 - 35</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-3 py-2">Obese Class II</td><td class="px-3 py-2 text-right font-semibold">35 - 40</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="px-3 py-2">Obese Class III</td><td class="px-3 py-2 text-right font-semibold">&gt; 40</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -600,34 +564,28 @@
                 a.download = convertedFileName;
                 a.click();
                 URL.revokeObjectURL(url);
-            }, 2000);
+            }, 2500);
         }
 
-        // Height Unit Toggle for BMI
+        /* --- ADVANCED BMI CALCULATOR SCRIPT --- */
         let currentHeightUnit = 'cm';
         function setHeightUnit(unit) {
             currentHeightUnit = unit;
-            const btnCm = document.getElementById('unitCm');
-            const btnFt = document.getElementById('unitFt');
-            const boxCm = document.getElementById('heightCmBox');
-            const boxFt = document.getElementById('heightFtBox');
-
             if(unit === 'cm') {
-                btnCm.className = "px-3 py-1.5 rounded-lg bg-slate-900 text-white shadow-sm transition";
-                btnFt.className = "px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition";
-                boxCm.classList.remove('hidden');
-                boxFt.classList.add('hidden');
+                document.getElementById('unitCmBtn').className = 'px-3 py-1 rounded-lg bg-slate-900 text-white transition shadow-sm';
+                document.getElementById('unitFtBtn').className = 'px-3 py-1 rounded-lg text-slate-600 transition';
+                document.getElementById('heightCmContainer').classList.remove('hidden');
+                document.getElementById('heightFtContainer').classList.add('hidden');
             } else {
-                btnFt.className = "px-3 py-1.5 rounded-lg bg-slate-900 text-white shadow-sm transition";
-                btnCm.className = "px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition";
-                boxFt.classList.remove('hidden');
-                boxCm.classList.add('hidden');
+                document.getElementById('unitFtBtn').className = 'px-3 py-1 rounded-lg bg-slate-900 text-white transition shadow-sm';
+                document.getElementById('unitCmBtn').className = 'px-3 py-1 rounded-lg text-slate-600 transition';
+                document.getElementById('heightFtContainer').classList.remove('hidden');
+                document.getElementById('heightCmContainer').classList.add('hidden');
             }
         }
 
-        // Professional Advanced BMI Calculation
         function calculateAdvancedBmi() {
-            let weight = parseFloat(document.getElementById('bmiWeight').value);
+            let weight = parseFloat(document.getElementById('bmiWeightKg').value);
             let heightInMeters = 0;
 
             if(!weight || weight <= 0) {
@@ -637,77 +595,63 @@
 
             if(currentHeightUnit === 'cm') {
                 let cm = parseFloat(document.getElementById('bmiHeightCm').value);
-                if(!cm || cm <= 0) {
-                    alert('দয়া করে সঠিক উচ্চতা (cm) ইনপুট দিন!');
-                    return;
-                }
+                if(!cm || cm <= 0) { alert('দয়া করে সঠিক উচ্চতা (cm) দিন!'); return; }
                 heightInMeters = cm / 100;
             } else {
                 let feet = parseFloat(document.getElementById('bmiHeightFeet').value) || 0;
                 let inches = parseFloat(document.getElementById('bmiHeightInches').value) || 0;
-                if(feet === 0 && inches === 0) {
-                    alert('দয়া করে সঠিক উচ্চতা (Feet/Inches) ইনপুট দিন!');
-                    return;
-                }
+                if(feet === 0 && inches === 0) { alert('দয়া করে সঠিক উচ্চতা (feet/inches) দিন!'); return; }
                 let totalInches = (feet * 12) + inches;
                 heightInMeters = totalInches * 0.0254;
             }
 
             let bmi = (weight / (heightInMeters * heightInMeters)).toFixed(1);
             let statusText = "";
-            let badgeColor = "";
-            let statusBannerBg = "";
-            let indicatorPos = "50%";
+            let badgeBg = "bg-emerald-600";
+            let bannerBg = "bg-emerald-50 text-emerald-900 border border-emerald-200";
 
-            // WHO Classification Logic
-            if(bmi < 16) {
-                statusText = "Severe Thinness";
-                badgeColor = "bg-blue-400";
-                statusBannerBg = "bg-blue-50 text-blue-800 border border-blue-200";
-                indicatorPos = "10%";
-            } else if(bmi >= 16 && bmi < 17) {
-                statusText = "Moderate Thinness";
-                badgeColor = "bg-blue-500";
-                statusBannerBg = "bg-blue-50 text-blue-800 border border-blue-200";
-                indicatorPos = "20%":
-            } else if(bmi >= 17 && bmi < 18.5) {
-                statusText = "Mild Thinness (Underweight)";
-                badgeColor = "bg-sky-500";
-                statusBannerBg = "bg-sky-50 text-sky-800 border border-sky-200";
-                indicatorPos = "30%";
-            } else if(bmi >= 18.5 && bmi <= 24.9) {
+            if (bmi < 16) {
+                statusText = "Severe Thinness — Take proper nutrition advice.";
+                badgeBg = "bg-rose-600";
+                bannerBg = "bg-rose-50 text-rose-900 border border-rose-200";
+            } else if (bmi >= 16 && bmi < 17) {
+                statusText = "Moderate Thinness — Consider increasing calorie intake.";
+                badgeBg = "bg-amber-500";
+                bannerBg = "bg-amber-50 text-amber-900 border border-amber-200";
+            } else if (bmi >= 17 && bmi < 18.5) {
+                statusText = "Mild Thinness — You are slightly underweight.";
+                badgeBg = "bg-yellow-500";
+                bannerBg = "bg-yellow-50 text-yellow-900 border border-yellow-200";
+            } else if (bmi >= 18.5 && bmi <= 25) {
                 statusText = "You're maintaining a healthy body weight - Keep it up!";
-                badgeColor = "bg-emerald-600";
-                statusBannerBg = "bg-emerald-50 text-emerald-800 border border-emerald-200";
-                indicatorPos = "50%";
-            } else if(bmi >= 25 && bmi < 30) {
-                statusText = "Overweight (Excess Weight)";
-                badgeColor = "bg-amber-500";
-                statusBannerBg = "bg-amber-50 text-amber-800 border border-amber-200";
-                indicatorPos = "70%";
-            } else if(bmi >= 30 && bmi < 35) {
-                statusText = "Obese Class I (Obesity)";
-                badgeColor = "bg-orange-600";
-                statusBannerBg = "bg-orange-50 text-orange-800 border border-orange-200";
-                indicatorPos = "85%";
+                badgeBg = "bg-emerald-600";
+                bannerBg = "bg-emerald-50 text-emerald-900 border border-emerald-200";
+            } else if (bmi > 25 && bmi <= 30) {
+                statusText = "Overweight — Consider regular physical activity.";
+                badgeBg = "bg-amber-500";
+                bannerBg = "bg-amber-50 text-amber-900 border border-amber-200";
+            } else if (bmi > 30 && bmi <= 35) {
+                statusText = "Obese Class I — Focus on balanced diet & exercise.";
+                badgeBg = "bg-orange-600";
+                bannerBg = "bg-orange-50 text-orange-900 border border-orange-200";
+            } else if (bmi > 35 && bmi <= 40) {
+                statusText = "Obese Class II — Consult a healthcare professional.";
+                badgeBg = "bg-rose-600";
+                bannerBg = "bg-rose-50 text-rose-900 border border-rose-200";
             } else {
-                statusText = "Obese Class II / III (Extremely Obesity)";
-                badgeColor = "bg-rose-600";
-                statusBannerBg = "bg-rose-50 text-rose-800 border border-rose-200";
-                indicatorPos = "95%";
+                statusText = "Obese Class III — Extreme obesity risk.";
+                badgeBg = "bg-red-700";
+                bannerBg = "bg-red-50 text-red-900 border border-red-200";
             }
 
-            // Healthy weight range for this height
             let minHealthyWeight = (18.5 * (heightInMeters * heightInMeters)).toFixed(1);
             let maxHealthyWeight = (24.9 * (heightInMeters * heightInMeters)).toFixed(1);
 
-            document.getElementById('bmiStatusCard').innerHTML = statusText;
-            document.getElementById('bmiStatusCard').className = `p-4 rounded-2xl text-center font-bold text-sm shadow-sm ${statusBannerBg}`;
-            document.getElementById('bmiHeaderLabel').innerText = `BMI = ${bmi} (${statusText.split(' ')[0]})`;
+            document.getElementById('bmiStatusBanner').innerText = statusText;
+            document.getElementById('bmiStatusBanner').className = `p-4 rounded-2xl font-bold text-xs shadow-sm ${bannerBg}`;
             document.getElementById('bmiScoreBadge').innerText = `BMI = ${bmi}`;
-            document.getElementById('bmiScoreBadge').className = `text-white font-black text-2xl px-6 py-3 rounded-2xl inline-block shadow-md ${badgeColor}`;
-            document.getElementById('healthyWeightText').innerHTML = `<b>Healthy weight for the height:</b> ${minHealthyWeight} kg - ${maxHealthyWeight} kg`;
-            document.getElementById('bmiIndicatorDot').style.left = indicatorPos;
+            document.getElementById('bmiScoreBadge').className = `text-white font-extrabold text-2xl px-6 py-3 rounded-2xl inline-block shadow-md ${badgeBg}`;
+            document.getElementById('healthyWeightRange').innerText = `${minHealthyWeight} kg - ${maxHealthyWeight} kg`;
 
             document.getElementById('bmiFormView').classList.add('hidden');
             document.getElementById('bmiResultView').classList.remove('hidden');
@@ -741,9 +685,15 @@
             let t = textInput.value.toLowerCase();
             textInput.value = t.replace(/(^\s*\w|[\.\!\?]\s*\w)/g, c => c.toUpperCase());
         }
-        function removeExtraSpaces() { textInput.value = textInput.value.replace(/\s+/g, ' ').trim(); }
-        function removeLineBreaks() { textInput.value = textInput.value.replace(/(\r\n|\n|\r)/gm, " "); }
-        function reverseText() { textInput.value = textInput.value.split('').reverse().join(''); }
+        function removeExtraSpaces() {
+            textInput.value = textInput.value.replace(/\s+/g, ' ').trim();
+        }
+        function removeLineBreaks() {
+            textInput.value = textInput.value.replace(/(\r\n|\n|\r)/gm, " ");
+        }
+        function reverseText() {
+            textInput.value = textInput.value.split('').reverse().join('');
+        }
         function findAndReplaceText() {
             let findVal = document.getElementById('findInput').value;
             let replaceVal = document.getElementById('replaceInput').value;
@@ -891,4 +841,4 @@
         }
     </script>
 </body>
-                    </html>
+            </html>
