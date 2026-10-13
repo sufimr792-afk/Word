@@ -159,7 +159,7 @@
             <textarea id="csvInput" rows="3" class="w-full p-3 border rounded-xl mb-3 text-sm" placeholder="name,age..."></textarea><button onclick="csvToJson()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs mb-3">Convert</button><pre id="jsonOutput" class="p-3 bg-slate-900 text-emerald-400 rounded-xl text-xs overflow-x-auto">JSON output...</pre>
         </div>
 
-        <!-- ================= 3. CALCULATORS HUB (Expanded with Age Years/Months/Days, %, Discount, Interest) ================= -->
+        <!-- ================= 3. CALCULATORS HUB ================= -->
         <div id="calculatorsHome" class="tool-section hidden space-y-6">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-2xl font-bold text-slate-900">🧮 Calculators Hub</h3>
@@ -169,72 +169,73 @@
                 <div onclick="showSection('calcBmi')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">BMI Calculator</h4><p class="text-xs text-slate-400 mt-1">Status check</p></div>
                 <div onclick="showSection('calcAge')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Age Calculator</h4><p class="text-xs text-slate-400 mt-1">Exact Years, Months, Days</p></div>
                 <div onclick="showSection('calcLoan')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Loan / EMI</h4><p class="text-xs text-slate-400 mt-1">Monthly installments</p></div>
-                <!-- New Calculators Added -->
                 <div onclick="showSection('calcPercentage')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Percentage Calculator</h4><p class="text-xs text-slate-400 mt-1">Find percentages easily</p></div>
                 <div onclick="showSection('calcDiscount')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Discount Calculator</h4><p class="text-xs text-slate-400 mt-1">Sale & offer savings</p></div>
                 <div onclick="showSection('calcInterest')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Simple Interest</h4><p class="text-xs text-slate-400 mt-1">Investment interest</p></div>
             </div>
         </div>
 
-        <!-- BMI Calculator -->
         <div id="calcBmi" class="tool-section hidden max-w-xl mx-auto bg-white rounded-3xl shadow-xl border overflow-hidden">
             <div class="bg-slate-900 text-white p-5 flex justify-between items-center"><h3 class="text-lg font-bold">Calculate Your BMI</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-800 text-slate-300 px-3 py-1.5 rounded-xl">← Back</button></div>
             <div id="bmiFormView" class="p-6 md:p-8 space-y-4"><div><label class="block text-xs font-semibold mb-1">Weight (kg)</label><input type="number" id="bmiWeight" class="w-full p-3 border rounded-xl" placeholder="Weight"></div><div><label class="block text-xs font-semibold mb-1">Height (cm)</label><input type="number" id="bmiHeight" class="w-full p-3 border rounded-xl" placeholder="Height in cm"></div><button onclick="calculateAdvancedBmi()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold">Calculate BMI</button></div>
             <div id="bmiResultView" class="hidden p-6 md:p-8 space-y-4 text-center"><button onclick="resetBmiForm()" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Recalculate</button><div id="bmiStatusCard" class="p-4 rounded-xl font-bold">Status</div><div id="bmiScoreBadge" class="text-white font-extrabold text-xl px-4 py-2 rounded-full inline-block">Score</div></div>
         </div>
-
-        <!-- Age Calculator (Years, Months, Days) -->
         <div id="calcAge" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
             <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🎂 Age Calculator</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
-            <label class="block text-xs font-semibold mb-1 text-slate-500">Select Date of Birth</label>
-            <input type="date" id="dobInput" class="w-full p-3 border rounded-xl mb-4 bg-slate-50">
-            <button onclick="calculateExactAge()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm shadow-md">Calculate Exact Age</button>
-            <div id="ageResult" class="mt-4 p-4 bg-blue-50 text-blue-900 font-bold rounded-xl text-center">Your Age: N/A</div>
+            <label class="block text-xs font-semibold mb-1 text-slate-500">Select Date of Birth</label><input type="date" id="dobInput" class="w-full p-3 border rounded-xl mb-4 bg-slate-50"><button onclick="calculateExactAge()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm shadow-md">Calculate Exact Age</button><div id="ageResult" class="mt-4 p-4 bg-blue-50 text-blue-900 font-bold rounded-xl text-center">Your Age: N/A</div>
         </div>
-
-        <!-- Loan EMI Calculator -->
         <div id="calcLoan" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
             <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">💳 Loan EMI</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
             <input type="number" id="loanAmount" class="w-full p-3 border rounded-xl mb-2" placeholder="Amount"><input type="number" id="loanRate" class="w-full p-3 border rounded-xl mb-2" placeholder="Rate %"><input type="number" id="loanMonths" class="w-full p-3 border rounded-xl mb-2" placeholder="Months"><button onclick="calculateLoan()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm">Calculate</button><div id="loanResult" class="mt-3 p-3 bg-blue-50 font-bold rounded-xl text-center">EMI: N/A</div>
         </div>
-
-        <!-- Percentage Calculator -->
         <div id="calcPercentage" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
             <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">📊 Percentage</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
-            <input type="number" id="perVal" class="w-full p-3 border rounded-xl mb-2" placeholder="Percentage (e.g. 20)"><input type="number" id="perTotal" class="w-full p-3 border rounded-xl mb-3" placeholder="Of number (e.g. 500)"><button onclick="calculatePercentage()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm">Calculate</button><div id="perResult" class="mt-3 p-3 bg-blue-50 font-bold rounded-xl text-center">Result: N/A</div>
+            <input type="number" id="perVal" class="w-full p-3 border rounded-xl mb-2" placeholder="Percentage"><input type="number" id="perTotal" class="w-full p-3 border rounded-xl mb-3" placeholder="Of number"><button onclick="calculatePercentage()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm">Calculate</button><div id="perResult" class="mt-3 p-3 bg-blue-50 font-bold rounded-xl text-center">Result: N/A</div>
         </div>
-
-        <!-- Discount Calculator -->
         <div id="calcDiscount" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
             <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🏷️ Discount</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
             <input type="number" id="discPrice" class="w-full p-3 border rounded-xl mb-2" placeholder="Original Price"><input type="number" id="discPercent" class="w-full p-3 border rounded-xl mb-3" placeholder="Discount %"><button onclick="calculateDiscount()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm">Calculate</button><div id="discResult" class="mt-3 p-3 bg-blue-50 font-bold rounded-xl text-center">Final Price: N/A</div>
         </div>
-
-        <!-- Simple Interest Calculator -->
         <div id="calcInterest" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
             <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">📈 Simple Interest</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
             <input type="number" id="intPrinciple" class="w-full p-3 border rounded-xl mb-2" placeholder="Principal"><input type="number" id="intRate" class="w-full p-3 border rounded-xl mb-2" placeholder="Rate (%)"><input type="number" id="intTime" class="w-full p-3 border rounded-xl mb-3" placeholder="Time (years)"><button onclick="calculateInterest()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm">Calculate</button><div id="intResult" class="mt-3 p-3 bg-blue-50 font-bold rounded-xl text-center">Total Interest: N/A</div>
         </div>
 
-        <!-- ================= 4. PRODUCTIVITY TOOLS ================= -->
+        <!-- ================= 4. PRODUCTIVITY TOOLS (Expanded with 4 Options) ================= -->
         <div id="productivityHome" class="tool-section hidden space-y-6">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-2xl font-bold text-slate-900">⚡ Productivity Tools</h3>
                 <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Home</button>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
-                <div onclick="showSection('prodPassword')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">🔑 Password Generator</h4></div>
-                <div onclick="showSection('prodQr')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">📱 QR Code Generator</h4></div>
+            <p class="text-sm text-slate-500 mb-6">Select a productivity utility:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+                <div onclick="showSection('prodPassword')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">🔑 Password Generator</h4><p class="text-xs text-slate-400 mt-1">Generate secure passwords</p></div>
+                <div onclick="showSection('prodQr')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">📱 QR Code Generator</h4><p class="text-xs text-slate-400 mt-1">Create QR code from text/URL</p></div>
+                <div onclick="showSection('prodBase64')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">🔐 Base64 Encoder / Decoder</h4><p class="text-xs text-slate-400 mt-1">Encode or decode strings</p></div>
+                <div onclick="showSection('prodUrl')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">🌐 URL Encoder / Decoder</h4><p class="text-xs text-slate-400 mt-1">Encode or decode URLs</p></div>
             </div>
         </div>
 
+        <!-- Productivity Sub-tools -->
         <div id="prodPassword" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🔑 Password</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5">← Back</button></div>
-            <div class="flex gap-2"><input type="text" id="generatedPassword" class="w-full p-3 border rounded-xl bg-slate-50" readonly><button onclick="generatePassword()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm">Gen</button></div>
+            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🔑 Password Generator</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
+            <div class="flex gap-2"><input type="text" id="generatedPassword" class="w-full p-3 border rounded-xl bg-slate-50 font-mono text-sm" readonly><button onclick="generatePassword()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Gen</button></div>
         </div>
         <div id="prodQr" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">📱 QR Code</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5">← Back</button></div>
-            <input type="text" id="qrText" class="w-full p-3 border rounded-xl mb-3" placeholder="Enter text/URL"><button onclick="generateQR()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm mb-3">Generate</button><div class="p-3 bg-slate-50 text-center"><img id="qrImage" src="" alt="QR" class="mx-auto hidden"></div>
+            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">📱 QR Code Generator</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
+            <input type="text" id="qrText" class="w-full p-3 border rounded-xl mb-3" placeholder="Enter text/URL"><button onclick="generateQR()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm mb-3">Generate QR Code</button><div class="p-3 bg-slate-50 rounded-xl text-center"><img id="qrImage" src="" alt="QR" class="mx-auto hidden"></div>
+        </div>
+        <div id="prodBase64" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
+            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🔐 Base64 Tool</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
+            <textarea id="base64Input" rows="3" class="w-full p-3 border rounded-xl mb-3" placeholder="Enter text..."></textarea>
+            <div class="flex gap-2 mb-3"><button onclick="encodeBase64()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs">Encode</button><button onclick="decodeBase64()" class="bg-indigo-600 text-white px-4 py-2 rounded-xl text-xs">Decode</button></div>
+            <textarea id="base64Output" rows="3" class="w-full p-3 border rounded-xl bg-slate-50" readonly placeholder="Output..."></textarea>
+        </div>
+        <div id="prodUrl" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
+            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🌐 URL Tool</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
+            <textarea id="urlInput" rows="3" class="w-full p-3 border rounded-xl mb-3" placeholder="Enter URL..."></textarea>
+            <div class="flex gap-2 mb-3"><button onclick="encodeUrl()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs">Encode</button><button onclick="decodeUrl()" class="bg-indigo-600 text-white px-4 py-2 rounded-xl text-xs">Decode</button></div>
+            <textarea id="urlOutput" rows="3" class="w-full p-3 border rounded-xl bg-slate-50" readonly placeholder="Output..."></textarea>
         </div>
 
         <!-- ================= 5. TEXT TOOLS ================= -->
@@ -404,20 +405,15 @@
             document.getElementById('bmiResultView').classList.add('hidden');
             document.getElementById('bmiFormView').classList.remove('hidden');
         }
-
-        // Exact Age Calculator (Years, Months, Days)
         function calculateExactAge() {
             let dobVal = document.getElementById('dobInput').value;
             if(!dobVal) { alert('Please select your date of birth!'); return; }
             let dob = new Date(dobVal);
             let today = new Date();
-
             if(dob > today) { alert('Date of birth cannot be in the future!'); return; }
-
             let years = today.getFullYear() - dob.getFullYear();
             let months = today.getMonth() - dob.getMonth();
             let days = today.getDate() - dob.getDate();
-
             if (days < 0) {
                 months--;
                 let prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
@@ -427,10 +423,8 @@
                 years--;
                 months += 12;
             }
-
             document.getElementById('ageResult').innerText = `${years} Years, ${months} Months, ${days} Days`;
         }
-
         function calculateLoan() {
             let p = parseFloat(document.getElementById('loanAmount').value), r = parseFloat(document.getElementById('loanRate').value)/12/100, n = parseFloat(document.getElementById('loanMonths').value);
             if(p && r && n) {
@@ -440,9 +434,7 @@
         }
         function calculatePercentage() {
             let p = parseFloat(document.getElementById('perVal').value), t = parseFloat(document.getElementById('perTotal').value);
-            if(!isNaN(p) && !isNaN(t)) {
-                document.getElementById('perResult').innerText = `Result: ${(p * t) / 100}`;
-            } else { alert('Please enter valid numbers.'); }
+            if(!isNaN(p) && !isNaN(t)) { document.getElementById('perResult').innerText = `Result: ${(p * t) / 100}`; } else { alert('Please enter valid numbers.'); }
         }
         function calculateDiscount() {
             let p = parseFloat(document.getElementById('discPrice').value), d = parseFloat(document.getElementById('discPercent').value);
@@ -459,7 +451,7 @@
             } else { alert('Please fill all interest fields.'); }
         }
 
-        // Productivity
+        // Productivity Logic
         function generatePassword() {
             let chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*";
             let pass = ""; for(let i=0; i<12; i++) pass += chars.charAt(Math.floor(Math.random() * chars.length));
@@ -471,6 +463,22 @@
             let img = document.getElementById('qrImage');
             img.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(t)}`;
             img.classList.remove('hidden');
+        }
+        function encodeBase64() {
+            let val = document.getElementById('base64Input').value;
+            try { document.getElementById('base64Output').value = btoa(val); } catch(e) { alert('Invalid input'); }
+        }
+        function decodeBase64() {
+            let val = document.getElementById('base64Input').value;
+            try { document.getElementById('base64Output').value = atob(val); } catch(e) { alert('Invalid Base64 string'); }
+        }
+        function encodeUrl() {
+            let val = document.getElementById('urlInput').value;
+            document.getElementById('urlOutput').value = encodeURIComponent(val);
+        }
+        function decodeUrl() {
+            let val = document.getElementById('urlInput').value;
+            try { document.getElementById('urlOutput').value = decodeURIComponent(val); } catch(e) { alert('Invalid URL string'); }
         }
     </script>
 </body>
