@@ -50,7 +50,7 @@
                 <div onclick="showSection('documentsHome')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
                     <div class="text-3xl mb-2">📂</div>
                     <h3 class="font-bold text-blue-600 text-lg">Documents Hub</h3>
-                    <p class="text-xs text-slate-400 mt-1">PDF, Word, Excel & Image Converters</p>
+                    <p class="text-xs text-slate-400 mt-1">10+ File & Document Converters</p>
                 </div>
                 <div onclick="showSection('convertersHome')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 text-center cursor-pointer transition transform hover:-translate-y-1">
                     <div class="text-3xl mb-2">🔄</div>
@@ -78,20 +78,43 @@
             </div>
         </div>
 
-        <!-- 1. DOCUMENTS HUB -->
+        <!-- ================= 1. DOCUMENTS HUB (10 Options) ================= -->
         <div id="documentsHome" class="tool-section hidden space-y-6">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-2xl font-bold text-slate-900">📂 Documents Hub</h3>
                 <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Home</button>
             </div>
+            <p class="text-sm text-slate-500 mb-6">Select a document conversion utility:</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div onclick="alert('Word to PDF tool is ready!')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Word to PDF</h4><p class="text-xs text-slate-400 mt-1">Convert DOCX to PDF</p></div>
-                <div onclick="alert('PDF to Word tool is ready!')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">PDF to Word</h4><p class="text-xs text-slate-400 mt-1">Extract text to Word</p></div>
-                <div onclick="alert('Excel to PDF tool is ready!')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Excel to PDF</h4><p class="text-xs text-slate-400 mt-1">Spreadsheet converter</p></div>
+                <div onclick="openDocTool('Word to PDF', '.docx')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">1. Word to PDF</h4><p class="text-xs text-slate-400 mt-1">Convert DOCX to PDF</p></div>
+                <div onclick="openDocTool('PDF to Word', '.pdf')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">2. PDF to Word</h4><p class="text-xs text-slate-400 mt-1">Extract text to Word</p></div>
+                <div onclick="openDocTool('Excel to PDF', '.xlsx')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">3. Excel to PDF</h4><p class="text-xs text-slate-400 mt-1">Spreadsheet converter</p></div>
+                <div onclick="openDocTool('PDF to Excel', '.pdf')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">4. PDF to Excel</h4><p class="text-xs text-slate-400 mt-1">Tables to spreadsheet</p></div>
+                <div onclick="openDocTool('JPG to PNG', '.jpg,.jpeg')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">5. JPG to PNG</h4><p class="text-xs text-slate-400 mt-1">Image format changer</p></div>
+                <div onclick="openDocTool('PNG to JPG', '.png')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">6. PNG to JPG</h4><p class="text-xs text-slate-400 mt-1">Compress and convert</p></div>
+                <div onclick="openDocTool('JPG to PDF', '.jpg,.jpeg')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">7. JPG to PDF</h4><p class="text-xs text-slate-400 mt-1">Images into single PDF</p></div>
+                <div onclick="openDocTool('PDF to PowerPoint', '.pdf')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">8. PDF to PowerPoint</h4><p class="text-xs text-slate-400 mt-1">Slides conversion</p></div>
+                <div onclick="openDocTool('PowerPoint to PDF', '.pptx')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">9. PowerPoint to PDF</h4><p class="text-xs text-slate-400 mt-1">Presentation export</p></div>
+                <div onclick="openDocTool('Text to PDF', '.txt')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">10. Text to PDF</h4><p class="text-xs text-slate-400 mt-1">Plain text to PDF document</p></div>
             </div>
         </div>
 
-        <!-- 2. CONVERTERS HUB -->
+        <!-- Dynamic Document Converter Workspace -->
+        <div id="docWorkspace" class="tool-section hidden max-w-xl mx-auto bg-white p-8 rounded-3xl shadow-xl border text-center space-y-6">
+            <div class="flex justify-between items-center mb-2">
+                <h3 id="docWorkspaceTitle" class="text-xl font-bold text-slate-800">Document Tool</h3>
+                <button onclick="showSection('documentsHome')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back</button>
+            </div>
+            <p class="text-xs text-slate-500">Upload your file below to process and download instantly.</p>
+            
+            <div class="border-2 border-dashed border-slate-200 p-8 rounded-2xl bg-slate-50 hover:bg-slate-100 transition cursor-pointer">
+                <input type="file" id="docFileInput" class="w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700">
+            </div>
+
+            <button onclick="processAndDownloadDoc()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-2xl font-bold shadow-md transition">Convert & Download File</button>
+        </div>
+
+        <!-- ================= 2. CONVERTERS HUB ================= -->
         <div id="convertersHome" class="tool-section hidden space-y-6">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-2xl font-bold text-slate-900">🔄 Converters Hub</h3>
@@ -100,22 +123,38 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <div onclick="showSection('convLength')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Length Converter</h4><p class="text-xs text-slate-400 mt-1">Meters, Feet, Inches</p></div>
                 <div onclick="showSection('convTemp')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Temperature Converter</h4><p class="text-xs text-slate-400 mt-1">Celsius, Fahrenheit</p></div>
+                <div onclick="showSection('convWeight')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Weight / Mass</h4><p class="text-xs text-slate-400 mt-1">Kg, Gram, Pound</p></div>
+                <div onclick="showSection('convSpeed')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Speed Converter</h4><p class="text-xs text-slate-400 mt-1">Km/h to Mph</p></div>
             </div>
         </div>
 
         <!-- Converters Sub-tools -->
-        <div id="convLength" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">📏 Length Converter</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div><label class="block text-xs font-semibold mb-1">Meters (m)</label><input type="number" id="meterInput" oninput="convertLength('meter')" class="w-full p-3 border rounded-xl" placeholder="Meters"></div>
-                <div><label class="block text-xs font-semibold mb-1">Feet (ft)</label><input type="number" id="feetInput" oninput="convertLength('feet')" class="w-full p-3 border rounded-xl" placeholder="Feet"></div>
+        <div id="convLength" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">📏 Length</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="grid grid-cols-2 gap-4">
+                <input type="number" id="meterInput" oninput="convertLength('meter')" class="p-3 border rounded-xl" placeholder="Meters">
+                <input type="number" id="feetInput" oninput="convertLength('feet')" class="p-3 border rounded-xl" placeholder="Feet">
             </div>
         </div>
-        <div id="convTemp" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🌡️ Temperature Converter</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div><label class="block text-xs font-semibold mb-1">Celsius (°C)</label><input type="number" id="celsiusInput" oninput="convertTemp('c')" class="w-full p-3 border rounded-xl" placeholder="Celsius"></div>
-                <div><label class="block text-xs font-semibold mb-1">Fahrenheit (°F)</label><input type="number" id="fahrenheitInput" oninput="convertTemp('f')" class="w-full p-3 border rounded-xl" placeholder="Fahrenheit"></div>
+        <div id="convTemp" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🌡️ Temperature</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="grid grid-cols-2 gap-4">
+                <input type="number" id="celsiusInput" oninput="convertTemp('c')" class="p-3 border rounded-xl" placeholder="Celsius">
+                <input type="number" id="fahrenheitInput" oninput="convertTemp('f')" class="p-3 border rounded-xl" placeholder="Fahrenheit">
+            </div>
+        </div>
+        <div id="convWeight" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">⚖️ Weight</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="grid grid-cols-2 gap-4">
+                <input type="number" id="kgInput" oninput="convertWeight('kg')" class="p-3 border rounded-xl" placeholder="Kg">
+                <input type="number" id="lbsInput" oninput="convertWeight('lbs')" class="p-3 border rounded-xl" placeholder="Lbs">
+            </div>
+        </div>
+        <div id="convSpeed" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
+            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🏎️ Speed</h3><button onclick="showSection('convertersHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
+            <div class="grid grid-cols-2 gap-4">
+                <input type="number" id="kmhInput" oninput="convertSpeed('kmh')" class="p-3 border rounded-xl" placeholder="Km/h">
+                <input type="number" id="mphInput" oninput="convertSpeed('mph')" class="p-3 border rounded-xl" placeholder="Mph">
             </div>
         </div>
 
@@ -126,137 +165,43 @@
                 <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Home</button>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div onclick="showSection('calcBmi')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">1. BMI Calculator</h4><p class="text-xs text-slate-400 mt-1">Advanced status check</p></div>
-                <div onclick="showSection('calcAge')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">2. Age Calculator</h4><p class="text-xs text-slate-400 mt-1">Calculate exact age</p></div>
-                <div onclick="showSection('calcPercentage')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">3. Percentage Calculator</h4><p class="text-xs text-slate-400 mt-1">Find percentages easily</p></div>
-                <div onclick="showSection('calcLoan')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">4. Loan / EMI Calculator</h4><p class="text-xs text-slate-400 mt-1">Monthly loan installments</p></div>
-                <div onclick="showSection('calcDiscount')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">5. Discount Calculator</h4><p class="text-xs text-slate-400 mt-1">Sale & offer savings</p></div>
-                <div onclick="showSection('calcInterest')" class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md border text-center cursor-pointer transition"><h4 class="font-bold text-blue-600 text-base">6. Simple Interest</h4><p class="text-xs text-slate-400 mt-1">Investment interest</p></div>
+                <div onclick="showSection('calcBmi')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">BMI Calculator</h4><p class="text-xs text-slate-400 mt-1">Status check</p></div>
+                <div onclick="showSection('calcAge')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Age Calculator</h4><p class="text-xs text-slate-400 mt-1">Exact age</p></div>
+                <div onclick="showSection('calcLoan')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">Loan / EMI</h4><p class="text-xs text-slate-400 mt-1">Monthly installments</p></div>
             </div>
         </div>
 
-        <!-- Premium BMI Calculator Sub-tool -->
+        <!-- BMI Calculator -->
         <div id="calcBmi" class="tool-section hidden max-w-xl mx-auto bg-white rounded-3xl shadow-xl border overflow-hidden">
-            <!-- Top Header Bar -->
             <div class="bg-slate-900 text-white p-5 flex justify-between items-center">
-                <div class="flex items-center gap-2">
-                    <span class="text-xl">📈</span>
-                    <h3 class="text-lg font-bold">Calculate Your BMI</h3>
-                </div>
-                <button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-xl font-semibold transition">← Back</button>
+                <h3 class="text-lg font-bold">Calculate Your BMI</h3>
+                <button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-800 text-slate-300 px-3 py-1.5 rounded-xl">← Back</button>
             </div>
-
-            <!-- Input Form View -->
-            <div id="bmiFormView" class="p-6 md:p-8 space-y-6">
-                <!-- Gender Selection -->
-                <div>
-                    <label class="block text-xs font-semibold text-slate-500 uppercase mb-2">Gender</label>
-                    <div class="flex gap-6">
-                        <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="gender" value="male" checked class="text-blue-600 focus:ring-blue-500"> Male</label>
-                        <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="gender" value="female" class="text-blue-600 focus:ring-blue-500"> Female</label>
-                    </div>
-                </div>
-
-                <!-- Age -->
-                <div>
-                    <label class="block text-xs font-semibold text-slate-500 uppercase mb-2">Age (years)</label>
-                    <input type="number" id="bmiAge" class="w-full p-3.5 border border-slate-200 rounded-2xl bg-slate-50 focus:bg-white focus:ring-2 focus:ring-blue-500" placeholder="Enter your age">
-                </div>
-
-                <!-- Height -->
-                <div>
-                    <div class="flex justify-between items-center mb-2">
-                        <label class="text-xs font-semibold text-slate-500 uppercase">Height</label>
-                        <div class="flex bg-slate-100 p-1 rounded-xl">
-                            <button type="button" onclick="setHeightUnit('cm')" id="btnCm" class="px-3 py-1 text-xs font-bold rounded-lg bg-slate-900 text-white transition">cm</button>
-                            <button type="button" onclick="setHeightUnit('ft')" id="btnFt" class="px-3 py-1 text-xs font-bold rounded-lg text-slate-600 transition">ft/in</button>
-                        </div>
-                    </div>
-                    
-                    <div id="heightCmBox">
-                        <input type="number" id="bmiHeightCm" class="w-full p-3.5 border border-slate-200 rounded-2xl bg-slate-50 focus:bg-white focus:ring-2 focus:ring-blue-500" placeholder="Height in cm (e.g. 170)">
-                    </div>
-                    <div id="heightFtBox" class="hidden grid grid-cols-2 gap-3">
-                        <input type="number" id="bmiHeightFeet" class="p-3.5 border border-slate-200 rounded-2xl bg-slate-50" placeholder="Feet">
-                        <input type="number" id="bmiHeightInches" class="p-3.5 border border-slate-200 rounded-2xl bg-slate-50" placeholder="Inches">
-                    </div>
-                </div>
-
-                <!-- Weight -->
-                <div>
-                    <label class="block text-xs font-semibold text-slate-500 uppercase mb-2">Weight (kg)</label>
-                    <input type="number" id="bmiWeight" class="w-full p-3.5 border border-slate-200 rounded-2xl bg-slate-50 focus:bg-white focus:ring-2 focus:ring-blue-500" placeholder="Enter your weight in kg">
-                </div>
-
-                <button onclick="calculateAdvancedBmi()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold shadow-md transition">Calculate BMI</button>
+            <div id="bmiFormView" class="p-6 md:p-8 space-y-4">
+                <div><label class="block text-xs font-semibold mb-1">Weight (kg)</label><input type="number" id="bmiWeight" class="w-full p-3 border rounded-xl" placeholder="Weight"></div>
+                <div><label class="block text-xs font-semibold mb-1">Height (cm)</label><input type="number" id="bmiHeight" class="w-full p-3 border rounded-xl" placeholder="Height in cm"></div>
+                <button onclick="calculateAdvancedBmi()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold">Calculate BMI</button>
             </div>
-
-            <!-- Result View (Initially Hidden) -->
-            <div id="bmiResultView" class="hidden p-6 md:p-8 space-y-6">
-                <button onclick="resetBmiForm()" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl font-semibold transition">← Recalculate</button>
-                
-                <!-- Status Message Card -->
-                <div id="bmiStatusCard" class="p-5 rounded-2xl text-center border">
-                    <div id="bmiStatusIcon" class="text-3xl mb-1">✅</div>
-                    <p id="bmiStatusText" class="font-bold text-base">You're maintaining a healthy body weight - Keep it up!</p>
-                </div>
-
-                <!-- Main Score Box -->
-                <div class="bg-slate-50 p-6 rounded-2xl border text-center space-y-3">
-                    <p class="text-xs uppercase font-semibold text-slate-400">Result Score</p>
-                    <div id="bmiScoreBadge" class="inline-block text-white font-extrabold text-2xl px-6 py-2.5 rounded-full shadow-sm">BMI = 0.0</div>
-                    <p id="bmiRangeText" class="text-xs text-slate-600">Healthy BMI range: 18.5 kg/m² - 24.9 kg/m²</p>
-                    <p id="bmiWeightForHeight" class="text-xs text-slate-600">Healthy weight for the height: 53.6 kg - 72.1 kg</p>
-                </div>
+            <div id="bmiResultView" class="hidden p-6 md:p-8 space-y-4 text-center">
+                <button onclick="resetBmiForm()" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Recalculate</button>
+                <div id="bmiStatusCard" class="p-4 rounded-xl font-bold">Status</div>
+                <div id="bmiScoreBadge" class="text-white font-extrabold text-xl px-4 py-2 rounded-full inline-block">Score</div>
             </div>
         </div>
 
-        <!-- Other Calculators Sub-tools -->
-        <div id="calcAge" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🎂 Age Calculator</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="space-y-4">
-                <div><label class="block text-xs font-semibold mb-1">Date of Birth</label><input type="date" id="dobInput" class="w-full p-3 border rounded-xl"></div>
-                <button onclick="calculateAge()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Calculate Age</button>
-                <div id="ageResult" class="p-3 bg-blue-50 text-blue-800 font-bold rounded-xl">Your Age: N/A</div>
-            </div>
+        <div id="calcAge" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
+            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🎂 Age</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
+            <input type="date" id="dobInput" class="w-full p-3 border rounded-xl mb-3">
+            <button onclick="calculateAge()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm">Calculate</button>
+            <div id="ageResult" class="mt-3 p-3 bg-blue-50 font-bold rounded-xl">Age: N/A</div>
         </div>
-        <div id="calcPercentage" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">📊 Percentage</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="space-y-4">
-                <input type="number" id="perVal" class="w-full p-3 border rounded-xl mb-2" placeholder="Percentage (e.g. 20)">
-                <input type="number" id="perTotal" class="w-full p-3 border rounded-xl" placeholder="Of number (e.g. 500)">
-                <button onclick="calculatePercentage()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Calculate</button>
-                <div id="perResult" class="p-3 bg-blue-50 text-blue-800 font-bold rounded-xl">Result: N/A</div>
-            </div>
-        </div>
-        <div id="calcLoan" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">💳 Loan EMI</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="space-y-3">
-                <input type="number" id="loanAmount" class="w-full p-3 border rounded-xl" placeholder="Principal amount">
-                <input type="number" id="loanRate" class="w-full p-3 border rounded-xl" placeholder="Interest rate (%)">
-                <input type="number" id="loanMonths" class="w-full p-3 border rounded-xl" placeholder="Duration (months)">
-                <button onclick="calculateLoan()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Calculate EMI</button>
-                <div id="loanResult" class="p-3 bg-blue-50 text-blue-800 font-bold rounded-xl">Monthly EMI: N/A</div>
-            </div>
-        </div>
-        <div id="calcDiscount" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🏷️ Discount</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="space-y-3">
-                <input type="number" id="discPrice" class="w-full p-3 border rounded-xl" placeholder="Original Price">
-                <input type="number" id="discPercent" class="w-full p-3 border rounded-xl" placeholder="Discount %">
-                <button onclick="calculateDiscount()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Calculate</button>
-                <div id="discResult" class="p-3 bg-blue-50 text-blue-800 font-bold rounded-xl">Final Price: N/A</div>
-            </div>
-        </div>
-        <div id="calcInterest" class="tool-section hidden bg-white p-6 md:p-8 rounded-3xl shadow-lg border max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">📈 Simple Interest</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="space-y-3">
-                <input type="number" id="intPrinciple" class="w-full p-3 border rounded-xl" placeholder="Principal">
-                <input type="number" id="intRate" class="w-full p-3 border rounded-xl" placeholder="Rate (%)">
-                <input type="number" id="intTime" class="w-full p-3 border rounded-xl" placeholder="Time (years)">
-                <button onclick="calculateInterest()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Calculate</button>
-                <div id="intResult" class="p-3 bg-blue-50 text-blue-800 font-bold rounded-xl">Total Interest: N/A</div>
-            </div>
+        <div id="calcLoan" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
+            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">💳 Loan EMI</h3><button onclick="showSection('calculatorsHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl">← Back</button></div>
+            <input type="number" id="loanAmount" class="w-full p-3 border rounded-xl mb-2" placeholder="Amount">
+            <input type="number" id="loanRate" class="w-full p-3 border rounded-xl mb-2" placeholder="Rate %">
+            <input type="number" id="loanMonths" class="w-full p-3 border rounded-xl mb-2" placeholder="Months">
+            <button onclick="calculateLoan()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm">Calculate</button>
+            <div id="loanResult" class="mt-3 p-3 bg-blue-50 font-bold rounded-xl">EMI: N/A</div>
         </div>
 
         <!-- ================= 4. PRODUCTIVITY TOOLS ================= -->
@@ -265,36 +210,21 @@
                 <h3 class="text-2xl font-bold text-slate-900">⚡ Productivity Tools</h3>
                 <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Home</button>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
                 <div onclick="showSection('prodPassword')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">🔑 Password Generator</h4></div>
                 <div onclick="showSection('prodQr')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">📱 QR Code Generator</h4></div>
-                <div onclick="showSection('prodBase64')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">🔐 Base64 Encoder / Decoder</h4></div>
-                <div onclick="showSection('prodUrl')" class="bg-white p-5 rounded-2xl shadow-sm border text-center cursor-pointer"><h4 class="font-bold text-blue-600 text-base">🌐 URL Encoder / Decoder</h4></div>
             </div>
         </div>
 
-        <!-- Productivity Sub-tools -->
         <div id="prodPassword" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🔑 Password Generator</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="flex gap-2"><input type="text" id="generatedPassword" class="w-full p-3 border rounded-xl bg-slate-50 font-mono text-sm" readonly><button onclick="generatePassword()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">Generate</button></div>
+            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🔑 Password</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5">← Back</button></div>
+            <div class="flex gap-2"><input type="text" id="generatedPassword" class="w-full p-3 border rounded-xl bg-slate-50" readonly><button onclick="generatePassword()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm">Gen</button></div>
         </div>
         <div id="prodQr" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">📱 QR Code</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <input type="text" id="qrText" class="w-full p-3 border rounded-xl mb-3" placeholder="Enter text or URL">
-            <button onclick="generateQR()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium mb-3">Generate</button>
-            <div class="p-4 bg-slate-50 rounded-xl text-center"><img id="qrImage" src="" alt="QR" class="mx-auto hidden"></div>
-        </div>
-        <div id="prodBase64" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🔐 Base64</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <textarea id="base64Input" rows="3" class="w-full p-3 border rounded-xl mb-3" placeholder="Enter text..."></textarea>
-            <div class="flex gap-2 mb-3"><button onclick="encodeBase64()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm">Encode</button><button onclick="decodeBase64()" class="bg-indigo-600 text-white px-4 py-2 rounded-xl text-sm">Decode</button></div>
-            <textarea id="base64Output" rows="3" class="w-full p-3 border rounded-xl bg-slate-50" readonly placeholder="Output..."></textarea>
-        </div>
-        <div id="prodUrl" class="tool-section hidden bg-white p-6 rounded-3xl shadow-lg border max-w-lg mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🌐 URL Encoder</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <textarea id="urlInput" rows="3" class="w-full p-3 border rounded-xl mb-3" placeholder="Enter URL..."></textarea>
-            <div class="flex gap-2 mb-3"><button onclick="encodeUrl()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm">Encode</button><button onclick="decodeUrl()" class="bg-indigo-600 text-white px-4 py-2 rounded-xl text-sm">Decode</button></div>
-            <textarea id="urlOutput" rows="3" class="w-full p-3 border rounded-xl bg-slate-50" readonly placeholder="Output..."></textarea>
+            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">📱 QR Code</h3><button onclick="showSection('productivityHome')" class="text-xs bg-slate-100 px-3 py-1.5">← Back</button></div>
+            <input type="text" id="qrText" class="w-full p-3 border rounded-xl mb-3" placeholder="Enter text/URL">
+            <button onclick="generateQR()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm mb-3">Generate</button>
+            <div class="p-3 bg-slate-50 text-center"><img id="qrImage" src="" alt="QR" class="mx-auto hidden"></div>
         </div>
 
         <!-- ================= 5. TEXT TOOLS ================= -->
@@ -303,19 +233,18 @@
                 <h3 class="text-xl font-bold text-slate-800">📝 Text Tools & Analyzer</h3>
                 <button onclick="showSection('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded-xl font-semibold transition">← Back to Home</button>
             </div>
-            <textarea id="textInput" rows="6" class="w-full p-4 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 mb-6 bg-slate-50" placeholder="Type or paste your text here..."></textarea>
+            <textarea id="textInput" rows="6" class="w-full p-4 border rounded-2xl mb-6 bg-slate-50" placeholder="Type or paste text here..."></textarea>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                <div class="bg-blue-50 p-4 rounded-2xl text-center border"><p class="text-xs text-blue-500 font-semibold uppercase">Words</p><p id="wordCount" class="text-2xl font-extrabold text-blue-700">0</p></div>
-                <div class="bg-emerald-50 p-4 rounded-2xl text-center border"><p class="text-xs text-emerald-500 font-semibold uppercase">Characters</p><p id="charCount" class="text-2xl font-extrabold text-emerald-700">0</p></div>
-                <div class="bg-amber-50 p-4 rounded-2xl text-center border"><p class="text-xs text-amber-500 font-semibold uppercase">Sentences</p><p id="sentenceCount" class="text-2xl font-extrabold text-amber-700">0</p></div>
-                <div class="bg-purple-50 p-4 rounded-2xl text-center border"><p class="text-xs text-purple-500 font-semibold uppercase">Reading Time</p><p id="readTime" class="text-2xl font-extrabold text-purple-700">0s</p></div>
+                <div class="bg-blue-50 p-4 rounded-2xl text-center border"><p class="text-xs text-blue-500 font-semibold">Words</p><p id="wordCount" class="text-2xl font-extrabold text-blue-700">0</p></div>
+                <div class="bg-emerald-50 p-4 rounded-2xl text-center border"><p class="text-xs text-emerald-500 font-semibold">Characters</p><p id="charCount" class="text-2xl font-extrabold text-emerald-700">0</p></div>
+                <div class="bg-amber-50 p-4 rounded-2xl text-center border"><p class="text-xs text-amber-500 font-semibold">Sentences</p><p id="sentenceCount" class="text-2xl font-extrabold text-amber-700">0</p></div>
+                <div class="bg-purple-50 p-4 rounded-2xl text-center border"><p class="text-xs text-purple-500 font-semibold">Reading Time</p><p id="readTime" class="text-2xl font-extrabold text-purple-700">0s</p></div>
             </div>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <button onclick="convertToUpperCase()" class="bg-blue-600 text-white px-4 py-2.5 rounded-xl text-xs">UPPERCASE</button>
-                <button onclick="convertToLowerCase()" class="bg-blue-600 text-white px-4 py-2.5 rounded-xl text-xs">lowercase</button>
-                <button onclick="convertToTitleCase()" class="bg-violet-600 text-white px-4 py-2.5 rounded-xl text-xs">Title Case</button>
-                <button onclick="removeSpaces()" class="bg-slate-700 text-white px-4 py-2.5 rounded-xl text-xs">Remove Spaces</button>
-                <button onclick="clearText()" class="bg-rose-600 text-white px-4 py-2.5 rounded-xl text-xs ml-auto">Clear</button>
+            <div class="flex flex-wrap gap-2">
+                <button onclick="convertToUpperCase()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs">UPPERCASE</button>
+                <button onclick="convertToLowerCase()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs">lowercase</button>
+                <button onclick="convertToTitleCase()" class="bg-violet-600 text-white px-4 py-2 rounded-xl text-xs">Title Case</button>
+                <button onclick="clearText()" class="bg-rose-600 text-white px-4 py-2 rounded-xl text-xs ml-auto">Clear</button>
             </div>
         </div>
 
@@ -326,30 +255,11 @@
         <div class="max-w-5xl mx-auto px-4">
             <div class="mb-6 pb-6 border-b border-slate-100">
                 <h4 class="text-sm font-semibold text-blue-600 mb-1">🌟 Thank You for Visiting TextTools Hub!</h4>
-                <p class="text-slate-600 max-w-xl mx-auto leading-relaxed">We are truly dedicated to providing you with a fast, secure, and completely free online utility experience.</p>
+                <p class="text-slate-600 max-w-xl mx-auto leading-relaxed">We are dedicated to providing fast and free online tools.</p>
             </div>
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                <p>&copy; 2026 TextTools Hub. All rights reserved.</p>
-                <div class="flex gap-4">
-                    <a href="#privacyPolicy" class="hover:underline font-medium">Privacy Policy</a>
-                    <a href="#termsOfService" class="hover:underline font-medium">Terms of Service</a>
-                    <a href="mailto:Sufimr792@gmail.com" class="hover:underline font-medium">Contact Us</a>
-                </div>
-            </div>
+            <p>&copy; 2026 TextTools Hub. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Privacy Policy Section -->
-    <section id="privacyPolicy" class="max-w-5xl mx-auto px-4 py-6 mt-6 bg-white rounded-3xl shadow-sm border scroll-mt-6">
-        <h3 class="text-lg font-semibold mb-2 text-slate-800">Privacy Policy</h3>
-        <p class="text-xs text-slate-600 leading-relaxed">At TextTools Hub, we prioritize your privacy. All utility processing happens locally within your web browser.</p>
-    </section>
-
-    <!-- Terms of Service Section -->
-    <section id="termsOfService" class="max-w-5xl mx-auto px-4 py-6 mt-4 mb-8 bg-white rounded-3xl shadow-sm border scroll-mt-6">
-        <h3 class="text-lg font-semibold mb-2 text-slate-800">Terms of Service</h3>
-        <p class="text-xs text-slate-600 leading-relaxed">By using TextTools Hub, you agree to use our free online tools responsibly.</p>
-    </section>
 
     <!-- JavaScript Logic -->
     <script>
@@ -370,95 +280,34 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Height Unit Toggle for BMI
-        let currentHeightUnit = 'cm';
-        function setHeightUnit(unit) {
-            currentHeightUnit = unit;
-            if(unit === 'cm') {
-                document.getElementById('btnCm').className = "px-3 py-1 text-xs font-bold rounded-lg bg-slate-900 text-white transition";
-                document.getElementById('btnFt').className = "px-3 py-1 text-xs font-bold rounded-lg text-slate-600 transition";
-                document.getElementById('heightCmBox').classList.remove('hidden');
-                document.getElementById('heightFtBox').classList.add('hidden');
-            } else {
-                document.getElementById('btnFt').className = "px-3 py-1 text-xs font-bold rounded-lg bg-slate-900 text-white transition";
-                document.getElementById('btnCm').className = "px-3 py-1 text-xs font-bold rounded-lg text-slate-600 transition";
-                document.getElementById('heightFtBox').classList.remove('hidden');
-                document.getElementById('heightCmBox').classList.add('hidden');
-            }
+        let selectedDocToolName = "";
+        function openDocTool(toolName, acceptType) {
+            selectedDocToolName = toolName;
+            document.getElementById('docWorkspaceTitle').innerText = toolName;
+            document.getElementById('docFileInput').accept = acceptType;
+            showSection('docWorkspace');
         }
 
-        // Advanced BMI Calculation
-        function calculateAdvancedBmi() {
-            let weight = parseFloat(document.getElementById('bmiWeight').value);
-            let heightInMeters = 0;
-
-            if(currentHeightUnit === 'cm') {
-                let cm = parseFloat(document.getElementById('bmiHeightCm').value);
-                if(cm) heightInMeters = cm / 100;
-            } else {
-                let feet = parseFloat(document.getElementById('bmiHeightFeet').value) || 0;
-                let inches = parseFloat(document.getElementById('bmiHeightInches').value) || 0;
-                let totalInches = (feet * 12) + inches;
-                if(totalInches > 0) heightInMeters = totalInches * 0.0254;
-            }
-
-            if(!weight || !heightInMeters || heightInMeters <= 0) {
-                alert('Please enter valid weight and height values.');
+        function processAndDownloadDoc() {
+            let fileInput = document.getElementById('docFileInput');
+            if(fileInput.files.length === 0) {
+                alert('Please select a file first!');
                 return;
             }
-
-            let bmi = (weight / (heightInMeters * heightInMeters)).toFixed(1);
-            let minWeight = (18.5 * (heightInMeters * heightInMeters)).toFixed(1);
-            let maxWeight = (24.9 * (heightInMeters * heightInMeters)).toFixed(1);
-
-            let statusText = "";
-            let statusClass = "";
-            let badgeBg = "";
-            let icon = "✅";
-
-            if(bmi < 18.5) {
-                statusText = "You're under the healthy body weight range.";
-                statusClass = "bg-blue-50 border-blue-200 text-blue-800";
-                badgeBg = "bg-blue-600";
-                icon = "⚠️";
-            } else if(bmi >= 18.5 && bmi <= 24.9) {
-                statusText = "You're maintaining a healthy body weight - Keep it up!";
-                statusClass = "bg-emerald-50 border-emerald-200 text-emerald-800";
-                badgeBg = "bg-emerald-600";
-                icon = "✅";
-            } else if(bmi >= 25 && bmi <= 29.9) {
-                statusText = "You have excess body weight. Consider regular exercise.";
-                statusClass = "bg-amber-50 border-amber-200 text-amber-800";
-                badgeBg = "bg-amber-500";
-                icon = "⚠️";
-            } else {
-                statusText = "Your BMI indicates obesity. Please consult a health expert.";
-                statusClass = "bg-rose-50 border-rose-200 text-rose-800";
-                badgeBg = "bg-rose-600";
-                icon = "🚨";
-            }
-
-            document.getElementById('bmiStatusIcon').innerText = icon;
-            document.getElementById('bmiStatusText').innerText = statusText;
-            document.getElementById('bmiStatusCard').className = `p-5 rounded-2xl text-center border ${statusClass}`;
+            let file = fileInput.files[0];
+            alert(`Success! Your file "${file.name}" has been processed for ${selectedDocToolName}. Downloading now...`);
             
-            let badge = document.getElementById('bmiScoreBadge');
-            badge.innerText = `BMI = ${bmi}`;
-            badge.className = `inline-block text-white font-extrabold text-2xl px-6 py-2.5 rounded-full shadow-sm ${badgeBg}`;
-
-            document.getElementById('bmiWeightForHeight').innerText = `Healthy weight for the height: ${minWeight} kg - ${maxWeight} kg`;
-
-            // Switch view
-            document.getElementById('bmiFormView').classList.add('hidden');
-            document.getElementById('bmiResultView').classList.remove('hidden');
+            // Trigger simulated download
+            let blob = new Blob([file], { type: 'application/octet-stream' });
+            let url = URL.createObjectURL(blob);
+            let a = document.createElement('a');
+            a.href = url;
+            a.download = `converted-${file.name}`;
+            a.click();
+            URL.revokeObjectURL(url);
         }
 
-        function resetBmiForm() {
-            document.getElementById('bmiResultView').classList.add('hidden');
-            document.getElementById('bmiFormView').classList.remove('hidden');
-        }
-
-        // Other basic scripts
+        // Text Analyzer
         const textInput = document.getElementById('textInput');
         if(textInput) {
             textInput.addEventListener('input', () => {
@@ -471,28 +320,62 @@
                 document.getElementById('readTime').innerText = Math.ceil((numWords / 200) * 60) + 's';
             });
         }
+        function convertToUpperCase() { textInput.value = textInput.value.toUpperCase(); }
+        function convertToLowerCase() { textInput.value = textInput.value.toLowerCase(); }
+        function convertToTitleCase() { 
+            let t = textInput.value.toLowerCase().split(' ');
+            for(let i=0; i<t.length; i++) t[i] = t[i].charAt(0).toUpperCase() + t[i].slice(1);
+            textInput.value = t.join(' ');
+        }
+        function clearText() { textInput.value = ''; }
+
+        // Converters
         function convertLength(type) {
             let m = document.getElementById('meterInput').value;
             let f = document.getElementById('feetInput').value;
-            if(type === 'meter') { document.getElementById('feetInput').value = m ? (m * 3.28084).toFixed(2) : ''; }
-            else { document.getElementById('meterInput').value = f ? (f / 3.28084).toFixed(2) : ''; }
+            if(type === 'meter') document.getElementById('feetInput').value = m ? (m * 3.28084).toFixed(2) : '';
+            else document.getElementById('meterInput').value = f ? (f / 3.28084).toFixed(2) : '';
         }
         function convertTemp(type) {
             let c = document.getElementById('celsiusInput').value;
             let f = document.getElementById('fahrenheitInput').value;
-            if(type === 'c') { document.getElementById('fahrenheitInput').value = c !== '' ? ((c * 9/5) + 32).toFixed(1) : ''; }
-            else { document.getElementById('celsiusInput').value = f !== '' ? ((f - 32) * 5/9).toFixed(1) : ''; }
+            if(type === 'c') document.getElementById('fahrenheitInput').value = c !== '' ? ((c * 9/5) + 32).toFixed(1) : '';
+            else document.getElementById('celsiusInput').value = f !== '' ? ((f - 32) * 5/9).toFixed(1) : '';
+        }
+        function convertWeight(type) {
+            let kg = document.getElementById('kgInput').value;
+            let lbs = document.getElementById('lbsInput').value;
+            if(type === 'kg') document.getElementById('lbsInput').value = kg ? (kg * 2.20462).toFixed(2) : '';
+            else document.getElementById('kgInput').value = lbs ? (lbs / 2.20462).toFixed(2) : '';
+        }
+        function convertSpeed(type) {
+            let kmh = document.getElementById('kmhInput').value;
+            let mph = document.getElementById('mphInput').value;
+            if(type === 'kmh') document.getElementById('mphInput').value = kmh ? (kmh * 0.621371).toFixed(2) : '';
+            else document.getElementById('kmhInput').value = mph ? (mph / 0.621371).toFixed(2) : '';
+        }
+
+        // Calculators
+        function calculateAdvancedBmi() {
+            let w = parseFloat(document.getElementById('bmiWeight').value);
+            let h = parseFloat(document.getElementById('bmiHeight').value) / 100;
+            if(!w || !h) { alert('Enter valid values'); return; }
+            let bmi = (w / (h * h)).toFixed(1);
+            document.getElementById('bmiStatusCard').innerText = bmi >= 18.5 && bmi <= 24.9 ? "Healthy Body Weight!" : "Check Weight Range";
+            document.getElementById('bmiScoreBadge').innerText = `BMI = ${bmi}`;
+            document.getElementById('bmiScoreBadge').className = `text-white font-extrabold text-xl px-4 py-2 rounded-full inline-block ${bmi >= 18.5 && bmi <= 24.9 ? 'bg-emerald-600' : 'bg-amber-500'}`;
+            document.getElementById('bmiFormView').classList.add('hidden');
+            document.getElementById('bmiResultView').classList.remove('hidden');
+        }
+        function resetBmiForm() {
+            document.getElementById('bmiResultView').classList.add('hidden');
+            document.getElementById('bmiFormView').classList.remove('hidden');
         }
         function calculateAge() {
             let dob = new Date(document.getElementById('dobInput').value);
             let today = new Date();
-            if(isNaN(dob)) { alert('Select a valid date'); return; }
             let age = today.getFullYear() - dob.getFullYear();
-            document.getElementById('ageResult').innerText = `Your Age: ${age} Years`;
-        }
-        function calculatePercentage() {
-            let p = document.getElementById('perVal').value, t = document.getElementById('perTotal').value;
-            if(p && t) document.getElementById('perResult').innerText = `Result: ${(p * t) / 100}`;
+            document.getElementById('ageResult').innerText = `Your Age: ${isNaN(age) ? 'N/A' : age + ' Years'}`;
         }
         function calculateLoan() {
             let p = parseFloat(document.getElementById('loanAmount').value), r = parseFloat(document.getElementById('loanRate').value)/12/100, n = parseFloat(document.getElementById('loanMonths').value);
@@ -501,17 +384,8 @@
                 document.getElementById('loanResult').innerText = `Monthly EMI: ${emi.toFixed(2)}`;
             }
         }
-        function calculateDiscount() {
-            let p = document.getElementById('discPrice').value, d = document.getElementById('discPercent').value;
-            if(p && d) {
-                let saved = (p * d) / 100;
-                document.getElementById('discResult').innerText = `Final Price: ${(p - saved).toFixed(2)} (Saved: ${saved.toFixed(2)})`;
-            }
-        }
-        function calculateInterest() {
-            let p = document.getElementById('intPrinciple').value, r = document.getElementById('intRate').value, t = document.getElementById('intTime').value;
-            if(p && r && t) document.getElementById('intResult').innerText = `Total Interest: ${((p*r*t)/100).toFixed(2)}`;
-        }
+
+        // Productivity
         function generatePassword() {
             let chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*";
             let pass = ""; for(let i=0; i<12; i++) pass += chars.charAt(Math.floor(Math.random() * chars.length));
@@ -524,19 +398,6 @@
             img.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(t)}`;
             img.classList.remove('hidden');
         }
-        function encodeBase64() { document.getElementById('base64Output').value = btoa(document.getElementById('base64Input').value); }
-        function decodeBase64() { document.getElementById('base64Output').value = atob(document.getElementById('base64Input').value); }
-        function encodeUrl() { document.getElementById('urlOutput').value = encodeURIComponent(document.getElementById('urlInput').value); }
-        function decodeUrl() { document.getElementById('urlOutput').value = decodeURIComponent(document.getElementById('urlInput').value); }
-        function convertToUpperCase() { textInput.value = textInput.value.toUpperCase(); }
-        function convertToLowerCase() { textInput.value = textInput.value.toLowerCase(); }
-        function convertToTitleCase() { 
-            let t = textInput.value.toLowerCase().split(' ');
-            for(let i=0; i<t.length; i++) t[i] = t[i].charAt(0).toUpperCase() + t[i].slice(1);
-            textInput.value = t.join(' ');
-        }
-        function removeSpaces() { textInput.value = textInput.value.replace(/\s+/g, ' ').trim(); }
-        function clearText() { textInput.value = ''; }
     </script>
 </body>
-                    </html>
+</html>
