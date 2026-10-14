@@ -257,41 +257,102 @@
             </div>
         </div>
 
-        <!-- ================= 1. DOCUMENTS HUB ================= -->
-        <div id="documentsHome" class="tool-section hidden space-y-6">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">📂 Documents Hub</h3>
-                <button onclick="showSection('home', true)" class="text-xs bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-600 dark:text-slate-300 px-3.5 py-2 rounded-xl font-semibold transition">← Back to Home</button>
+        <!-- ================= 1. ADVANCED DOCUMENTS & FILE CONVERTERS HUB ================= -->
+        <div id="documentsHome" class="tool-section hidden space-y-6 animate-fadeIn">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
+                <div>
+                    <h3 class="text-2xl font-black text-slate-900 dark:text-slate-100 flex items-center gap-2.5">
+                        <span class="p-2.5 bg-amber-500 text-white rounded-2xl shadow-md text-lg">📂</span> Documents & File Converters
+                    </h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Secure, client-side document processing and format conversion engine.</p>
+                </div>
+                <button onclick="showSection('home', true)" class="text-xs bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-2xl font-bold transition shadow-sm flex items-center gap-1.5">
+                    ← Back to Dashboard
+                </button>
             </div>
-            <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Select a document conversion utility:</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div onclick="openDocTool('Word to PDF', '.docx')" class="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-amber-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-amber-700 dark:text-amber-400 text-base">1. Word to PDF</h4><p class="text-xs text-amber-600/80 dark:text-slate-400 mt-1">Convert DOCX to PDF</p></div>
-                <div onclick="openDocTool('Excel to PDF', '.xlsx')" class="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-amber-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-amber-700 dark:text-amber-400 text-base">2. Excel to PDF</h4><p class="text-xs text-amber-600/80 dark:text-slate-400 mt-1">Spreadsheet converter</p></div>
-                <div onclick="openDocTool('JPG to PNG', '.jpg,.jpeg')" class="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-amber-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-amber-700 dark:text-amber-400 text-base">3. JPG to PNG</h4><p class="text-xs text-amber-600/80 dark:text-slate-400 mt-1">Image format changer</p></div>
-                <div onclick="openDocTool('PNG to JPG', '.png')" class="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-amber-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-amber-700 dark:text-amber-400 text-base">4. PNG to JPG</h4><p class="text-xs text-amber-600/80 dark:text-slate-400 mt-1">Compress and convert</p></div>
-                <div onclick="openDocTool('JPG to PDF', '.jpg,.jpeg')" class="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-amber-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-amber-700 dark:text-amber-400 text-base">5. JPG to PDF</h4><p class="text-xs text-amber-600/80 dark:text-slate-400 mt-1">Images into single PDF</p></div>
-                <div onclick="openDocTool('Text to PDF', '.txt')" class="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-amber-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-amber-700 dark:text-amber-400 text-base">6. Text to PDF</h4><p class="text-xs text-amber-600/80 dark:text-slate-400 mt-1">Plain text to PDF document</p></div>
+
+            <!-- Modern Grid UI for Documents -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                <div onclick="openDocTool('Word to PDF Converter', '.docx')" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-amber-500/5 hover:to-orange-500/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-amber-50 dark:bg-slate-800 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📄</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-amber-600 transition">Word to PDF</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Convert DOCX files safely</p>
+                </div>
+
+                <div onclick="openDocTool('Excel to PDF Converter', '.xlsx')" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-emerald-500/5 hover:to-teal-500/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-emerald-50 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📊</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-emerald-600 transition">Excel to PDF</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Spreadsheet format converter</p>
+                </div>
+
+                <div onclick="openDocTool('JPG to PNG Image Tool', '.jpg,.jpeg')" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-blue-500/5 hover:to-indigo-500/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🖼️</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-blue-600 transition">JPG to PNG Tool</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">High-quality image changer</p>
+                </div>
+
+                <div onclick="openDocTool('PNG to JPG Compressor', '.png')" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-purple-500/5 hover:to-pink-500/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-purple-50 dark:bg-slate-800 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🗜️</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-purple-600 transition">PNG to JPG Compressor</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Optimize and convert image</p>
+                </div>
+
+                <div onclick="openDocTool('JPG to PDF Creator', '.jpg,.jpeg')" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-sky-500/5 hover:to-blue-500/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-sky-50 dark:bg-slate-800 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📑</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-sky-600 transition">JPG to PDF Creator</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Combine images into single PDF</p>
+                </div>
+
+                <div onclick="openDocTool('Text to PDF Document', '.txt')" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-teal-500/5 hover:to-emerald-500/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-teal-50 dark:bg-slate-800 text-teal-600 dark:text-teal-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📝</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-teal-600 transition">Text to PDF Document</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Convert plain text files</p>
+                </div>
             </div>
         </div>
 
-        <!-- Document Workspace -->
-        <div id="docWorkspace" class="tool-section hidden max-w-xl mx-auto bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-2xl border dark:border-slate-800 text-center space-y-6">
-            <div class="flex justify-between items-center mb-2">
-                <h3 id="docWorkspaceTitle" class="text-xl font-bold text-slate-800 dark:text-slate-100">Document Tool</h3>
-                <button onclick="showSection('documentsHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl">← Back</button>
-            </div>
-            <p class="text-xs text-slate-500 dark:text-slate-400">Upload your file below. Our secure cloud conversion engine will process and convert it instantly.</p>
-            
-            <div class="border-2 border-dashed border-slate-200 dark:border-slate-700 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50">
-                <input type="file" id="docFileInput" class="w-full text-sm file:py-2.5 file:px-4 file:rounded-xl file:bg-blue-600 file:text-white file:border-0 cursor-pointer font-medium">
+        <!-- Advanced Document Workspace (Dedicated Download Option Added) -->
+        <div id="docWorkspace" class="tool-section hidden max-w-xl mx-auto bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 space-y-6">
+            <div class="flex justify-between items-center border-b dark:border-slate-800 pb-4">
+                <div>
+                    <h3 id="docWorkspaceTitle" class="text-xl font-bold text-slate-900 dark:text-slate-100">Document Tool Workspace</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Secure local conversion environment</p>
+                </div>
+                <button onclick="showSection('documentsHome', true)" class="text-xs bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 px-3.5 py-2 rounded-2xl font-bold transition">← Back</button>
             </div>
 
-            <div id="conversionStatus" class="hidden text-xs font-semibold text-blue-600 dark:text-blue-400 animate-pulse">Connecting to secure cloud converter... Please wait.</div>
+            <!-- Upload Box -->
+            <div class="border-2 border-dashed border-slate-300 dark:border-slate-700 p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/40 text-center space-y-3">
+                <div class="text-3xl">📁</div>
+                <div class="text-xs text-slate-600 dark:text-slate-300 font-medium">Drag & drop your file here or browse from device</div>
+                <input type="file" id="docFileInput" class="w-full text-xs file:py-2.5 file:px-4 file:rounded-xl file:bg-amber-500 file:hover:bg-amber-600 file:text-white file:border-0 cursor-pointer font-bold transition">
+            </div>
 
-            <button id="convertBtn" onclick="processAndConvertDocument()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-2xl font-bold shadow-lg transition">Convert & Download File</button>
+            <!-- Progress status -->
+            <div id="conversionStatus" class="hidden p-3.5 bg-blue-50 dark:bg-slate-800 text-blue-700 dark:text-blue-300 rounded-2xl text-xs font-semibold animate-pulse text-center border border-blue-100 dark:border-slate-700">
+                ⚙️ Processing file securely... Please wait a moment.
+            </div>
 
-            <div class="p-3.5 bg-blue-50 dark:bg-slate-800 text-blue-700 dark:text-blue-300 rounded-2xl text-xs text-left leading-relaxed border border-blue-100 dark:border-slate-700">
-                💡 <b>Pro Tip:</b> For heavy files, you can also use our <a href="https://cloudconvert.com" target="_blank" class="underline font-bold">CloudConvert Partner Engine</a> directly through this workspace.
+            <!-- Action buttons -->
+            <div class="space-y-3">
+                <button id="convertBtn" onclick="processAndConvertDocument()" class="w-full bg-amber-500 hover:bg-amber-600 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition transform active:scale-95 flex items-center justify-center gap-2">
+                    ⚡ Convert File Now
+                </button>
+                
+                <!-- Separate Download Button Container (Appears after conversion) -->
+                <div id="downloadSection" class="hidden">
+                    <a id="downloadResultBtn" href="#" download class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition flex items-center justify-center gap-2 text-center">
+                        📥 Download Converted File
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pro Tip Box -->
+            <div class="p-4 bg-amber-50/60 dark:bg-slate-800/80 text-amber-900 dark:text-amber-300 rounded-2xl text-xs leading-relaxed border border-amber-100 dark:border-slate-700 flex items-start gap-2.5">
+                <span class="text-base">💡</span>
+                <div>
+                    <strong class="font-bold">Pro Tip:</strong> For extremely large files or advanced cloud formatting, you can also use our secure <a href="https://cloudconvert.com" target="_blank" class="underline font-bold text-amber-700 dark:text-amber-400">CloudConvert Partner Engine</a> directly through this workspace.
+                </div>
             </div>
         </div>
 
@@ -300,7 +361,7 @@
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
                 <div>
                     <h3 class="text-2xl font-black text-slate-900 dark:text-slate-100 flex items-center gap-2.5">
-                        <span class="p-2.5 bg-blue-600 text-white rounded-2xl shadow-md text-lg">🔄</span> Converters & Calculators Hub
+                        <span class="p-2.5 bg-blue-600 text-white rounded-2xl shadow-md text-lg">🔄</span> Converters Hub
                     </h3>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Lightning-fast, accurate local calculations for professional developers and everyday use.</p>
                 </div>
