@@ -244,18 +244,41 @@
                 </div>
             </div>
 
-            <!-- Group 4: Productivity & Text Tools -->
-            <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border dark:border-slate-800 space-y-4">
-                <h4 class="font-extrabold text-purple-600 dark:text-purple-400 text-sm flex items-center gap-2">⚡ Productivity & Text Utilities</h4>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                    <div onclick="showSection('textTools', true)" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-purple-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">Text Tools & Analyzer</p><p class="text-[10px] text-slate-500">Word count & case converters</p></div>
-                    <div onclick="showSection('prodPassword', true)" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-purple-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">Password Generator</p><p class="text-[10px] text-slate-500">Secure passwords</p></div>
-                    <div onclick="showSection('prodQr', true)" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-purple-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">QR Code Generator</p><p class="text-[10px] text-slate-500">Instant QR code creator</p></div>
-                    <div onclick="showSection('prodBase64', true)" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-purple-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">Base64 Encoder/Decoder</p><p class="text-[10px] text-slate-500">Data encoding</p></div>
-                    <div onclick="showSection('prodUrl', true)" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-purple-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">URL Encoder/Decoder</p><p class="text-[10px] text-slate-500">Web link converter</p></div>
+                    <!-- Group 4: Master Directory Productivity & Text Tools Card -->
+        <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border dark:border-slate-800 space-y-4">
+            <h4 class="font-extrabold text-purple-600 dark:text-purple-400 text-sm flex items-center gap-2">⚡ Productivity & Text Tools</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                <div onclick="showSection('textTools', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
+                    <div class="font-bold text-xs text-slate-800 dark:text-slate-200">📝 Text Tools & Analyzer</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Word count, case converters</div>
+                </div>
+                <div onclick="showSection('prodPassword', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
+                    <div class="font-bold text-xs text-slate-800 dark:text-slate-200">🔑 Password Generator</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Secure random keys</div>
+                </div>
+                <div onclick="showSection('prodQr', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
+                    <div class="font-bold text-xs text-slate-800 dark:text-slate-200">📱 QR Code Generator</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Instant text & URL QR codes</div>
+                </div>
+                <div onclick="showSection('prodUuid', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
+                    <div class="font-bold text-xs text-slate-800 dark:text-slate-200">🆔 UUID v4 Generator</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Unique ID tokens</div>
+                </div>
+                <div onclick="showSection('prodLorem', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
+                    <div class="font-bold text-xs text-slate-800 dark:text-slate-200">📝 Lorem Ipsum Generator</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Dummy text creator</div>
+                </div>
+                <div onclick="showSection('prodBase64', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
+                    <div class="font-bold text-xs text-slate-800 dark:text-slate-200">🔐 Base64 Encoder / Decoder</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Data encoding utility</div>
+                </div>
+                <div onclick="showSection('prodUrl', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
+                    <div class="font-bold text-xs text-slate-800 dark:text-slate-200">🌐 URL Encoder / Decoder</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Web link formatter</div>
                 </div>
             </div>
         </div>
+
 
         <!-- ================= 1. ADVANCED DOCUMENTS & FILE CONVERTERS HUB ================= -->
         <div id="documentsHome" class="tool-section hidden space-y-6 animate-fadeIn">
@@ -1436,6 +1459,20 @@
             let val = document.getElementById('urlInput').value;
             try { document.getElementById('urlOutput').value = decodeURIComponent(val); showToast('URL Decoded'); } catch(e) { alert('Invalid URL string'); }
         }
+        // UUID v4 Generator Function
+function generateUuidV4() {
+    const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+    document.getElementById('uuidOutput').value = uuid;
+}
+
+// Lorem Ipsum Generator Function
+function generateLorem() {
+    const dummyText = "TextTools Hub provides lightning-fast local web utilities, advanced converters, and secure developer tools. Designed for high performance, efficiency, and seamless user experience without server-side data storage. Empowering your daily digital workflow with modern client-side architecture.";
+    document.getElementById('loremOutput').value = dummyText;
+}
     </script>
 </body>
                                                                                                                                                                                                                                                                                                       </html>
