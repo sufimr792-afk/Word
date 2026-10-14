@@ -1581,5 +1581,97 @@ function findAndReplaceText() {
     analyzeText();
 }
     </script>
+    <script>
+    // Section Switcher Router
+    function showSection(sectionId) {
+        document.querySelectorAll('.tool-section').forEach(el => el.classList.add('hidden'));
+        let target = document.getElementById(sectionId);
+        if (target) {
+            target.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+
+    // Real-time Text Analyzer Function
+    function analyzeText() {
+        let text = document.getElementById('textInput').value;
+        let words = text.trim() ? text.trim().split(/\s+/).length : 0;
+        let chars = text.length;
+        let sentences = text.split(/[.!?]+/).filter(Boolean).length;
+        let readTime = Math.ceil(words / 200 * 60);
+
+        document.getElementById('wordCount').innerText = words;
+        document.getElementById('charCount').innerText = chars;
+        document.getElementById('sentenceCount').innerText = sentences;
+        document.getElementById('readTime').innerText = readTime + 's';
+    }
+
+    // Text Formatters & Utilities
+    function convertToUpperCase() {
+        let el = document.getElementById('textInput');
+        if(el) { el.value = el.value.toUpperCase(); analyzeText(); }
+    }
+
+    function convertToLowerCase() {
+        let el = document.getElementById('textInput');
+        if(el) { el.value = el.value.toLowerCase(); analyzeText(); }
+    }
+
+    function convertToTitleCase() {
+        let el = document.getElementById('textInput');
+        if(el) { 
+            el.value = el.value.toLowerCase().replace(/\b\w/g, l => l.toUpperCase()); 
+            analyzeText(); 
+        }
+    }
+
+    function convertToSentenceCase() {
+        let el = document.getElementById('textInput');
+        if(el) {
+            let text = el.value.toLowerCase();
+            el.value = text.charAt(0).toUpperCase() + text.slice(1);
+            analyzeText();
+        }
+    }
+
+    function removeExtraSpaces() {
+        let el = document.getElementById('textInput');
+        if(el) { el.value = el.value.replace(/\s+/g, ' ').trim(); analyzeText(); }
+    }
+
+    function removeLineBreaks() {
+        let el = document.getElementById('textInput');
+        if(el) { el.value = el.value.replace(/(\r\n|\n|\r)/gm, " "); analyzeText(); }
+    }
+
+    function reverseText() {
+        let el = document.getElementById('textInput');
+        if(el) { el.value = el.value.split('').reverse().join(''); analyzeText(); }
+    }
+
+    function copyTextToClipboard() {
+        let el = document.getElementById('textInput');
+        if(el) {
+            el.select();
+            navigator.clipboard.writeText(el.value);
+            alert('Text copied to clipboard successfully!');
+        }
+    }
+
+    function clearText() {
+        let el = document.getElementById('textInput');
+        if(el) { el.value = ''; analyzeText(); }
+    }
+
+    function findAndReplaceText() {
+        let text = document.getElementById('textInput').value;
+        let findVal = document.getElementById('findInput').value;
+        let replaceVal = document.getElementById('replaceInput').value;
+        if (!findVal) return;
+        let regex = new RegExp(findVal, 'g');
+        document.getElementById('textInput').value = text.replace(regex, replaceVal);
+        analyzeText();
+    }
+    </script>
 </body>
                                                                                                                                                                                                                                                                                                       </html>
