@@ -34,7 +34,6 @@
     }
     </script>
 
-    <!-- Google Search Console Verification Meta Tag -->
     <meta name="google-site-verification" content="BqizJoyVioQZT_aqZl0aFEqBuQ7vRXXl018m0u97b8I">
     
     <!-- Tailwind CSS CDN -->
@@ -45,7 +44,7 @@
 </head>
 <body class="bg-gradient-to-br from-slate-50 via-blue-50/40 to-indigo-50/40 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950 text-slate-800 dark:text-slate-100 min-h-screen flex flex-col justify-between font-sans selection:bg-blue-500 selection:text-white transition-colors duration-300">
 
-    <!-- Ultra-Premium Glassmorphism Header -->
+    <!-- Header -->
     <header class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-2xl text-slate-800 dark:text-white shadow-md sticky top-0 z-50 py-3.5 border-b border-slate-200/60 dark:border-slate-800/60">
         <div class="max-w-5xl mx-auto px-4 flex justify-between items-center">
             <a href="#" onclick="showSection('home', true)" class="text-xl font-extrabold tracking-wide flex items-center gap-2.5 hover:text-blue-600 transition transform hover:scale-105">
@@ -109,7 +108,7 @@
                 <button onclick="showSection('allToolsSection', true)" class="hidden sm:flex items-center gap-1 text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline">View All Tools →</button>
             </div>
 
-            <!-- Premium Category Cards -->
+            <!-- Cards -->
             <div id="categoryGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
                 <div onclick="showSection('documentsHome', true)" class="searchable-card group bg-gradient-to-r from-amber-600 via-amber-500 to-orange-600 text-white p-6 rounded-3xl shadow-lg hover:shadow-2xl cursor-pointer transition-all duration-300 transform hover:-translate-y-2 flex items-center gap-5 border border-amber-400/40" data-name="documents hub word excel pdf image converter">
                     <div class="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center text-2xl group-hover:scale-110 transition backdrop-blur-md shadow-inner">📂</div>
@@ -494,21 +493,34 @@
             </div>
         </div>
 
-        <!-- BMI Workspace -->
+        <!-- Advanced WHO BMI Calculator Workspace with Highlight Table -->
         <div id="calcBmi" class="tool-section hidden max-w-xl mx-auto bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border dark:border-slate-800 overflow-hidden">
             <div class="bg-slate-900 text-white p-5 flex justify-between items-center">
                 <h3 class="text-sm font-bold">📈 Advanced WHO BMI Calculator</h3>
                 <button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-800 px-3 py-1.5 rounded-xl">← Back</button>
             </div>
-            <div id="bmiFormView" class="p-6 space-y-4 text-xs">
-                <div><label class="font-bold mb-1 block">Weight (Kg)</label><input type="number" id="bmiWeightKg" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl" placeholder="68"></div>
-                <div><label class="font-bold mb-1 block">Height (cm)</label><input type="number" id="bmiHeightCm" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl" placeholder="170"></div>
-                <button onclick="calculateAdvancedBmi()" class="w-full bg-emerald-600 text-white py-3 rounded-xl font-bold">Calculate BMI Score</button>
-            </div>
-            <div id="bmiResultView" class="hidden p-6 space-y-4 text-center">
-                <div id="bmiStatusBanner" class="p-3 rounded-xl font-bold text-xs">Status</div>
-                <div id="bmiScoreBadge" class="text-white font-extrabold text-xl px-4 py-2 rounded-xl inline-block">BMI = 0</div>
-                <button onclick="resetBmiForm()" class="bg-slate-100 dark:bg-slate-800 px-4 py-2 rounded-xl text-xs font-bold">Recalculate</button>
+            
+            <div class="p-6 space-y-5 text-xs">
+                <div class="grid grid-cols-2 gap-3">
+                    <div><label class="font-bold mb-1 block">Weight (Kg)</label><input type="number" id="bmiWeightKg" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl" placeholder="68"></div>
+                    <div><label class="font-bold mb-1 block">Height (cm)</label><input type="number" id="bmiHeightCm" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl" placeholder="170"></div>
+                </div>
+                <button onclick="calculateAdvancedBmi()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-bold transition">Calculate BMI & View WHO Table</button>
+                
+                <div id="bmiResultContainer" class="hidden space-y-4 pt-2">
+                    <div id="bmiStatusBanner" class="p-3.5 rounded-xl font-bold text-center text-xs">Status</div>
+                    
+                    <!-- WHO Reference Table with Dynamic Highlighting -->
+                    <div class="border dark:border-slate-700 rounded-2xl overflow-hidden">
+                        <div class="bg-slate-100 dark:bg-slate-800 p-2.5 font-bold text-center border-b dark:border-slate-700">WHO BMI Classification</div>
+                        <div class="divide-y dark:divide-slate-700 text-[11px]">
+                            <div id="rowUnderweight" class="p-2.5 flex justify-between items-center transition"><span>Underweight (< 18.5)</span> <span class="font-semibold">Thinness</span></div>
+                            <div id="rowNormal" class="p-2.5 flex justify-between items-center transition"><span>Normal Weight (18.5 - 24.9)</span> <span class="font-semibold">Healthy</span></div>
+                            <div id="rowOverweight" class="p-2.5 flex justify-between items-center transition"><span>Overweight (25.0 - 29.9)</span> <span class="font-semibold">Pre-obese</span></div>
+                            <div id="rowObese" class="p-2.5 flex justify-between items-center transition"><span>Obese (≥ 30.0)</span> <span class="font-semibold">Obese</span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -652,29 +664,48 @@
             <textarea id="urlOutput" rows="2" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl font-mono text-[10px]" readonly placeholder="Output..."></textarea>
         </div>
 
-        <!-- ================= TEXT TOOLS & ANALYZER ================= -->
+        <!-- ================= FULL TEXT TOOLS & ANALYZER ================= -->
         <div id="textTools" class="tool-section hidden max-w-3xl mx-auto bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 space-y-6 animate-fadeIn">
             <div class="flex justify-between items-center border-b dark:border-slate-800 pb-5">
                 <div>
                     <h3 class="text-2xl font-black text-slate-900 dark:text-slate-100 flex items-center gap-2.5">
                         <span class="p-2.5 bg-blue-600 text-white rounded-2xl shadow-md text-lg">📝</span> Advanced Text Tools & Analyzer
                     </h3>
-                    <p class="text-xs text-slate-500 mt-1">Real-time character metrics, case formatters, and professional text utilities.</p>
+                    <p class="text-xs text-slate-500 mt-1">Real-time metrics, case formatting, line cleaning, and replacement utilities.</p>
                 </div>
                 <button onclick="showSection('home', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-4 py-2.5 rounded-2xl font-bold">← Back</button>
             </div>
+            
             <textarea id="textInput" rows="6" oninput="analyzeText()" class="w-full p-4 border dark:border-slate-700 rounded-2xl text-sm bg-slate-50 dark:bg-slate-800/60 outline-none leading-relaxed" placeholder="Type or paste your text here..."></textarea>
+            
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs">
                 <div class="p-4 bg-blue-50 dark:bg-slate-800 rounded-2xl text-center font-bold">Words: <span id="wordCount" class="text-lg block">0</span></div>
                 <div class="p-4 bg-emerald-50 dark:bg-slate-800 rounded-2xl text-center font-bold">Characters: <span id="charCount" class="text-lg block">0</span></div>
                 <div class="p-4 bg-amber-50 dark:bg-slate-800 rounded-2xl text-center font-bold">Sentences: <span id="sentenceCount" class="text-lg block">0</span></div>
                 <div class="p-4 bg-purple-50 dark:bg-slate-800 rounded-2xl text-center font-bold">Reading Time: <span id="readTime" class="text-lg block">0s</span></div>
             </div>
-            <div class="flex flex-wrap gap-2.5">
-                <button onclick="convertToUpperCase()" class="bg-blue-600 text-white px-4 py-2.5 rounded-xl text-xs font-bold shadow">UPPERCASE</button>
-                <button onclick="convertToLowerCase()" class="bg-blue-600 text-white px-4 py-2.5 rounded-xl text-xs font-bold shadow">lowercase</button>
-                <button onclick="removeExtraSpaces()" class="bg-slate-700 text-white px-4 py-2.5 rounded-xl text-xs font-bold shadow">Remove Spaces</button>
-                <button onclick="clearText()" class="bg-rose-600 text-white px-4 py-2.5 rounded-xl text-xs font-bold shadow ml-auto">Clear</button>
+
+            <!-- Complete Text Action Buttons -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs font-bold">
+                <button onclick="convertToUpperCase()" class="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl shadow transition">UPPERCASE</button>
+                <button onclick="convertToLowerCase()" class="bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-xl shadow transition">lowercase</button>
+                <button onclick="capitalizeText()" class="bg-sky-600 hover:bg-sky-700 text-white py-3 rounded-xl shadow transition">Capitalize</button>
+                <button onclick="removeExtraSpaces()" class="bg-slate-700 hover:bg-slate-800 text-white py-3 rounded-xl shadow transition">Remove Spaces</button>
+            </div>
+
+            <!-- Find & Replace Section -->
+            <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-2xl space-y-3 text-xs border dark:border-slate-700">
+                <div class="font-bold">Find & Replace Utilities</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <input type="text" id="findText" class="p-2.5 border dark:border-slate-700 dark:bg-slate-800 rounded-xl" placeholder="Find word...">
+                    <input type="text" id="replaceText" class="p-2.5 border dark:border-slate-700 dark:bg-slate-800 rounded-xl" placeholder="Replace with...">
+                </div>
+                <button onclick="findAndReplaceText()" class="w-full bg-slate-800 dark:bg-slate-700 hover:bg-slate-900 text-white py-2.5 rounded-xl font-bold transition">Apply Find & Replace</button>
+            </div>
+
+            <div class="flex justify-between items-center pt-2">
+                <button onclick="copyProcessedText()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-xl text-xs font-bold shadow">📋 Copy Text</button>
+                <button onclick="clearText()" class="bg-rose-600 hover:bg-rose-700 text-white px-5 py-2.5 rounded-xl text-xs font-bold shadow">🗑️ Clear All</button>
             </div>
         </div>
 
@@ -723,7 +754,7 @@
 
     </main>
 
-    <!-- Restored Multi-Column Premium Footer with support. Gmail -->
+    <!-- Footer -->
     <footer class="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-10 mt-20 text-xs font-sans shadow-2xl">
         <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12 pb-12 border-b border-slate-800/80">
             <div class="space-y-3">
@@ -875,19 +906,30 @@
             document.getElementById('jsonOutput').innerText = JSON.stringify(res, null, 2);
         }
 
+        <!-- Advanced WHO BMI Calculator with Row Highlighting Logic -->
         function calculateAdvancedBmi() {
             let w = parseFloat(document.getElementById('bmiWeightKg').value);
             let h = parseFloat(document.getElementById('bmiHeightCm').value) / 100;
             if(!w || !h) { alert('দয়া করে ওজন ও উচ্চতা দিন!'); return; }
             let bmi = (w / (h * h)).toFixed(1);
-            document.getElementById('bmiStatusBanner').innerText = bmi < 18.5 ? "Underweight" : (bmi <= 25 ? "Normal Weight" : "Overweight");
-            document.getElementById('bmiScoreBadge').innerText = `BMI = ${bmi}`;
-            document.getElementById('bmiFormView').classList.add('hidden');
-            document.getElementById('bmiResultView').classList.remove('hidden');
-        }
-        function resetBmiForm() {
-            document.getElementById('bmiResultView').classList.add('hidden');
-            document.getElementById('bmiFormView').classList.remove('hidden');
+            
+            let statusText = "";
+            let targetRowId = "";
+            if(bmi < 18.5) { statusText = `BMI = ${bmi} (Underweight)`; targetRowId = 'rowUnderweight'; }
+            else if(bmi <= 24.9) { statusText = `BMI = ${bmi} (Normal Weight)`; targetRowId = 'rowNormal'; }
+            else if(bmi <= 29.9) { statusText = `BMI = ${bmi} (Overweight)`; targetRowId = 'rowOverweight'; }
+            else { statusText = `BMI = ${bmi} (Obese)`; targetRowId = 'rowObese'; }
+
+            document.getElementById('bmiStatusBanner').innerText = statusText;
+            document.getElementById('bmiResultContainer').classList.remove('hidden');
+
+            // Reset and Highlight active row
+            ['rowUnderweight', 'rowNormal', 'rowOverweight', 'rowObese'].forEach(id => {
+                let el = document.getElementById(id);
+                el.className = "p-2.5 flex justify-between items-center transition";
+            });
+            let activeRow = document.getElementById(targetRowId);
+            if(activeRow) activeRow.className = "p-2.5 flex justify-between items-center bg-blue-600 text-white font-bold rounded-xl shadow-md scale-[1.02]";
         }
 
         function calculateExactAge() {
@@ -926,6 +968,7 @@
             if(!isNaN(p) && !isNaN(r) && !isNaN(t)) document.getElementById('intResult').innerText = `Interest: ${(p * r * t) / 100}`;
         }
 
+        <!-- Text Analyzer & Manipulator Functions -->
         function analyzeText() {
             let text = document.getElementById('textInput').value;
             let words = text.trim() ? text.trim().split(/\s+/).length : 0;
@@ -936,7 +979,27 @@
         }
         function convertToUpperCase() { let el = document.getElementById('textInput'); el.value = el.value.toUpperCase(); analyzeText(); }
         function convertToLowerCase() { let el = document.getElementById('textInput'); el.value = el.value.toLowerCase(); analyzeText(); }
+        function capitalizeText() {
+            let el = document.getElementById('textInput');
+            el.value = el.value.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g, c => c.toUpperCase());
+            analyzeText();
+        }
         function removeExtraSpaces() { let el = document.getElementById('textInput'); el.value = el.value.replace(/\s+/g, ' ').trim(); analyzeText(); }
+        function findAndReplaceText() {
+            let el = document.getElementById('textInput');
+            let find = document.getElementById('findText').value;
+            let replace = document.getElementById('replaceText').value;
+            if(find) {
+                el.value = el.value.replaceAll(find, replace);
+                analyzeText();
+            }
+        }
+        function copyProcessedText() {
+            let el = document.getElementById('textInput');
+            el.select();
+            navigator.clipboard.writeText(el.value);
+            alert('টেক্সট কপি করা হয়েছে!');
+        }
         function clearText() { document.getElementById('textInput').value = ''; analyzeText(); }
 
         function generatePassword() {
