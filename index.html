@@ -295,57 +295,147 @@
             </div>
         </div>
 
-        <!-- ================= 2. CONVERTERS HUB ================= -->
-        <div id="convertersHome" class="tool-section hidden space-y-6">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">🔄 Converters Hub</h3>
-                <button onclick="showSection('home', true)" class="text-xs bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-600 dark:text-slate-300 px-3.5 py-2 rounded-xl font-semibold transition">← Back to Home</button>
+        <!-- ================= 2. ADVANCED UI/UX CONVERTERS HUB ================= -->
+        <div id="convertersHome" class="tool-section hidden space-y-6 animate-fadeIn">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
+                <div>
+                    <h3 class="text-2xl font-black text-slate-900 dark:text-slate-100 flex items-center gap-2.5">
+                        <span class="p-2.5 bg-blue-600 text-white rounded-2xl shadow-md text-lg">🔄</span> Converters & Calculators Hub
+                    </h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Lightning-fast, accurate local calculations for professional developers and everyday use.</p>
+                </div>
+                <button onclick="showSection('home', true)" class="text-xs bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-2xl font-bold transition shadow-sm flex items-center gap-1.5">
+                    ← Back to Dashboard
+                </button>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div onclick="showSection('convLength', true)" class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-blue-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-blue-700 dark:text-blue-400 text-base">Length Converter</h4><p class="text-xs text-blue-600/80 dark:text-slate-400 mt-1">Meters, Feet, Inches</p></div>
-                <div onclick="showSection('convTemp', true)" class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-blue-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-blue-700 dark:text-blue-400 text-base">Temperature Converter</h4><p class="text-xs text-blue-600/80 dark:text-slate-400 mt-1">Celsius, Fahrenheit</p></div>
-                <div onclick="showSection('convWeight', true)" class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-blue-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-blue-700 dark:text-blue-400 text-base">Weight / Mass</h4><p class="text-xs text-blue-600/80 dark:text-slate-400 mt-1">Kg, Gram, Pound</p></div>
-                <div onclick="showSection('convSpeed', true)" class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-blue-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-blue-700 dark:text-blue-400 text-base">Speed Converter</h4><p class="text-xs text-blue-600/80 dark:text-slate-400 mt-1">Km/h to Mph</p></div>
-                <div onclick="showSection('convData', true)" class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-blue-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-blue-700 dark:text-blue-400 text-base">Data Storage</h4><p class="text-xs text-blue-600/80 dark:text-slate-400 mt-1">MB, GB, KB, TB</p></div>
-                <div onclick="showSection('convColor', true)" class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-blue-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-blue-700 dark:text-blue-400 text-base">Hex to RGB</h4><p class="text-xs text-blue-600/80 dark:text-slate-400 mt-1">Color code converter</p></div>
-                <div onclick="showSection('convHexDec', true)" class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-blue-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-blue-700 dark:text-blue-400 text-base">Hex to Decimal</h4><p class="text-xs text-blue-600/80 dark:text-slate-400 mt-1">Hexadecimal calculator</p></div>
-                <div onclick="showSection('convCsvJson', true)" class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-blue-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-blue-700 dark:text-blue-400 text-base">CSV to JSON</h4><p class="text-xs text-blue-600/80 dark:text-slate-400 mt-1">Format converter</p></div>
+
+            <!-- Modern Grid UI -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                <div onclick="showSection('convLength', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-blue-600/5 hover:to-indigo-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 text-cursor cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📏</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-blue-600 transition">Length Converter</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Meters, Feet, Inches & Yards</p>
+                </div>
+
+                <div onclick="showSection('convTemp', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-indigo-600/5 hover:to-purple-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 text-cursor cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-indigo-50 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🌡️</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-indigo-600 transition">Temperature</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Celsius, Fahrenheit & Kelvin</p>
+                </div>
+
+                <div onclick="showSection('convWeight', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-sky-600/5 hover:to-blue-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 text-cursor cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-sky-50 dark:bg-slate-800 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">⚖️</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-sky-600 transition">Weight / Mass</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Kg, Gram, Pound & Ounce</p>
+                </div>
+
+                <div onclick="showSection('convSpeed', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-teal-600/5 hover:to-emerald-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 text-cursor cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-teal-50 dark:bg-slate-800 text-teal-600 dark:text-teal-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🏎️</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-teal-600 transition">Speed Converter</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Km/h to Mph calculations</p>
+                </div>
+
+                <div onclick="showSection('convData', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-violet-600/5 hover:to-purple-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 text-cursor cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-violet-50 dark:bg-slate-800 text-violet-600 dark:text-violet-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">💾</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-violet-600 transition">Data Storage</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">MB, GB, TB & KB Calculator</p>
+                </div>
+
+                <div onclick="showSection('convColor', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-fuchsia-600/5 hover:to-pink-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 text-cursor cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-fuchsia-50 dark:bg-slate-800 text-fuchsia-600 dark:text-fuchsia-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🎨</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-fuchsia-600 transition">Hex to RGB</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Color code format converter</p>
+                </div>
+
+                <div onclick="showSection('convHexDec', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-cyan-600/5 hover:to-blue-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 text-cursor cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-cyan-50 dark:bg-slate-800 text-cyan-600 dark:text-cyan-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🔢</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-cyan-600 transition">Hex to Decimal</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Hexadecimal math tool</p>
+                </div>
+
+                <div onclick="showSection('convCsvJson', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-emerald-600/5 hover:to-teal-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 text-cursor cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-emerald-50 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📊</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-emerald-600 transition">CSV to JSON</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Data format formatter</p>
+                </div>
             </div>
         </div>
 
-        <!-- Converters Sub-tools -->
-        <div id="convLength" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border dark:border-slate-800 max-w-lg mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">📏 Length</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="grid grid-cols-2 gap-4"><input type="number" id="meterInput" oninput="convertLength('meter')" class="p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl" placeholder="Meters"><input type="number" id="feetInput" oninput="convertLength('feet')" class="p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl" placeholder="Feet"></div>
+        <!-- Converters Sub-tools Workspace with Glassmorphic UI -->
+        <div id="convLength" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">📏 Length Converter</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-xl font-semibold">← Back</button></div>
+            <div class="grid grid-cols-2 gap-4">
+                <div><label class="block text-xs font-bold mb-1.5">Meters</label><input type="number" id="meterInput" oninput="convertLength('meter')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. 10"></div>
+                <div><label class="block text-xs font-bold mb-1.5">Feet</label><input type="number" id="feetInput" oninput="convertLength('feet')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. 32.8"></div>
+            </div>
         </div>
-        <div id="convTemp" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border dark:border-slate-800 max-w-lg mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🌡️ Temperature</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="grid grid-cols-2 gap-4"><input type="number" id="celsiusInput" oninput="convertTemp('c')" class="p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl" placeholder="Celsius"><input type="number" id="fahrenheitInput" oninput="convertTemp('f')" class="p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl" placeholder="Fahrenheit"></div>
+
+        <div id="convTemp" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🌡️ Temperature</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-xl font-semibold">← Back</button></div>
+            <div class="grid grid-cols-2 gap-4">
+                <div><label class="block text-xs font-bold mb-1.5">Celsius (°C)</label><input type="number" id="celsiusInput" oninput="convertTemp('c')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-indigo-500 outline-none" placeholder="e.g. 30"></div>
+                <div><label class="block text-xs font-bold mb-1.5">Fahrenheit (°F)</label><input type="number" id="fahrenheitInput" oninput="convertTemp('f')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-indigo-500 outline-none" placeholder="e.g. 86"></div>
+            </div>
         </div>
-        <div id="convWeight" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border dark:border-slate-800 max-w-lg mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">⚖️ Weight</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="grid grid-cols-2 gap-4"><input type="number" id="kgInput" oninput="convertWeight('kg')" class="p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl" placeholder="Kg"><input type="number" id="lbsInput" oninput="convertWeight('lbs')" class="p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl" placeholder="Lbs"></div>
+
+        <div id="convWeight" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">⚖️ Weight / Mass</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-xl font-semibold">← Back</button></div>
+            <div class="grid grid-cols-2 gap-4">
+                <div><label class="block text-xs font-bold mb-1.5">Kilograms (Kg)</label><input type="number" id="kgInput" oninput="convertWeight('kg')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-sky-500 outline-none" placeholder="e.g. 50"></div>
+                <div><label class="block text-xs font-bold mb-1.5">Pounds (Lbs)</label><input type="number" id="lbsInput" oninput="convertWeight('lbs')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-sky-500 outline-none" placeholder="e.g. 110"></div>
+            </div>
         </div>
-        <div id="convSpeed" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border dark:border-slate-800 max-w-lg mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🏎️ Speed</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="grid grid-cols-2 gap-4"><input type="number" id="kmhInput" oninput="convertSpeed('kmh')" class="p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl" placeholder="Km/h"><input type="number" id="mphInput" oninput="convertSpeed('mph')" class="p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl" placeholder="Mph"></div>
+
+        <div id="convSpeed" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🏎️ Speed Converter</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-xl font-semibold">← Back</button></div>
+            <div class="grid grid-cols-2 gap-4">
+                <div><label class="block text-xs font-bold mb-1.5">Km/h</label><input type="number" id="kmhInput" oninput="convertSpeed('kmh')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-teal-500 outline-none" placeholder="e.g. 120"></div>
+                <div><label class="block text-xs font-bold mb-1.5">Mph</label><input type="number" id="mphInput" oninput="convertSpeed('mph')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-teal-500 outline-none" placeholder="e.g. 75"></div>
+            </div>
         </div>
-        <div id="convData" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border dark:border-slate-800 max-w-lg mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">💾 Data Storage</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div><label class="block text-xs font-semibold mb-1">MB</label><input type="number" id="mbInput" oninput="convertData()" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl" placeholder="MB"></div><div><p class="text-xs font-semibold mb-1">GB:</p><div id="gbResult" class="p-3 bg-blue-50 dark:bg-slate-800 text-blue-700 dark:text-blue-300 font-bold rounded-xl border dark:border-slate-700">0 GB</div></div></div>
+
+        <div id="convData" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">💾 Data Storage</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-xl font-semibold">← Back</button></div>
+            <div>
+                <label class="block text-xs font-bold mb-1.5">Megabytes (MB)</label>
+                <input type="number" id="mbInput" oninput="convertData()" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm mb-4 focus:ring-2 focus:ring-violet-500 outline-none" placeholder="e.g. 1024">
+                <div class="p-4 bg-violet-50 dark:bg-slate-800 text-violet-900 dark:text-violet-300 font-bold rounded-2xl border border-violet-100 dark:border-slate-700 text-center text-sm shadow-sm">
+                    Converted Result: <span id="gbResult" class="text-lg">0 GB</span>
+                </div>
+            </div>
         </div>
-        <div id="convColor" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border dark:border-slate-800 max-w-lg mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🎨 Hex to RGB</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div><label class="block text-xs font-semibold mb-1">Hex Code</label><input type="text" id="hexInput" oninput="hexToRgb()" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl mb-3" placeholder="#3b82f6"><p id="rgbResult" class="text-sm font-medium text-slate-700 dark:text-slate-300">RGB: N/A</p></div>
+
+        <div id="convColor" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🎨 Hex to RGB</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-xl font-semibold">← Back</button></div>
+            <div>
+                <label class="block text-xs font-bold mb-1.5">Hex Code</label>
+                <input type="text" id="hexInput" oninput="hexToRgb()" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm mb-4 focus:ring-2 focus:ring-fuchsia-500 outline-none" placeholder="#3b82f6">
+                <div id="rgbResult" class="p-4 bg-fuchsia-50 dark:bg-slate-800 text-fuchsia-900 dark:text-fuchsia-300 font-bold rounded-2xl border border-fuchsia-100 dark:border-slate-700 text-center text-sm shadow-sm">
+                    RGB: N/A
+                </div>
+            </div>
         </div>
-        <div id="convHexDec" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border dark:border-slate-800 max-w-lg mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">🔢 Hex to Decimal</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div><label class="block text-xs font-semibold mb-1">Hex</label><input type="text" id="hexDecInput" oninput="hexToDecimal()" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl" placeholder="e.g. 1A"></div><div><p class="text-xs font-semibold mb-1">Decimal:</p><div id="decimalResult" class="p-3 bg-blue-50 dark:bg-slate-800 text-blue-700 dark:text-blue-300 font-bold rounded-xl border dark:border-slate-700">0</div></div></div>
+
+        <div id="convHexDec" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🔢 Hex to Decimal</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-xl font-semibold">← Back</button></div>
+            <div>
+                <label class="block text-xs font-bold mb-1.5">Hexadecimal</label>
+                <input type="text" id="hexDecInput" oninput="hexToDecimal()" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm mb-4 focus:ring-2 focus:ring-cyan-500 outline-none" placeholder="e.g. 2F">
+                <div class="p-4 bg-cyan-50 dark:bg-slate-800 text-cyan-900 dark:text-cyan-300 font-bold rounded-2xl border border-cyan-100 dark:border-slate-700 text-center text-sm shadow-sm">
+                    Decimal: <span id="decimalResult" class="text-lg">0</span>
+                </div>
+            </div>
         </div>
-        <div id="convCsvJson" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border dark:border-slate-800 max-w-lg mx-auto">
-            <div class="flex justify-between items-center mb-6"><h3 class="text-xl font-bold">📊 CSV to JSON</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl font-semibold">← Back</button></div>
-            <textarea id="csvInput" rows="3" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl mb-3 text-sm" placeholder="name,age..."></textarea><button onclick="csvToJson()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs mb-3">Convert</button><pre id="jsonOutput" class="p-3 bg-slate-900 text-emerald-400 rounded-xl text-xs overflow-x-auto">JSON output...</pre>
-        </div>
+
+        <div id="convCsvJson" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">📊 CSV to JSON</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-xl font-semibold">← Back</button></div>
+            <div>
+                <label class="block text-xs font-bold mb-1.5">CSV Data Input</label>
+                <textarea id="csvInput" rows="3" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl mb-3 text-sm focus:ring-2 focus:ring-emerald-500 outline-none" placeholder="name,age\nJohn,25"></textarea>
+                <button onclick="csvToJson()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-2xl font-bold text-xs mb-3 shadow-lg transition transform active:scale-95">Convert to JSON</button>
+                <pre id="jsonOutput" class="p-4 bg-slate-950 text-emerald-400 rounded-2xl text-xs overflow-x-auto shadow-inner border border-slate-800">JSON output...</pre>
+            </div>
+                                                                                   </div>
 
         <!-- ================= 3. CALCULATORS HUB ================= -->
         <div id="calculatorsHome" class="tool-section hidden space-y-6">
