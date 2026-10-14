@@ -1296,57 +1296,129 @@
             document.getElementById('bmiResultView').classList.remove('hidden');
         }
 
-        function resetBmiForm() {
-            document.getElementById('bmiResultView').classList.add('hidden');
-            document.getElementById('bmiFormView').classList.remove('hidden');
-        }
+        // Safe and Clean Text Tools & Analyzer Functions
+function getTextInput() {
+    return document.getElementById('textInput');
+}
 
-        const textInput = document.getElementById('textInput');
-        if(textInput) {
-            textInput.addEventListener('input', () => {
-                let text = textInput.value;
-                document.getElementById('charCount').innerText = text.length;
-                let words = text.trim().split(/\s+/);
-                let numWords = text.trim() === '' ? 0 : words.length;
-                document.getElementById('wordCount').innerText = numWords;
-                document.getElementById('sentenceCount').innerText = text.split(/[.!?]+/).filter(Boolean).length;
-                document.getElementById('readTime').innerText = Math.ceil((numWords / 200) * 60) + 's';
-            });
-        }
-        function convertToUpperCase() { textInput.value = textInput.value.toUpperCase(); showToast('Converted to UPPERCASE'); }
-        function convertToLowerCase() { textInput.value = textInput.value.toLowerCase(); showToast('Converted to lowercase'); }
-        function convertToTitleCase() { 
-            let t = textInput.value.toLowerCase().split(' ');
-            for(let i=0; i<t.length; i++) t[i] = t[i].charAt(0).toUpperCase() + t[i].slice(1);
-            textInput.value = t.join(' ');
-            showToast('Converted to Title Case');
-        }
-        function convertToSentenceCase() {
-            let t = textInput.value.toLowerCase();
-            textInput.value = t.replace(/(^\s*\w|[\.\!\?]\s*\w)/g, c => c.toUpperCase());
-            showToast('Converted to Sentence case');
-        }
-        function removeExtraSpaces() {
-            textInput.value = textInput.value.replace(/\s+/g, ' ').trim();
-            showToast('Extra spaces removed');
-        }
-        function removeLineBreaks() {
-            textInput.value = textInput.value.replace(/(\r\n|\n|\r)/gm, " ");
-            showToast('Line breaks removed');
-        }
-        function reverseText() {
-            textInput.value = textInput.value.split('').reverse().join('');
-            showToast('Text reversed');
-        }
-        function findAndReplaceText() {
-            let findVal = document.getElementById('findInput').value;
-            let replaceVal = document.getElementById('replaceInput').value;
-            if(!findVal) { alert('অনুগ্রহ করে খোঁজার জন্য শব্দ লিখুন!'); return; }
-            let regex = new RegExp(findVal, 'g');
-            textInput.value = textInput.value.replace(regex, replaceVal);
-            showToast('Find & Replace completed!', '🔄');
-        }
-        function copyTextToClipboard() {
+// Real-time Text Analyzer Event Listener (Runs inside input)
+document.addEventListener('input', function (e) {
+    if (e.target && e.target.id === 'textInput') {
+        let text = e.target.value;
+        let words = text.trim() ? text.trim().split(/\s+/).length : 0;
+        let chars = text.length;
+        let sentences = text.split(/[.!?]+/).filter(Boolean).length;
+        let readTime = Math.ceil(words / 200 * 60);
+
+        let wEl = document.getElementById('wordCount');
+        let cEl = document.getElementById('charCount');
+        let sEl = document.getElementById('sentenceCount');
+        let rEl = document.getElementById('readTime');
+
+        if (wEl) wEl.innerText = words;
+        if (cEl) cEl.innerText = chars;
+        if (sEl) sEl.innerText = sentences;
+        if (rEl) rEl.innerText = readTime + 's';
+    }
+});
+
+function convertToUpperCase() {
+    let el = getTextInput();
+    if (el) {
+        el.value = el.value.toUpperCase();
+        el.dispatchEvent(new Event('input'));
+        showToast('Converted to UPPERCASE', '✨');
+    }
+}
+
+function convertToLowerCase() {
+    let el = getTextInput();
+    if (el) {
+        el.value = el.value.toLowerCase();
+        el.dispatchEvent(new Event('input'));
+        showToast('Converted to lowercase', '✨');
+    }
+}
+
+function convertToTitleCase() {
+    let el = getTextInput();
+    if (el) {
+        el.value = el.value.toLowerCase().replace(/\b\w/g, l => l.toUpperCase());
+        el.dispatchEvent(new Event('input'));
+        showToast('Converted to Title Case', '✨');
+    }
+}
+
+function convertToSentenceCase() {
+    let el = getTextInput();
+    if (el) {
+        let text = el.value.toLowerCase();
+        el.value = text.charAt(0).toUpperCase() + text.slice(1);
+        el.dispatchEvent(new Event('input'));
+        showToast('Converted to Sentence case', '✨');
+    }
+}
+
+function removeExtraSpaces() {
+    let el = getTextInput();
+    if (el) {
+        el.value = el.value.replace(/\s+/g, ' ').trim();
+        el.dispatchEvent(new Event('input'));
+        showToast('Extra spaces removed', '✨');
+    }
+}
+
+function removeLineBreaks() {
+    let el = getTextInput();
+    if (el) {
+        el.value = el.value.replace(/(\r\n|\n|\r)/gm, " ");
+        el.dispatchEvent(new Event('input'));
+        showToast('Line breaks removed', '✨');
+    }
+}
+
+function reverseText() {
+    let el = getTextInput();
+    if (el) {
+        el.value = el.value.split('').reverse().join('');
+        el.dispatchEvent(new Event('input'));
+        showToast('Text reversed', '✨');
+    }
+}
+
+function findAndReplaceText() {
+    let el = getTextInput();
+    let findVal = document.getElementById('findInput').value;
+    let replaceVal = document.getElementById('replaceInput').value;
+    if (!findVal) {
+        alert('অনুগ্রহ করে খোঁজার জন্য একটি শব্দ লিখুন!');
+        return;
+    }
+    if (el) {
+        let regex = new RegExp(findVal, 'g');
+        el.value = el.value.replace(regex, replaceVal);
+        el.dispatchEvent(new Event('input'));
+        showToast('Find & Replace completed!', '✨');
+    }
+}
+
+function copyTextToClipboard() {
+    let el = getTextInput();
+    if (el) {
+        el.select();
+        navigator.clipboard.writeText(el.value);
+        showToast('Text copied to clipboard!', '📋');
+    }
+}
+
+function clearText() {
+    let el = getTextInput();
+    if (el) {
+        el.value = '';
+        el.dispatchEvent(new Event('input'));
+        showToast('Cleared successfully', '🗑️');
+    }
+}
             textInput.select();
             navigator.clipboard.writeText(textInput.value);
             showToast('Text copied to clipboard!', '📋');
