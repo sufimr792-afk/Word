@@ -699,40 +699,127 @@
             </div>
         </div>
 
-        <!-- ================= 4. PRODUCTIVITY TOOLS ================= -->
-        <div id="productivityHome" class="tool-section hidden space-y-6">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">⚡ Productivity Tools</h3>
-                <button onclick="showSection('home', true)" class="text-xs bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-600 dark:text-slate-300 px-3.5 py-2 rounded-xl font-semibold transition">← Back to Home</button>
+                <!-- ================= 4. ADVANCED UI/UX PRODUCTIVITY TOOLS ================= -->
+        <div id="productivityHome" class="tool-section hidden space-y-6 animate-fadeIn">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
+                <div>
+                    <h3 class="text-2xl font-black text-slate-900 dark:text-slate-100 flex items-center gap-2.5">
+                        <span class="p-2.5 bg-purple-600 text-white rounded-2xl shadow-md text-lg">⚡</span> Advanced Productivity & Generators
+                    </h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Professional generators, secure encoders, cryptographic tools, and developer utilities.</p>
+                </div>
+                <button onclick="showSection('home', true)" class="text-xs bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-2xl font-bold transition shadow-sm flex items-center gap-1.5">
+                    ← Back to Dashboard
+                </button>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
-                <div onclick="showSection('prodPassword', true)" class="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-purple-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-purple-700 dark:text-purple-400 text-base">🔑 Password Generator</h4></div>
-                <div onclick="showSection('prodQr', true)" class="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-purple-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-purple-700 dark:text-purple-400 text-base">📱 QR Code Generator</h4></div>
-                <div onclick="showSection('prodBase64', true)" class="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-purple-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-purple-700 dark:text-purple-400 text-base">🔐 Base64 Encoder / Decoder</h4></div>
-                <div onclick="showSection('prodUrl', true)" class="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-purple-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-purple-700 dark:text-purple-400 text-base">🌐 URL Encoder / Decoder</h4></div>
+
+            <!-- Modern Productivity Tools Grid UI -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                <div onclick="showSection('prodPassword', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-purple-600/5 hover:to-indigo-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-purple-50 dark:bg-slate-800 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🔑</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-purple-600 transition">Password Generator</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Secure random keys & passwords</p>
+                </div>
+
+                <div onclick="showSection('prodQr', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-blue-600/5 hover:to-cyan-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📱</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-blue-600 transition">QR Code Generator</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Instant text & URL QR codes</p>
+                </div>
+
+                <div onclick="showSection('prodUuid', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-emerald-600/5 hover:to-teal-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-emerald-50 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🆔</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-emerald-600 transition">UUID v4 Generator</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Secure unique ID tokens</p>
+                </div>
+
+                <div onclick="showSection('prodLorem', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-amber-600/5 hover:to-orange-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-amber-50 dark:bg-slate-800 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📝</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-amber-600 transition">Lorem Ipsum Generator</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Placeholder dummy text</p>
+                </div>
+
+                <div onclick="showSection('prodBase64', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-indigo-600/5 hover:to-violet-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-indigo-50 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🔐</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-indigo-600 transition">Base64 Encoder / Decoder</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Data encoding format tool</p>
+                </div>
+
+                <div onclick="showSection('prodUrl', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-cyan-600/5 hover:to-blue-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-cyan-50 dark:bg-slate-800 text-cyan-600 dark:text-cyan-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🌐</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-cyan-600 transition">URL Encoder / Decoder</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Web link string formatter</p>
+                </div>
             </div>
         </div>
 
-        <div id="prodPassword" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-lg border dark:border-slate-800 max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🔑 Password</h3><button onclick="showSection('productivityHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5">← Back</button></div>
-            <div class="flex gap-2"><input type="text" id="generatedPassword" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl bg-slate-50" readonly><button onclick="generatePassword()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm">Gen</button></div>
+        <!-- PASSWORD GENERATOR WORKSPACE -->
+        <div id="prodPassword" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🔑 Password Generator</h3><button onclick="showSection('productivityHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
+            <div class="space-y-4">
+                <div class="flex gap-2">
+                    <input type="text" id="generatedPassword" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl bg-slate-50 text-sm font-mono outline-none" readonly placeholder="Generated secure password">
+                    <button onclick="generatePassword()" class="bg-purple-600 hover:bg-purple-700 text-white px-5 py-3.5 rounded-2xl font-bold text-xs shadow-md transition">Generate</button>
+                </div>
+            </div>
         </div>
-        <div id="prodQr" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-lg border dark:border-slate-800 max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">📱 QR Code</h3><button onclick="showSection('productivityHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5">← Back</button></div>
-            <input type="text" id="qrText" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl mb-3" placeholder="Enter text/URL"><button onclick="generateQR()" class="bg-blue-600 text-white py-2 px-4 rounded-xl text-sm mb-3">Generate</button><div class="p-3 bg-slate-50 dark:bg-slate-800 text-center"><img id="qrImage" src="" alt="QR" class="mx-auto hidden"></div>
+
+        <!-- QR CODE GENERATOR WORKSPACE -->
+        <div id="prodQr" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">📱 QR Code Generator</h3><button onclick="showSection('productivityHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
+            <div class="space-y-4">
+                <input type="text" id="qrText" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="Enter text or website URL...">
+                <button onclick="generateQR()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition">Generate QR Code</button>
+                <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border dark:border-slate-700 text-center">
+                    <img id="qrImage" src="" alt="QR Code" class="mx-auto hidden rounded-xl shadow-md max-w-[200px]">
+                </div>
+            </div>
         </div>
-        <div id="prodBase64" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-lg border dark:border-slate-800 max-w-lg mx-auto">
-            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🔐 Base64 Tool</h3><button onclick="showSection('productivityHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl">← Back</button></div>
-            <textarea id="base64Input" rows="3" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl mb-3" placeholder="Enter text..."></textarea>
-            <div class="flex gap-2 mb-3"><button onclick="encodeBase64()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs">Encode</button><button onclick="decodeBase64()" class="bg-indigo-600 text-white px-4 py-2 rounded-xl text-xs">Decode</button></div>
-            <textarea id="base64Output" rows="3" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl bg-slate-50" readonly placeholder="Output..."></textarea>
+
+        <!-- NEW: UUID v4 GENERATOR WORKSPACE -->
+        <div id="prodUuid" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🆔 UUID v4 Generator</h3><button onclick="showSection('productivityHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
+            <div class="space-y-4">
+                <input type="text" id="uuidOutput" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl bg-slate-50 text-sm font-mono outline-none text-center font-bold text-emerald-600" readonly value="Click generate below">
+                <button onclick="generateUuidV4()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition">Generate Unique UUID</button>
+            </div>
         </div>
-        <div id="prodUrl" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-lg border dark:border-slate-800 max-w-lg mx-auto">
-            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🌐 URL Tool</h3><button onclick="showSection('productivityHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl">← Back</button></div>
-            <textarea id="urlInput" rows="3" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl mb-3" placeholder="Enter URL..."></textarea>
-            <div class="flex gap-2 mb-3"><button onclick="encodeUrl()" class="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs">Encode</button><button onclick="decodeUrl()" class="bg-indigo-600 text-white px-4 py-2 rounded-xl text-xs">Decode</button></div>
-            <textarea id="urlOutput" rows="3" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl bg-slate-50" readonly placeholder="Output..."></textarea>
+
+        <!-- NEW: LOREM IPSUM GENERATOR WORKSPACE -->
+        <div id="prodLorem" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">📝 Lorem Ipsum Generator</h3><button onclick="showSection('productivityHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
+            <div class="space-y-4">
+                <button onclick="generateLorem()" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition">Generate Dummy Paragraphs</button>
+                <textarea id="loremOutput" rows="4" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl bg-slate-50 text-xs outline-none" readonly placeholder="Generated dummy text will appear here..."></textarea>
+            </div>
         </div>
+
+        <!-- BASE64 TOOL WORKSPACE -->
+        <div id="prodBase64" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-5">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🔐 Base64 Tool</h3><button onclick="showSection('productivityHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
+            <div class="space-y-4">
+                <textarea id="base64Input" rows="3" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="Enter text to encode or decode..."></textarea>
+                <div class="grid grid-cols-2 gap-3">
+                    <button onclick="encodeBase64()" class="bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-2xl font-bold text-xs shadow-md transition">Encode Base64</button>
+                    <button onclick="decodeBase64()" class="bg-violet-600 hover:bg-violet-700 text-white py-3 rounded-2xl font-bold text-xs shadow-md transition">Decode Base64</button>
+                </div>
+                <textarea id="base64Output" rows="3" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl bg-slate-50 text-xs outline-none font-mono" readonly placeholder="Output result..."></textarea>
+            </div>
+        </div>
+
+        <!-- URL TOOL WORKSPACE -->
+        <div id="prodUrl" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-5">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🌐 URL Tool</h3><button onclick="showSection('productivityHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
+            <div class="space-y-4">
+                <textarea id="urlInput" rows="3" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="Enter URL string..."></textarea>
+                <div class="grid grid-cols-2 gap-3">
+                    <button onclick="encodeUrl()" class="bg-cyan-600 hover:bg-cyan-700 text-white py-3 rounded-2xl font-bold text-xs shadow-md transition">Encode URL</button>
+                    <button onclick="decodeUrl()" class="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-2xl font-bold text-xs shadow-md transition">Decode URL</button>
+                </div>
+                <textarea id="urlOutput" rows="3" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl bg-slate-50 text-xs outline-none font-mono" readonly placeholder="Output result..."></textarea>
+            </div>
+        </div>
+
 
         <!-- ================= 5. ENHANCED TEXT TOOLS & ANALYZER ================= -->
         <div id="textTools" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800">
