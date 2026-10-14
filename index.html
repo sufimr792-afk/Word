@@ -108,7 +108,7 @@
                 <button onclick="showSection('allToolsSection', true)" class="hidden sm:flex items-center gap-1 text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline">View All Tools →</button>
             </div>
 
-            <!-- Cards -->
+            <!-- Hub Categories Cards -->
             <div id="categoryGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
                 <div onclick="showSection('documentsHome', true)" class="searchable-card group bg-gradient-to-r from-amber-600 via-amber-500 to-orange-600 text-white p-6 rounded-3xl shadow-lg hover:shadow-2xl cursor-pointer transition-all duration-300 transform hover:-translate-y-2 flex items-center gap-5 border border-amber-400/40" data-name="documents hub word excel pdf image converter">
                     <div class="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center text-2xl group-hover:scale-110 transition backdrop-blur-md shadow-inner">📂</div>
@@ -906,7 +906,7 @@
             document.getElementById('jsonOutput').innerText = JSON.stringify(res, null, 2);
         }
 
-        <!-- Advanced WHO BMI Calculator with Row Highlighting Logic -->
+        // Advanced WHO BMI Calculator with Row Highlighting Logic
         function calculateAdvancedBmi() {
             let w = parseFloat(document.getElementById('bmiWeightKg').value);
             let h = parseFloat(document.getElementById('bmiHeightCm').value) / 100;
@@ -968,7 +968,7 @@
             if(!isNaN(p) && !isNaN(r) && !isNaN(t)) document.getElementById('intResult').innerText = `Interest: ${(p * r * t) / 100}`;
         }
 
-        <!-- Text Analyzer & Manipulator Functions -->
+        // Text Analyzer & Manipulator Functions
         function analyzeText() {
             let text = document.getElementById('textInput').value;
             let words = text.trim() ? text.trim().split(/\s+/).length : 0;
