@@ -498,140 +498,185 @@
             </div>
                                                                                    </div>
 
-        <!-- ================= 3. CALCULATORS HUB ================= -->
-        <div id="calculatorsHome" class="tool-section hidden space-y-6">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">🧮 Calculators Hub</h3>
-                <button onclick="showSection('home', true)" class="text-xs bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-600 dark:text-slate-300 px-3.5 py-2 rounded-xl font-semibold transition">← Back to Home</button>
+        <!-- ================= 3. ADVANCED UI/UX CALCULATORS HUB ================= -->
+        <div id="calculatorsHome" class="tool-section hidden space-y-6 animate-fadeIn">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
+                <div>
+                    <h3 class="text-2xl font-black text-slate-900 dark:text-slate-100 flex items-center gap-2.5">
+                        <span class="p-2.5 bg-emerald-600 text-white rounded-2xl shadow-md text-lg">🧮</span> Advanced Calculators Hub
+                    </h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">WHO health metrics, financial EMI, age precision, and daily mathematics utilities.</p>
+                </div>
+                <button onclick="showSection('home', true)" class="text-xs bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-2xl font-bold transition shadow-sm flex items-center gap-1.5">
+                    ← Back to Dashboard
+                </button>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div onclick="showSection('calcBmi', true)" class="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-emerald-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-emerald-700 dark:text-emerald-400 text-base">BMI Calculator</h4><p class="text-xs text-emerald-600/80 dark:text-slate-400 mt-1">WHO Table & Gauge</p></div>
-                <div onclick="showSection('calcAge', true)" class="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-emerald-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-emerald-700 dark:text-emerald-400 text-base">Age Calculator</h4><p class="text-xs text-emerald-600/80 dark:text-slate-400 mt-1">Exact Years, Months, Days</p></div>
-                <div onclick="showSection('calcLoan', true)" class="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-emerald-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-emerald-700 dark:text-emerald-400 text-base">Loan / EMI</h4><p class="text-xs text-emerald-600/80 dark:text-slate-400 mt-1">Monthly installments</p></div>
-                <div onclick="showSection('calcPercentage', true)" class="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-emerald-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-emerald-700 dark:text-emerald-400 text-base">Percentage Calculator</h4><p class="text-xs text-emerald-600/80 dark:text-slate-400 mt-1">Find percentages easily</p></div>
-                <div onclick="showSection('calcDiscount', true)" class="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-emerald-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-emerald-700 dark:text-emerald-400 text-base">Discount Calculator</h4><p class="text-xs text-emerald-600/80 dark:text-slate-400 mt-1">Sale & offer savings</p></div>
-                <div onclick="showSection('calcInterest', true)" class="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-900 dark:to-slate-800 hover:shadow-lg p-5 rounded-2xl shadow-sm border border-emerald-200/60 dark:border-slate-800 text-center cursor-pointer transition transform hover:-translate-y-1"><h4 class="font-bold text-emerald-700 dark:text-emerald-400 text-base">Simple Interest</h4><p class="text-xs text-emerald-600/80 dark:text-slate-400 mt-1">Investment interest</p></div>
+
+            <!-- Modern Calculators Grid UI -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                <div onclick="showSection('calcBmi', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-emerald-600/5 hover:to-teal-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-emerald-50 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📈</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-emerald-600 transition">BMI Calculator</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">WHO standard tables & gauge</p>
+                </div>
+
+                <div onclick="showSection('calcAge', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-blue-600/5 hover:to-indigo-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🎂</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-blue-600 transition">Age Calculator</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Exact years, months & days</p>
+                </div>
+
+                <div onclick="showSection('calcLoan', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-purple-600/5 hover:to-pink-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-purple-50 dark:bg-slate-800 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">💳</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-purple-600 transition">Loan / EMI Calculator</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Monthly installment breakdown</p>
+                </div>
+
+                <div onclick="showSection('calcPercentage', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-amber-600/5 hover:to-orange-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-amber-50 dark:bg-slate-800 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📊</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-amber-600 transition">Percentage Calculator</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Find ratio and percentages</p>
+                </div>
+
+                <div onclick="showSection('calcDiscount', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-rose-600/5 hover:to-red-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-rose-50 dark:bg-slate-800 text-rose-600 dark:text-rose-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🏷️</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-rose-600 transition">Discount Calculator</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Sale & shopping savings</p>
+                </div>
+
+                <div onclick="showSection('calcInterest', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-teal-600/5 hover:to-cyan-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 mb-4 rounded-2xl bg-teal-50 dark:bg-slate-800 text-teal-600 dark:text-teal-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📈</div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-teal-600 transition">Simple Interest</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Investment return calculation</p>
+                </div>
             </div>
         </div>
 
-        <!-- ADVANCED BMI CALCULATOR -->
+        <!-- ADVANCED BMI CALCULATOR WORKSPACE -->
         <div id="calcBmi" class="tool-section hidden max-w-xl mx-auto bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border dark:border-slate-800 overflow-hidden">
-            <div class="bg-slate-900 text-white p-5 flex justify-between items-center">
-                <h3 class="text-base font-bold flex items-center gap-2"><span>📈</span> Calculate Your BMI</h3>
-                <button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-800 text-slate-300 px-3 py-1.5 rounded-xl hover:bg-slate-700 transition">← Back</button>
+            <div class="bg-slate-900 text-white p-5 md:p-6 flex justify-between items-center">
+                <h3 class="text-base font-bold flex items-center gap-2"><span>📈</span> Advanced WHO BMI Calculator</h3>
+                <button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-800 text-slate-300 px-3.5 py-2 rounded-xl hover:bg-slate-700 transition font-bold">← Back</button>
             </div>
-            
-            <!-- Input View -->
+
             <div id="bmiFormView" class="p-6 md:p-8 space-y-5">
-                <p class="text-xs text-slate-500 dark:text-slate-400 font-medium text-center">For an accurate calculation, please share a few basic details about yourself.</p>
-                
-                <!-- Gender -->
+                <p class="text-xs text-slate-500 dark:text-slate-400 font-medium text-center">For an accurate evaluation, please provide your personal metrics.</p>
+
                 <div>
                     <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">Gender</label>
-                    <div class="flex gap-4">
+                    <div class="flex gap-6">
                         <label class="flex items-center gap-2 text-xs font-semibold cursor-pointer"><input type="radio" name="bmiGender" value="male" checked class="text-blue-600 focus:ring-blue-500"> Male</label>
                         <label class="flex items-center gap-2 text-xs font-semibold cursor-pointer"><input type="radio" name="bmiGender" value="female" class="text-blue-600 focus:ring-blue-500"> Female</label>
-                        <label class="flex items-center gap-2 text-xs font-semibold cursor-pointer"><input type="radio" name="bmiGender" value="other" class="text-blue-600 focus:ring-blue-500"> Other</label>
                     </div>
                 </div>
 
-                <!-- Age -->
                 <div>
-                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Age (years)</label>
-                    <input type="number" id="bmiAge" class="w-full p-3 border dark:border-slate-700 rounded-xl text-sm bg-slate-50 dark:bg-slate-800 focus:bg-white dark:focus:bg-slate-900 transition focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Enter your age">
+                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">Age (Years)</label>
+                    <input type="number" id="bmiAge" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-emerald-500 outline-none" placeholder="e.g. 25">
                 </div>
 
-                <!-- Height Unit Switcher -->
                 <div>
-                    <div class="flex justify-between items-center mb-1">
-                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300">Height</label>
+                    <div class="flex justify-between items-center mb-1.5">
+                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300">Height Unit</label>
                         <div class="inline-flex bg-slate-100 dark:bg-slate-800 p-1 rounded-xl text-xs font-bold">
                             <button type="button" id="unitCmBtn" onclick="setHeightUnit('cm')" class="px-3 py-1 rounded-lg bg-slate-900 text-white transition shadow-sm">cm</button>
                             <button type="button" id="unitFtBtn" onclick="setHeightUnit('ft')" class="px-3 py-1 rounded-lg text-slate-600 dark:text-slate-300 transition">ft/in</button>
                         </div>
                     </div>
-                    
-                    <!-- CM Input -->
                     <div id="heightCmContainer">
-                        <input type="number" id="bmiHeightCm" class="w-full p-3 border dark:border-slate-700 rounded-xl text-sm bg-slate-50 dark:bg-slate-800 focus:bg-white dark:focus:bg-slate-900 transition focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Height in cm (e.g. 170)">
+                        <input type="number" id="bmiHeightCm" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-emerald-500 outline-none" placeholder="Height in cm (e.g. 170)">
                     </div>
-
-                    <!-- FT/IN Input -->
                     <div id="heightFtContainer" class="hidden grid grid-cols-2 gap-3">
-                        <input type="number" id="bmiHeightFeet" class="w-full p-3 border dark:border-slate-700 rounded-xl text-sm bg-slate-50 dark:bg-slate-800 focus:bg-white dark:focus:bg-slate-900 transition outline-none" placeholder="Feet (e.g. 5)">
-                        <input type="number" id="bmiHeightInches" class="w-full p-3 border dark:border-slate-700 rounded-xl text-sm bg-slate-50 dark:bg-slate-800 focus:bg-white dark:focus:bg-slate-900 transition outline-none" placeholder="Inches (e.g. 8)">
+                        <input type="number" id="bmiHeightFeet" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="Feet (e.g. 5)">
+                        <input type="number" id="bmiHeightInches" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="Inches (e.g. 7)">
                     </div>
                 </div>
 
-                <!-- Weight -->
                 <div>
-                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Weight (kg)</label>
-                    <input type="number" id="bmiWeightKg" class="w-full p-3 border dark:border-slate-700 rounded-xl text-sm bg-slate-50 dark:bg-slate-800 focus:bg-white dark:focus:bg-slate-900 transition focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Weight in kg (e.g. 65)">
+                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">Weight (Kg)</label>
+                    <input type="number" id="bmiWeightKg" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-emerald-500 outline-none" placeholder="Weight in kg (e.g. 68)">
                 </div>
 
-                <button onclick="calculateAdvancedBmi()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-xl font-bold shadow-lg transition">Calculate BMI</button>
+                <button onclick="calculateAdvancedBmi()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition transform active:scale-95">Calculate BMI Result</button>
             </div>
 
-            <!-- Result View -->
+            <!-- BMI Result View -->
             <div id="bmiResultView" class="hidden p-6 md:p-8 space-y-6 text-center animate-fadeIn">
                 <div class="flex justify-between items-center border-b dark:border-slate-800 pb-4">
-                    <button onclick="resetBmiForm()" class="text-xs bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-300 px-3.5 py-2 rounded-xl font-bold transition flex items-center gap-1.5">← Recalculate</button>
-                    <h4 class="font-extrabold text-slate-900 dark:text-slate-100 text-sm">Your BMI Result</h4>
+                    <button onclick="resetBmiForm()" class="text-xs bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 px-3.5 py-2 rounded-2xl font-bold transition">← Recalculate</button>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm">BMI Score Overview</h4>
                 </div>
-
-                <!-- Status Banner -->
                 <div id="bmiStatusBanner" class="p-4 rounded-2xl font-bold text-xs shadow-sm">Status banner</div>
-
-                <!-- Score Badge -->
                 <div class="py-2">
                     <div id="bmiScoreBadge" class="text-white font-extrabold text-2xl px-6 py-3 rounded-2xl inline-block shadow-md">BMI = 0.0</div>
                 </div>
-
-                <!-- Range Details -->
-                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border dark:border-slate-700 text-xs space-y-1.5 text-left">
-                    <p class="flex justify-between font-medium"><span>Healthy BMI range:</span> <strong class="text-slate-900 dark:text-slate-100">18.5 kg/m² - 24.9 kg/m²</strong></p>
-                    <p class="flex justify-between font-medium"><span>Healthy weight for height:</span> <strong id="healthyWeightRange" class="text-blue-600 dark:text-blue-400">-- kg</strong></p>
-                </div>
-
-                <!-- WHO Classification Table -->
-                <div class="border dark:border-slate-800 rounded-2xl overflow-hidden text-left text-xs">
-                    <div class="bg-slate-900 text-white px-4 py-2.5 font-bold">WHO Adult BMI Table</div>
-                    <table class="w-full divide-y divide-slate-200 dark:divide-slate-800">
-                        <tbody id="bmiTableBody" class="divide-y divide-slate-100 dark:divide-slate-800">
-                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50"><td class="px-3 py-2">Severe Thinness</td><td class="px-3 py-2 text-right font-semibold">&lt; 16</td></tr>
-                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50"><td class="px-3 py-2">Moderate Thinness</td><td class="px-3 py-2 text-right font-semibold">16 - 17</td></tr>
-                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50"><td class="px-3 py-2">Mild Thinness</td><td class="px-3 py-2 text-right font-semibold">17 - 18.5</td></tr>
-                            <tr class="bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-300 font-bold"><td class="px-3 py-2">Normal</td><td class="px-3 py-2 text-right">18.5 - 25</td></tr>
-                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50"><td class="px-3 py-2">Overweight</td><td class="px-3 py-2 text-right font-semibold">25 - 30</td></tr>
-                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50"><td class="px-3 py-2">Obese Class I</td><td class="px-3 py-2 text-right font-semibold">30 - 35</td></tr>
-                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50"><td class="px-3 py-2">Obese Class II</td><td class="px-3 py-2 text-right font-semibold">35 - 40</td></tr>
-                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50"><td class="px-3 py-2">Obese Class III</td><td class="px-3 py-2 text-right font-semibold">&gt; 40</td></tr>
-                        </tbody>
-                    </table>
+                <div class="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border dark:border-slate-700 text-xs space-y-1.5 text-left">
+                    <p class="flex justify-between font-medium"><span>Healthy BMI range:</span> <strong class="text-slate-900 dark:text-slate-100">18.5 - 24.9 kg/m²</strong></p>
+                    <p class="flex justify-between font-medium"><span>Healthy weight for height:</span> <strong id="healthyWeightRange" class="text-emerald-600 dark:text-emerald-400">-- kg</strong></p>
                 </div>
             </div>
         </div>
 
-        <div id="calcAge" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-lg border dark:border-slate-800 max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🎂 Age Calculator</h3><button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl">← Back</button></div>
-            <label class="block text-xs font-semibold mb-1 text-slate-500 dark:text-slate-400">Select Date of Birth</label><input type="date" id="dobInput" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl mb-4 bg-slate-50"><button onclick="calculateExactAge()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm shadow-md">Calculate Exact Age</button><div id="ageResult" class="mt-4 p-4 bg-blue-50 dark:bg-slate-800 text-blue-900 dark:text-blue-300 font-bold rounded-xl text-center">Your Age: N/A</div>
+        <!-- AGE CALCULATOR WORKSPACE -->
+        <div id="calcAge" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🎂 Exact Age Calculator</h3><button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
+            <div>
+                <label class="block text-xs font-bold mb-1.5">Select Date of Birth</label>
+                <input type="date" id="dobInput" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm mb-4 outline-none focus:ring-2 focus:ring-blue-500">
+                <button onclick="calculateExactAge()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition">Calculate Exact Age</button>
+                <div id="ageResult" class="mt-4 p-4 bg-blue-50 dark:bg-slate-800 text-blue-900 dark:text-blue-300 font-bold rounded-2xl text-center text-sm shadow-sm border border-blue-100 dark:border-slate-700">Your Age: N/A</div>
+            </div>
         </div>
-        <div id="calcLoan" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-lg border dark:border-slate-800 max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">💳 Loan EMI</h3><button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl">← Back</button></div>
-            <input type="number" id="loanAmount" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl mb-2" placeholder="Amount"><input type="number" id="loanRate" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl mb-2" placeholder="Rate %"><input type="number" id="loanMonths" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl mb-2" placeholder="Months"><button onclick="calculateLoan()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm">Calculate</button><div id="loanResult" class="mt-3 p-3 bg-blue-50 dark:bg-slate-800 font-bold rounded-xl text-center">EMI: N/A</div>
+
+        <!-- LOAN / EMI CALCULATOR WORKSPACE -->
+        <div id="calcLoan" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-5">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">💳 Loan EMI Calculator</h3><button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
+            <div class="space-y-4">
+                <div><label class="block text-xs font-bold mb-1.5">Loan Amount</label><input type="number" id="loanAmount" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 100000"></div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div><label class="block text-xs font-bold mb-1.5">Interest Rate (%)</label><input type="number" id="loanRate" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 8.5"></div>
+                    <div><label class="block text-xs font-bold mb-1.5">Tenure (Months)</label><input type="number" id="loanMonths" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 12"></div>
+                </div>
+                <button onclick="calculateLoan()" class="w-full bg-purple-600 hover:bg-purple-700 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition">Calculate Monthly EMI</button>
+                <div id="loanResult" class="p-4 bg-purple-50 dark:bg-slate-800 text-purple-900 dark:text-purple-300 font-bold rounded-2xl text-center text-sm shadow-sm border border-purple-100 dark:border-slate-700">Monthly EMI: N/A</div>
+            </div>
         </div>
-        <div id="calcPercentage" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-lg border dark:border-slate-800 max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">📊 Percentage</h3><button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl">← Back</button></div>
-            <input type="number" id="perVal" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl mb-2" placeholder="Percentage"><input type="number" id="perTotal" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl mb-3" placeholder="Of number"><button onclick="calculatePercentage()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm">Calculate</button><div id="perResult" class="mt-3 p-3 bg-blue-50 dark:bg-slate-800 font-bold rounded-xl text-center">Result: N/A</div>
+
+        <!-- PERCENTAGE CALCULATOR WORKSPACE -->
+        <div id="calcPercentage" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-5">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">📊 Percentage Calculator</h3><button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
+            <div class="space-y-4">
+                <div><label class="block text-xs font-bold mb-1.5">Percentage (%)</label><input type="number" id="perVal" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 15"></div>
+                <div><label class="block text-xs font-bold mb-1.5">Total Value</label><input type="number" id="perTotal" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 500"></div>
+                <button onclick="calculatePercentage()" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition">Calculate Percentage</button>
+                <div id="perResult" class="p-4 bg-amber-50 dark:bg-slate-800 text-amber-900 dark:text-amber-300 font-bold rounded-2xl text-center text-sm shadow-sm border border-amber-100 dark:border-slate-700">Result: N/A</div>
+            </div>
         </div>
-        <div id="calcDiscount" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-lg border dark:border-slate-800 max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">🏷️ Discount</h3><button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl">← Back</button></div>
-            <input type="number" id="discPrice" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl mb-2" placeholder="Original Price"><input type="number" id="discPercent" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl mb-3" placeholder="Discount %"><button onclick="calculateDiscount()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm">Calculate</button><div id="discResult" class="mt-3 p-3 bg-blue-50 dark:bg-slate-800 font-bold rounded-xl text-center">Final Price: N/A</div>
+
+        <!-- DISCOUNT CALCULATOR WORKSPACE -->
+        <div id="calcDiscount" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-5">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🏷️ Discount Calculator</h3><button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
+            <div class="space-y-4">
+                <div><label class="block text-xs font-bold mb-1.5">Original Price</label><input type="number" id="discPrice" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 1200"></div>
+                <div><label class="block text-xs font-bold mb-1.5">Discount Percentage (%)</label><input type="number" id="discPercent" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 20"></div>
+                <button onclick="calculateDiscount()" class="w-full bg-rose-600 hover:bg-rose-700 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition">Calculate Savings</button>
+                <div id="discResult" class="p-4 bg-rose-50 dark:bg-slate-800 text-rose-900 dark:text-rose-300 font-bold rounded-2xl text-center text-sm shadow-sm border border-rose-100 dark:border-slate-700">Final Price: N/A</div>
+            </div>
         </div>
-        <div id="calcInterest" class="tool-section hidden bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-lg border dark:border-slate-800 max-w-md mx-auto">
-            <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold">📈 Simple Interest</h3><button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl">← Back</button></div>
-            <input type="number" id="intPrinciple" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl mb-2" placeholder="Principal"><input type="number" id="intRate" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl mb-2" placeholder="Rate (%)"><input type="number" id="intTime" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-xl mb-3" placeholder="Time (years)"><button onclick="calculateInterest()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-sm">Calculate</button><div id="intResult" class="mt-3 p-3 bg-blue-50 dark:bg-slate-800 font-bold rounded-xl text-center">Total Interest: N/A</div>
-        </div>
+
+        <!-- SIMPLE INTEREST CALCULATOR WORKSPACE -->
+        <div id="calcInterest" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-5">
+            <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">📈 Simple Interest Calculator</h3><button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
+            <div class="space-y-4">
+                <div><label class="block text-xs font-bold mb-1.5">Principal Amount</label><input type="number" id="intPrinciple" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 50000"></div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div><label class="block text-xs font-bold mb-1.5">Interest Rate (%)</label><input type="number" id="intRate" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 5"></div>
+                    <div><label class="block text-xs font-bold mb-1.5">Time (Years)</label><input type="number" id="intTime" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 3"></div>
+                </div>
+                <button onclick="calculateInterest()" class="w-full bg-teal-600 hover:bg-teal-700 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition">Calculate Interest</button>
+                <div id="intResult" class="p-4 bg-teal-50 dark:bg-slate-800 text-teal-900 dark:text-teal-300 font-bold rounded-2xl text-center text-sm shadow-sm border border-teal-100 dark:border-slate-700">Total Interest: N/A</div>
+            </div>
+                    </div>
 
         <!-- ================= 4. PRODUCTIVITY TOOLS ================= -->
         <div id="productivityHome" class="tool-section hidden space-y-6">
