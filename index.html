@@ -517,7 +517,7 @@
                 <div onclick="showSection('calcBmi', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-emerald-600/5 hover:to-teal-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-emerald-50 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📈</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-emerald-600 transition">BMI Calculator</h4>
-                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">WHO standard tables & gauge</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">WHO standard tables & live row highlight</p>
                 </div>
 
                 <div onclick="showSection('calcAge', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-blue-600/5 hover:to-indigo-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
@@ -559,6 +559,7 @@
                 <button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-800 text-slate-300 px-3.5 py-2 rounded-xl hover:bg-slate-700 transition font-bold">← Back</button>
             </div>
 
+            <!-- Input View -->
             <div id="bmiFormView" class="p-6 md:p-8 space-y-5">
                 <p class="text-xs text-slate-500 dark:text-slate-400 font-medium text-center">For an accurate evaluation, please provide your personal metrics.</p>
 
@@ -600,19 +601,39 @@
                 <button onclick="calculateAdvancedBmi()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition transform active:scale-95">Calculate BMI Result</button>
             </div>
 
-            <!-- BMI Result View -->
+            <!-- BMI Result View with Highlightable WHO Table -->
             <div id="bmiResultView" class="hidden p-6 md:p-8 space-y-6 text-center animate-fadeIn">
                 <div class="flex justify-between items-center border-b dark:border-slate-800 pb-4">
                     <button onclick="resetBmiForm()" class="text-xs bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 px-3.5 py-2 rounded-2xl font-bold transition">← Recalculate</button>
-                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm">BMI Score Overview</h4>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm">BMI Score & WHO Table</h4>
                 </div>
+                
                 <div id="bmiStatusBanner" class="p-4 rounded-2xl font-bold text-xs shadow-sm">Status banner</div>
+                
                 <div class="py-2">
                     <div id="bmiScoreBadge" class="text-white font-extrabold text-2xl px-6 py-3 rounded-2xl inline-block shadow-md">BMI = 0.0</div>
                 </div>
+                
                 <div class="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border dark:border-slate-700 text-xs space-y-1.5 text-left">
                     <p class="flex justify-between font-medium"><span>Healthy BMI range:</span> <strong class="text-slate-900 dark:text-slate-100">18.5 - 24.9 kg/m²</strong></p>
                     <p class="flex justify-between font-medium"><span>Healthy weight for height:</span> <strong id="healthyWeightRange" class="text-emerald-600 dark:text-emerald-400">-- kg</strong></p>
+                </div>
+
+                <!-- WHO Table with ID rows for dynamic highlighting -->
+                <div class="border dark:border-slate-800 rounded-2xl overflow-hidden text-left text-xs">
+                    <div class="bg-slate-900 text-white px-4 py-2.5 font-bold">WHO Adult BMI Classification Table</div>
+                    <table class="w-full divide-y divide-slate-200 dark:divide-slate-800">
+                        <tbody id="bmiTableBody" class="divide-y divide-slate-100 dark:divide-slate-800">
+                            <tr id="rowSevereThin" class="transition"><td class="px-3.5 py-2.5">Severe Thinness</td><td class="px-3.5 py-2.5 text-right font-semibold">&lt; 16</td></tr>
+                            <tr id="rowModThin" class="transition"><td class="px-3.5 py-2.5">Moderate Thinness</td><td class="px-3.5 py-2.5 text-right font-semibold">16 - 17</td></tr>
+                            <tr id="rowMildThin" class="transition"><td class="px-3.5 py-2.5">Mild Thinness</td><td class="px-3.5 py-2.5 text-right font-semibold">17 - 18.5</td></tr>
+                            <tr id="rowNormal" class="transition"><td class="px-3.5 py-2.5 font-bold">Normal Weight</td><td class="px-3.5 py-2.5 text-right font-bold">18.5 - 25</td></tr>
+                            <tr id="rowOverweight" class="transition"><td class="px-3.5 py-2.5">Overweight</td><td class="px-3.5 py-2.5 text-right font-semibold">25 - 30</td></tr>
+                            <tr id="rowObese1" class="transition"><td class="px-3.5 py-2.5">Obese Class I</td><td class="px-3.5 py-2.5 text-right font-semibold">30 - 35</td></tr>
+                            <tr id="rowObese2" class="transition"><td class="px-3.5 py-2.5">Obese Class II</td><td class="px-3.5 py-2.5 text-right font-semibold">35 - 40</td></tr>
+                            <tr id="rowObese3" class="transition"><td class="px-3.5 py-2.5">Obese Class III</td><td class="px-3.5 py-2.5 text-right font-semibold">&gt; 40</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -676,7 +697,7 @@
                 <button onclick="calculateInterest()" class="w-full bg-teal-600 hover:bg-teal-700 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition">Calculate Interest</button>
                 <div id="intResult" class="p-4 bg-teal-50 dark:bg-slate-800 text-teal-900 dark:text-teal-300 font-bold rounded-2xl text-center text-sm shadow-sm border border-teal-100 dark:border-slate-700">Total Interest: N/A</div>
             </div>
-                    </div>
+        </div>
 
         <!-- ================= 4. PRODUCTIVITY TOOLS ================= -->
         <div id="productivityHome" class="tool-section hidden space-y-6">
