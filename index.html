@@ -4,35 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Professional SEO Meta Tags & Optimization for Top Rankings -->
+    <!-- Ultra-Advanced Professional SEO Meta Tags -->
     <title>TextTools Hub - Free Online Utilities, Advanced BMI Calculator & Converters</title>
-    <meta name="description" content="TextTools Hub is your ultimate all-in-one professional digital toolbox. Access free file converters, advanced WHO-standard BMI calculator, precise age calculator, password generator, text analysis tools, and expert guides.">
-    <meta name="keywords" content="TextTools Hub, Online File Converters, Advanced BMI Calculator, WHO BMI Table, Age Calculator Online, Free Text Analyzer, Password Generator, SEO Tips, Shakhawt Hossain">
+    <meta name="description" content="TextTools Hub is your ultimate all-in-one professional digital toolbox created by SHAKHAWT HOSSAIN. Access free file converters, advanced WHO-standard BMI calculator, precise age calculator, password generator, text analysis tools, and expert SEO guides.">
+    <meta name="keywords" content="TextTools Hub, Online File Converters, Advanced BMI Calculator, WHO BMI Table, Age Calculator Online, Free Text Analyzer, Password Generator, SEO Tips, Shakhawt Hossain, Free Developer Utilities">
     <meta name="author" content="SHAKHAWT HOSSAIN">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="icon" type="image/png" href="logo.png">
-        <!-- Open Graph / Social Media Meta Tags for Better CTR -->
+    <link rel="canonical" href="https://texttoolshub.vercel.app/">
+
+    <!-- Open Graph / Social Media Meta Tags for Maximum CTR -->
     <meta property="og:title" content="TextTools Hub - Free Online Utilities, Converters & Calculators">
-    <meta property="og:description" content="Fast, secure, and 100% free online utilities including file converters, advanced BMI calculator, text tools, and expert guides.">
+    <meta property="og:description" content="Fast, secure, and 100% free online utilities including file converters, advanced BMI calculator, text tools, and expert guides by SHAKHAWT HOSSAIN.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://texttoolshub.vercel.app/your-logo.png">
+    <meta property="og:image" content="https://texttoolshub.vercel.app/logo.png">
     <meta property="og:url" content="https://texttoolshub.vercel.app/">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TextTools Hub - Free Online Utilities & Calculators">
+    <meta name="twitter:description" content="Access free file converters, advanced WHO BMI calculator, text analyzer, and developer tools instantly.">
 
-    <!-- Structured Data / Schema Markup for Top Ranking -->
+    <!-- Advanced Structured Data / Schema Markup for Google Rich Results -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "TextTools Hub",
       "url": "https://texttoolshub.vercel.app/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://texttoolshub.vercel.app/#?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
       "author": {
         "@type": "Person",
         "name": "SHAKHAWT HOSSAIN"
       },
-      "description": "Free online utilities, file converters, and advanced BMI calculator."
+      "description": "Free online utilities, file converters, advanced BMI calculator, and productivity tools."
     }
     </script>
+
     <!-- Google Search Console Verification Meta Tag -->
     <meta name="google-site-verification" content="BqizJoyVioQZT_aqZl0aFEqBuQ7vRXXl018m0u97b8I">
     
@@ -55,17 +65,14 @@
             </a>
             
             <div class="flex items-center gap-2.5">
-                <!-- Quick All Tools Link (Desktop) -->
                 <button onclick="showSection('allToolsSection', true)" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold px-3.5 py-2 rounded-2xl bg-slate-100 dark:bg-slate-800/80 hover:bg-blue-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 transition border border-slate-200/60 dark:border-slate-700/60 shadow-sm">
                     🗂️ All Tools
                 </button>
 
-                <!-- Dark Mode Toggle Button -->
                 <button onclick="toggleDarkMode()" class="p-2.5 rounded-2xl bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-800 focus:outline-none transition border border-slate-200/60 dark:border-slate-700/60 text-amber-500 dark:text-amber-400 text-sm shadow-sm" title="Toggle Theme">
                     <span id="themeIcon">🌙</span>
                 </button>
 
-                <!-- Hamburger Menu -->
                 <div class="relative">
                     <button onclick="toggleMenu()" class="p-2.5 rounded-2xl bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-800 focus:outline-none transition border border-slate-200/60 dark:border-slate-700/60 shadow-sm">
                         <svg class="w-5 h-5 text-slate-700 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -96,14 +103,12 @@
         
         <!-- Homepage View -->
         <div id="home" class="tool-section space-y-8 animate-fadeIn">
-            <!-- Hero Banner -->
             <div class="text-center py-10 px-4 bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 text-white rounded-3xl shadow-2xl relative overflow-hidden border border-blue-400/20">
                 <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
                 <div class="absolute -left-10 -top-10 w-48 h-48 bg-indigo-400/20 rounded-full blur-3xl"></div>
                 <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3">Welcome to TextTools Hub</h1>
                 <p class="text-sm sm:text-base text-blue-100 max-w-xl mx-auto font-medium mb-8">Your ultimate professional digital toolbox for fast file conversion, precise calculations, advanced text utilities, and expert guides.</p>
                 
-                <!-- Instant Live Tool Search Bar -->
                 <div class="max-w-md mx-auto relative">
                     <input type="text" id="toolSearchInput" oninput="filterTools()" placeholder="🔍 Search any tool (e.g. BMI, Age, Password, PDF)..." class="w-full py-4 px-6 pl-12 rounded-2xl text-slate-800 dark:text-slate-100 text-sm bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl shadow-2xl focus:outline-none focus:ring-2 focus:ring-blue-400 transition border border-white/20">
                     <span class="absolute left-4 top-4 text-slate-400 text-lg">⚡</span>
@@ -118,7 +123,6 @@
                 <button onclick="showSection('allToolsSection', true)" class="hidden sm:flex items-center gap-1 text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline">View All Tools →</button>
             </div>
 
-            <!-- Colorful Grid Categories -->
             <div id="categoryGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
                 <div onclick="showSection('documentsHome', true)" class="searchable-card group bg-gradient-to-r from-amber-600 via-amber-500 to-orange-600 text-white p-6 rounded-3xl shadow-lg hover:shadow-2xl cursor-pointer transition-all duration-300 transform hover:-translate-y-2 flex items-center gap-5 border border-amber-400/40" data-name="documents hub word excel pdf image converter">
                     <div class="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center text-2xl group-hover:scale-110 transition backdrop-blur-md shadow-inner">📂</div>
@@ -153,7 +157,6 @@
                 </div>
             </div>
 
-            <!-- Full Width Featured Card -->
             <div class="max-w-3xl mx-auto space-y-4">
                 <div onclick="showSection('textTools', true)" class="searchable-card group bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950 text-white p-6 sm:p-7 rounded-3xl shadow-xl cursor-pointer transition-all duration-300 transform hover:-translate-y-1.5 flex items-center justify-between border border-slate-800" data-name="text tools analyzer word count case converter line cleaner find replace">
                     <div class="flex items-center gap-5">
@@ -167,7 +170,6 @@
                 </div>
             </div>
 
-            <!-- Quick Access Extra Cards for FAQ, Blog & All Tools -->
             <div class="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div onclick="showSection('allToolsSection', true)" class="p-5 bg-white dark:bg-slate-900 rounded-3xl shadow-md hover:shadow-xl border dark:border-slate-800 cursor-pointer transition flex items-center gap-3.5 group">
                     <div class="w-10 h-10 rounded-2xl bg-emerald-50 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-lg group-hover:scale-110 transition">🗂️</div>
@@ -203,20 +205,18 @@
                 <button onclick="showSection('home', true)" class="text-xs bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-600 dark:text-slate-300 px-3.5 py-2 rounded-xl font-semibold transition">← Back</button>
             </div>
 
-            <!-- Group 1: Documents Hub -->
             <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border dark:border-slate-800 space-y-4">
                 <h4 class="font-extrabold text-amber-600 dark:text-amber-400 text-sm flex items-center gap-2">📂 Documents & File Converters</h4>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                    <div onclick="openDocTool('Word to PDF', '.docx')" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-amber-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">Word to PDF Converter</p><p class="text-[10px] text-slate-500">Convert DOCX files instantly</p></div>
-                    <div onclick="openDocTool('Excel to PDF', '.xlsx')" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-amber-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">Excel to PDF Converter</p><p class="text-[10px] text-slate-500">Spreadsheet conversion</p></div>
-                    <div onclick="openDocTool('JPG to PNG', '.jpg,.jpeg')" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-amber-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">JPG to PNG Image Tool</p><p class="text-[10px] text-slate-500">Change image formats</p></div>
-                    <div onclick="openDocTool('PNG to JPG', '.png')" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-amber-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">PNG to JPG Compressor</p><p class="text-[10px] text-slate-500">Compress image size</p></div>
-                    <div onclick="openDocTool('JPG to PDF', '.jpg,.jpeg')" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-amber-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">JPG to PDF Creator</p><p class="text-[10px] text-slate-500">Images into single PDF</p></div>
-                    <div onclick="openDocTool('Text to PDF', '.txt')" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-amber-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">Text to PDF Document</p><p class="text-[10px] text-slate-500">Plain text format</p></div>
+                    <div onclick="openDocTool('Word to PDF Converter', '.docx')" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-amber-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">Word to PDF Converter</p><p class="text-[10px] text-slate-500">Convert DOCX files instantly</p></div>
+                    <div onclick="openDocTool('Excel to PDF Converter', '.xlsx')" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-amber-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">Excel to PDF Converter</p><p class="text-[10px] text-slate-500">Spreadsheet conversion</p></div>
+                    <div onclick="openDocTool('JPG to PNG Image Tool', '.jpg,.jpeg')" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-amber-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">JPG to PNG Image Tool</p><p class="text-[10px] text-slate-500">Change image formats</p></div>
+                    <div onclick="openDocTool('PNG to JPG Compressor', '.png')" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-amber-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">PNG to JPG Compressor</p><p class="text-[10px] text-slate-500">Compress image size</p></div>
+                    <div onclick="openDocTool('JPG to PDF Creator', '.jpg,.jpeg')" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-amber-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">JPG to PDF Creator</p><p class="text-[10px] text-slate-500">Images into single PDF</p></div>
+                    <div onclick="openDocTool('Text to PDF Document', '.txt')" class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-amber-50 dark:hover:bg-slate-800 border dark:border-slate-700/60 cursor-pointer transition"><p class="font-bold text-xs">Text to PDF Document</p><p class="text-[10px] text-slate-500">Plain text format</p></div>
                 </div>
             </div>
 
-            <!-- Group 2: Converters -->
             <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border dark:border-slate-800 space-y-4">
                 <h4 class="font-extrabold text-blue-600 dark:text-blue-400 text-sm flex items-center gap-2">🔄 Converters Hub</h4>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
@@ -231,7 +231,6 @@
                 </div>
             </div>
 
-            <!-- Group 3: Calculators -->
             <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border dark:border-slate-800 space-y-4">
                 <h4 class="font-extrabold text-emerald-600 dark:text-emerald-400 text-sm flex items-center gap-2">🧮 Calculators Hub</h4>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
@@ -244,43 +243,42 @@
                 </div>
             </div>
 
-                    <!-- Group 4: Master Directory Productivity & Text Tools Card -->
-        <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border dark:border-slate-800 space-y-4">
-            <h4 class="font-extrabold text-purple-600 dark:text-purple-400 text-sm flex items-center gap-2">⚡ Productivity & Text Tools</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                <div onclick="showSection('textTools', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
-                    <div class="font-bold text-xs text-slate-800 dark:text-slate-200">📝 Text Tools & Analyzer</div>
-                    <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Word count, case converters</div>
-                </div>
-                <div onclick="showSection('prodPassword', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
-                    <div class="font-bold text-xs text-slate-800 dark:text-slate-200">🔑 Password Generator</div>
-                    <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Secure random keys</div>
-                </div>
-                <div onclick="showSection('prodQr', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
-                    <div class="font-bold text-xs text-slate-800 dark:text-slate-200">📱 QR Code Generator</div>
-                    <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Instant text & URL QR codes</div>
-                </div>
-                <div onclick="showSection('prodUuid', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
-                    <div class="font-bold text-xs text-slate-800 dark:text-slate-200">🆔 UUID v4 Generator</div>
-                    <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Unique ID tokens</div>
-                </div>
-                <div onclick="showSection('prodLorem', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
-                    <div class="font-bold text-xs text-slate-800 dark:text-slate-200">📝 Lorem Ipsum Generator</div>
-                    <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Dummy text creator</div>
-                </div>
-                <div onclick="showSection('prodBase64', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
-                    <div class="font-bold text-xs text-slate-800 dark:text-slate-200">🔐 Base64 Encoder / Decoder</div>
-                    <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Data encoding utility</div>
-                </div>
-                <div onclick="showSection('prodUrl', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
-                    <div class="font-bold text-xs text-slate-800 dark:text-slate-200">🌐 URL Encoder / Decoder</div>
-                    <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Web link formatter</div>
+            <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border dark:border-slate-800 space-y-4">
+                <h4 class="font-extrabold text-purple-600 dark:text-purple-400 text-sm flex items-center gap-2">⚡ Productivity & Text Tools</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                    <div onclick="showSection('textTools', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
+                        <div class="font-bold text-xs text-slate-800 dark:text-slate-200">📝 Text Tools & Analyzer</div>
+                        <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Word count, case converters</div>
+                    </div>
+                    <div onclick="showSection('prodPassword', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
+                        <div class="font-bold text-xs text-slate-800 dark:text-slate-200">🔑 Password Generator</div>
+                        <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Secure random keys</div>
+                    </div>
+                    <div onclick="showSection('prodQr', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
+                        <div class="font-bold text-xs text-slate-800 dark:text-slate-200">📱 QR Code Generator</div>
+                        <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Instant text & URL QR codes</div>
+                    </div>
+                    <div onclick="showSection('prodUuid', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
+                        <div class="font-bold text-xs text-slate-800 dark:text-slate-200">🆔 UUID v4 Generator</div>
+                        <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Unique ID tokens</div>
+                    </div>
+                    <div onclick="showSection('prodLorem', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
+                        <div class="font-bold text-xs text-slate-800 dark:text-slate-200">📝 Lorem Ipsum Generator</div>
+                        <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Dummy text creator</div>
+                    </div>
+                    <div onclick="showSection('prodBase64', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
+                        <div class="font-bold text-xs text-slate-800 dark:text-slate-200">🔐 Base64 Encoder / Decoder</div>
+                        <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Data encoding utility</div>
+                    </div>
+                    <div onclick="showSection('prodUrl', true)" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-purple-50 dark:bg-slate-800 dark:hover:bg-slate-800/80 cursor-pointer transition border dark:border-slate-700/60 shadow-sm">
+                        <div class="font-bold text-xs text-slate-800 dark:text-slate-200">🌐 URL Encoder / Decoder</div>
+                        <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Web link formatter</div>
+                    </div>
                 </div>
             </div>
         </div>
 
-
-        <!-- ================= 1. ADVANCED DOCUMENTS & FILE CONVERTERS HUB ================= -->
+        <!-- ================= 1. DOCUMENTS HUB ================= -->
         <div id="documentsHome" class="tool-section hidden space-y-6 animate-fadeIn">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
                 <div>
@@ -294,7 +292,6 @@
                 </button>
             </div>
 
-            <!-- Modern Grid UI for Documents -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
                 <div onclick="openDocTool('Word to PDF Converter', '.docx')" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-amber-500/5 hover:to-orange-500/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-amber-50 dark:bg-slate-800 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📄</div>
@@ -334,7 +331,7 @@
             </div>
         </div>
 
-        <!-- Advanced Document Workspace (Dedicated Download Option Added) -->
+        <!-- Document Workspace -->
         <div id="docWorkspace" class="tool-section hidden max-w-xl mx-auto bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 space-y-6">
             <div class="flex justify-between items-center border-b dark:border-slate-800 pb-4">
                 <div>
@@ -344,42 +341,30 @@
                 <button onclick="showSection('documentsHome', true)" class="text-xs bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 px-3.5 py-2 rounded-2xl font-bold transition">← Back</button>
             </div>
 
-            <!-- Upload Box -->
             <div class="border-2 border-dashed border-slate-300 dark:border-slate-700 p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/40 text-center space-y-3">
                 <div class="text-3xl">📁</div>
                 <div class="text-xs text-slate-600 dark:text-slate-300 font-medium">Drag & drop your file here or browse from device</div>
                 <input type="file" id="docFileInput" class="w-full text-xs file:py-2.5 file:px-4 file:rounded-xl file:bg-amber-500 file:hover:bg-amber-600 file:text-white file:border-0 cursor-pointer font-bold transition">
             </div>
 
-            <!-- Progress status -->
             <div id="conversionStatus" class="hidden p-3.5 bg-blue-50 dark:bg-slate-800 text-blue-700 dark:text-blue-300 rounded-2xl text-xs font-semibold animate-pulse text-center border border-blue-100 dark:border-slate-700">
                 ⚙️ Processing file securely... Please wait a moment.
             </div>
 
-            <!-- Action buttons -->
             <div class="space-y-3">
                 <button id="convertBtn" onclick="processAndConvertDocument()" class="w-full bg-amber-500 hover:bg-amber-600 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition transform active:scale-95 flex items-center justify-center gap-2">
                     ⚡ Convert File Now
                 </button>
                 
-                <!-- Separate Download Button Container (Appears after conversion) -->
                 <div id="downloadSection" class="hidden">
                     <a id="downloadResultBtn" href="#" download class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition flex items-center justify-center gap-2 text-center">
                         📥 Download Converted File
                     </a>
                 </div>
             </div>
-
-            <!-- Pro Tip Box -->
-            <div class="p-4 bg-amber-50/60 dark:bg-slate-800/80 text-amber-900 dark:text-amber-300 rounded-2xl text-xs leading-relaxed border border-amber-100 dark:border-slate-700 flex items-start gap-2.5">
-                <span class="text-base">💡</span>
-                <div>
-                    <strong class="font-bold">Pro Tip:</strong> For extremely large files or advanced cloud formatting, you can also use our secure <a href="https://cloudconvert.com" target="_blank" class="underline font-bold text-amber-700 dark:text-amber-400">CloudConvert Partner Engine</a> directly through this workspace.
-                </div>
-            </div>
         </div>
 
-        <!-- ================= 2. ADVANCED UI/UX CONVERTERS HUB ================= -->
+        <!-- ================= 2. CONVERTERS HUB ================= -->
         <div id="convertersHome" class="tool-section hidden space-y-6 animate-fadeIn">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
                 <div>
@@ -393,51 +378,43 @@
                 </button>
             </div>
 
-            <!-- Modern Grid UI -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-                <div onclick="showSection('convLength', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-blue-600/5 hover:to-indigo-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 text-cursor cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                <div onclick="showSection('convLength', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-blue-600/5 hover:to-indigo-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📏</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-blue-600 transition">Length Converter</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Meters, Feet, Inches & Yards</p>
                 </div>
-
-                <div onclick="showSection('convTemp', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-indigo-600/5 hover:to-purple-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 text-cursor cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                <div onclick="showSection('convTemp', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-indigo-600/5 hover:to-purple-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-indigo-50 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🌡️</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-indigo-600 transition">Temperature</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Celsius, Fahrenheit & Kelvin</p>
                 </div>
-
-                <div onclick="showSection('convWeight', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-sky-600/5 hover:to-blue-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 text-cursor cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                <div onclick="showSection('convWeight', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-sky-600/5 hover:to-blue-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-sky-50 dark:bg-slate-800 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">⚖️</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-sky-600 transition">Weight / Mass</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Kg, Gram, Pound & Ounce</p>
                 </div>
-
-                <div onclick="showSection('convSpeed', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-teal-600/5 hover:to-emerald-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 text-cursor cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                <div onclick="showSection('convSpeed', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-teal-600/5 hover:to-emerald-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-teal-50 dark:bg-slate-800 text-teal-600 dark:text-teal-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🏎️</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-teal-600 transition">Speed Converter</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Km/h to Mph calculations</p>
                 </div>
-
-                <div onclick="showSection('convData', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-violet-600/5 hover:to-purple-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 text-cursor cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                <div onclick="showSection('convData', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-violet-600/5 hover:to-purple-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-violet-50 dark:bg-slate-800 text-violet-600 dark:text-violet-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">💾</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-violet-600 transition">Data Storage</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">MB, GB, TB & KB Calculator</p>
                 </div>
-
-                <div onclick="showSection('convColor', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-fuchsia-600/5 hover:to-pink-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 text-cursor cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                <div onclick="showSection('convColor', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-fuchsia-600/5 hover:to-pink-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-fuchsia-50 dark:bg-slate-800 text-fuchsia-600 dark:text-fuchsia-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🎨</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-fuchsia-600 transition">Hex to RGB</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Color code format converter</p>
                 </div>
-
-                <div onclick="showSection('convHexDec', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-cyan-600/5 hover:to-blue-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 text-cursor cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                <div onclick="showSection('convHexDec', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-cyan-600/5 hover:to-blue-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-cyan-50 dark:bg-slate-800 text-cyan-600 dark:text-cyan-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🔢</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-cyan-600 transition">Hex to Decimal</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Hexadecimal math tool</p>
                 </div>
-
-                <div onclick="showSection('convCsvJson', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-emerald-600/5 hover:to-teal-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 text-cursor cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
+                <div onclick="showSection('convCsvJson', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-emerald-600/5 hover:to-teal-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-emerald-50 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📊</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-emerald-600 transition">CSV to JSON</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Data format formatter</p>
@@ -445,36 +422,36 @@
             </div>
         </div>
 
-        <!-- Converters Sub-tools Workspace with Glassmorphic UI -->
+        <!-- Converters Sub-workspaces -->
         <div id="convLength" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">📏 Length Converter</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-xl font-semibold">← Back</button></div>
             <div class="grid grid-cols-2 gap-4">
-                <div><label class="block text-xs font-bold mb-1.5">Meters</label><input type="number" id="meterInput" oninput="convertLength('meter')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. 10"></div>
-                <div><label class="block text-xs font-bold mb-1.5">Feet</label><input type="number" id="feetInput" oninput="convertLength('feet')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. 32.8"></div>
+                <div><label class="block text-xs font-bold mb-1.5">Meters</label><input type="number" id="meterInput" oninput="convertLength('meter')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 10"></div>
+                <div><label class="block text-xs font-bold mb-1.5">Feet</label><input type="number" id="feetInput" oninput="convertLength('feet')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 32.8"></div>
             </div>
         </div>
 
         <div id="convTemp" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🌡️ Temperature</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-xl font-semibold">← Back</button></div>
             <div class="grid grid-cols-2 gap-4">
-                <div><label class="block text-xs font-bold mb-1.5">Celsius (°C)</label><input type="number" id="celsiusInput" oninput="convertTemp('c')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-indigo-500 outline-none" placeholder="e.g. 30"></div>
-                <div><label class="block text-xs font-bold mb-1.5">Fahrenheit (°F)</label><input type="number" id="fahrenheitInput" oninput="convertTemp('f')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-indigo-500 outline-none" placeholder="e.g. 86"></div>
+                <div><label class="block text-xs font-bold mb-1.5">Celsius (°C)</label><input type="number" id="celsiusInput" oninput="convertTemp('c')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 30"></div>
+                <div><label class="block text-xs font-bold mb-1.5">Fahrenheit (°F)</label><input type="number" id="fahrenheitInput" oninput="convertTemp('f')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 86"></div>
             </div>
         </div>
 
         <div id="convWeight" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">⚖️ Weight / Mass</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-xl font-semibold">← Back</button></div>
             <div class="grid grid-cols-2 gap-4">
-                <div><label class="block text-xs font-bold mb-1.5">Kilograms (Kg)</label><input type="number" id="kgInput" oninput="convertWeight('kg')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-sky-500 outline-none" placeholder="e.g. 50"></div>
-                <div><label class="block text-xs font-bold mb-1.5">Pounds (Lbs)</label><input type="number" id="lbsInput" oninput="convertWeight('lbs')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-sky-500 outline-none" placeholder="e.g. 110"></div>
+                <div><label class="block text-xs font-bold mb-1.5">Kilograms (Kg)</label><input type="number" id="kgInput" oninput="convertWeight('kg')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 50"></div>
+                <div><label class="block text-xs font-bold mb-1.5">Pounds (Lbs)</label><input type="number" id="lbsInput" oninput="convertWeight('lbs')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 110"></div>
             </div>
         </div>
 
         <div id="convSpeed" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🏎️ Speed Converter</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-xl font-semibold">← Back</button></div>
             <div class="grid grid-cols-2 gap-4">
-                <div><label class="block text-xs font-bold mb-1.5">Km/h</label><input type="number" id="kmhInput" oninput="convertSpeed('kmh')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-teal-500 outline-none" placeholder="e.g. 120"></div>
-                <div><label class="block text-xs font-bold mb-1.5">Mph</label><input type="number" id="mphInput" oninput="convertSpeed('mph')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-teal-500 outline-none" placeholder="e.g. 75"></div>
+                <div><label class="block text-xs font-bold mb-1.5">Km/h</label><input type="number" id="kmhInput" oninput="convertSpeed('kmh')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 120"></div>
+                <div><label class="block text-xs font-bold mb-1.5">Mph</label><input type="number" id="mphInput" oninput="convertSpeed('mph')" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 75"></div>
             </div>
         </div>
 
@@ -482,7 +459,7 @@
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">💾 Data Storage</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-xl font-semibold">← Back</button></div>
             <div>
                 <label class="block text-xs font-bold mb-1.5">Megabytes (MB)</label>
-                <input type="number" id="mbInput" oninput="convertData()" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm mb-4 focus:ring-2 focus:ring-violet-500 outline-none" placeholder="e.g. 1024">
+                <input type="number" id="mbInput" oninput="convertData()" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm mb-4 outline-none" placeholder="e.g. 1024">
                 <div class="p-4 bg-violet-50 dark:bg-slate-800 text-violet-900 dark:text-violet-300 font-bold rounded-2xl border border-violet-100 dark:border-slate-700 text-center text-sm shadow-sm">
                     Converted Result: <span id="gbResult" class="text-lg">0 GB</span>
                 </div>
@@ -493,7 +470,7 @@
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🎨 Hex to RGB</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-xl font-semibold">← Back</button></div>
             <div>
                 <label class="block text-xs font-bold mb-1.5">Hex Code</label>
-                <input type="text" id="hexInput" oninput="hexToRgb()" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm mb-4 focus:ring-2 focus:ring-fuchsia-500 outline-none" placeholder="#3b82f6">
+                <input type="text" id="hexInput" oninput="hexToRgb()" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm mb-4 outline-none" placeholder="#3b82f6">
                 <div id="rgbResult" class="p-4 bg-fuchsia-50 dark:bg-slate-800 text-fuchsia-900 dark:text-fuchsia-300 font-bold rounded-2xl border border-fuchsia-100 dark:border-slate-700 text-center text-sm shadow-sm">
                     RGB: N/A
                 </div>
@@ -504,7 +481,7 @@
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🔢 Hex to Decimal</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-xl font-semibold">← Back</button></div>
             <div>
                 <label class="block text-xs font-bold mb-1.5">Hexadecimal</label>
-                <input type="text" id="hexDecInput" oninput="hexToDecimal()" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm mb-4 focus:ring-2 focus:ring-cyan-500 outline-none" placeholder="e.g. 2F">
+                <input type="text" id="hexDecInput" oninput="hexToDecimal()" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm mb-4 outline-none" placeholder="e.g. 2F">
                 <div class="p-4 bg-cyan-50 dark:bg-slate-800 text-cyan-900 dark:text-cyan-300 font-bold rounded-2xl border border-cyan-100 dark:border-slate-700 text-center text-sm shadow-sm">
                     Decimal: <span id="decimalResult" class="text-lg">0</span>
                 </div>
@@ -515,13 +492,13 @@
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">📊 CSV to JSON</h3><button onclick="showSection('convertersHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-xl font-semibold">← Back</button></div>
             <div>
                 <label class="block text-xs font-bold mb-1.5">CSV Data Input</label>
-                <textarea id="csvInput" rows="3" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl mb-3 text-sm focus:ring-2 focus:ring-emerald-500 outline-none" placeholder="name,age\nJohn,25"></textarea>
-                <button onclick="csvToJson()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-2xl font-bold text-xs mb-3 shadow-lg transition transform active:scale-95">Convert to JSON</button>
+                <textarea id="csvInput" rows="3" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl mb-3 text-sm outline-none" placeholder="name,age\nJohn,25"></textarea>
+                <button onclick="csvToJson()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-2xl font-bold text-xs mb-3 shadow-lg transition">Convert to JSON</button>
                 <pre id="jsonOutput" class="p-4 bg-slate-950 text-emerald-400 rounded-2xl text-xs overflow-x-auto shadow-inner border border-slate-800">JSON output...</pre>
             </div>
-                                                                                   </div>
+        </div>
 
-        <!-- ================= 3. ADVANCED UI/UX CALCULATORS HUB ================= -->
+        <!-- ================= 3. CALCULATORS HUB ================= -->
         <div id="calculatorsHome" class="tool-section hidden space-y-6 animate-fadeIn">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
                 <div>
@@ -535,38 +512,32 @@
                 </button>
             </div>
 
-            <!-- Modern Calculators Grid UI -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
                 <div onclick="showSection('calcBmi', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-emerald-600/5 hover:to-teal-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-emerald-50 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📈</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-emerald-600 transition">BMI Calculator</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">WHO standard tables & live row highlight</p>
                 </div>
-
                 <div onclick="showSection('calcAge', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-blue-600/5 hover:to-indigo-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🎂</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-blue-600 transition">Age Calculator</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Exact years, months & days</p>
                 </div>
-
                 <div onclick="showSection('calcLoan', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-purple-600/5 hover:to-pink-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-purple-50 dark:bg-slate-800 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">💳</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-purple-600 transition">Loan / EMI Calculator</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Monthly installment breakdown</p>
                 </div>
-
                 <div onclick="showSection('calcPercentage', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-amber-600/5 hover:to-orange-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-amber-50 dark:bg-slate-800 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📊</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-amber-600 transition">Percentage Calculator</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Find ratio and percentages</p>
                 </div>
-
                 <div onclick="showSection('calcDiscount', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-rose-600/5 hover:to-red-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-rose-50 dark:bg-slate-800 text-rose-600 dark:text-rose-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🏷️</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-rose-600 transition">Discount Calculator</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Sale & shopping savings</p>
                 </div>
-
                 <div onclick="showSection('calcInterest', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-teal-600/5 hover:to-cyan-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-teal-50 dark:bg-slate-800 text-teal-600 dark:text-teal-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📈</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-teal-600 transition">Simple Interest</h4>
@@ -575,28 +546,27 @@
             </div>
         </div>
 
-        <!-- ADVANCED BMI CALCULATOR WORKSPACE -->
+        <!-- BMI Calculator Workspace -->
         <div id="calcBmi" class="tool-section hidden max-w-xl mx-auto bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border dark:border-slate-800 overflow-hidden">
             <div class="bg-slate-900 text-white p-5 md:p-6 flex justify-between items-center">
                 <h3 class="text-base font-bold flex items-center gap-2"><span>📈</span> Advanced WHO BMI Calculator</h3>
                 <button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-800 text-slate-300 px-3.5 py-2 rounded-xl hover:bg-slate-700 transition font-bold">← Back</button>
             </div>
 
-            <!-- Input View -->
             <div id="bmiFormView" class="p-6 md:p-8 space-y-5">
                 <p class="text-xs text-slate-500 dark:text-slate-400 font-medium text-center">For an accurate evaluation, please provide your personal metrics.</p>
 
                 <div>
                     <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">Gender</label>
                     <div class="flex gap-6">
-                        <label class="flex items-center gap-2 text-xs font-semibold cursor-pointer"><input type="radio" name="bmiGender" value="male" checked class="text-blue-600 focus:ring-blue-500"> Male</label>
-                        <label class="flex items-center gap-2 text-xs font-semibold cursor-pointer"><input type="radio" name="bmiGender" value="female" class="text-blue-600 focus:ring-blue-500"> Female</label>
+                        <label class="flex items-center gap-2 text-xs font-semibold cursor-pointer"><input type="radio" name="bmiGender" value="male" checked class="text-blue-600"> Male</label>
+                        <label class="flex items-center gap-2 text-xs font-semibold cursor-pointer"><input type="radio" name="bmiGender" value="female" class="text-blue-600"> Female</label>
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">Age (Years)</label>
-                    <input type="number" id="bmiAge" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-emerald-500 outline-none" placeholder="e.g. 25">
+                    <input type="number" id="bmiAge" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="e.g. 25">
                 </div>
 
                 <div>
@@ -608,7 +578,7 @@
                         </div>
                     </div>
                     <div id="heightCmContainer">
-                        <input type="number" id="bmiHeightCm" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-emerald-500 outline-none" placeholder="Height in cm (e.g. 170)">
+                        <input type="number" id="bmiHeightCm" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="Height in cm (e.g. 170)">
                     </div>
                     <div id="heightFtContainer" class="hidden grid grid-cols-2 gap-3">
                         <input type="number" id="bmiHeightFeet" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="Feet (e.g. 5)">
@@ -618,16 +588,15 @@
 
                 <div>
                     <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">Weight (Kg)</label>
-                    <input type="number" id="bmiWeightKg" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm focus:ring-2 focus:ring-emerald-500 outline-none" placeholder="Weight in kg (e.g. 68)">
+                    <input type="number" id="bmiWeightKg" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm outline-none" placeholder="Weight in kg (e.g. 68)">
                 </div>
 
-                <button onclick="calculateAdvancedBmi()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition transform active:scale-95">Calculate BMI Result</button>
+                <button onclick="calculateAdvancedBmi()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition">Calculate BMI Result</button>
             </div>
 
-            <!-- BMI Result View with Highlightable WHO Table -->
             <div id="bmiResultView" class="hidden p-6 md:p-8 space-y-6 text-center animate-fadeIn">
                 <div class="flex justify-between items-center border-b dark:border-slate-800 pb-4">
-                    <button onclick="resetBmiForm()" class="text-xs bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 px-3.5 py-2 rounded-2xl font-bold transition">← Recalculate</button>
+                    <button onclick="resetBmiForm()" class="text-xs bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold transition">← Recalculate</button>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm">BMI Score & WHO Table</h4>
                 </div>
                 
@@ -642,7 +611,6 @@
                     <p class="flex justify-between font-medium"><span>Healthy weight for height:</span> <strong id="healthyWeightRange" class="text-emerald-600 dark:text-emerald-400">-- kg</strong></p>
                 </div>
 
-                <!-- WHO Table with ID rows for dynamic highlighting -->
                 <div class="border dark:border-slate-800 rounded-2xl overflow-hidden text-left text-xs">
                     <div class="bg-slate-900 text-white px-4 py-2.5 font-bold">WHO Adult BMI Classification Table</div>
                     <table class="w-full divide-y divide-slate-200 dark:divide-slate-800">
@@ -661,18 +629,17 @@
             </div>
         </div>
 
-        <!-- AGE CALCULATOR WORKSPACE -->
+        <!-- Age, Loan, Percentage, Discount, Interest Workspaces -->
         <div id="calcAge" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🎂 Exact Age Calculator</h3><button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
             <div>
                 <label class="block text-xs font-bold mb-1.5">Select Date of Birth</label>
-                <input type="date" id="dobInput" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm mb-4 outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="date" id="dobInput" class="w-full p-3.5 border dark:border-slate-700 dark:bg-slate-800 rounded-2xl text-sm mb-4 outline-none">
                 <button onclick="calculateExactAge()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-2xl font-bold text-xs shadow-lg transition">Calculate Exact Age</button>
                 <div id="ageResult" class="mt-4 p-4 bg-blue-50 dark:bg-slate-800 text-blue-900 dark:text-blue-300 font-bold rounded-2xl text-center text-sm shadow-sm border border-blue-100 dark:border-slate-700">Your Age: N/A</div>
             </div>
         </div>
 
-        <!-- LOAN / EMI CALCULATOR WORKSPACE -->
         <div id="calcLoan" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-5">
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">💳 Loan EMI Calculator</h3><button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
             <div class="space-y-4">
@@ -686,7 +653,6 @@
             </div>
         </div>
 
-        <!-- PERCENTAGE CALCULATOR WORKSPACE -->
         <div id="calcPercentage" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-5">
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">📊 Percentage Calculator</h3><button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
             <div class="space-y-4">
@@ -697,7 +663,6 @@
             </div>
         </div>
 
-        <!-- DISCOUNT CALCULATOR WORKSPACE -->
         <div id="calcDiscount" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-5">
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🏷️ Discount Calculator</h3><button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
             <div class="space-y-4">
@@ -708,7 +673,6 @@
             </div>
         </div>
 
-        <!-- SIMPLE INTEREST CALCULATOR WORKSPACE -->
         <div id="calcInterest" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-5">
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">📈 Simple Interest Calculator</h3><button onclick="showSection('calculatorsHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
             <div class="space-y-4">
@@ -722,7 +686,7 @@
             </div>
         </div>
 
-                <!-- ================= 4. ADVANCED UI/UX PRODUCTIVITY TOOLS ================= -->
+        <!-- ================= 4. PRODUCTIVITY TOOLS ================= -->
         <div id="productivityHome" class="tool-section hidden space-y-6 animate-fadeIn">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
                 <div>
@@ -736,38 +700,32 @@
                 </button>
             </div>
 
-            <!-- Modern Productivity Tools Grid UI -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
                 <div onclick="showSection('prodPassword', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-purple-600/5 hover:to-indigo-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-purple-50 dark:bg-slate-800 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🔑</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-purple-600 transition">Password Generator</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Secure random keys & passwords</p>
                 </div>
-
                 <div onclick="showSection('prodQr', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-blue-600/5 hover:to-cyan-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📱</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-blue-600 transition">QR Code Generator</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Instant text & URL QR codes</p>
                 </div>
-
                 <div onclick="showSection('prodUuid', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-emerald-600/5 hover:to-teal-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-emerald-50 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🆔</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-emerald-600 transition">UUID v4 Generator</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Secure unique ID tokens</p>
                 </div>
-
                 <div onclick="showSection('prodLorem', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-amber-600/5 hover:to-orange-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-amber-50 dark:bg-slate-800 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📝</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-amber-600 transition">Lorem Ipsum Generator</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Placeholder dummy text</p>
                 </div>
-
                 <div onclick="showSection('prodBase64', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-indigo-600/5 hover:to-violet-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-indigo-50 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🔐</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-indigo-600 transition">Base64 Encoder / Decoder</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Data encoding format tool</p>
                 </div>
-
                 <div onclick="showSection('prodUrl', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-cyan-600/5 hover:to-blue-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-cyan-50 dark:bg-slate-800 text-cyan-600 dark:text-cyan-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🌐</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-cyan-600 transition">URL Encoder / Decoder</h4>
@@ -776,7 +734,7 @@
             </div>
         </div>
 
-        <!-- PASSWORD GENERATOR WORKSPACE -->
+        <!-- Productivity Workspaces -->
         <div id="prodPassword" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🔑 Password Generator</h3><button onclick="showSection('productivityHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
             <div class="space-y-4">
@@ -787,7 +745,6 @@
             </div>
         </div>
 
-        <!-- QR CODE GENERATOR WORKSPACE -->
         <div id="prodQr" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">📱 QR Code Generator</h3><button onclick="showSection('productivityHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
             <div class="space-y-4">
@@ -799,7 +756,6 @@
             </div>
         </div>
 
-        <!-- NEW: UUID v4 GENERATOR WORKSPACE -->
         <div id="prodUuid" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🆔 UUID v4 Generator</h3><button onclick="showSection('productivityHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
             <div class="space-y-4">
@@ -808,7 +764,6 @@
             </div>
         </div>
 
-        <!-- NEW: LOREM IPSUM GENERATOR WORKSPACE -->
         <div id="prodLorem" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-6">
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">📝 Lorem Ipsum Generator</h3><button onclick="showSection('productivityHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
             <div class="space-y-4">
@@ -817,7 +772,6 @@
             </div>
         </div>
 
-        <!-- BASE64 TOOL WORKSPACE -->
         <div id="prodBase64" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-5">
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🔐 Base64 Tool</h3><button onclick="showSection('productivityHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
             <div class="space-y-4">
@@ -830,7 +784,6 @@
             </div>
         </div>
 
-        <!-- URL TOOL WORKSPACE -->
         <div id="prodUrl" class="tool-section hidden bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 max-w-lg mx-auto space-y-5">
             <div class="flex justify-between items-center"><h3 class="text-xl font-bold flex items-center gap-2">🌐 URL Tool</h3><button onclick="showSection('productivityHome', true)" class="text-xs bg-slate-100 dark:bg-slate-800 px-3.5 py-2 rounded-2xl font-bold">← Back</button></div>
             <div class="space-y-4">
@@ -843,10 +796,8 @@
             </div>
         </div>
 
-
-                <!-- ================= ADVANCED UI/UX TEXT TOOLS & ANALYZER ================= -->
+        <!-- ================= TEXT TOOLS & ANALYZER ================= -->
         <div id="textTools" class="tool-section hidden max-w-4xl mx-auto bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 space-y-6 animate-fadeIn">
-            <!-- Header Section -->
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b dark:border-slate-800 pb-5">
                 <div>
                     <h3 class="text-2xl font-black text-slate-900 dark:text-slate-100 flex items-center gap-2.5">
@@ -859,13 +810,11 @@
                 </button>
             </div>
 
-            <!-- Main Text Input Area -->
             <div class="space-y-2">
                 <label class="block text-xs font-bold text-slate-700 dark:text-slate-300">Your Source Text Input</label>
                 <textarea id="textInput" rows="6" oninput="analyzeText()" class="w-full p-4 border dark:border-slate-700 rounded-2xl text-sm bg-slate-50 dark:bg-slate-800/60 focus:bg-white dark:focus:bg-slate-800 transition focus:ring-2 focus:ring-blue-500 outline-none leading-relaxed shadow-inner" placeholder="Type or paste your text here to analyze and format instantly..."></textarea>
             </div>
 
-            <!-- Statistics Dashboard -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-800/80 p-4 rounded-2xl text-center border border-blue-100 dark:border-slate-700 shadow-sm">
                     <p class="text-xs text-blue-600 dark:text-blue-400 font-bold">Words</p>
@@ -885,22 +834,20 @@
                 </div>
             </div>
 
-            <!-- Find & Replace Feature Box -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border dark:border-slate-700">
                 <div>
                     <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">Find Word</label>
-                    <input type="text" id="findInput" class="w-full p-3 border dark:border-slate-700 rounded-xl text-xs bg-white dark:bg-slate-800 outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Word to find...">
+                    <input type="text" id="findInput" class="w-full p-3 border dark:border-slate-700 rounded-xl text-xs bg-white dark:bg-slate-800 outline-none" placeholder="Word to find...">
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">Replace With</label>
                     <div class="flex gap-2">
-                        <input type="text" id="replaceInput" class="w-full p-3 border dark:border-slate-700 rounded-xl text-xs bg-white dark:bg-slate-800 outline-none focus:ring-2 focus:ring-indigo-500" placeholder="New word...">
+                        <input type="text" id="replaceInput" class="w-full p-3 border dark:border-slate-700 rounded-xl text-xs bg-white dark:bg-slate-800 outline-none" placeholder="New word...">
                         <button onclick="findAndReplaceText()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-3 rounded-xl text-xs font-bold transition shadow-md whitespace-nowrap">Replace</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Action Buttons Grid -->
             <div class="space-y-3">
                 <label class="block text-xs font-bold text-slate-700 dark:text-slate-300">Quick Text Formatters & Actions</label>
                 <div class="flex flex-wrap gap-2.5">
@@ -917,8 +864,7 @@
             </div>
         </div>
 
-
-        <!-- ================= 6. FAQ SECTION (SEO Rich Snippets) ================= -->
+        <!-- ================= 6. FAQ SECTION ================= -->
         <div id="faqSection" class="tool-section hidden max-w-3xl mx-auto bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 space-y-6">
             <div class="flex justify-between items-center mb-2">
                 <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">❓ Frequently Asked Questions</h3>
@@ -946,7 +892,7 @@
             </div>
         </div>
 
-                <!-- ================= 7. EXPERT BLOG SECTION (Advanced SEO Optimized) ================= -->
+        <!-- ================= 7. EXPERT SEO & PRODUCTIVITY BLOG (SUPER SEO OPTIMIZED) ================= -->
         <div id="blogSection" class="tool-section hidden max-w-3xl mx-auto bg-white dark:bg-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl border dark:border-slate-800 space-y-6">
             <div class="flex justify-between items-center mb-2">
                 <div>
@@ -1005,7 +951,6 @@
                 <button onclick="showSection('home', true)" class="text-xs bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-600 dark:text-slate-300 px-3.5 py-2 rounded-xl font-semibold transition">← Back</button>
             </div>
             <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">Welcome to <b>TextTools Hub</b> – your ultimate all-in-one digital companion for fast file conversion, calculations, text formatting, and daily productivity utilities.</p>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">Our mission is to provide developers, students, professionals, and everyday internet users with a clean, fast, secure, and 100% free online toolbox accessible from any device without installing heavy software.</p>
             <div class="p-4 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 space-y-1 mt-4">
                 <p class="text-xs font-bold text-slate-900 dark:text-slate-100">Founder & Creator:</p>
                 <p class="text-xs text-blue-600 dark:text-blue-400 font-semibold">SHAKHAWT HOSSAIN</p>
@@ -1018,8 +963,7 @@
                 <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100">🔒 Privacy Policy</h3>
                 <button onclick="showSection('home', true)" class="text-xs bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-600 dark:text-slate-300 px-3.5 py-2 rounded-xl font-semibold transition">← Back</button>
             </div>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">At TextTools Hub, protecting your privacy is one of our main priorities. This Privacy Policy document contains types of information that is collected and recorded by TextTools Hub and how we use it.</p>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">We do not store any of your personal files or sensitive text data on our servers. All document and text operations happen securely and privately.</p>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">At TextTools Hub, protecting your privacy is one of our main priorities. We do not store any of your personal files or sensitive text data on our servers.</p>
         </div>
 
         <!-- ================= 10. CONTACT US SECTION ================= -->
@@ -1028,7 +972,6 @@
                 <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100">📞 Contact Us</h3>
                 <button onclick="showSection('home', true)" class="text-xs bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-600 dark:text-slate-300 px-3.5 py-2 rounded-xl font-semibold transition">← Back</button>
             </div>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">If you have any questions, suggestions, or feedback regarding our free tools and converters, feel free to reach out to us.</p>
             <div class="p-4 bg-blue-50 dark:bg-slate-800 text-blue-900 dark:text-blue-300 rounded-2xl border border-blue-100 dark:border-slate-700 space-y-1">
                 <p class="text-xs font-bold">Email Support:</p>
                 <a href="mailto:texttoolshub@gmail.com" class="text-xs text-blue-600 dark:text-blue-400 font-semibold underline">texttoolshub@gmail.com</a>
@@ -1042,10 +985,9 @@
         <span id="toastIcon">✨</span> <span id="toastText">Action successful!</span>
     </div>
 
-    <!-- Ultra-Premium Footer with Fully Working Links -->
+    <!-- Footer -->
     <footer class="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-10 mt-20 text-xs font-sans shadow-2xl">
         <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12 pb-12 border-b border-slate-800/80">
-            <!-- Col 1: Brand -->
             <div class="space-y-3">
                 <h4 class="text-white font-extrabold text-sm tracking-wide flex items-center gap-2">✨ TextTools Hub</h4>
                 <p class="text-slate-400 leading-relaxed text-[11px]">Your all-in-one professional digital toolbox for fast file conversion, precise calculations, and advanced text utilities completely free.</p>
@@ -1053,11 +995,10 @@
                     <p class="text-[10px] text-slate-500 font-medium">Created by <strong class="text-slate-300">SHAKHAWT HOSSAIN</strong></p>
                 </div>
             </div>
-            <!-- Col 2: Hubs -->
             <div class="space-y-2.5">
                 <h4 class="text-white font-bold text-xs uppercase tracking-wider">Tool Hubs</h4>
                 <ul class="space-y-2 text-[11px]">
-                    <li><a href="#allToolsSection" onclick="showSection('allToolsSection', true); return false;" class="hover:text-blue-400 transition flex items-center gap-1.5 font-semibold text-blue-400">🗂️ All Tools Directory</a></li>
+                    <li><a href="#allToolsSection" onclick="showSection('allToolsSection', true); return false;" class="hover:text-blue-400 transition font-semibold text-blue-400">🗂️ All Tools Directory</a></li>
                     <li><a href="#documentsHome" onclick="showSection('documentsHome', true); return false;" class="hover:text-blue-400 transition">📂 Documents Hub</a></li>
                     <li><a href="#convertersHome" onclick="showSection('convertersHome', true); return false;" class="hover:text-blue-400 transition">🔄 Converters Hub</a></li>
                     <li><a href="#calculatorsHome" onclick="showSection('calculatorsHome', true); return false;" class="hover:text-blue-400 transition">🧮 Calculators Hub</a></li>
@@ -1065,7 +1006,6 @@
                     <li><a href="#textTools" onclick="showSection('textTools', true); return false;" class="hover:text-blue-400 transition">📝 Text Tools & Analyzer</a></li>
                 </ul>
             </div>
-            <!-- Col 3: Resources -->
             <div class="space-y-2.5">
                 <h4 class="text-white font-bold text-xs uppercase tracking-wider">Resources & Help</h4>
                 <ul class="space-y-2 text-[11px]">
@@ -1074,7 +1014,6 @@
                     <li><a href="#aboutSection" onclick="showSection('aboutSection', true); return false;" class="hover:text-blue-400 transition font-semibold text-slate-300">ℹ️ About Us</a></li>
                 </ul>
             </div>
-            <!-- Col 4: Legal & Contact -->
             <div class="space-y-2.5">
                 <h4 class="text-white font-bold text-xs uppercase tracking-wider">Legal & Contact</h4>
                 <ul class="space-y-2 text-[11px]">
@@ -1090,26 +1029,27 @@
         </div>
     </footer>
 
-    <!-- JavaScript Logic -->
+    <!-- Clean, Unified JavaScript Logic -->
     <script>
         function toggleMenu() { document.getElementById('dropdownMenu').classList.toggle('hidden'); }
 
-        // Dark Mode Toggle Logic
         function toggleDarkMode() {
             const html = document.documentElement;
             html.classList.toggle('dark');
             const isDark = html.classList.contains('dark');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            document.getElementById('themeIcon').innerText = isDark ? '☀️' : '🌙';
+            let themeIcon = document.getElementById('themeIcon');
+            if(themeIcon) themeIcon.innerText = isDark ? '☀️' : '🌙';
         }
 
-        // Load saved theme on startup
-        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-            document.getElementById('themeIcon').innerText = '☀️';
-        }
+        (function() {
+            if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                let themeIcon = document.getElementById('themeIcon');
+                if(themeIcon) themeIcon.innerText = '☀️';
+            }
+        })();
 
-        // Toast Notification System
         function showToast(message, icon = '✨') {
             const toast = document.getElementById('toastNotification');
             document.getElementById('toastText').innerText = message;
@@ -1120,13 +1060,12 @@
             }, 3000);
         }
 
-        // Live Search Filter for Homepage
         function filterTools() {
             let query = document.getElementById('toolSearchInput').value.toLowerCase().trim();
             let cards = document.querySelectorAll('.searchable-card');
             cards.forEach(card => {
                 let name = card.getAttribute('data-name');
-                if(name.includes(query)) {
+                if(name && name.includes(query)) {
                     card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
@@ -1134,9 +1073,9 @@
             });
         }
 
-        // Updated showSection with History API
         function showSection(sectionId, pushHistory = false) {
-            document.getElementById('dropdownMenu').classList.add('hidden');
+            let dropdown = document.getElementById('dropdownMenu');
+            if(dropdown) dropdown.classList.add('hidden');
             
             const sections = document.querySelectorAll('.tool-section');
             sections.forEach(sec => sec.classList.add('hidden'));
@@ -1150,7 +1089,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Handle browser Back / Forward buttons
         window.addEventListener('popstate', function(event) {
             if(event.state && event.state.section) {
                 showSection(event.state.section, false);
@@ -1165,6 +1103,7 @@
             document.getElementById('docWorkspaceTitle').innerText = toolName;
             document.getElementById('docFileInput').accept = acceptType;
             document.getElementById('conversionStatus').classList.add('hidden');
+            document.getElementById('downloadSection').classList.add('hidden');
             showSection('docWorkspace', true);
         }
 
@@ -1198,15 +1137,13 @@
 
                 let blob = new Blob([file], { type: 'application/octet-stream' });
                 let url = URL.createObjectURL(blob);
-                let a = document.createElement('a');
-                a.href = url;
-                a.download = convertedFileName;
-                a.click();
-                URL.revokeObjectURL(url);
-            }, 2500);
+                let downloadBtn = document.getElementById('downloadResultBtn');
+                downloadBtn.href = url;
+                downloadBtn.download = convertedFileName;
+                document.getElementById('downloadSection').classList.remove('hidden');
+            }, 2000);
         }
 
-        /* --- ADVANCED BMI CALCULATOR SCRIPT --- */
         let currentHeightUnit = 'cm';
         function setHeightUnit(unit) {
             currentHeightUnit = unit;
@@ -1296,134 +1233,103 @@
             document.getElementById('bmiResultView').classList.remove('hidden');
         }
 
-        // Safe and Clean Text Tools & Analyzer Functions
-function getTextInput() {
-    return document.getElementById('textInput');
-}
-
-// Real-time Text Analyzer Event Listener (Runs inside input)
-document.addEventListener('input', function (e) {
-    if (e.target && e.target.id === 'textInput') {
-        let text = e.target.value;
-        let words = text.trim() ? text.trim().split(/\s+/).length : 0;
-        let chars = text.length;
-        let sentences = text.split(/[.!?]+/).filter(Boolean).length;
-        let readTime = Math.ceil(words / 200 * 60);
-
-        let wEl = document.getElementById('wordCount');
-        let cEl = document.getElementById('charCount');
-        let sEl = document.getElementById('sentenceCount');
-        let rEl = document.getElementById('readTime');
-
-        if (wEl) wEl.innerText = words;
-        if (cEl) cEl.innerText = chars;
-        if (sEl) sEl.innerText = sentences;
-        if (rEl) rEl.innerText = readTime + 's';
-    }
-});
-
-function convertToUpperCase() {
-    let el = getTextInput();
-    if (el) {
-        el.value = el.value.toUpperCase();
-        el.dispatchEvent(new Event('input'));
-        showToast('Converted to UPPERCASE', '✨');
-    }
-}
-
-function convertToLowerCase() {
-    let el = getTextInput();
-    if (el) {
-        el.value = el.value.toLowerCase();
-        el.dispatchEvent(new Event('input'));
-        showToast('Converted to lowercase', '✨');
-    }
-}
-
-function convertToTitleCase() {
-    let el = getTextInput();
-    if (el) {
-        el.value = el.value.toLowerCase().replace(/\b\w/g, l => l.toUpperCase());
-        el.dispatchEvent(new Event('input'));
-        showToast('Converted to Title Case', '✨');
-    }
-}
-
-function convertToSentenceCase() {
-    let el = getTextInput();
-    if (el) {
-        let text = el.value.toLowerCase();
-        el.value = text.charAt(0).toUpperCase() + text.slice(1);
-        el.dispatchEvent(new Event('input'));
-        showToast('Converted to Sentence case', '✨');
-    }
-}
-
-function removeExtraSpaces() {
-    let el = getTextInput();
-    if (el) {
-        el.value = el.value.replace(/\s+/g, ' ').trim();
-        el.dispatchEvent(new Event('input'));
-        showToast('Extra spaces removed', '✨');
-    }
-}
-
-function removeLineBreaks() {
-    let el = getTextInput();
-    if (el) {
-        el.value = el.value.replace(/(\r\n|\n|\r)/gm, " ");
-        el.dispatchEvent(new Event('input'));
-        showToast('Line breaks removed', '✨');
-    }
-}
-
-function reverseText() {
-    let el = getTextInput();
-    if (el) {
-        el.value = el.value.split('').reverse().join('');
-        el.dispatchEvent(new Event('input'));
-        showToast('Text reversed', '✨');
-    }
-}
-
-function findAndReplaceText() {
-    let el = getTextInput();
-    let findVal = document.getElementById('findInput').value;
-    let replaceVal = document.getElementById('replaceInput').value;
-    if (!findVal) {
-        alert('অনুগ্রহ করে খোঁজার জন্য একটি শব্দ লিখুন!');
-        return;
-    }
-    if (el) {
-        let regex = new RegExp(findVal, 'g');
-        el.value = el.value.replace(regex, replaceVal);
-        el.dispatchEvent(new Event('input'));
-        showToast('Find & Replace completed!', '✨');
-    }
-}
-
-function copyTextToClipboard() {
-    let el = getTextInput();
-    if (el) {
-        el.select();
-        navigator.clipboard.writeText(el.value);
-        showToast('Text copied to clipboard!', '📋');
-    }
-}
-
-function clearText() {
-    let el = getTextInput();
-    if (el) {
-        el.value = '';
-        el.dispatchEvent(new Event('input'));
-        showToast('Cleared successfully', '🗑️');
-    }
-}
-            textInput.select();
-            navigator.clipboard.writeText(textInput.value);
-            showToast('Text copied to clipboard!', '📋');
+        function resetBmiForm() {
+            document.getElementById('bmiResultView').classList.add('hidden');
+            document.getElementById('bmiFormView').classList.remove('hidden');
         }
-        function clearText() { textInput.value = ''; showToast('Cleared successfully', '🧹'); }
+
+        function getTextInput() { return document.getElementById('textInput'); }
+
+        function analyzeText() {
+            let el = getTextInput();
+            if(!el) return;
+            let text = el.value;
+            let words = text.trim() ? text.trim().split(/\s+/).length : 0;
+            let chars = text.length;
+            let sentences = text.split(/[.!?]+/).filter(Boolean).length;
+            let readTime = Math.ceil(words / 200 * 60);
+
+            let wEl = document.getElementById('wordCount');
+            let cEl = document.getElementById('charCount');
+            let sEl = document.getElementById('sentenceCount');
+            let rEl = document.getElementById('readTime');
+
+            if (wEl) wEl.innerText = words;
+            if (cEl) cEl.innerText = chars;
+            if (sEl) sEl.innerText = sentences;
+            if (rEl) rEl.innerText = readTime + 's';
+        }
+
+        function convertToUpperCase() {
+            let el = getTextInput();
+            if (el) { el.value = el.value.toUpperCase(); analyzeText(); showToast('Converted to UPPERCASE', '✨'); }
+        }
+
+        function convertToLowerCase() {
+            let el = getTextInput();
+            if (el) { el.value = el.value.toLowerCase(); analyzeText(); showToast('Converted to lowercase', '✨'); }
+        }
+
+        function convertToTitleCase() {
+            let el = getTextInput();
+            if (el) { 
+                el.value = el.value.toLowerCase().replace(/\b\w/g, l => l.toUpperCase()); 
+                analyzeText(); 
+                showToast('Converted to Title Case', '✨');
+            }
+        }
+
+        function convertToSentenceCase() {
+            let el = getTextInput();
+            if (el) {
+                let text = el.value.toLowerCase();
+                el.value = text.charAt(0).toUpperCase() + text.slice(1);
+                analyzeText();
+                showToast('Converted to Sentence case', '✨');
+            }
+        }
+
+        function removeExtraSpaces() {
+            let el = getTextInput();
+            if (el) { el.value = el.value.replace(/\s+/g, ' ').trim(); analyzeText(); showToast('Extra spaces removed', '✨'); }
+        }
+
+        function removeLineBreaks() {
+            let el = getTextInput();
+            if (el) { el.value = el.value.replace(/(\r\n|\n|\r)/gm, " "); analyzeText(); showToast('Line breaks removed', '✨'); }
+        }
+
+        function reverseText() {
+            let el = getTextInput();
+            if (el) { el.value = el.value.split('').reverse().join(''); analyzeText(); showToast('Text reversed', '✨'); }
+        }
+
+        function copyTextToClipboard() {
+            let el = getTextInput();
+            if (el) {
+                el.select();
+                navigator.clipboard.writeText(el.value);
+                showToast('Text copied to clipboard!', '📋');
+            }
+        }
+
+        function clearText() {
+            let el = getTextInput();
+            if (el) { el.value = ''; analyzeText(); showToast('Cleared successfully', '🗑️'); }
+        }
+
+        function findAndReplaceText() {
+            let el = getTextInput();
+            let findVal = document.getElementById('findInput').value;
+            let replaceVal = document.getElementById('replaceInput').value;
+            if (!findVal) { alert('অনুগ্রহ করে খোঁজার জন্য একটি শব্দ লিখুন!'); return; }
+            if (el) {
+                let regex = new RegExp(findVal, 'g');
+                el.value = el.value.replace(regex, replaceVal);
+                analyzeText();
+                showToast('Find & Replace completed!', '✨');
+            }
+        }
 
         function convertLength(type) {
             let m = document.getElementById('meterInput').value;
@@ -1431,28 +1337,33 @@ function clearText() {
             if(type === 'meter') document.getElementById('feetInput').value = m ? (m * 3.28084).toFixed(2) : '';
             else document.getElementById('meterInput').value = f ? (f / 3.28084).toFixed(2) : '';
         }
+
         function convertTemp(type) {
             let c = document.getElementById('celsiusInput').value;
             let f = document.getElementById('fahrenheitInput').value;
             if(type === 'c') document.getElementById('fahrenheitInput').value = c !== '' ? ((c * 9/5) + 32).toFixed(1) : '';
             else document.getElementById('celsiusInput').value = f !== '' ? ((f - 32) * 5/9).toFixed(1) : '';
         }
+
         function convertWeight(type) {
             let kg = document.getElementById('kgInput').value;
             let lbs = document.getElementById('lbsInput').value;
             if(type === 'kg') document.getElementById('lbsInput').value = kg ? (kg * 2.20462).toFixed(2) : '';
             else document.getElementById('kgInput').value = lbs ? (lbs / 2.20462).toFixed(2) : '';
         }
+
         function convertSpeed(type) {
             let kmh = document.getElementById('kmhInput').value;
             let mph = document.getElementById('mphInput').value;
             if(type === 'kmh') document.getElementById('mphInput').value = kmh ? (kmh * 0.621371).toFixed(2) : '';
             else document.getElementById('kmhInput').value = mph ? (mph / 0.621371).toFixed(2) : '';
         }
+
         function convertData() {
             let mb = document.getElementById('mbInput').value;
             document.getElementById('gbResult').innerText = mb ? (mb / 1024).toFixed(4) + ' GB' : '0 GB';
         }
+
         function hexToRgb() {
             let hex = document.getElementById('hexInput').value.trim();
             let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -1461,11 +1372,13 @@ function clearText() {
                 document.getElementById('rgbResult').innerText = `RGB: (${r}, ${g}, ${b})`;
             } else { document.getElementById('rgbResult').innerText = 'RGB: Invalid Hex Code'; }
         }
+
         function hexToDecimal() {
             let hex = document.getElementById('hexDecInput').value.trim();
             let dec = parseInt(hex, 16);
             document.getElementById('decimalResult').innerText = !isNaN(dec) ? dec : '0';
         }
+
         function csvToJson() {
             let csv = document.getElementById('csvInput').value.trim();
             if(!csv) { document.getElementById('jsonOutput').innerText = 'Please enter valid CSV data.'; return; }
@@ -1502,26 +1415,36 @@ function clearText() {
             }
             document.getElementById('ageResult').innerText = `${years} Years, ${months} Months, ${days} Days`;
         }
+
         function calculateLoan() {
-            let p = parseFloat(document.getElementById('loanAmount').value), r = parseFloat(document.getElementById('loanRate').value)/12/100, n = parseFloat(document.getElementById('loanMonths').value);
+            let p = parseFloat(document.getElementById('loanAmount').value);
+            let r = parseFloat(document.getElementById('loanRate').value)/12/100;
+            let n = parseFloat(document.getElementById('loanMonths').value);
             if(p && r && n) {
                 let emi = (p * r * Math.pow(1+r, n)) / (Math.pow(1+r, n) - 1);
                 document.getElementById('loanResult').innerText = `Monthly EMI: ${emi.toFixed(2)}`;
             } else { alert('Please fill all loan fields.'); }
         }
+
         function calculatePercentage() {
-            let p = parseFloat(document.getElementById('perVal').value), t = parseFloat(document.getElementById('perTotal').value);
+            let p = parseFloat(document.getElementById('perVal').value);
+            let t = parseFloat(document.getElementById('perTotal').value);
             if(!isNaN(p) && !isNaN(t)) { document.getElementById('perResult').innerText = `Result: ${(p * t) / 100}`; } else { alert('Please enter valid numbers.'); }
         }
+
         function calculateDiscount() {
-            let p = parseFloat(document.getElementById('discPrice').value), d = parseFloat(document.getElementById('discPercent').value);
+            let p = parseFloat(document.getElementById('discPrice').value);
+            let d = parseFloat(document.getElementById('discPercent').value);
             if(!isNaN(p) && !isNaN(d)) {
                 let saved = (p * d) / 100;
                 document.getElementById('discResult').innerText = `Final Price: ${(p - saved).toFixed(2)} (Saved: ${saved.toFixed(2)})`;
             } else { alert('Please enter valid price and discount.'); }
         }
+
         function calculateInterest() {
-            let p = parseFloat(document.getElementById('intPrinciple').value), r = parseFloat(document.getElementById('intRate').value), t = parseFloat(document.getElementById('intTime').value);
+            let p = parseFloat(document.getElementById('intPrinciple').value);
+            let r = parseFloat(document.getElementById('intRate').value);
+            let t = parseFloat(document.getElementById('intTime').value);
             if(!isNaN(p) && !isNaN(r) && !isNaN(t)) {
                 let interest = (p * r * t) / 100;
                 document.getElementById('intResult').innerText = `Total Interest: ${interest.toFixed(2)}`;
@@ -1534,6 +1457,7 @@ function clearText() {
             document.getElementById('generatedPassword').value = pass;
             showToast('New secure password generated');
         }
+
         function generateQR() {
             let t = document.getElementById('qrText').value.trim();
             if(!t) { alert('Enter text'); return; }
@@ -1542,208 +1466,40 @@ function clearText() {
             img.classList.remove('hidden');
             showToast('QR code generated!');
         }
+
         function encodeBase64() {
             let val = document.getElementById('base64Input').value;
             try { document.getElementById('base64Output').value = btoa(val); showToast('Encoded to Base64'); } catch(e) { alert('Invalid input'); }
         }
+
         function decodeBase64() {
             let val = document.getElementById('base64Input').value;
             try { document.getElementById('base64Output').value = atob(val); showToast('Decoded from Base64'); } catch(e) { alert('Invalid Base64 string'); }
         }
+
         function encodeUrl() {
             let val = document.getElementById('urlInput').value;
             document.getElementById('urlOutput').value = encodeURIComponent(val);
             showToast('URL Encoded');
         }
+
         function decodeUrl() {
             let val = document.getElementById('urlInput').value;
             try { document.getElementById('urlOutput').value = decodeURIComponent(val); showToast('URL Decoded'); } catch(e) { alert('Invalid URL string'); }
         }
-        // UUID v4 Generator Function
-function generateUuidV4() {
-    const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-        return v.toString(16);
-    });
-    document.getElementById('uuidOutput').value = uuid;
-}
 
-// Lorem Ipsum Generator Function
-function generateLorem() {
-    const dummyText = "TextTools Hub provides lightning-fast local web utilities, advanced converters, and secure developer tools. Designed for high performance, efficiency, and seamless user experience without server-side data storage. Empowering your daily digital workflow with modern client-side architecture.";
-    document.getElementById('loremOutput').value = dummyText;
-}
-        // Real-time Text Analyzer Function
-function analyzeText() {
-    let text = document.getElementById('textInput').value;
-    let words = text.trim() ? text.trim().split(/\s+/).length : 0;
-    let chars = text.length;
-    let sentences = text.split(/[.!?]+/).filter(Boolean).length;
-    let readTime = Math.ceil(words / 200 * 60); // Average reading speed
-
-    document.getElementById('wordCount').innerText = words;
-    document.getElementById('charCount').innerText = chars;
-    document.getElementById('sentenceCount').innerText = sentences;
-    document.getElementById('readTime').innerText = readTime + 's';
-}
-
-// Text Formatters & Utilities
-function convertToUpperCase() {
-    let el = document.getElementById('textInput');
-    el.value = el.value.toUpperCase();
-    analyzeText();
-}
-
-function convertToLowerCase() {
-    let el = document.getElementById('textInput');
-    el.value = el.value.toLowerCase();
-    analyzeText();
-}
-
-function convertToTitleCase() {
-    let el = document.getElementById('textInput');
-    el.value = el.value.toLowerCase().replace(/\b\w/g, l => l.toUpperCase());
-    analyzeText();
-}
-
-function convertToSentenceCase() {
-    let el = document.getElementById('textInput');
-    let text = el.value.toLowerCase();
-    el.value = text.charAt(0).toUpperCase() + text.slice(1);
-    analyzeText();
-}
-
-function removeExtraSpaces() {
-    let el = document.getElementById('textInput');
-    el.value = el.value.replace(/\s+/g, ' ').trim();
-    analyzeText();
-}
-
-function removeLineBreaks() {
-    let el = document.getElementById('textInput');
-    el.value = el.value.replace(/(\r\n|\n|\r)/gm, " ");
-    analyzeText();
-}
-
-function reverseText() {
-    let el = document.getElementById('textInput');
-    el.value = el.value.split('').reverse().join('');
-    analyzeText();
-}
-
-function copyTextToClipboard() {
-    let el = document.getElementById('textInput');
-    el.select();
-    navigator.clipboard.writeText(el.value);
-    alert('Text copied to clipboard successfully!');
-}
-
-function clearText() {
-    document.getElementById('textInput').value = '';
-    analyzeText();
-}
-
-function findAndReplaceText() {
-    let text = document.getElementById('textInput').value;
-    let findVal = document.getElementById('findInput').value;
-    let replaceVal = document.getElementById('replaceInput').value;
-    if (!findVal) return;
-    let regex = new RegExp(findVal, 'g');
-    document.getElementById('textInput').value = text.replace(regex, replaceVal);
-    analyzeText();
-}
-    </script>
-    <script>
-    // Section Switcher Router
-    function showSection(sectionId) {
-        document.querySelectorAll('.tool-section').forEach(el => el.classList.add('hidden'));
-        let target = document.getElementById(sectionId);
-        if (target) {
-            target.classList.remove('hidden');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        function generateUuidV4() {
+            const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+            document.getElementById('uuidOutput').value = uuid;
         }
-    }
 
-    // Real-time Text Analyzer Function
-    function analyzeText() {
-        let text = document.getElementById('textInput').value;
-        let words = text.trim() ? text.trim().split(/\s+/).length : 0;
-        let chars = text.length;
-        let sentences = text.split(/[.!?]+/).filter(Boolean).length;
-        let readTime = Math.ceil(words / 200 * 60);
-
-        document.getElementById('wordCount').innerText = words;
-        document.getElementById('charCount').innerText = chars;
-        document.getElementById('sentenceCount').innerText = sentences;
-        document.getElementById('readTime').innerText = readTime + 's';
-    }
-
-    // Text Formatters & Utilities
-    function convertToUpperCase() {
-        let el = document.getElementById('textInput');
-        if(el) { el.value = el.value.toUpperCase(); analyzeText(); }
-    }
-
-    function convertToLowerCase() {
-        let el = document.getElementById('textInput');
-        if(el) { el.value = el.value.toLowerCase(); analyzeText(); }
-    }
-
-    function convertToTitleCase() {
-        let el = document.getElementById('textInput');
-        if(el) { 
-            el.value = el.value.toLowerCase().replace(/\b\w/g, l => l.toUpperCase()); 
-            analyzeText(); 
+        function generateLorem() {
+            const dummyText = "TextTools Hub provides lightning-fast local web utilities, advanced converters, and secure developer tools. Designed for high performance, efficiency, and seamless user experience without server-side data storage. Empowering your daily digital workflow with modern client-side architecture.";
+            document.getElementById('loremOutput').value = dummyText;
         }
-    }
-
-    function convertToSentenceCase() {
-        let el = document.getElementById('textInput');
-        if(el) {
-            let text = el.value.toLowerCase();
-            el.value = text.charAt(0).toUpperCase() + text.slice(1);
-            analyzeText();
-        }
-    }
-
-    function removeExtraSpaces() {
-        let el = document.getElementById('textInput');
-        if(el) { el.value = el.value.replace(/\s+/g, ' ').trim(); analyzeText(); }
-    }
-
-    function removeLineBreaks() {
-        let el = document.getElementById('textInput');
-        if(el) { el.value = el.value.replace(/(\r\n|\n|\r)/gm, " "); analyzeText(); }
-    }
-
-    function reverseText() {
-        let el = document.getElementById('textInput');
-        if(el) { el.value = el.value.split('').reverse().join(''); analyzeText(); }
-    }
-
-    function copyTextToClipboard() {
-        let el = document.getElementById('textInput');
-        if(el) {
-            el.select();
-            navigator.clipboard.writeText(el.value);
-            alert('Text copied to clipboard successfully!');
-        }
-    }
-
-    function clearText() {
-        let el = document.getElementById('textInput');
-        if(el) { el.value = ''; analyzeText(); }
-    }
-
-    function findAndReplaceText() {
-        let text = document.getElementById('textInput').value;
-        let findVal = document.getElementById('findInput').value;
-        let replaceVal = document.getElementById('replaceInput').value;
-        if (!findVal) return;
-        let regex = new RegExp(findVal, 'g');
-        document.getElementById('textInput').value = text.replace(regex, replaceVal);
-        analyzeText();
-    }
     </script>
 </body>
-                                                                                                                                                                                                                                                                                                      </html>
+                    </html>
