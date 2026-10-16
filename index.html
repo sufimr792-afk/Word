@@ -46,24 +46,22 @@
         tailwind.config = {
             darkMode: 'class',
         }
-     <style>spinner {
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border-left-color: #0099dd;
-  animation: spin 1s ease infinite;
-}
+     <style>
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #0099dd;
+    animation: spin 1s ease infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .hidden { display: none; }
+</style>
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.hidden {
-  display: none;
-} <style>  
-    </script>
 </head>
 
 <body class="bg-gradient-to-br from-slate-50 via-blue-50/40 to-indigo-50/40 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950 text-slate-800 dark:text-slate-100 min-h-screen flex flex-col justify-between font-sans selection:bg-blue-500 selection:text-white transition-colors duration-300">
@@ -1535,7 +1533,7 @@
     document.getElementById('loader').classList.remove('hidden');
 
     let p = parseFloat(document.getElementById('loanAmount').value);
-    let r = parseFloat(document.getElementById('loanRate').value);
+    let r = parseFloat(document.getElementById('loanRate').value) / 12 / 100;
     let n = parseFloat(document.getElementById('loanMonths').value);
 
     setTimeout(() => {
