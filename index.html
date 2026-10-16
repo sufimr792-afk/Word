@@ -46,6 +46,23 @@
         tailwind.config = {
             darkMode: 'class',
         }
+     <style>spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #0099dd;
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hidden {
+  display: none;
+} <style>  
     </script>
 </head>
 
@@ -537,36 +554,42 @@
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-emerald-50 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📈</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-emerald-600 transition">BMI Calculator</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">WHO standard tables & live row highlight</p>
+                    <div id="loader" class="spinner hidden"></div>
                 </div>
 
                 <div onclick="showSection('calcAge', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-blue-600/5 hover:to-indigo-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🎂</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-blue-600 transition">Age Calculator</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Exact years, months & days</p>
+                    <div id="loader" class="spinner hidden"></div>
                 </div>
 
                 <div onclick="showSection('calcLoan', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-purple-600/5 hover:to-pink-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-purple-50 dark:bg-slate-800 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">💳</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-purple-600 transition">Loan / EMI Calculator</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Monthly installment breakdown</p>
+                    <div id="loader" class="spinner hidden"></div>
                 </div>
 
                 <div onclick="showSection('calcPercentage', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-amber-600/5 hover:to-orange-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-amber-50 dark:bg-slate-800 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📊</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-amber-600 transition">Percentage Calculator</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Find ratio and percentages</p>
+                    <div id="loader" class="spinner hidden"></div>
                 </div>
 
                 <div onclick="showSection('calcDiscount', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-rose-600/5 hover:to-red-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-rose-50 dark:bg-slate-800 text-rose-600 dark:text-rose-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">🏷️</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-rose-600 transition">Discount Calculator</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Sale & shopping savings</p>
+                    <div id="loader" class="spinner hidden"></div>
                 </div>
 
                 <div onclick="showSection('calcInterest', true)" class="group relative bg-white dark:bg-slate-900 hover:bg-gradient-to-br hover:from-teal-600/5 hover:to-cyan-600/5 p-6 rounded-3xl shadow-sm hover:shadow-2xl border border-slate-100 dark:border-slate-800 cursor-pointer transition-all duration-300 transform hover:-translate-y-1">
                     <div class="w-12 h-12 mb-4 rounded-2xl bg-teal-50 dark:bg-slate-800 text-teal-600 dark:text-teal-400 flex items-center justify-center text-xl shadow-inner group-hover:scale-110 transition">📈</div>
                     <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-teal-600 transition">Simple Interest</h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Investment return calculation</p>
+                    <div id="loader" class="spinner hidden"></div>
                 </div>
             </div>
         </div>
@@ -1480,6 +1503,10 @@
 
         function calculateExactAge() {
             let dobVal = document.getElementById('dobInput').value;
+            if (document.getElementById("dobInput").value === "") {
+  showToast("Please select your date of birth!");
+  return;
+            }
             if(!dobVal) { alert('Please select your date of birth!'); return; }
             let dob = new Date(dobVal);
             let today = new Date();
