@@ -1263,6 +1263,7 @@
         }
 
         function calculateAdvancedBmi() {
+          document.getElementById('loader').classList.remove('hidden');
             let weight = parseFloat(document.getElementById('bmiWeightKg').value);
             let heightInMeters = 0;
 
@@ -1333,6 +1334,7 @@
 
             document.getElementById('bmiFormView').classList.add('hidden');
             document.getElementById('bmiResultView').classList.remove('hidden');
+            document.getElementById('loader').classList.remove('hidden');
         }
 
         function resetBmiForm() {
@@ -1526,30 +1528,59 @@
             document.getElementById('ageResult').innerText = `${years} Years, ${months} Months, ${days} Days`;
         }
 
+        document.getElementById('loader').classList.remove('hidden');
+
+
         function calculateLoan() {
-            let p = parseFloat(document.getElementById('loanAmount').value);
-            let r = parseFloat(document.getElementById('loanRate').value)/12/100;
-            let n = parseFloat(document.getElementById('loanMonths').value);
-            if(p && r && n) {
-                let emi = (p * r * Math.pow(1+r, n)) / (Math.pow(1+r, n) - 1);
-                document.getElementById('loanResult').innerText = `Monthly EMI: ${emi.toFixed(2)}`;
-            } else { alert('Please fill all loan fields.'); }
-        }
+    document.getElementById('loader').classList.remove('hidden');
 
+    let p = parseFloat(document.getElementById('loanAmount').value);
+    let r = parseFloat(document.getElementById('loanRate').value);
+    let n = parseFloat(document.getElementById('loanMonths').value);
+
+    setTimeout(() => {
+        if (p && r && n) {
+            let emi = (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+            document.getElementById('loanResult').innerText = `Monthly EMI: ${emi.toFixed(2)}`;
+        } else {
+            alert('Please fill all loan fields.');
+        }
+        document.getElementById('loader').classList.add('hidden');
+    }, 1000);
+        }
         function calculatePercentage() {
-            let p = parseFloat(document.getElementById('perVal').value);
-            let t = parseFloat(document.getElementById('perTotal').value);
-            if(!isNaN(p) && !isNaN(t)) { document.getElementById('perResult').innerText = `Result: ${(p * t) / 100}`; } else { alert('Please enter valid numbers.'); }
-        }
+    document.getElementById('loader').classList.remove('hidden');
 
-        function calculateDiscount() {
-            let p = parseFloat(document.getElementById('discPrice').value);
-            let d = parseFloat(document.getElementById('discPercent').value);
-            if(!isNaN(p) && !isNaN(d)) {
-                let saved = (p * d) / 100;
-                document.getElementById('discResult').innerText = `Final Price: ${(p - saved).toFixed(2)} (Saved: ${saved.toFixed(2)})`;
-            } else { alert('Please enter valid price and discount.'); }
+    let p = parseFloat(document.getElementById('perVal').value);
+    let t = parseFloat(document.getElementById('perTotal').value);
+
+    setTimeout(() => {
+        if (!isNaN(p) && !isNaN(t)) {
+            document.getElementById('perResult').innerText = `Result: ${(p * t) / 100}`;
+        } else {
+            alert('Please enter valid values.');
         }
+        document.getElementById('loader').classList.add('hidden');
+    }, 1000);
+}
+```—
+        function calculateDiscount() {
+    document.getElementById('loader').classList.remove('hidden');
+
+    let p = parseFloat(document.getElementById('discPrice').value);
+    let d = parseFloat(document.getElementById('discPercent').value);
+
+    setTimeout(() => {
+        if (!isNaN(p) && !isNaN(d)) {
+            let saved = (p * d) / 100;
+            document.getElementById('discResult').innerText = `Final Price: ${(p - saved).toFixed(2)} (Saved: ${saved.toFixed(2)})`;
+        } else {
+            alert('Please enter valid price and discount.');
+        }
+        document.getElementById('loader').classList.add('hidden');
+    }, 1000);
+}
+
 
         function calculateInterest() {
             let p = parseFloat(document.getElementById('intPrinciple').value);
